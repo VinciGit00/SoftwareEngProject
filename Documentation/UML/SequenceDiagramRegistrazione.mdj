@@ -18,6 +18,7 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Main",
+<<<<<<< Updated upstream
 					"defaultDiagram": true,
 					"ownedViews": [
 						{
@@ -967,6 +968,9 @@
 						"$ref": "AAAAAAF9/WAlZ8/49z0="
 					},
 					"name": "Role2"
+=======
+					"defaultDiagram": true
+>>>>>>> Stashed changes
 				}
 			]
 		}
