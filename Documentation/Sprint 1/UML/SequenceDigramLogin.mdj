@@ -1400,9 +1400,6 @@
 								"$ref": "AAAAAAF9/Vac9VnZx5k="
 							},
 							"name": "Cliente",
-							"represent": {
-								"$ref": "AAAAAAF9/VbxaVnnnaY="
-							},
 							"isMultiInstance": false
 						},
 						{
@@ -1412,9 +1409,6 @@
 								"$ref": "AAAAAAF9/Vac9VnZx5k="
 							},
 							"name": "Sistema",
-							"represent": {
-								"$ref": "AAAAAAF9/Vb9eloGrrE="
-							},
 							"isMultiInstance": false
 						},
 						{
@@ -1424,9 +1418,6 @@
 								"$ref": "AAAAAAF9/Vac9VnZx5k="
 							},
 							"name": "Gestore Parruccheria",
-							"represent": {
-								"$ref": "AAAAAAF9/VcO+lolMOU="
-							},
 							"isMultiInstance": false
 						},
 						{
@@ -1489,32 +1480,6 @@
 							]
 						}
 					]
-				}
-			],
-			"attributes": [
-				{
-					"_type": "UMLAttribute",
-					"_id": "AAAAAAF9/VbxaVnnnaY=",
-					"_parent": {
-						"$ref": "AAAAAAF9/Vac81nYaPU="
-					},
-					"name": "Role1"
-				},
-				{
-					"_type": "UMLAttribute",
-					"_id": "AAAAAAF9/Vb9eloGrrE=",
-					"_parent": {
-						"$ref": "AAAAAAF9/Vac81nYaPU="
-					},
-					"name": "Role2"
-				},
-				{
-					"_type": "UMLAttribute",
-					"_id": "AAAAAAF9/VcO+lolMOU=",
-					"_parent": {
-						"$ref": "AAAAAAF9/Vac81nYaPU="
-					},
-					"name": "Role3"
 				}
 			]
 		}

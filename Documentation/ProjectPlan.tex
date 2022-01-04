@@ -10,8 +10,6 @@
 
 \title{Documentation for Software engineering project}
 \author{Nicolas Anselmi, David Guzman Piedrahita and Marco Vinciguerra}
-\date{\today}
-
 
 \begin{document}
 \maketitle
@@ -23,36 +21,39 @@ un cliente e un padrone di negozio.
 \\Il target della clientela è client driven.
 Il cliente ha la possibilità di prenotare diversi 
 tipi di acconciatura direttamente senza interfacciarsi /chiamare direttamente il proprietario
-del negozio. Ogni tipologia di taglio selezionabile ha una durata e può consentire un orario customizzabile 
+del negozio ma tramite l'applicazione.Ogni tipologia di taglio selezionabile ha una durata e in base al tipo dei macchinari e delle risorse che devono essere utilizzate 
+e può consentire un orario customizzabile di prenotazione 
 da parte del cliente. 
 \\I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco Vinciguerra.
 
 \section{Process model}
 Il life cycle del progetto è agile, in particolare la tecnica utilizzata è SCRUM con
-sprint di 5 giorni in quanto il tempo per la consegna è imminente. Inoltre viene utilizzato un triage per
-gestire i compiti.
+sprint di 5 giorni in quanto il tempo necessario per lo sviluppo è breve. Inoltre viene utilizzato un triage per
+gestire i compiti (MoSCoW).
 \\Per quanto riguarda i requirements si utilizza il Kano Model.
-Il periodo di sviluppo parte poco prima di Natale. Ogni giorno verso le 9 30 
+Il periodo di sviluppo parte poco prima di Natale. Ogni giorno verso le 9 30 del mattino 
 c'è un daily scrum tenuto dallo scrum master in cui si discutono le problematiche riscontrate durante 
 il giorno precedente e le possibili soluzioni a queste.
 
 \section{Organization of the project}
 Il progetto, dovuto alla sua natura, deve intefacciarsi sia con utenti  che usufruiscono del servizio di prenotazione, sia da utenti che mettono a disposizioni i loro servizi commerciali.
-Il team di sviluppo è composto dai succitati integranti. Per portare a termine l'applicazione, ci sono dei knowledge-gap che dovranno essere colmati tramite la lettura di documentazione e l'uso di risorse online: particolarmente nel caso del framework Flutter per il frontend development.
+Il team di sviluppo è composto dai succitati integranti. Per portare a termine l'applicazione, ci sono dei knowledge-gap che dovranno essere colmati tramite la lettura di documentazione e
+l'uso di risorse online: particolarmente nel caso del framework Flutter per il frontend development.
 
 \section{Standards, guidelines, procedures}
 I principali linguaggi di programmazione del progetto saranno: python e dart, quest'ultimo
 viene esteso tramite flutter.
 Si usa i coding standards di flutter.
-\\Per gesture l'assegnazione e il corretto sviluppo si usa un template di Notion per gestire i compiti.
+\\Per gestire l'assegnazione e il corretto sviluppo si usa un template di Notion per gestire i compiti.
 \\Gli IDE che vengono utilizzati sono: VSC e terminale con VIM.
 
 \section{Management activities}
 Ogni settimana viene fatto un report sui progressi in corso fatti dal team di sviluppo per avere un'idea sull'avanzamento del progetto.
 \\Le modifiche critiche del progetto devono essere accettate dal padrone della cartella (Marco Vinciguerra), le altre possono essere fatte 
 liberamente.
-\\ Questi report, insieme alle decisioni definite negli scrum meeting, rappresentano la principale strategia per valutare velocemente lo status del progetto, e, di conseguenza, sono utili a fare course-correction.
-\\ Difatti, è proprio in questo modo che è previsto bilanciare l’equilibrio tra requirements e l’impegno necessario per soddisfarli.  
+\\Questi report, insieme alle decisioni definite negli scrum meeting, rappresentano la principale strategia per valutare velocemente lo status del progetto, e, 
+di conseguenza, sono utili a fare course-correction.
+\\Difatti, è proprio in questo modo che è previsto bilanciare l’equilibrio tra requirements e l’impegno necessario per soddisfarli.  
 \section{Risks}
 Il rischio principale è di non consegnare in tempo il progetto o di non consegnare un progetto perfettamente funzionante.
 \section{Staffing}
@@ -67,9 +68,10 @@ Per gestire gli sprint è stato utilizzato un template di Notion in quanto ha la
 non si applica fin da principio.
 \\Per quanto riguarda la specifica dei requisiti si utilizza lo standard IEEE 830.
 \\Si utilizza Flutlab.io per convertire il modello fatto con Figma in codice sorgente Flutter, questa è una strategia model driven.
-\\Si prevede l'uso di una strategia COTS per la scelta di diversi moduli o, più precisamente, widget di Flutter, che consentono di implementare velocemente elementi UI classici, senza scrivergli da zero.
+\\Si prevede l'uso di una strategia COTS per la scelta di diversi moduli o, più precisamente, widget di Flutter, che consentono di implementare velocemente
+elementi UI classici, senza scrivergli da zero.
 \\Per quanto riguarda i test di Dart si utilizza Dart unit testing.
-\\Per i database non si fa nessun tipo di testing.
+\\Per i database non si fa nessun tipo di testing e si utilizza MySql per creare e gestire il database delle prenotazioni.
 \\La gestione delle modifiche viene svolta tenendo in conto le considerazione del punto 5 e, soprattutto, il punto 13.
 \section{Quality assurance}
 Per garantire la qualità del prodotto viene utilizzato lo standard ISO 9001.
@@ -82,7 +84,7 @@ Alcuni dei sottoprogetti (work package) che sono stati definiti a priori.
     \item Imparare ad utilizzare Flutter e dart
     \item Implementare l'applicazione con un'interfaccia grafica (front-end)
     \item Implementare la domain logic (back-end)
-    \item Valutare l'uso di un database
+    \item Uso di un database
     \item Fare il testing sul prodotto
     \item Fare testing usando l'applicazioni in telefoni reali (non simulator)
 \end{itemize}
