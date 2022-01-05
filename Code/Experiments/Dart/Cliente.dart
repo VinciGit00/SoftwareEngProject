@@ -15,6 +15,8 @@ class Cliente {
     this.cognome = cognome;
     this.idcliente = idcliente;
   }
+
+  //Ovverride del costruttore
   Cliente.constructor2(
       String nome, String cognome, int idcliente, Sesso s, Prenotazione P) {
     this.nome = nome;

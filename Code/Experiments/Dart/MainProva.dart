@@ -1,4 +1,7 @@
-import 'ProjectClasses.dart';
+import 'Cliente.dart';
+import 'Negozio.dart';
+import 'Prenotazione.dart';
+import 'Sesso.dart';
 
 void main() {
   //Clienti
