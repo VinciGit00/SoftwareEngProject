@@ -2,10 +2,10 @@ import 'Prenotazione.dart';
 
 class Negozio {
   // Field
-  late String nome;
-  late int PartitaIVA;
-  late String via;
-  late Prenotazione P;
+  String nome;
+  int PartitaIVA;
+  String via;
+  Prenotazione P;
 
   // Constructor
   Negozio.constructor1(String nome, int PartitaIVA, String via) {
@@ -25,5 +25,9 @@ class Negozio {
   // Functions
   void LeggiInfoPrenotazione() {
     P.Leggi();
+  }
+
+  String ScriviPrenotazione() {
+    return P.scriviP();
   }
 }

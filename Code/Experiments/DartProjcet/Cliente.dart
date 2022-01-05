@@ -3,11 +3,11 @@ import 'Prenotazione.dart';
 
 class Cliente {
   // Field
-  late String nome;
-  late String cognome;
-  late int idcliente;
-  late Sesso s;
-  late Prenotazione P;
+  String nome;
+  String cognome;
+  int idcliente;
+  Sesso s;
+  Prenotazione P;
 
   //Constructor
   Cliente.constructor1(String nome, String cognome, int idcliente, Sesso s) {
@@ -29,5 +29,9 @@ class Cliente {
   void leggiPrenotazione() {
     print(nome + " " + cognome);
     P.Leggi();
+  }
+
+  String ScriviPrenotazione() {
+    return P.scriviP();
   }
 }

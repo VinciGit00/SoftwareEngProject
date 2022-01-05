@@ -3,12 +3,12 @@ import 'Extra.dart';
 abstract class Taglio {
   //Abstract classes does not have the constructor
   // Field
-  late int ID;
-  late String tipologia;
-  late int Costo;
-  late int Durata;
-  late String Descrizione;
-  late String Procedura;
+  int ID;
+  String tipologia;
+  int Costo;
+  int Durata;
+  String Descrizione;
+  String Procedura;
 
   // Functions
 
@@ -16,8 +16,8 @@ abstract class Taglio {
 
 class Stutturato extends Taglio {
   // Fields
-  late Prodotto p;
-  late Macchinario m;
+  Prodotto p;
+  Macchinario m;
 
   // Constructor
   Stutturato() {}

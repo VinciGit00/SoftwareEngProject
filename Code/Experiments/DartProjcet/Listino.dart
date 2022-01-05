@@ -1,6 +1,6 @@
 class Listino {
   // Field
-  late int ID;
+  int ID;
 
   // Constructor
   Listino(int ID) {

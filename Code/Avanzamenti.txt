@@ -5,3 +5,5 @@ Settimana del 3 gennaio:
 - Finiti i diagrammi in UML
 - Design pattern delle classi in dart
 - Creati le classi in dart dell'applicazione
+- Fatto il testing delle classi
+- Fatta la documentazione per CMM e ISO9126

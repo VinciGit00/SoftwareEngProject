@@ -1,7 +1,7 @@
 class Prenotazione {
   // Field
-  late DateTime _data;
-  late String _codice;
+  DateTime _data;
+  String _codice;
 
   //Constructor
   Prenotazione(DateTime Data, String codice) {
@@ -13,5 +13,9 @@ class Prenotazione {
   void Leggi() {
     print(_codice);
     print(_data);
+  }
+
+  String scriviP() {
+    return _codice;
   }
 }

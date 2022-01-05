@@ -1,7 +1,7 @@
 class Prodotto {
   // Fields
-  late int idProdotto;
-  late int Dimensione;
+  int idProdotto;
+  int Dimensione;
 
   //Constructor
   Prodotto(int idProdotto, int Dimensione) {
@@ -12,8 +12,8 @@ class Prodotto {
 
 class Macchinario {
   //Fields
-  late int idMacchinario;
-  late int ImportoAmmortamento;
+  int idMacchinario;
+  int ImportoAmmortamento;
 
   //Constructor
   Macchinario(int idMacchinario, int ImportoAmmortamento) {
