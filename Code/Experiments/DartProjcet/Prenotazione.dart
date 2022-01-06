@@ -11,11 +11,10 @@ class Prenotazione {
 
   // Functions
   void Leggi() {
-    print(_codice);
-    print(_data);
+    print("$_data ${_codice}");
   }
 
   String scriviP() {
-    return _codice;
+    return "$_data ${_codice}";
   }
 }
