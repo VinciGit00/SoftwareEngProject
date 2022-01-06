@@ -9,10 +9,12 @@ void main() {
   test("Testo la correttezza delle classi", () {
     // Expected values
     String expected = "Vinciguerra";
+    String nome = "Marco";
     DateTime d = new DateTime(20000, 1, 6);
     String codice = "codice1";
     String codiceUnito = "$d ${codice}";
     int IVA = 01001010101;
+
     // Actual
     Cliente C1 =
         new Cliente.constructor1("Marco", "Vinciguerra", 11, Sesso.maschio);
@@ -32,6 +34,8 @@ void main() {
 
     //Provo la funzione che ho delegato
     expect(C2.ScriviPrenotazione(), codiceUnito);
+
+    expect(N1.nome, nome);
 
     expect(N2.PartitaIVA, IVA);
   });
