@@ -1,2 +1,8 @@
 *.Rhistory
 *.DS_Store
+Documentation/Sprint 1/Architecture/Architecture.aux
+*.aux
+*.fdb_latexmk
+*.log
+*.gz
+Documentation/Sprint 1/Architecture/Architecture.synctex.gz

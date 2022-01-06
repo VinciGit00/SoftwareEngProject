@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.2)  6 JAN 2022 02:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.2)  6 JAN 2022 02:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,13 +210,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Here is how much of TeX's memory you used:
  4260 strings out of 478994
  68156 string characters out of 5858184
- 386953 words of memory out of 5000000
+ 387953 words of memory out of 5000000
  21736 multiletter control sequences out of 15000+600000
  407712 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,6n,77p,427b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/Documentation/Sprint 1/Architecture/Architecture.pdf" (1 page, 61938 bytes).
+Output written on "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/Documentation/Sprint 1/Architecture/Architecture.pdf" (1 page, 64773 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
