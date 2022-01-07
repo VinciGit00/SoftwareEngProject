@@ -70,43 +70,10 @@ class _TravelAppState extends State<TravelApp> {
               height: 20.0,
             ),
 
-            Material(
-                elevation: 10.0,
-                borderRadius: BorderRadius.circular(30.0),
-                shadowColor: Color(0x5543434343),
-                child: TextField(
-                    textAlign: TextAlign.start,
-                    textAlignVertical: TextAlignVertical.center,
-                    decoration: InputDecoration(
-                      hintText: "Search for Hotel, flight... ",
-                      prefixIcon: Icon(Icons.search, color: Colors.black54),
-                      border: InputBorder.none,
-                    ))),
-
             DefaultTabController(
                 length: 3,
                 child: Expanded(
                   child: Column(children: [
-                    SizedBox(height: 30.0),
-                    TabBar(
-                      indicatorColor: Color(0xFFFE8C68),
-                      unselectedLabelColor: Color(0xFF555555),
-                      labelColor: Color(0xFFFE8C68),
-                      tabs: [
-                        Tab(
-                          text: "Trending",
-                        ),
-                        Tab(
-                          text: "Promotions",
-                        ),
-                        Tab(
-                          text: "Favorites",
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
                     Container(
                       height: 300.0,
                       child: TabBarView(children: [
@@ -114,12 +81,15 @@ class _TravelAppState extends State<TravelApp> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              travelCard(urls[0], "BOH", "Bormio", 5),
                               travelCard(
-                                  "https://www.deabyday.tv/.imaging/default/article/guides/cuccioli/altri-animali/Tutto-sul-kiwi--l-animale-simbolo-della-Nuova-Zelanda/imageOriginal.jpg",
-                                  "Sfaccim",
+                                  urls[0],
+                                  "Cristina e Thomas parrucchieri",
                                   "Bormio",
                                   5),
+                              travelCard(urls[0], "Total Look N.&N. Bormio",
+                                  "Bormio", 4),
+                              travelCard(urls[0], "Total Look N.&N. Bormio",
+                                  "Bormio", 4),
                             ],
                           ),
                         ),
@@ -152,15 +122,7 @@ class _TravelAppState extends State<TravelApp> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
-            label: "BookMark",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.location_on),
-            label: "Destination",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: "Notification",
+            label: "Prenotazioni",
           ),
         ],
       ),
@@ -171,6 +133,7 @@ class _TravelAppState extends State<TravelApp> {
 const users = const {
   'dribbble@gmail.com': '12345',
   'hunter@gmail.com': 'hunter',
+  'VinciSuperUser@gmail.com': '0000',
 };
 
 class LoginScreen extends StatelessWidget {

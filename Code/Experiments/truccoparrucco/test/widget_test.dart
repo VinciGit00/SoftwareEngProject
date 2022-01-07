@@ -11,5 +11,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:truccoparrucco/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {});
+  testWidgets("Given When a Then B", (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp());
+
+    //await tester.tap(find.byKey(Key("LOGIN")));
+
+    //expect(find.text("LOGIN"), findsOneWidget);
+  });
 }
