@@ -1,9 +1,10 @@
 //Customized widget card
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
-Widget travelCard(
-    String imgUrl, String HotelName, String location, int rating) {
+Widget travelCard(String img, String HotelName, String location, int rating) {
   return Card(
     margin: EdgeInsets.only(
       right: 22.0,
@@ -16,7 +17,7 @@ Widget travelCard(
       child: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: NetworkImage(imgUrl),
+          image: AssetImage("$img"),
           fit: BoxFit.cover,
           scale: 2.0,
         )),

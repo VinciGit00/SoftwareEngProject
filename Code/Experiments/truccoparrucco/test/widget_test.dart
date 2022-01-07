@@ -14,6 +14,7 @@ void main() {
   testWidgets("Given When a Then B", (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp());
 
+    //await tester.enterText(TextField(controller: ,), "Ciao");
     //await tester.tap(find.byKey(Key("LOGIN")));
 
     //expect(find.text("LOGIN"), findsOneWidget);

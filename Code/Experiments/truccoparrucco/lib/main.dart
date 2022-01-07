@@ -18,10 +18,13 @@ class TravelApp extends StatefulWidget {
 }
 
 class _TravelAppState extends State<TravelApp> {
-  List<String> urls = [
+  List<String> img = [
     //1
-    "https://upload.wikimedia.org/wikipedia/it/4/43/Bender.png",
+    "a.jpg",
     //2
+    "b.jpg",
+    //3
+    "c.jpg",
   ];
 
   @override
@@ -82,14 +85,13 @@ class _TravelAppState extends State<TravelApp> {
                             scrollDirection: Axis.horizontal,
                             children: [
                               travelCard(
-                                  urls[0],
+                                  img[0],
                                   "Cristina e Thomas parrucchieri",
                                   "Bormio",
                                   5),
-                              travelCard(urls[0], "Total Look N.&N. Bormio",
-                                  "Bormio", 4),
-                              travelCard(urls[0], "Total Look N.&N. Bormio",
-                                  "Bormio", 4),
+                              travelCard(
+                                  img[1], "Total Look N.&N", "Bormio", 4),
+                              travelCard(img[2], "Da Vincis", "Bormio", 4),
                             ],
                           ),
                         ),
