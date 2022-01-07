@@ -7,3 +7,5 @@ Settimana del 3 gennaio:
 - Creati le classi in dart dell'applicazione
 - Fatto il testing delle classi
 - Fatta la documentazione per CMM e ISO9126
+- Fatta UI per quanto riguarda il cliente 
+- Fatti i casi di test per flutter

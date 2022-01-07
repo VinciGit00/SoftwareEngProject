@@ -160,19 +160,19 @@ class _TravelAppState extends State<TravelApp> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text("Home"),
+            label: "Home",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
-            title: Text("BookMark"),
+            label: "BookMark",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
-            title: Text("Destination"),
+            label: "Destination",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
-            title: Text("Notification"),
+            label: "Notification",
           ),
         ],
       ),
