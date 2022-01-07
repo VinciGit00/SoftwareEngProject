@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-Widget travelCard(
-    String imgUrl, String HotelName, String location, int rating) {
+Widget travelCard(String imgUrl, String HotelName, String location, int rating,
+    {VoidCallback onTap}) {
   return Card(
     margin: EdgeInsets.only(
       right: 22.0,
@@ -12,7 +12,7 @@ Widget travelCard(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
     elevation: 0.0,
     child: InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
