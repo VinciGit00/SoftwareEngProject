@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
+import 'package:flutter_login/flutter_login.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: TravelApp(),
+    home: LoginScreen(),
   ));
 }
 
@@ -18,25 +20,8 @@ class TravelApp extends StatefulWidget {
 class _TravelAppState extends State<TravelApp> {
   List<String> urls = [
     //1
-    "https://www.ecosia.org/images?q=bender#id=B3C8B54B5B6CA77E4F48A501EA7AB15A2A4ECF66"
-        //2
-        "https://www.ecosia.org/images?q=bender#id=C8BBDF2419E3069154BB193B4042A1FE7CA68A19"
-        //3
-        "https://www.ecosia.org/images?q=bender#id=B3C8B54B5B6CA77E4F48A501EA7AB15A2A4ECF66"
-        //4
-        "https://www.ecosia.org/images?q=bender#id=0CB8F537F87B33339FDF1B79395A41769568ECCB"
-        //5
-        "https://www.ecosia.org/images?q=bender#id=3A632000A4328BBF3128DF1CF7EF0509F1CA2731"
-        //6
-        "https://www.ecosia.org/images?q=bender#id=A5D2C94DF53FBFD3E51F24FC9FCFD1710E281226"
-        //7
-        "https://www.ecosia.org/images?q=bender#id=F171EA13952F9F7B5434F15D214F031F5644806F"
-        //8
-        "https://www.ecosia.org/images?q=bender#id=515F36C7283468568CFF031BBEE309890E701C37"
-        //9
-        "https://www.ecosia.org/images?q=kiwi%20animal#id=96CECCEEA43B82AEF55F18BFD4635D6D0EC5F1D8"
-        //10
-        "https://www.ecosia.org/images?q=pinplup#id=3D1BFC9B96216AD112D25F827E11EB6E4B6E7486"
+    "https://upload.wikimedia.org/wikipedia/it/4/43/Bender.png",
+    //2
   ];
 
   @override
@@ -129,9 +114,12 @@ class _TravelAppState extends State<TravelApp> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              travelCard(urls[0], "Sfaccim", "Bormio", 5),
-                              travelCard(urls[1], "Sfaccim", "Bormio", 5),
-                              travelCard(urls[2], "Sfaccim", "Bormio", 5)
+                              travelCard(urls[0], "BOH", "Bormio", 5),
+                              travelCard(
+                                  "https://www.deabyday.tv/.imaging/default/article/guides/cuccioli/altri-animali/Tutto-sul-kiwi--l-animale-simbolo-della-Nuova-Zelanda/imageOriginal.jpg",
+                                  "Sfaccim",
+                                  "Bormio",
+                                  5),
                             ],
                           ),
                         ),
@@ -176,6 +164,100 @@ class _TravelAppState extends State<TravelApp> {
           ),
         ],
       ),
+    );
+  }
+}
+
+const users = const {
+  'dribbble@gmail.com': '12345',
+  'hunter@gmail.com': 'hunter',
+};
+
+class LoginScreen extends StatelessWidget {
+  Duration get loginTime => Duration(milliseconds: 1000);
+
+  Future<String?> _authUser(LoginData data) {
+    debugPrint('Name: ${data.name}, Password: ${data.password}');
+    return Future.delayed(loginTime).then((_) {
+      if (!users.containsKey(data.name)) {
+        return 'User not exists';
+      }
+      if (users[data.name] != data.password) {
+        return 'Password does not match';
+      }
+      return null;
+    });
+  }
+
+  Future<String?> _signupUser(SignupData data) {
+    debugPrint('Signup Name: ${data.name}, Password: ${data.password}');
+    return Future.delayed(loginTime).then((_) {
+      return null;
+    });
+  }
+
+  Future<String?> _recoverPassword(String name) {
+    debugPrint('Name: $name');
+    return Future.delayed(loginTime).then((_) {
+      if (!users.containsKey(name)) {
+        return 'User not exists';
+      }
+      return null;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FlutterLogin(
+      title: 'Trucco Parrucco Bormio',
+      onLogin: _authUser,
+      onSignup: _signupUser,
+      loginProviders: <LoginProvider>[
+        LoginProvider(
+          icon: FontAwesomeIcons.google,
+          label: 'Google',
+          callback: () async {
+            debugPrint('start google sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop google sign in');
+            return null;
+          },
+        ),
+        LoginProvider(
+          icon: FontAwesomeIcons.facebookF,
+          label: 'Facebook',
+          callback: () async {
+            debugPrint('start facebook sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop facebook sign in');
+            return null;
+          },
+        ),
+        LoginProvider(
+          icon: FontAwesomeIcons.linkedinIn,
+          callback: () async {
+            debugPrint('start linkdin sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop linkdin sign in');
+            return null;
+          },
+        ),
+        LoginProvider(
+          icon: FontAwesomeIcons.githubAlt,
+          callback: () async {
+            debugPrint('start github sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop github sign in');
+            return null;
+          },
+        ),
+      ],
+      onSubmitAnimationCompleted: () {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => TravelApp(),
+        ));
+      },
+      onRecoverPassword: _recoverPassword,
     );
   }
 }
