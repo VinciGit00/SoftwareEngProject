@@ -9,3 +9,5 @@ Settimana del 3 gennaio:
 - Fatta la documentazione per CMM e ISO9126
 - Fatta UI per quanto riguarda il cliente 
 - Fatti i casi di test per flutter
+- Fatto il refactoring del codice di flutter
+- Creato database per custodire le password

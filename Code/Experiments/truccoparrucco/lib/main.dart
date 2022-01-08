@@ -32,7 +32,7 @@ class _TravelAppState extends State<TravelApp> {
     return Scaffold(
       backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
-        //elevation: 0.0,
+        elevation: 4.0,
         backgroundColor: Color(0xFFF6F7FF),
         title: Row(
           children: [
@@ -225,6 +225,25 @@ class LoginScreen extends StatelessWidget {
         ));
       },
       onRecoverPassword: _recoverPassword,
+    );
+  }
+}
+
+class nextPage extends StatefulWidget {
+  const nextPage({Key? key}) : super(key: key);
+
+  @override
+  _nextPageState createState() => _nextPageState();
+}
+
+class _nextPageState extends State<nextPage> {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: AppBar(
+        title: Text("Next page"),
+      ),
+      body: Text("Sono la nuova pagina"),
     );
   }
 }
