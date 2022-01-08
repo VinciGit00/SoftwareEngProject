@@ -4,10 +4,13 @@ import 'package:truccoparrucco/pages/TravelApp.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'calendar_screen.dart';
+
 const users = const {
   'dribbble@gmail.com': '12345',
   'hunter@gmail.com': 'hunter',
   'VinciSuperUser@gmail.com': '0000',
+  'david@pm.me': '0000',
 };
 
 class LoginScreen extends StatelessWidget {
@@ -91,7 +94,8 @@ class LoginScreen extends StatelessWidget {
       ],
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => TravelApp(),
+          builder: (context) => CalendarScreen(),
+          //builder: (context) => TravelApp(),
         ));
       },
       onRecoverPassword: _recoverPassword,
