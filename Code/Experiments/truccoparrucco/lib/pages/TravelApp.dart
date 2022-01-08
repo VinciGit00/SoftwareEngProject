@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 
+import 'calendar_screen.dart';
+
 class TravelApp extends StatefulWidget {
   const TravelApp({Key key}) : super(key: key);
 
@@ -73,10 +75,17 @@ class _TravelAppState extends State<TravelApp> {
                             scrollDirection: Axis.horizontal,
                             children: [
                               travelCard(
-                                  urls[0],
-                                  "Cristina e Thomas parrucchieri",
-                                  "Bormio",
-                                  5),
+                                urls[0],
+                                "Cristina e Roberto parrucchieri",
+                                "Bormio",
+                                5,
+                                onTap: () {
+                                  Navigator.of(context)
+                                      .pushReplacement(MaterialPageRoute(
+                                    builder: (context) => TravelApp(),
+                                  ));
+                                },
+                              ),
                               travelCard(urls[0], "Total Look N.&N. Bormio",
                                   "Bormio", 4),
                               travelCard(urls[0], "Total Look N.&N. Bormio",

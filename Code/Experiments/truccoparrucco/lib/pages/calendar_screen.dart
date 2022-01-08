@@ -16,9 +16,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   static const _BACKWARD_ICON =
       'assets/icons/signin_screen/bp_backward_icon.svg';
-  static const _ARROW_ICON = 'assets/icons/detail_screen/bp_arrow_icon.svg';
-  static const _BED_ICON = 'assets/icons/home_screen/bp_hotel_icon.svg';
-  static const _PLUS_ICON = 'assets/icons/detail_screen/bp_plus_icon.svg';
+  static const _ARROW_ICON = 'assets/icons/bp_arrow_icon.svg';
+  static const _BED_ICON = 'assets/icons/bp_hotel_icon.svg';
+  static const _PLUS_ICON = 'assets/icons/bp_plus_icon.svg';
 
   @override
   void initState() {
