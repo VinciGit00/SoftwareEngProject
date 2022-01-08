@@ -32,7 +32,7 @@ class _TravelAppState extends State<TravelApp> {
     return Scaffold(
       backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
-        elevation: 0.0,
+        //elevation: 0.0,
         backgroundColor: Color(0xFFF6F7FF),
         title: Row(
           children: [
@@ -116,7 +116,7 @@ class _TravelAppState extends State<TravelApp> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Color(0xFFB7B7B7),
-        selectedItemColor: Color(0xFFFE8C68),
+        selectedItemColor: Colors.blue.shade300,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -140,7 +140,6 @@ const users = const {
 
 class LoginScreen extends StatelessWidget {
   Duration get loginTime => Duration(milliseconds: 1000);
-
   Future<String?> _authUser(LoginData data) {
     debugPrint('Name: ${data.name}, Password: ${data.password}');
     return Future.delayed(loginTime).then((_) {
@@ -174,13 +173,16 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
+      //backgroundColor: Color((0xFFF6F7FF);
       title: 'Trucco Parrucco Bormio',
       onLogin: _authUser,
       onSignup: _signupUser,
+      //style: TextStyle(color: Color(0xFFF6F7FF)
+
       loginProviders: <LoginProvider>[
         LoginProvider(
           icon: FontAwesomeIcons.google,
-          label: 'Google',
+          //label: 'Google',
           callback: () async {
             debugPrint('start google sign in');
             await Future.delayed(loginTime);
@@ -190,7 +192,7 @@ class LoginScreen extends StatelessWidget {
         ),
         LoginProvider(
           icon: FontAwesomeIcons.facebookF,
-          label: 'Facebook',
+          //label: 'Facebook',
           callback: () async {
             debugPrint('start facebook sign in');
             await Future.delayed(loginTime);

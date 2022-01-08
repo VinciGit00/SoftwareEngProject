@@ -33,7 +33,7 @@ Widget travelCard(String img, String HotelName, String location, int rating) {
                   for (var i = 0; i < rating; i++)
                     Icon(
                       Icons.star,
-                      color: Color(0xFFFE8C68),
+                      color: Colors.blue.shade300,
                     ),
                 ],
               ),
@@ -45,7 +45,7 @@ Widget travelCard(String img, String HotelName, String location, int rating) {
                     Text(
                       HotelName,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.blue.shade300,
                         fontSize: 22.0,
                         fontWeight: FontWeight.w800,
                       ),
@@ -56,7 +56,7 @@ Widget travelCard(String img, String HotelName, String location, int rating) {
                     Text(
                       location,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.blue.shade300,
                         fontSize: 20.0,
                         fontWeight: FontWeight.w600,
                       ),
