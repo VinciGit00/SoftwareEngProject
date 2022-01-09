@@ -6,15 +6,26 @@ import 'package:truccoparrucco/main.dart';
 import 'package:flutter/material.dart';
 
 class TravelCard extends StatefulWidget {
-  const TravelCard({Key? key}) : super(key: key);
+  const TravelCard(
+      {Key? key,
+      required this.img,
+      required this.HotelName,
+      required this.location,
+      required this.rating})
+      : super(key: key);
+
+  final String img;
+  final String HotelName;
+  final String location;
+  final int rating;
 
   @override
   _TravelCardState createState() => _TravelCardState();
 }
 
-class _TravelCardState extends State<TravelApp> {
-  @ovveride
-  Widget build(String img, String HotelName, String location, int rating) {
+class _TravelCardState extends State<TravelCard> {
+  @override
+  Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.only(
         right: 22.0,
@@ -25,14 +36,13 @@ class _TravelCardState extends State<TravelApp> {
       shadowColor: Colors.blueGrey,
       child: InkWell(
         onTap: () {
-          // Navigator.push(
-          // context, MaterialPageRoute<void>(builder: (context) => nextPage())
-          // );
+          Navigator.push(context,
+              MaterialPageRoute<void>(builder: (context) => nextPage()));
         },
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-            image: AssetImage("$img"),
+            image: AssetImage(widget.img),
             fit: BoxFit.cover,
             scale: 2.0,
           )),
@@ -45,7 +55,7 @@ class _TravelCardState extends State<TravelApp> {
               children: [
                 Row(
                   children: [
-                    for (var i = 0; i < rating; i++)
+                    for (var i = 0; i < widget.rating; i++)
                       Icon(
                         Icons.star,
                         color: Colors.blue.shade300,
@@ -58,7 +68,7 @@ class _TravelCardState extends State<TravelApp> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        HotelName,
+                        widget.HotelName,
                         style: TextStyle(
                           color: Colors.blue.shade300,
                           fontSize: 22.0,
@@ -69,7 +79,7 @@ class _TravelCardState extends State<TravelApp> {
                         height: 3.0,
                       ),
                       Text(
-                        location,
+                        widget.location,
                         style: TextStyle(
                           color: Colors.blue.shade300,
                           fontSize: 20.0,

@@ -84,14 +84,21 @@ class _TravelAppState extends State<TravelApp> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              travelCard(
-                                  img[0],
-                                  "Cristina e Thomas parrucchieri",
-                                  "Bormio",
-                                  5),
-                              travelCard(
-                                  img[1], "Total Look N.&N", "Bormio", 4),
-                              travelCard(img[2], "Da Vincis", "Bormio", 4),
+                              TravelCard(
+                                  img: img[0],
+                                  HotelName: "Cristina e Thomas parrucchieri",
+                                  location: "Bormio",
+                                  rating: 5),
+                              TravelCard(
+                                  img: img[1],
+                                  HotelName: "Total Look N.&N",
+                                  location: "Bormio",
+                                  rating: 4),
+                              TravelCard(
+                                  img: img[2],
+                                  HotelName: "Da Vincis",
+                                  location: "Bormio",
+                                  rating: 4),
                             ],
                           ),
                         ),
