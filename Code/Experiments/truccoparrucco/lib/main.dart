@@ -276,7 +276,7 @@ class _nextPageState extends State<nextPage> {
             decoration: InputDecoration(
           labelText: "Data", //babel text
           hintText: "Inserisci il giorno", //hint text
-          prefixIcon: Icon(Icons.calendar_month), //prefix iocn
+          prefixIcon: Icon(Icons.calendar_view_month), //prefix iocn
           hintStyle: TextStyle(
               fontSize: 18, fontWeight: FontWeight.bold), //hint text style
           labelStyle: TextStyle(
