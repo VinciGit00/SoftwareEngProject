@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'components/MenuItem.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LoginScreen(),
+    //home: LoginScreen(),
+    home: nextPage(),
   ));
 }
 
@@ -244,13 +246,100 @@ class nextPage extends StatefulWidget {
 }
 
 class _nextPageState extends State<nextPage> {
+  void onPressed() {
+    print("Pressed");
+  }
+
+  late String choice = "Scegli il tipo di taglio";
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text("Next page"),
+        title: Text("Seleziona la data"),
       ),
-      body: Text("Sono la nuova pagina"),
+      body: Column(children: [
+        DatePickerDialog(
+          initialDate: DateTime.now(),
+          firstDate: DateTime.now(),
+          lastDate: DateTime.parse("20250101"),
+        ),
+        Text(
+          "Inserisci il giorno ",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
+        TextField(
+            //controller: username,
+            decoration: InputDecoration(
+          labelText: "Data", //babel text
+          hintText: "Inserisci il giorno", //hint text
+          prefixIcon: Icon(Icons.calendar_month), //prefix iocn
+          hintStyle: TextStyle(
+              fontSize: 18, fontWeight: FontWeight.bold), //hint text style
+          labelStyle: TextStyle(
+              fontSize: 13, color: Colors.blue.shade300), //label style
+        )),
+        Text(
+          "Inserisci il tipo di taglio",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
+        PopupMenuButton<MenuItem>(
+          onSelected: (item) => setState(() {
+            choice = item.text;
+          }),
+          itemBuilder: (context) => [
+            ...TipoTaglio.itemFirst.map(buildItem).toList(),
+          ],
+        ),
+        Container(
+          margin: EdgeInsets.all(10),
+          child: Text(
+            choice,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+        ),
+        RaisedButton(
+          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: Text(
+            "My raised button",
+            style: TextStyle(color: Colors.white),
+          ),
+          color: Colors.blue.shade300,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30.0))),
+          elevation: 4.0,
+          onPressed: onPressed,
+          //child: Icon(Icons.send, color: Colors.white)
+        )
+      ]),
     );
   }
+
+  PopupMenuItem<MenuItem> buildItem(MenuItem item) => PopupMenuItem(
+      value: item,
+      child: Row(
+        children: [
+          Icon(item.icon, color: Colors.black, size: 20),
+          Text(item.text)
+        ],
+      ));
+}
+
+class TipoTaglio {
+  static const List<MenuItem> itemFirst = [semplice, composto];
+
+  static const semplice = MenuItem(text: "Semplice", icon: Icons.share);
+
+  static const composto = MenuItem(text: "Composto", icon: Icons.share);
 }
