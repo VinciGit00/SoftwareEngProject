@@ -3,12 +3,14 @@ import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/MenuItem.dart';
+import 'components/Registrazione.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     //home: LoginScreen(),
     home: nextPage(),
+    //home: Registrazione(),
   ));
 }
 
@@ -250,38 +252,33 @@ class _nextPageState extends State<nextPage> {
     print("Pressed");
   }
 
-  late String choice = "Scegli il tipo di taglio";
+  late String choice = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Seleziona la data"),
+        title: Text("Seleziona la data e il tipo di taglio"),
       ),
       body: Column(children: [
+        Container(
+          margin: EdgeInsets.all(10),
+          child: Text(
+            "Inserisci il giorno ",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+        ),
+        //prefixIcon: Icon(Icons.calendar_month),
+
         DatePickerDialog(
           initialDate: DateTime.now(),
           firstDate: DateTime.now(),
           lastDate: DateTime.parse("20250101"),
         ),
-        Text(
-          "Inserisci il giorno ",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20.0,
-            fontWeight: FontWeight.w300,
-          ),
-        ),
-        TextField(
-            //controller: username,
-            decoration: InputDecoration(
-          labelText: "Data", //babel text
-          hintText: "Inserisci il giorno", //hint text
-          prefixIcon: Icon(Icons.calendar_view_month), //prefix iocn
-          hintStyle: TextStyle(
-              fontSize: 18, fontWeight: FontWeight.bold), //hint text style
-          labelStyle: TextStyle(
-              fontSize: 13, color: Colors.blue.shade300), //label style
-        )),
+
         Text(
           "Inserisci il tipo di taglio",
           style: TextStyle(
