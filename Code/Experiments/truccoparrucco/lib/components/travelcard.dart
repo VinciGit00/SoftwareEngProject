@@ -1,7 +1,6 @@
 //Customized widget card
 
-import 'dart:html';
-import 'package:truccoparrucco/main.dart';
+import 'package:truccoparrucco/components/Nextpage.dart';
 
 import 'package:flutter/material.dart';
 
