@@ -1,4 +1,0 @@
-2022/01/11-20:53:01.221 ba03 Reusing MANIFEST /private/var/folders/m5/1xdj8pfj2cs3wjpc41g9qkj80000gn/T/flutter_tools.9yeSZB/flutter_tools_chrome_device.LHnxGd/Default/Service Worker/Database/MANIFEST-000001
-2022/01/11-20:53:01.221 ba03 Recovering log #3
-2022/01/11-20:53:01.221 ba03 (ignoring error) /private/var/folders/m5/1xdj8pfj2cs3wjpc41g9qkj80000gn/T/flutter_tools.9yeSZB/flutter_tools_chrome_device.LHnxGd/Default/Service Worker/Database/000003.log: dropping 12007 bytes; Corruption: checksum mismatch
-2022/01/11-20:53:01.221 ba03 Reusing old log /private/var/folders/m5/1xdj8pfj2cs3wjpc41g9qkj80000gn/T/flutter_tools.9yeSZB/flutter_tools_chrome_device.LHnxGd/Default/Service Worker/Database/000003.log 
