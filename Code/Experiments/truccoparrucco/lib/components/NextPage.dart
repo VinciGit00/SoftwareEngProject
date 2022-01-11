@@ -6,6 +6,10 @@ class nextPage extends StatefulWidget {
 
   @override
   _nextPageState createState() => _nextPageState();
+
+  String onPressed2() {
+    return "Pressed";
+  }
 }
 
 class _nextPageState extends State<nextPage> {
