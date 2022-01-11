@@ -7,6 +7,7 @@ const users = const {
   'dribbble@gmail.com': '12345',
   'hunter@gmail.com': 'hunter',
   'VinciSuperUser@gmail.com': '0000',
+  'd.g@gmail.com': '12345',
 };
 
 class LoginScreen extends StatelessWidget {
