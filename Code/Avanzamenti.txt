@@ -1,1 +1,18 @@
-Settimana del 13 dicembre = imparato come utilizzare Flutter
+Settimana del 13 dicembre => imparato come utilizzare Flutter
+Settimana del 3 gennaio:
+- Creato il database
+- Creato le classi in dart
+- Finiti i diagrammi in UML
+- Design pattern delle classi in dart
+- Creati le classi in dart dell'applicazione
+- Fatto il testing delle classi
+- Fatta la documentazione per CMM e ISO9126
+- Fatta UI per quanto riguarda il cliente 
+- Fatti i casi di test per flutter
+- Fatto il refactoring del codice di flutter
+- Creato database per custodire le password
+
+Settimana dopo:
+-Fatti altri casi di test
+-Aggiunto file con tutte le immagini della documentazione
+-Aggiunte altre schermate al programma
