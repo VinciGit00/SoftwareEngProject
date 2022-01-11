@@ -1,0 +1,4 @@
+#Fri Jan 07 18:01:35 CET 2022
+base.0=/Users/marcovinciguerra/Github/SoftwareEngProject/Code/Experiments/truccoparrucco/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
