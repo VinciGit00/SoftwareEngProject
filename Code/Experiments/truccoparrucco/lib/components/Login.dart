@@ -27,6 +27,7 @@ class LoginScreen extends StatelessWidget {
 
   Future<String?> _signupUser(SignupData data) {
     debugPrint('Signup Name: ${data.name}, Password: ${data.password}');
+
     return Future.delayed(loginTime).then((_) {
       return null;
     });

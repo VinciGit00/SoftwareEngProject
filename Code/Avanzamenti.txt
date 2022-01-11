@@ -11,3 +11,8 @@ Settimana del 3 gennaio:
 - Fatti i casi di test per flutter
 - Fatto il refactoring del codice di flutter
 - Creato database per custodire le password
+
+Settimana dopo:
+-Fatti altri casi di test
+-Aggiunto file con tutte le immagini della documentazione
+-Aggiunte altre schermate al programma

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
+import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
 
 class TravelApp extends StatefulWidget {
   const TravelApp({Key? key}) : super(key: key);
@@ -121,7 +122,15 @@ class _TravelAppState extends State<TravelApp> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
+            icon: IconButton(
+              icon: Icon(Icons.bookmark),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                        builder: (context) => PrenotazioneCliente()));
+              },
+            ),
             label: "Prenotazioni",
           ),
         ],
