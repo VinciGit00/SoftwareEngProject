@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:integration_test/integration_test.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/NextPage.dart';
 import 'package:truccoparrucco/components/MenuItem.dart';
