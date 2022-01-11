@@ -13,7 +13,7 @@ class DatabaseHelper {
 
   Future<Database> _initDatabase() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    String path = join(documentsDirectory.path, 'groceries.db');
+    String path = join(documentsDirectory.path, 'accounts.db');
     return await openDatabase(
       path,
       version: 1,
@@ -23,35 +23,35 @@ class DatabaseHelper {
 
   Future _onCreate(Database db, int version) async {
     await db.execute('''
-      CREATE TABLE groceries(
-          id INTEGER PRIMARY KEY,
-          name TEXT
-      )
+      CREATE TABLE AccountPW (
+      Mail text NOT NULL,
+      Password text NOT NULL
+      ) 
       ''');
   }
 
-  Future<List<Cliente>> getGroceries() async {
+  Future<List<Cliente>> getAccounts() async {
     Database db = await instance.database;
-    var groceries = await db.query('groceries', orderBy: 'name');
-    List<Cliente> clienteList = groceries.isNotEmpty
-        ? groceries.map((c) => Cliente.fromMap(c)).toList()
+    var accounts = await db.query('accounts', orderBy: 'email');
+    List<Cliente> clienteList = accounts.isNotEmpty
+        ? accounts.map((c) => Cliente.fromMap(c)).toList()
         : [];
     return clienteList;
   }
 
   Future<int> add(Cliente cliente) async {
     Database db = await instance.database;
-    return await db.insert('groceries', cliente.toMap());
+    return await db.insert('accounts', cliente.toMap());
   }
 
   Future<int> remove(int id) async {
     Database db = await instance.database;
-    return await db.delete('groceries', where: 'id = ?', whereArgs: [id]);
+    return await db.delete('accounts', where: 'id = ?', whereArgs: [id]);
   }
 
   Future<int> update(Cliente cliente) async {
     Database db = await instance.database;
-    return await db.update('groceries', cliente.toMap(),
+    return await db.update('accounts', cliente.toMap(),
         where: "id = ?", whereArgs: [cliente.email]);
   }
 }
