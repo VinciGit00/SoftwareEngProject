@@ -93,11 +93,6 @@ class _TravelCardState extends State<TravelCard> {
           ),
         ),
       ),
-      //onPressed:() {
-      //Navigator.push(
-      //  context, MaterialPageRoute<void>(builder: (context) => nextPage())
-      // );
-      //};
     );
   }
 }
