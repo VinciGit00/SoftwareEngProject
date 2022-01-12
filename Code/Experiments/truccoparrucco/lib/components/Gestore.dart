@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:truccoparrucco/components/Profilo.dart';
 
 class PagGestore extends StatefulWidget {
   PagGestore({Key? key}) : super(key: key);
@@ -51,15 +52,18 @@ class _PagGestoreState extends State<PagGestore> {
         selectedItemColor: Colors.blue,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
+            icon: Icon(Icons.bookmark),
+            label: "Prenotazioni",
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-              icon: Icon(Icons.bookmark),
-              onPressed: () {},
+              icon: Icon(IconData(0xf01f3, fontFamily: 'MaterialIcons')),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute<void>(builder: (context) => Profilo()));
+              },
             ),
-            label: "Prenotazioni",
+            label: "Profilo",
           ),
         ],
       ),

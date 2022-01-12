@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Buffer.dart';
 import 'package:truccoparrucco/components/MenuItem.dart';
 
 class nextPage extends StatefulWidget {
@@ -81,7 +82,10 @@ class _nextPageState extends State<nextPage> {
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0))),
           elevation: 4.0,
-          onPressed: onPressed,
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute<void>(builder: (context) => Buffer()));
+          },
           //child: Icon(Icons.send, color: Colors.white)
         )
       ]),
