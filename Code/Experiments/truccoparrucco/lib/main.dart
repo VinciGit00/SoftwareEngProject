@@ -5,17 +5,20 @@ import 'components/TravelApp.dart';
 import 'components/PrenotazioniCliente.dart';
 import 'components/Chosen.dart';
 import 'components/Gestore.dart';
+import 'components/NextPage.dart';
+import 'components/Buffer.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    //home: PagGestore(),
+    //home: LoginScreen(),
     //home: Chosen(),
-    //home: PrenotazioneCliente(),
-    //home: TravelApp(),
-    //home: PagGestore(),
-    home: LoginScreen(),
     //home: nextPage(),
+    //home: PrenotazioneCliente(),
     //home: Registrazione(),
+    //home: Buffer(),
+    //home: PagGestore(),
+    //home: TravelApp(),
+    home: PagGestore(),
   ));
 }
