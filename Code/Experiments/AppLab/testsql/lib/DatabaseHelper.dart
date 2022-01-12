@@ -24,7 +24,7 @@ class DatabaseHelper {
   Future _onCreate(Database db, int version) async {
     await db.execute('''
       CREATE TABLE accounts (
-      Mail text NOT NULL,
+      email text NOT NULL,
       Password text NOT NULL
       ) 
       ''');
