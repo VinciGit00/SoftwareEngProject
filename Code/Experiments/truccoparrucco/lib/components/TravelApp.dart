@@ -26,17 +26,6 @@ class _TravelAppState extends State<TravelApp> {
       appBar: AppBar(
         elevation: 4.0,
         backgroundColor: Color(0xFFF6F7FF),
-        title: Row(
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.menu,
-                color: Colors.black,
-              ),
-            )
-          ],
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 24.0),
@@ -115,7 +104,7 @@ class _TravelAppState extends State<TravelApp> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Color(0xFFB7B7B7),
-        selectedItemColor: Colors.blue.shade300,
+        selectedItemColor: Colors.blue,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

@@ -74,7 +74,7 @@ class _nextPageState extends State<nextPage> {
         RaisedButton(
           padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
           child: Text(
-            "My raised button",
+            "Esegui richiesta",
             style: TextStyle(color: Colors.white),
           ),
           color: Colors.blue.shade300,

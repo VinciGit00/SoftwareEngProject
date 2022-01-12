@@ -46,8 +46,8 @@ class _RegistrazioneState extends State<Registrazione> {
                   IconData(0xf55f, fontFamily: 'MaterialIcons')), //prefix iocn
               hintStyle: TextStyle(
                   fontSize: 18, fontWeight: FontWeight.bold), //hint text style
-              labelStyle: TextStyle(
-                  fontSize: 13, color: Colors.blue.shade300), //label style
+              labelStyle:
+                  TextStyle(fontSize: 13, color: Colors.blue), //label style
             )),
             Text(
               "Inserisci la password candidata",
@@ -67,8 +67,8 @@ class _RegistrazioneState extends State<Registrazione> {
               ), //prefix iocn
               hintStyle: TextStyle(
                   fontSize: 18, fontWeight: FontWeight.bold), //hint text style
-              labelStyle: TextStyle(
-                  fontSize: 13, color: Colors.blue.shade300), //label style
+              labelStyle:
+                  TextStyle(fontSize: 13, color: Colors.blue), //label style
             )),
             Text(
               "Ripeti  la password",
@@ -87,8 +87,8 @@ class _RegistrazioneState extends State<Registrazione> {
                   IconData(0xe47a, fontFamily: 'MaterialIcons')), //prefix iocn
               hintStyle: TextStyle(
                   fontSize: 18, fontWeight: FontWeight.bold), //hint text style
-              labelStyle: TextStyle(
-                  fontSize: 13, color: Colors.blue.shade300), //label style
+              labelStyle:
+                  TextStyle(fontSize: 13, color: Colors.blue), //label style
             )),
             Text(
               "Inserisci il tipo di user che vuoi essere",
