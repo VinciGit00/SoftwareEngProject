@@ -28,7 +28,7 @@ class _nextPageState extends State<nextPage> {
         Container(
           margin: EdgeInsets.all(10),
           child: Text(
-            "Inserisci il giorno ",
+            "Seleziona il giorno ",
             style: TextStyle(
               color: Colors.black,
               fontSize: 20.0,
@@ -77,7 +77,7 @@ class _nextPageState extends State<nextPage> {
             "Esegui richiesta",
             style: TextStyle(color: Colors.white),
           ),
-          color: Colors.blue.shade300,
+          color: Colors.blue,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0))),
           elevation: 4.0,

@@ -9,12 +9,12 @@ import 'components/Gestore.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: PagGestore(),
+    //home: PagGestore(),
     //home: Chosen(),
     //home: PrenotazioneCliente(),
     //home: TravelApp(),
     //home: PagGestore(),
-    //home: LoginScreen(),
+    home: LoginScreen(),
     //home: nextPage(),
     //home: Registrazione(),
   ));
