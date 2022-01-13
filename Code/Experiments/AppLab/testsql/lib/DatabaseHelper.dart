@@ -24,7 +24,7 @@ class DatabaseHelper {
   Future _onCreate(Database db, int version) async {
     await db.execute('''
       CREATE TABLE accounts (
-      Mail text NOT NULL,
+      email text NOT NULL,
       Password text NOT NULL
       ) 
       ''');
@@ -44,7 +44,7 @@ class DatabaseHelper {
     return await db.insert('accounts', cliente.toMap());
   }
 
-  Future<int> remove(int id) async {
+  Future<int> remove(String id) async {
     Database db = await instance.database;
     return await db.delete('accounts', where: 'id = ?', whereArgs: [id]);
   }

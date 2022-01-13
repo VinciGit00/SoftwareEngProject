@@ -9,7 +9,7 @@ class Cliente {
   Sesso s;
   Prenotazione P;
   // Account fields
-  String email;
+  String? email;
   String password;
 
   //Constructor
