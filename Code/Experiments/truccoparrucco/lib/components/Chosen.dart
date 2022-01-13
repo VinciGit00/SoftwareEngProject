@@ -12,6 +12,7 @@ class Chosen extends StatefulWidget {
 
 class _ChosenState extends State<Chosen> {
   bool state = true;
+
   void onPressed() {
     print("Pressed");
   }
@@ -67,8 +68,24 @@ class _ChosenState extends State<Chosen> {
                 borderRadius: BorderRadius.all(Radius.circular(30.0))),
             elevation: 4.0,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute<void>(builder: (context) => PagGestore()));
+              if (state == true) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                        builder: (context) => PagGestore()));
+              } else {
+                final snackBar = SnackBar(
+                  content: const Text(
+                      'Non puoi accettare prenotazioni se non abiliti lo switch'),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {
+                      // Some code to undo the change.
+                    },
+                  ),
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              }
             },
           ),
           Container(
