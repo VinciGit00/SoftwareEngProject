@@ -44,7 +44,7 @@ class DatabaseHelper {
     return await db.insert('accounts', cliente.toMap());
   }
 
-  Future<int> remove(int id) async {
+  Future<int> remove(String id) async {
     Database db = await instance.database;
     return await db.delete('accounts', where: 'id = ?', whereArgs: [id]);
   }
