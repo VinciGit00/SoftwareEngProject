@@ -12,13 +12,13 @@ void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     //home: LoginScreen(),
-    //home: Chosen(),
+    home: Chosen(),
     //home: nextPage(),
     //home: PrenotazioneCliente(),
     //home: Registrazione(),
     //home: Buffer(),
     //home: PagGestore(),
     //home: TravelApp(),
-    home: PagGestore(),
+    //home: PagGestore(),
   ));
 }

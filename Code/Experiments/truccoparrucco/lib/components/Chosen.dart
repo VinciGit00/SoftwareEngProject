@@ -11,6 +11,7 @@ class Chosen extends StatefulWidget {
 }
 
 class _ChosenState extends State<Chosen> {
+  bool state = true;
   void onPressed() {
     print("Pressed");
   }
@@ -31,7 +32,7 @@ class _ChosenState extends State<Chosen> {
               "Scegli una modalità",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 20.0,
+                fontSize: 25.0,
                 fontWeight: FontWeight.w300,
               ),
             ),
@@ -69,7 +70,25 @@ class _ChosenState extends State<Chosen> {
               Navigator.push(context,
                   MaterialPageRoute<void>(builder: (context) => PagGestore()));
             },
-          )
+          ),
+          Container(
+              margin: EdgeInsets.all(9),
+              child: Text(
+                "Abilita la possibilità di tagliare capelli",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w300,
+                ),
+              )),
+          Switch(
+            value: state,
+            onChanged: (bool s) {
+              setState(() {
+                state = s;
+              });
+            },
+          ),
         ],
       ),
     );
