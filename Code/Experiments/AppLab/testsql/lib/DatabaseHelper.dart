@@ -2,7 +2,7 @@ import 'package:sqflite/sqflite.dart';
 import 'dart:io';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:testsql/Models/Cliente.dart';
+import 'package:testsql/Models/Cliente2.dart';
 
 class DatabaseHelper {
   DatabaseHelper._privateConstructor();

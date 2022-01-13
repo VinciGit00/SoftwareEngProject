@@ -1,94 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart';
-import 'package:testsql/Models/Cliente.dart';
-
+import 'package:testsql/Models/Cliente2.dart';
 import 'DatabaseHelper.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  runApp(SqliteApp());
-}
-
-class SqliteApp extends StatefulWidget {
-  const SqliteApp({Key? key}) : super(key: key);
-
-  @override
-  _SqliteAppState createState() => _SqliteAppState();
-}
-
-class _SqliteAppState extends State<SqliteApp> {
-  String? email;
-  final textController = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: TextField(
-            controller: textController,
-          ),
-        ),
-        body: Center(
-          child: FutureBuilder<List<Cliente>>(
-              future: DatabaseHelper.instance.getAccounts(),
-              builder: (BuildContext context,
-                  AsyncSnapshot<List<Cliente>> snapshot) {
-                if (!snapshot.hasData) {
-                  return Center(child: Text('Loading...'));
-                }
-                return snapshot.data!.isEmpty
-                    ? Center(child: Text('No Accounts in List.'))
-                    : ListView(
-                        children: snapshot.data!.map((Cliente) {
-                          return Center(
-                            child: ListTile(
-                              title: Text(Cliente.email),
-                              onTap: () {
-                                setState(() {
-                                  textController.text = Cliente.email;
-                                  email = Cliente.email;
-                                });
-                              },
-                              onLongPress: () {
-                                setState(() {
-                                  DatabaseHelper.instance.remove(Cliente
-                                      .email!); // TODO fix client negation
-                                });
-                              },
-                            ),
-                          );
-                        }).toList(),
-                      );
-              }),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.save),
-          onPressed: () async {
-            email != null
-                ? await DatabaseHelper.instance.update(
-                    Cliente.account(
-                        email: email, password: textController.text),
-                  )
-                : await DatabaseHelper.instance.add(
-                    Cliente.account(
-                        email: textController.text,
-                        password: '1'), // TODO implement password
-                  );
-            setState(() {
-              textController.clear();
-            });
-          },
-        ),
-      ),
-    );
-  }
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -113,20 +34,47 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  void _incrementCounter() async {
+    //setState(() { _counter++;});
+    await DatabaseHelper.instance.add(
+      Cliente(
+          email: 'textController.text',
+          password: '1'), // TODO implement password
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
       body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
         child: Column(
+          // Column is also a layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Invoke "debug painting" (press "p" in the console, choose the
+          // "Toggle Debug Paint" action from the Flutter Inspector in Android
+          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+          // to see the wireframe for each widget.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
@@ -143,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
