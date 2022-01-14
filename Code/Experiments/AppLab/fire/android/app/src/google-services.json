@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "861308972717",
+    "project_id": "firsttry-23d69",
+    "storage_bucket": "firsttry-23d69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861308972717:android:f263f468c94990d0ec6024",
+        "android_client_info": {
+          "package_name": "com.truccoparrucco.fire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861308972717-41vekr8h1ipn6gujk9u88a859jn6dliv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHrWfT5w9BEAWGXluICn9M811ILyWo5YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861308972717-41vekr8h1ipn6gujk9u88a859jn6dliv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
