@@ -18,6 +18,8 @@ class _tempState extends State<temp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
       ),
       body: Column(

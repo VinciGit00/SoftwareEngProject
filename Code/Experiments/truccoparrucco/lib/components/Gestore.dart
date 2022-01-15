@@ -36,9 +36,9 @@ class _PagGestoreState extends State<PagGestore> {
             Text(
               "Prenotazioni effettuate",
               style: TextStyle(
-                color: Colors.blue,
+                color: Colors.black,
                 fontSize: 20.0,
-                fontWeight: FontWeight.w300,
+                fontWeight: FontWeight.w600,
               ),
             ),
             SizedBox(

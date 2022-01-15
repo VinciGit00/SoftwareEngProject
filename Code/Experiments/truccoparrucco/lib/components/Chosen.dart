@@ -21,6 +21,8 @@ class _ChosenState extends State<Chosen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
       ),
       body: Column(
@@ -36,7 +38,7 @@ class _ChosenState extends State<Chosen> {
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 25.0,
-                fontWeight: FontWeight.w300,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),
