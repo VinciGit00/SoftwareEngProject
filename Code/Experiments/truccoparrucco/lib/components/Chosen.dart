@@ -20,7 +20,9 @@ class _ChosenState extends State<Chosen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: Container(),
+      ),
       body: Column(
         //mainAxisAlignment: MainAxisAlignment.center,
 

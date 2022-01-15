@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Chosen.dart';
 import 'Wrong.dart';
+import 'Temp.dart';
 
 class Buffer extends StatefulWidget {
   Buffer({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class _BufferState extends State<Buffer> {
               if (snapshot.hasError) {
                 return SomethingWentWrong();
               }
-              return Chosen();
+              return temp();
             } else {
               return Container(
                   alignment: Alignment.center,
