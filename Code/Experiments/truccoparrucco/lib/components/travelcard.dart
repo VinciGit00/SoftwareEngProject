@@ -32,7 +32,7 @@ class _TravelCardState extends State<TravelCard> {
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
       elevation: 0.0,
-      shadowColor: Colors.blueGrey,
+      shadowColor: Colors.black,
       child: InkWell(
         onTap: () {
           Navigator.push(context,
@@ -57,7 +57,7 @@ class _TravelCardState extends State<TravelCard> {
                     for (var i = 0; i < widget.rating; i++)
                       Icon(
                         Icons.star,
-                        color: Colors.blue,
+                        color: Colors.black,
                       ),
                   ],
                 ),
@@ -69,7 +69,7 @@ class _TravelCardState extends State<TravelCard> {
                       Text(
                         widget.HotelName,
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Colors.black,
                           fontSize: 22.0,
                           fontWeight: FontWeight.w800,
                         ),
@@ -80,7 +80,7 @@ class _TravelCardState extends State<TravelCard> {
                       Text(
                         widget.location,
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Colors.black,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
                         ),
