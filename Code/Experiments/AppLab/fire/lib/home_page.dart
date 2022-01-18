@@ -5,13 +5,13 @@ import 'package:provider/provider.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //var email = await context.read<AuthenticationService>().userEmail();
+    var email = context.read<AuthenticationService>().userEmail();
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("HOME"),
+            Text("Welcome: " + email!), // TODO turn into null safe version!
             RaisedButton(
               onPressed: () {
                 context.read<AuthenticationService>().signOut();
