@@ -6,6 +6,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'components/Login.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -45,7 +47,9 @@ class AuthenticationWrapper extends StatelessWidget {
 
     if (firebaseUser != null) {
       return HomePage();
+      //return Chosen();
     }
-    return SignInPage();
+    //return SignInPage();
+    return LoginScreen();
   }
 }
