@@ -7,6 +7,7 @@ import 'components/Chosen.dart';
 import 'components/Gestore.dart';
 import 'components/NextPage.dart';
 import 'components/Buffer.dart';
+import 'components/Profilo.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,5 +21,6 @@ void main() {
     //home: PagGestore(),
     //home: TravelApp(),
     //home: PagGestore(),
+    //home: Profilo(),
   ));
 }

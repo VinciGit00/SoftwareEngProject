@@ -26,8 +26,6 @@ class _ChosenState extends State<Chosen> {
         leading: Container(),
       ),
       body: Column(
-        //mainAxisAlignment: MainAxisAlignment.center,
-
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
