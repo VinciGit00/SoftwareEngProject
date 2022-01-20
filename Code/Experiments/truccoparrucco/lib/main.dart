@@ -11,6 +11,7 @@ import 'components/NextPage.dart';
 import 'components/Buffer.dart';
 import 'components/Profilo.dart';
 import 'components/travelcard.dart';
+<<<<<<< Updated upstream
 >>>>>>> Sprint2
 
 void main() {
@@ -43,4 +44,26 @@ void main() {
         rating: 5), */
 >>>>>>> Sprint2
   ));
+=======
+import 'components/Temp.dart';
+import 'components/Wrong.dart';
+
+void main() {
+  runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      //home: LoginScreen(),
+      //home: Chosen(),
+      //home: nextPage(),
+      //home: PrenotazioneCliente(),
+      //home: Buffer(),
+      //home: PagGestore(),
+      //home: TravelApp(),
+      home: TravelCard(
+          img: "a.jpeg", HotelName: "Nome", location: "Bormio", rating: 5)
+      //home: PagGestore(),
+      //home: Profilo(),
+      //home: temp(),
+      //home: SomethingWentWrong()
+      ));
+>>>>>>> Stashed changes
 }

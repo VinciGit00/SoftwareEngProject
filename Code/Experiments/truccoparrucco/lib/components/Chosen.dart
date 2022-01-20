@@ -61,6 +61,7 @@ class _ChosenState extends State<Chosen> {
           Container(
             margin: EdgeInsets.all(15),
             child: RaisedButton(
+                key: Key("Bottone1"),
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
                 child: Text(
                   "Cliente",
@@ -78,6 +79,7 @@ class _ChosenState extends State<Chosen> {
                 }),
           ),
           RaisedButton(
+            key: Key("Bottone2"),
             padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
             child: Text(
               "Parrucchiere",

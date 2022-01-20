@@ -29,7 +29,7 @@ class _ProfiloState extends State<Profilo> {
           alignment: Alignment.center,
           padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
           child: Text(
-            "Profilo del parrucchiere",
+            "Profilo parrucchiere",
             style: TextStyle(
               color: Colors.black,
               fontSize: 25.0,
