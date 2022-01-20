@@ -1,7 +1,8 @@
 import 'Cliente.dart';
-import 'Negozio.dart';
+import 'Parrucchiere.dart';
 import 'Prenotazione.dart';
 import 'Sesso.dart';
+import 'Visibility.dart';
 
 void main() {
   //Clienti
@@ -19,10 +20,10 @@ void main() {
 
   print("---------------------------");
   // Negozi
-  Negozio N1 =
-      new Negozio.constructor1("Marco", 01001010101, "Vittorio Veneto");
-  Negozio N2 =
-      new Negozio.constructor2("Marco", 01001010101, "Vittorio Veneto", P);
+  Parrucchiere N1 = new Parrucchiere.constructor1(
+      "Marco", 01001010101, "Vittorio Veneto", Visibility.yes);
+  Parrucchiere N2 = new Parrucchiere.constructor2(
+      "Marco", 01001010101, "Vittorio Veneto", P, Visibility.yes);
 
   N2.LeggiInfoPrenotazione();
 }

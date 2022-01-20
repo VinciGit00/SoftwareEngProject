@@ -1,0 +1,1 @@
+enum Visibility { yes, no }

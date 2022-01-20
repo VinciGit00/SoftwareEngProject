@@ -16,3 +16,5 @@ Settimana dopo:
 -Fatti altri casi di test
 -Aggiunto file con tutte le immagini della documentazione
 -Aggiunte altre schermate al programma
+-Aggiunto uno switch per la possibilità di essere gestore 
+-Aggiunto il buffer dopo la prenotazione

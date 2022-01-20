@@ -12,11 +12,11 @@ class TravelApp extends StatefulWidget {
 class _TravelAppState extends State<TravelApp> {
   List<String> img = [
     //1
-    "a.jpg",
+    "a.jpeg",
     //2
-    "b.jpg",
+    "b.jpeg",
     //3
-    "c.jpg",
+    "c.jpeg",
   ];
 
   @override

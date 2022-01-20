@@ -1,8 +1,9 @@
 import 'package:test/test.dart';
 import 'Cliente.dart';
-import 'Negozio.dart';
+import 'Parrucchiere.dart';
 import 'Prenotazione.dart';
 import 'Sesso.dart';
+import 'Visibility.dart';
 
 void main() {
   // Define the test
@@ -24,10 +25,10 @@ void main() {
     Cliente C2 =
         new Cliente.constructor2("Marco", "Vinciguerra", 11, Sesso.maschio, P);
 
-    Negozio N1 =
-        new Negozio.constructor1("Marco", 01001010101, "Vittorio Veneto");
-    Negozio N2 =
-        new Negozio.constructor2("Marco", 01001010101, "Vittorio Veneto", P);
+    Parrucchiere N1 = new Parrucchiere.constructor1(
+        "Marco", 01001010101, "Vittorio Veneto", Visibility.yes);
+    Parrucchiere N2 = new Parrucchiere.constructor2(
+        "Marco", 01001010101, "Vittorio Veneto", P, Visibility.yes);
 
     // Asset
     expect(C1.cognome, expected);
@@ -38,5 +39,9 @@ void main() {
     expect(N1.nome, nome);
 
     expect(N2.PartitaIVA, IVA);
+
+    // Provo la funzione per cambiare la visibilità
+    N2.ChangeVisibility();
+    expect(N2.readV(), Visibility.no);
   });
 }

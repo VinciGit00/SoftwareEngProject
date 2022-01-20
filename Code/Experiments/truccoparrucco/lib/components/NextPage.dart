@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Buffer.dart';
 import 'package:truccoparrucco/components/MenuItem.dart';
 
 class nextPage extends StatefulWidget {
@@ -22,17 +23,35 @@ class _nextPageState extends State<nextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Seleziona la data e il tipo di taglio"),
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.blue,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          "Seleziona la data e il tipo di taglio",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
       ),
       body: Column(children: [
         Container(
           margin: EdgeInsets.all(10),
           child: Text(
-            "Inserisci il giorno ",
+            "Seleziona il giorno ",
             style: TextStyle(
               color: Colors.black,
               fontSize: 20.0,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w600,
             ),
           ),
         ),
@@ -49,7 +68,7 @@ class _nextPageState extends State<nextPage> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 20.0,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w400,
           ),
         ),
         PopupMenuButton<MenuItem>(
@@ -77,11 +96,14 @@ class _nextPageState extends State<nextPage> {
             "Esegui richiesta",
             style: TextStyle(color: Colors.white),
           ),
-          color: Colors.blue.shade300,
+          color: Colors.blue,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0))),
           elevation: 4.0,
-          onPressed: onPressed,
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute<void>(builder: (context) => Buffer()));
+          },
           //child: Icon(Icons.send, color: Colors.white)
         )
       ]),
