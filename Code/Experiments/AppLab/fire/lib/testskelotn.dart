@@ -10,18 +10,7 @@ void main() {
     var expectedResult = "Signed in";
     final expectedFuture = Future.value('errore');
     // Actual
-<<<<<<< Updated upstream
-    var auth = AuthenticationService(FirebaseAuth.instance);
-    // Asset
-    expect(
-        auth.signIn(
-          email: 'dd@t.com',
-          password: '123456',
-        ),
-        expectedFuture);
-=======
     //var auth = AuthenticationService(FirebaseAuth.instance);
     // Asset
->>>>>>> Stashed changes
   });
 }
