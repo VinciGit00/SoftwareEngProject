@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-=======
 import 'TravelApp.dart';
 import 'travelcard.dart';
 import 'Gestore.dart';
->>>>>>> Sprint2
 
 class Chosen extends StatefulWidget {
   Chosen({Key? key}) : super(key: key);
@@ -14,11 +11,8 @@ class Chosen extends StatefulWidget {
 }
 
 class _ChosenState extends State<Chosen> {
-<<<<<<< HEAD
-=======
   bool state = true;
 
->>>>>>> Sprint2
   void onPressed() {
     print("Pressed");
   }
@@ -26,18 +20,6 @@ class _ChosenState extends State<Chosen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-      appBar: AppBar(),
-      body: Column(
-          //mainAxisAlignment: MainAxisAlignment.center,
-
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              alignment: Alignment.center,
-              child: Text(
-                "Scegli un'azione",
-=======
       appBar: AppBar(
         elevation: 4.0,
         backgroundColor: Color(0xFFF6F7FF),
@@ -61,7 +43,6 @@ class _ChosenState extends State<Chosen> {
           Container(
             margin: EdgeInsets.all(15),
             child: RaisedButton(
-                key: Key("Bottone1"),
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
                 child: Text(
                   "Cliente",
@@ -79,7 +60,6 @@ class _ChosenState extends State<Chosen> {
                 }),
           ),
           RaisedButton(
-            key: Key("Bottone2"),
             padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
             child: Text(
               "Parrucchiere",
@@ -114,41 +94,11 @@ class _ChosenState extends State<Chosen> {
               margin: EdgeInsets.all(9),
               child: Text(
                 "Abilita la possibilità di tagliare capelli",
->>>>>>> Sprint2
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
                   fontWeight: FontWeight.w300,
                 ),
-<<<<<<< HEAD
-              ),
-            ),
-            RaisedButton(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-              child: Text(
-                "Cliente",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Colors.blue,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(30.0))),
-              elevation: 4.0,
-              onPressed: onPressed,
-            ),
-            RaisedButton(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-              child: Text(
-                "Parrucchiere",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Colors.blue,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(30.0))),
-              elevation: 4.0,
-              onPressed: onPressed,
-            )
-          ]),
-=======
               )),
           Switch(
             value: state,
@@ -160,7 +110,6 @@ class _ChosenState extends State<Chosen> {
           ),
         ],
       ),
->>>>>>> Sprint2
     );
   }
 }
