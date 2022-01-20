@@ -29,11 +29,9 @@ class HomePage extends StatelessWidget {
                 print('start');
                 //db.addData('test', 'test', 'test');
                 //print(db.database.child("name").parent!.key);
-                db.database.push().set({
-                  "name": "John",
-                  "age": 17,
-                  "address": {"line1": "100 Mountain View"}
-                });
+                //db.database.push().set({"name": "John","age": 17,"address": {"line1": "100 Mountain View"}});
+                // db.addBooking(_email, 'Parrucchiere', 'semplice', DateTime(20000, 1, 6));
+                db.addStylist('a');
                 print('done');
               },
               child: const Text("Add booking"),

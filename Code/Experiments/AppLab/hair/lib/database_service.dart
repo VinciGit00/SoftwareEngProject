@@ -1,33 +1,59 @@
 import 'package:firebase_database/firebase_database.dart';
 
+import 'Model/Entity/stylist.dart';
+
 class DatabaseService {
-  final database = FirebaseDatabase.instance.ref("users/123");
+  final database = FirebaseDatabase.instance;
   DatabaseService();
 
-  Future<void> addData(String name, String email, String password) async {
-    await database.push().set({
-      'name': name,
-      'email': email,
-      'password': password,
+  Future<void> addBooking(String idClient, String idStyilist, String type,
+      DateTime appointmentDate) async {
+    await database.ref('bookings').push().set({
+      'idClient': idClient,
+      'idStyilist': idStyilist,
+      'type': type,
+      'appointmentDate': appointmentDate.toString(),
+      'currentTime': DateTime.now().toString(),
     });
   }
 
-  Future<void> updateData(String name, String email, String password) async {
-    await database.update({
-      'name': name,
+  Future<void> addStylist(String email) async {
+    await database.ref('stylist').push().set({
       'email': email,
-      'password': password,
+      //'currentTime': DateTime.now().toString(),
     });
   }
 
-  Future<void> deleteData() async {
-    await database.remove();
+  Future<void> becomeStylist(String idStyilist) async {
+    await database.ref('stylist').push().set({
+      'idStyilist': idStyilist,
+      'currentTime': DateTime.now().toString(),
+    });
   }
 
   //read data from realtime database
+  Future<List<Stylist>?> readData() async {
+    DatabaseEvent event = await database.ref('stylist').once();
 
-  readData() async {
-    DatabaseEvent event = await database.once();
-    print(event.snapshot.value);
+    //print(event.snapshot.value);
+
+    List<Stylist> Stylists = [];
+
+    Map<dynamic, dynamic> values =
+        event.snapshot.value as Map<dynamic, dynamic>;
+    values.forEach((key, values) {
+      //Stylists?.add(Stylist.fromSnapshot(values));
+      Stylists.add(Stylist(id: key, email: values['email']));
+      print(key);
+      print(values['email']);
+    });
+
+    Stylists.forEach((element) {
+      print(element.email);
+    });
+
+    return Stylists;
   }
+
+  //method that returns if stylists
 }
