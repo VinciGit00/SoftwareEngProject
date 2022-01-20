@@ -13,8 +13,8 @@ import 'components/travelcard.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LoginScreen(),
-    //home: Chosen(),
+    //home: LoginScreen(),
+    home: Chosen(),
     //home: nextPage(),
     //home: PrenotazioneCliente(),
     //home: Registrazione(),

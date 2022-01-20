@@ -57,7 +57,7 @@ class _TravelCardState extends State<TravelCard> {
                     for (var i = 0; i < widget.rating; i++)
                       Icon(
                         Icons.star,
-                        color: Colors.black,
+                        color: Colors.blue,
                       ),
                   ],
                 ),
@@ -69,7 +69,7 @@ class _TravelCardState extends State<TravelCard> {
                       Text(
                         widget.HotelName,
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.blue,
                           fontSize: 22.0,
                           fontWeight: FontWeight.w800,
                         ),
@@ -80,7 +80,7 @@ class _TravelCardState extends State<TravelCard> {
                       Text(
                         widget.location,
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
                         ),
