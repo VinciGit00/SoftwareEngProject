@@ -1,7 +1,6 @@
 name: my_app
 description: My app
 version: 0.0.1
-author: Marco
 
 dependencies:
   test: ^1.6.0

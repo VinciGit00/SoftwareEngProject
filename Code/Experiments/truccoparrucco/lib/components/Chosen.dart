@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'TravelApp.dart';
 import 'travelcard.dart';
 import 'Gestore.dart';
+import 'Settings.dart';
 
 class Chosen extends StatefulWidget {
   Chosen({Key? key}) : super(key: key);
@@ -20,10 +21,23 @@ class _ChosenState extends State<Chosen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
         backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+              color: Colors.blue,
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute<void>(builder: (context) => Settings()));
+            },
+          )
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
