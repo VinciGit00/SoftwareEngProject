@@ -16,8 +16,10 @@ void main() {
     expect(Card.rating, 4);
   });
   test('Unit test sulla creazione del MenutItem', () {
-    final Menu = MenuItem(text: "ProvaTesto", icon: Icons.share);
+    final Menu =
+        MenuItem(text: "ProvaTesto", category: "Semplice", icon: Icons.share);
     expect(Menu.text, "ProvaTesto");
+    expect(Menu.category, "Semplice");
     expect(Menu.icon, Icons.share);
   });
 

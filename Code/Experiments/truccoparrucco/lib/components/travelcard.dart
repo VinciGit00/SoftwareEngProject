@@ -1,5 +1,3 @@
-//Customized widget card
-
 import 'package:truccoparrucco/components/Nextpage.dart';
 
 import 'package:flutter/material.dart';

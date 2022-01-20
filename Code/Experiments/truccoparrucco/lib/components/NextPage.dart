@@ -121,9 +121,30 @@ class _nextPageState extends State<nextPage> {
 }
 
 class TipoTaglio {
-  static const List<MenuItem> itemFirst = [semplice, composto];
+  static const List<MenuItem> itemFirst = [a, b, c, d, e];
 
-  static const semplice = MenuItem(text: "Semplice", icon: Icons.share);
+  static const a = MenuItem(
+      text: "Piega",
+      category: "Semplice",
+      icon: IconData(0xf535, fontFamily: 'MaterialIcons'));
 
-  static const composto = MenuItem(text: "Composto", icon: Icons.share);
+  static const b = MenuItem(
+      text: "Shampoo",
+      category: "Semplice",
+      icon: IconData(0xf535, fontFamily: 'MaterialIcons'));
+
+  static const c = MenuItem(
+      text: "Colore",
+      category: "Semplice",
+      icon: IconData(0xee49, fontFamily: 'MaterialIcons'));
+
+  static const d = MenuItem(
+      text: "Permamente",
+      category: "Semplice",
+      icon: IconData(0xee49, fontFamily: 'MaterialIcons'));
+
+  static const e = MenuItem(
+      text: "Shatsuch",
+      category: "Semplice",
+      icon: IconData(0xee49, fontFamily: 'MaterialIcons'));
 }

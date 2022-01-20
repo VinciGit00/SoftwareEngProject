@@ -1,5 +1,5 @@
 Settimana del 13 dicembre => imparato come utilizzare Flutter
-Settimana del 3 gennaio:
+Sprint1:
 - Creato il database
 - Creato le classi in dart
 - Finiti i diagrammi in UML
@@ -12,9 +12,13 @@ Settimana del 3 gennaio:
 - Fatto il refactoring del codice di flutter
 - Creato database per custodire le password
 
-Settimana dopo:
+Sprint2:
 -Fatti altri casi di test
 -Aggiunto file con tutte le immagini della documentazione
 -Aggiunte altre schermate al programma
 -Aggiunto uno switch per la possibilità di essere gestore 
 -Aggiunto il buffer dopo la prenotazione
+
+
+Sprint 3:
+-Aggiunti dei nuovi casi di test al progetto per quanto riguarda i widget test
