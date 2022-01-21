@@ -5,42 +5,20 @@ import 'components/TravelApp.dart';
 import 'components/PrenotazioniCliente.dart';
 import 'components/Chosen.dart';
 import 'components/Gestore.dart';
-<<<<<<< HEAD
-=======
-import 'components/NextPage.dart';
-import 'components/Buffer.dart';
-import 'components/Profilo.dart';
-import 'components/travelcard.dart';
->>>>>>> Sprint2
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-<<<<<<< HEAD
     home: PagGestore(),
     //home: Chosen(),
-=======
-    //home: LoginScreen(),
-    home: Chosen(),
-    //home: nextPage(),
->>>>>>> Sprint2
     //home: PrenotazioneCliente(),
     //home: Registrazione(),
     //home: Buffer(),
     //home: PagGestore(),
     //home: TravelApp(),
     //home: PagGestore(),
-<<<<<<< HEAD
     //home: LoginScreen(),
     //home: nextPage(),
     //home: Registrazione(),
-=======
-    //home: Profilo(),
-    /*home: TravelCard(
-        img: "a.png",
-        HotelName: "Cristina e Thomas parrucchieri",
-        location: "Bormio",
-        rating: 5), */
->>>>>>> Sprint2
   ));
 }
