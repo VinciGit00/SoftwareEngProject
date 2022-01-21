@@ -6,28 +6,28 @@ class DatabaseService {
   final database = FirebaseDatabase.instance;
   DatabaseService();
 
-  Future<void> addBooking(String idClient, String idStyilist, String type,
+  Future<void> addBooking(String idClient, String idStylist, String type,
       DateTime appointmentDate) async {
     await database.ref('bookings').push().set({
       'idClient': idClient,
-      'idStyilist': idStyilist,
+      'idStylist': idStylist,
       'type': type,
       'appointmentDate': appointmentDate.toString(),
-      'currentTime': DateTime.now().toString(),
+      'inputDate': DateTime.now().toString(),
     });
   }
 
   Future<void> addStylist(String email) async {
     await database.ref('stylist').push().set({
       'email': email,
-      //'currentTime': DateTime.now().toString(),
+      //'inputDate': DateTime.now().toString(),
     });
   }
 
-  Future<void> becomeStylist(String idStyilist) async {
+  Future<void> becomeStylist(String idStylist) async {
     await database.ref('stylist').push().set({
-      'idStyilist': idStyilist,
-      'currentTime': DateTime.now().toString(),
+      'idStylist': idStylist,
+      'inputDate': DateTime.now().toString(),
     });
   }
 

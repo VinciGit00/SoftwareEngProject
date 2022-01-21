@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                 //db.addData('test', 'test', 'test');
                 //print(db.database.child("name").parent!.key);
                 //db.database.push().set({"name": "John","age": 17,"address": {"line1": "100 Mountain View"}});
-                // db.addBooking(_email, 'Parrucchiere', 'semplice', DateTime(20000, 1, 6));
+                //db.addBooking(_email, 'Parrucchiere', 'semplice', DateTime(20000, 1, 6));
                 db.addStylist('a');
                 print('done');
               },
@@ -40,7 +40,13 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 db.readData();
               },
-              child: Text("read"),
+              child: Text("add stylists to entitites"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                db.becomeStylist(_email);
+              },
+              child: Text("become stylist"),
             ),
           ],
         ),
