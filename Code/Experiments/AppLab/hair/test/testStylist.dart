@@ -1,8 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-//import 'package:hair/components/Model/Entity/stylist.dart';
 import '../lib/Model/Entity/stylist.dart';
 
-void main(List<String> args) {
+void main() {
   test('Provo a vedere se la classe Stylist funziona', () {
     Stylist s = Stylist(id: "12345", email: "mvincig11@gmail.com");
 

@@ -7,6 +7,8 @@ class Client {
     this.email = email;
   }
 
+  Client.fromSnapshot2() {}
+
   //Ovverride del costruttore
 
   // Functions
