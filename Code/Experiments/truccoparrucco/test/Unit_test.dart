@@ -10,7 +10,7 @@ void main() {
     final Card = TravelCard(
         img: "a.jpg", HotelName: "Da Vincis", location: "Bormio", rating: 4);
 
-    expect(Card.img, "a.jpg");
+    expect(Card.img, "B.jpg");
     expect(Card.HotelName, "Da Vincis");
     expect(Card.location, "Bormio");
     expect(Card.rating, 4);
