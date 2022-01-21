@@ -16,8 +16,8 @@
 \maketitle
 \section{Introduzione}
 Questo tipo di documento si occupa di specificare e documentare come avviene la fase di testing
-del progetto. Questo documento rappresenta anche il test plan .Siccome stiamo facendo un tipo di
-sviluppo di software AGILE i test non vengonofatti alla fine ma vengono svolti in contemporanea allo
+del progetto. Questo documento rappresenta anche il test plan. Siccome stiamo facendo un tipo di
+sviluppo di software AGILE i test non vengono fatti alla fine ma vengono svolti in contemporanea allo
 sviluppo delle classi.
 \\Viene svolto un tipo di sviluppo di tipo TDD in cui si scrivono le classi dei test in 
 contemporanea (se non prima) delle classi che servono per il sito. Le fasi del testing sono le 
@@ -34,21 +34,21 @@ sono stati fatti prima i test pensando poi alle classi che sarebbero state imple
 I test per le classi in dart vengono scritti anche loro in linguaggio dart ed eseguiti tramite Junit.
 \\Per quanto riguarda il testing di flutter si utilizza la funzione testWidgets che si importa 
 dal pacchetto $flutter_test$ e permette di fare i test sulla web app.
+\\I test tenderanno ad essere il più possibile di tipo coverage in quanto si cercerà di coprire 
+il più possibile i casi di test.
 \\All'interno del progetto flutter vengono utilizzate 3 classi differenti che si occupano dello 
 sviluppo del testing, essi sono:
 \begin{itemize}
     \item $UnitTest.dart$: per fare unit testing
     \item $WidgetTest.dart$: per fare i test delle widget
-    \item $IntegrationTest.dart$: per fare il test per vedere
-        se tutto il progetto funziona correttamente.
 \end{itemize}
 
 \section{Running the tests}
-Una votla fatte le classi ed eseguiti i test si procede in modo iterativo a modificare il codice
+Una volta fatte le classi ed eseguiti i test si procede in modo iterativo a modificare il codice
 finchè i test non danno tutti risultati positivi
 
 \section{Completion of testing}
 I dati expected sono inventati e ad ogni iterazione si commentano i risultati per capire 
-se va tutto bene e c'è qualcosa che non  quadra.
+se va tutto bene e se c'è qualcosa che non quadra.
 
 \end{document}
