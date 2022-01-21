@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: pub get
-        working-directory: Code/Experiments/AppLab/hair
+        working-directory: Code/Experiments/truccoparrucco
 
       # Uncomment this step to verify the use of 'dart format' on each commit.
       # - name: Verify formatting
