@@ -1,8 +1,10 @@
 import 'package:hair/authentication_service.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:hair/components/StylistListWidget.dart';
 import 'package:provider/provider.dart';
 
+import 'Model/Entity/stylist2.dart';
 import 'database_service.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,31 +24,44 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 context.read<AuthenticationService>().signOut();
               },
-              child: Text("Sign out"),
+              child: const Text("Sign out"),
             ),
             RaisedButton(
               onPressed: () {
                 print('start');
-                //db.addData('test', 'test', 'test');
-                //print(db.database.child("name").parent!.key);
-                //db.database.push().set({"name": "John","age": 17,"address": {"line1": "100 Mountain View"}});
-                //db.addBooking(_email, 'Parrucchiere', 'semplice', DateTime(20000, 1, 6));
                 db.addStylist('a');
                 print('done');
               },
-              child: const Text("Add booking"),
+              child: const Text("Add Stylist"),
             ),
             RaisedButton(
               onPressed: () {
                 db.readData();
               },
-              child: Text("add stylists to entitites"),
+              child: const Text("add stylists to entitites"),
             ),
             ElevatedButton(
               onPressed: () {
                 db.becomeStylist(_email);
               },
-              child: Text("become stylist"),
+              child: const Text("become stylist"),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChangeNotifierProvider<HairStylists>(
+                      create: (_) => HairStylists(),
+                      child: StylistListWidget(),
+                    ),
+                  ),
+                );
+              },
+              child: const Text("stylist list"),
             ),
           ],
         ),
