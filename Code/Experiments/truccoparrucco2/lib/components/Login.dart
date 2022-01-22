@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:truccoparrucco/components/TravelApp.dart';
 import 'package:truccoparrucco/components/Chosen.dart';
+import 'TravelApp.dart';
 
 const users = const {
   'dribbble@gmail.com': '12345',
@@ -95,7 +96,7 @@ class LoginScreen extends StatelessWidget {
       ],
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => Chosen(),
+          builder: (context) => TravelApp(),
         ));
       },
       onRecoverPassword: _recoverPassword,

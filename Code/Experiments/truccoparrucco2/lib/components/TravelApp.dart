@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
+import 'Settings.dart';
 
 class TravelApp extends StatefulWidget {
   const TravelApp({Key? key}) : super(key: key);
@@ -18,23 +19,36 @@ class _TravelAppState extends State<TravelApp> {
     //3
     "c.jpeg",
   ];
-
+  bool state = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
-          elevation: 4.0,
-          backgroundColor: Color(0xFFF6F7FF),
-          leading: IconButton(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.blue,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: <Widget>[
+          IconButton(
             icon: Icon(
-              Icons.arrow_back_ios,
+              Icons.settings,
               color: Colors.blue,
             ),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute<void>(builder: (context) => Settings()));
             },
-          )),
+          )
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 24.0),
         child: Column(
@@ -51,7 +65,7 @@ class _TravelAppState extends State<TravelApp> {
               ),
             ),
             Text(
-              "Scegli il tuo negozio da cui fare il taglio",
+              "Scegli il parrucchiere dove tagliare i capelli",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20.0,
@@ -61,52 +75,14 @@ class _TravelAppState extends State<TravelApp> {
             SizedBox(
               height: 20.0,
             ),
-
-            DefaultTabController(
-                length: 3,
-                child: Expanded(
-                  child: Column(children: [
-                    Container(
-                      height: 300.0,
-                      child: TabBarView(children: [
-                        Container(
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              TravelCard(
-                                  img: img[0],
-                                  HotelName: "Cristina e Thomas parrucchieri",
-                                  location: "Bormio",
-                                  rating: 5),
-                              TravelCard(
-                                  img: img[1],
-                                  HotelName: "Total Look N.&N",
-                                  location: "Bormio",
-                                  rating: 4),
-                              TravelCard(
-                                  img: img[2],
-                                  HotelName: "Da Vincis",
-                                  location: "Bormio",
-                                  rating: 4),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [],
-                          ),
-                        ),
-                        Container(
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [],
-                          ),
-                        ),
-                      ]),
-                    )
-                  ]),
-                ))
+            Switch(
+              value: state,
+              onChanged: (bool s) {
+                setState(() {
+                  state = s;
+                });
+              },
+            ),
           ],
         ),
       ),
@@ -116,7 +92,7 @@ class _TravelAppState extends State<TravelApp> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home",
+            label: "Parrucchiere",
           ),
           BottomNavigationBarItem(
             icon: IconButton(
