@@ -6,9 +6,6 @@ dart:
 dart_task:
   - dartfmt
 
-install:
-  - git clone https://github.com/flutter/flutter.git -b stable
-
 os:
   - linux
 sudo: false
