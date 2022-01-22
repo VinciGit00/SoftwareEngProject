@@ -9,12 +9,14 @@ import 'components/NextPage.dart';
 import 'components/Buffer.dart';
 import 'components/Profilo.dart';
 import 'components/travelcard.dart';
+import 'components/Settings.dart';
+import 'components/Changesetting.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     //home: LoginScreen(),
-    home: Chosen(),
+    //home: Chosen(),
     //home: nextPage(),
     //home: PrenotazioneCliente(),
     //home: Registrazione(),
@@ -23,10 +25,7 @@ void main() {
     //home: TravelApp(),
     //home: PagGestore(),
     //home: Profilo(),
-    /*home: TravelCard(
-        img: "a.png",
-        HotelName: "Cristina e Thomas parrucchieri",
-        location: "Bormio",
-        rating: 5), */
+    //home: Settings(),
+    home: changeSetting(),
   ));
 }

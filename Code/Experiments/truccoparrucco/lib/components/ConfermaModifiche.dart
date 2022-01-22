@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
-import 'TravelApp.dart';
-import 'travelcard.dart';
-import 'Gestore.dart';
 import 'Chosen.dart';
 
-class temp extends StatefulWidget {
-  temp({Key? key}) : super(key: key);
+class confermaModifiche extends StatefulWidget {
+  confermaModifiche({Key? key}) : super(key: key);
 
   @override
-  _tempState createState() => _tempState();
+  _confermaModificheState createState() => _confermaModificheState();
 }
 
-class _tempState extends State<temp> {
-  bool state = true;
-
+class _confermaModificheState extends State<confermaModifiche> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +25,7 @@ class _tempState extends State<temp> {
             margin: EdgeInsets.only(top: 10),
             alignment: Alignment.center,
             child: Text(
-              "Modifiche avvenute con successo!",
+              "Prenotazione confermata!",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 25.0,
