@@ -15,7 +15,7 @@ class HairStylists extends ChangeNotifier {
   }
 
   void _ReadStylists() async {
-    event = await _db.child('stylist').once();
+    event = await _db.child('stylists').once();
 
     Map<dynamic, dynamic> values =
         event.snapshot.value as Map<dynamic, dynamic>;
@@ -33,7 +33,7 @@ class HairStylists extends ChangeNotifier {
   }
 
   void _StreamChanges() {
-    _subscription = _db.child('stylist').onValue.listen((event) {
+    _subscription = _db.child('stylists').onValue.listen((event) {
       Map<dynamic, dynamic> values =
           event.snapshot.value as Map<dynamic, dynamic>;
 
