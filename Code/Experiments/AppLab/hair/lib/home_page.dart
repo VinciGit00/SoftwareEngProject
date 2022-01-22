@@ -20,34 +20,38 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Welcome: " + _email!), // TODO turn into null safe version!
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 context.read<AuthenticationService>().signOut();
               },
               child: const Text("Sign out"),
             ),
-            RaisedButton(
+            Text("Stylists functionality"),
+            ElevatedButton(
               onPressed: () {
                 print('start');
-                db.addStylist('a');
+                db.addStylist('email@test.com');
                 print('done');
               },
               child: const Text("Add Stylist"),
             ),
-            RaisedButton(
+            /**ElevatedButton(
               onPressed: () {
                 db.readData();
               },
               child: const Text("add stylists to entitites"),
-            ),
+            ),*/
             ElevatedButton(
               onPressed: () {
                 db.becomeStylist(_email);
               },
               child: const Text("become stylist"),
             ),
-            const SizedBox(
-              height: 10,
+            ElevatedButton(
+              onPressed: () {
+                db.stopBeingStylist(_email);
+              },
+              child: const Text("stop being stylist"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -62,6 +66,25 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text("stylist list"),
+            ),
+            Text("Booking functionality"),
+            ElevatedButton(
+              onPressed: () {
+                db.addBooking(
+                  _email,
+                  'StylistEmail',
+                  'type',
+                  DateTime.now(),
+                );
+              },
+              child: const Text("add booking"),
+            ),
+            Text("User functionality"),
+            ElevatedButton(
+              onPressed: () {
+                db.addUserInfo(_email, 'nick', 'via einstein');
+              },
+              child: const Text("add user info"),
             ),
           ],
         ),

@@ -5,7 +5,7 @@ import 'Model/Entity/stylist.dart';
 class DatabaseService {
   final database = FirebaseDatabase.instance;
   DatabaseService();
-
+//Bookings
   Future<void> addBooking(String idClient, String idStylist, String type,
       DateTime appointmentDate) async {
     await database.ref('bookings').push().set({
@@ -17,23 +17,48 @@ class DatabaseService {
     });
   }
 
+//Stylists
   Future<void> addStylist(String email) async {
-    await database.ref('stylist').push().set({
+    await database.ref('stylists').push().set({
       'email': email,
-      //'inputDate': DateTime.now().toString(),
-    });
-  }
-
-  Future<void> becomeStylist(String idStylist) async {
-    await database.ref('stylist').push().set({
-      'idStylist': idStylist,
       'inputDate': DateTime.now().toString(),
     });
   }
 
-  //read data from realtime database
+  Future<void> becomeStylist(String email) async {
+    await database.ref('stylists').push().set({
+      'email': email,
+      'inputDate': DateTime.now().toString(),
+    });
+  }
+
+  Future<void> stopBeingStylist(String email) async {
+    var directory = await database.ref('stylists');
+    //var val = await directory.once();
+    var val = await directory.orderByChild('email').equalTo(email).once();
+    //val.ref.remove();
+
+    Map<dynamic, dynamic> values = val.snapshot.value as Map<dynamic, dynamic>;
+    values.forEach((key, values) {
+      print(key);
+      print(values);
+      directory.child(key).remove();
+    });
+  }
+
+  //User info
+  Future<void> addUserInfo(String email, String nick, String street) async {
+    await database.ref('users').push().set({
+      'email': email,
+      'nick': nick,
+      'street': street,
+      'inputDate': DateTime.now().toString(),
+    });
+  }
+
+  //tests
   Future<List<Stylist>?> readData() async {
-    DatabaseEvent event = await database.ref('stylist').once();
+    DatabaseEvent event = await database.ref('stylists').once();
 
     //print(event.snapshot.value);
 
@@ -54,6 +79,4 @@ class DatabaseService {
 
     return Stylists;
   }
-
-  //method that returns if stylists
 }
