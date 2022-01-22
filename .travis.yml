@@ -27,4 +27,4 @@ before_script:
   - ./flutter/bin/flutter doctor
   
 script:
-  - ./flutter/bin/flutter test
+  - ./truccoparrucco/flutter test
