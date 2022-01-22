@@ -80,7 +80,7 @@ class _nextPageState extends State<nextPage> {
           ],
         ),
         Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(5),
           child: Text(
             choice,
             style: TextStyle(
@@ -114,7 +114,7 @@ class _nextPageState extends State<nextPage> {
       value: item,
       child: Row(
         children: [
-          Icon(item.icon, color: Colors.black, size: 20),
+          Icon(item.icon, color: Colors.black, size: 10),
           Text(item.text)
         ],
       ));
