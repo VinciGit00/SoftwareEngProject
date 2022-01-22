@@ -5550,7 +5550,8 @@
 							},
 							"name": "Class1"
 						}
-					]
+					],
+					"stereotype": "root"
 				},
 				{
 					"_type": "UMLCollaboration",
@@ -5593,9 +5594,9 @@
 														"$ref": "AAAAAAF+TxRKy8ZW94Y="
 													},
 													"font": "Arial;13;0",
-													"left": 32.72998046875,
+													"left": 30.55908203125,
 													"top": 13,
-													"width": 133.25341796875,
+													"width": 121.57373046875,
 													"height": 13,
 													"text": "SequenceDigramLogin"
 												},
@@ -5608,7 +5609,7 @@
 													"font": "Arial;13;1",
 													"left": 13,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -6440,9 +6441,9 @@
 														"$ref": "AAAAAAF+TxRKy8aCfN4="
 													},
 													"font": "Arial;13;0",
-													"left": 79.9599609375,
+													"left": 76.3291015625,
 													"top": 149,
-													"width": 81.208984375,
+													"width": 75.724609375,
 													"height": 13,
 													"text": "Analizza posti"
 												},
@@ -6455,7 +6456,7 @@
 													"font": "Arial;13;1",
 													"left": 53,
 													"top": 149,
-													"width": 21.9599609375,
+													"width": 18.3291015625,
 													"height": 13,
 													"text": "seq"
 												},
@@ -6488,7 +6489,7 @@
 																	"font": "Arial;13;0",
 																	"left": 68,
 																	"top": 182,
-																	"width": 108.75439453125,
+																	"width": 106.27880859375,
 																	"height": 13,
 																	"text": "[postiDisponibili>0]"
 																}
@@ -6521,7 +6522,7 @@
 																	"font": "Arial;13;0",
 																	"left": 68,
 																	"top": 264,
-																	"width": 116.34619140625,
+																	"width": 113.6103515625,
 																	"height": 13,
 																	"text": "[postiDisponibili==0]"
 																}
@@ -6554,7 +6555,7 @@
 																	"font": "Arial;13;0",
 																	"left": 68,
 																	"top": 344,
-																	"width": 105.47265625,
+																	"width": 97.4619140625,
 																	"height": 13,
 																	"text": "[Errore di sistema]"
 																}
@@ -10087,7 +10088,7 @@
 											"font": "Arial;13;0",
 											"left": 492,
 											"top": 76.5,
-											"width": 95.24267578125,
+											"width": 94,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+WbnzDdgyhhw="
@@ -10487,7 +10488,7 @@
 											"font": "Arial;13;0",
 											"left": 606,
 											"top": 332.5,
-											"width": 143.60546875,
+											"width": 143,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+WbnzDdhICEY="
@@ -11057,7 +11058,7 @@
 											"font": "Arial;13;0",
 											"left": 959,
 											"top": 172.5,
-											"width": 108.94091796875,
+											"width": 108,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+WbnzDdhjmCc="
@@ -12006,7 +12007,7 @@
 											"font": "Arial;13;0",
 											"left": 379.5,
 											"top": 364.5,
-											"width": 207.92626953125,
+											"width": 207,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+WbnzDdiRlf0="
@@ -31744,7 +31745,8 @@
 											"_parent": {
 												"$ref": "AAAAAAF+c+ue+Y8XfjI="
 											},
-											"name": "PartitaIva"
+											"name": "PartitaIva",
+											"type": ""
 										},
 										{
 											"_type": "UMLParameter",
@@ -31752,7 +31754,8 @@
 											"_parent": {
 												"$ref": "AAAAAAF+c+ue+Y8XfjI="
 											},
-											"name": "Via"
+											"name": "Via",
+											"type": ""
 										}
 									]
 								}
