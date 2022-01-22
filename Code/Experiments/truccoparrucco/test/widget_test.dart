@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:truccoparrucco/components/Chosen.dart';
+import 'package:truccoparrucco/components/Settings.dart';
+import 'package:truccoparrucco/components/Changesetting.dart';
 import 'package:truccoparrucco/components/Wrong.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/Temp.dart';
@@ -96,5 +98,38 @@ void main() {
 
     //Check outputs
     expect(messageFinder1, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget Settings funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: Settings()));
+
+    final messageFinder1 = find.text("Impostazioni utente");
+
+    final addButton1 = find.text('Cambia le impostazioni');
+
+    //Execute the test
+    await tester.tap(addButton1);
+    await tester.pump();
+
+    //Check outputs
+    expect(messageFinder1, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget ChangeSetting funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: changeSetting()));
+
+    final messageFinder1 = find.text("Cambia le impostazioni");
+    final messageFinder2 = find.text("Inserisci il nuovo nickname");
+    final messageFinder3 = find.text("Cambia la via");
+
+    //Execute the test
+    await tester.pump();
+
+    //Check outputs
+    expect(messageFinder1, findsOneWidget);
+    expect(messageFinder2, findsOneWidget);
+    expect(messageFinder3, findsOneWidget);
   });
 }
