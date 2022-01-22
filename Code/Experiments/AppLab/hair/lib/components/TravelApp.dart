@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hair/Model/Entity/stylist2.dart';
 import 'package:hair/components/travelcard.dart';
 import 'package:hair/components/PrenotazioniCliente.dart';
+import 'package:provider/provider.dart';
+
+import '../authentication_service.dart';
+import '../storage_service.dart';
 
 class TravelApp extends StatefulWidget {
   const TravelApp({Key? key}) : super(key: key);
@@ -13,14 +18,23 @@ class _TravelAppState extends State<TravelApp> {
   List<String> img = [
     //1
     "a.jpg",
+    //'https://i.insider.com/5abba0887708e93291718c93?width=2000',
     //2
     "b.jpg",
+    //'https://i.insider.com/5abba0887708e93291718c93?width=2000',
     //3
     "c.jpg",
+    // 'https://i.insider.com/5abba0887708e93291718c93?width=2000',
   ];
 
   @override
   Widget build(BuildContext context) {
+    var _email = context.read<AuthenticationService>().userEmail();
+    var t = FireStorageService.getImageUrl(context, 'pepasaur.jpg') != null
+        ? FireStorageService.getImageUrl(context, 'pepasaur.jpg').toString()
+        : "";
+    t = 'https://firebasestorage.googleapis.com/v0/b/mypro-cc322.appspot.com/o/pepasaur.jpg?alt=media&token=e3304ccc-3451-4bda-988a-1099a904cbf6';
+    print(t);
     return Scaffold(
       backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
@@ -42,9 +56,15 @@ class _TravelAppState extends State<TravelApp> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ElevatedButton(
+              onPressed: () {
+                context.read<AuthenticationService>().signOut();
+              },
+              child: const Text("Sign out"),
+            ),
             //Let's start by adding the text
             Text(
-              "Welcome in TruccoParrucco",
+              "Welcome " + _email!,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 26.0,
@@ -71,21 +91,39 @@ class _TravelAppState extends State<TravelApp> {
                       height: 300.0,
                       child: TabBarView(children: [
                         Container(
+                          child: Consumer<HairStylists>(
+                              builder: (context, stylists, child) {
+                            return ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                for (var stylist in stylists.stylists)
+                                  TravelCard(
+                                      img: t,
+                                      HotelName: stylist.id != null
+                                          ? stylist.id.toString()
+                                          : "null",
+                                      location: "Bormio",
+                                      rating: 4),
+                              ],
+                            );
+                          }),
+                        ),
+                        Container(
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
                               TravelCard(
-                                  img: img[0],
+                                  img: t,
                                   HotelName: "Cristina e Thomas parrucchieri",
                                   location: "Bormio",
                                   rating: 5),
                               TravelCard(
-                                  img: img[1],
+                                  img: t,
                                   HotelName: "Total Look N.&N",
                                   location: "Bormio",
                                   rating: 4),
                               TravelCard(
-                                  img: img[2],
+                                  img: t,
                                   HotelName: "Da Vincis",
                                   location: "Bormio",
                                   rating: 4),
@@ -95,13 +133,13 @@ class _TravelAppState extends State<TravelApp> {
                         Container(
                           child: ListView(
                             scrollDirection: Axis.horizontal,
-                            children: [],
-                          ),
-                        ),
-                        Container(
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [],
+                            children: [
+                              TravelCard(
+                                  img: t,
+                                  HotelName: "Da Vincis",
+                                  location: "Bormio",
+                                  rating: 4),
+                            ],
                           ),
                         ),
                       ]),

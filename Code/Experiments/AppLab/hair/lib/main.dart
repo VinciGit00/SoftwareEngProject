@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import 'Model/Entity/stylist2.dart';
 import 'components/Chosen.dart';
 import 'components/Login.dart';
+import 'components/TravelApp.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
           create: (context) =>
               context.read<AuthenticationService>().authStateChanges,
           initialData: null,
-        )
+        ),
+        ChangeNotifierProvider<HairStylists>(create: (_) => HairStylists())
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -48,8 +50,9 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User?>();
 
     if (firebaseUser != null) {
-      return HomePage();
+      //return HomePage();
       //return Chosen();
+      return TravelApp();
     }
     //return SignInPage();
     return LoginScreen();
