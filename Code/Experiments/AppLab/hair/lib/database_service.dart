@@ -6,11 +6,11 @@ class DatabaseService {
   final database = FirebaseDatabase.instance;
   DatabaseService();
 //Bookings
-  Future<void> addBooking(String idClient, String idStylist, String type,
+  Future<void> addBooking(String clientEmail, String stylistEmail, String type,
       DateTime appointmentDate) async {
     await database.ref('bookings').push().set({
-      'idClient': idClient,
-      'idStylist': idStylist,
+      'clientEmail': clientEmail,
+      'stylistEmail': stylistEmail,
       'type': type,
       'appointmentDate': appointmentDate.toString(),
       'inputDate': DateTime.now().toString(),
@@ -34,9 +34,17 @@ class DatabaseService {
 
   Future<void> stopBeingStylist(String email) async {
     var directory = await database.ref('stylists');
-    //var val = await directory.once();
     var val = await directory.orderByChild('email').equalTo(email).once();
-    //val.ref.remove();
+
+    Map<dynamic, dynamic> values = val.snapshot.value as Map<dynamic, dynamic>;
+    values.forEach((key, values) {
+      directory.child(key).remove();
+    });
+  }
+
+  Future<void> getStylistBookings(String email) async {
+    var directory = await database.ref('bookings');
+    var val = await directory.orderByChild('email').equalTo(email).once();
 
     Map<dynamic, dynamic> values = val.snapshot.value as Map<dynamic, dynamic>;
     values.forEach((key, values) {
