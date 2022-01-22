@@ -22,10 +22,10 @@ void main() {
     //home: Registrazione(),
     //home: Buffer(),
     //home: PagGestore(),
-    //home: TravelApp(),
+    home: TravelApp(),
     //home: PagGestore(),
     //home: Profilo(),
     //home: Settings(),
-    home: changeSetting(),
+    //home: changeSetting(),
   ));
 }
