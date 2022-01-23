@@ -1,6 +1,8 @@
 import 'package:firebase_database/firebase_database.dart';
 
+import 'Model/Entity/clientBookings.dart';
 import 'Model/Entity/stylist.dart';
+import 'Model/Entity/stylistBookings.dart';
 
 class DatabaseService {
   final database = FirebaseDatabase.instance;
@@ -15,6 +17,20 @@ class DatabaseService {
       'appointmentDate': appointmentDate.toString(),
       'inputDate': DateTime.now().toString(),
     });
+  }
+
+  void readClientBookings(String email) {
+    var bookings = clientBookings(email).bookings;
+    for (var booking in bookings) {
+      print(booking.toMap().toString());
+    }
+  }
+
+  void readStylistBookings(String email) {
+    var bookings = stylistBookings(email).bookings;
+    for (var booking in bookings) {
+      print(booking.toMap().toString());
+    }
   }
 
 //Stylists
@@ -42,17 +58,7 @@ class DatabaseService {
     });
   }
 
-  Future<void> getStylistBookings(String email) async {
-    var directory = await database.ref('bookings');
-    var val = await directory.orderByChild('email').equalTo(email).once();
-
-    Map<dynamic, dynamic> values = val.snapshot.value as Map<dynamic, dynamic>;
-    values.forEach((key, values) {
-      print(key);
-      print(values);
-      directory.child(key).remove();
-    });
-  }
+  // Future<void> getStylistBookings(String email) async {}
 
   //User info
   Future<void> addUserInfo(String email, String nick, String street) async {

@@ -6,7 +6,7 @@ class stylistBookings extends ChangeNotifier {
   List<booking> _bookings = [];
   final _db = FirebaseDatabase.instance;
 
-  HairStylists(email) {
+  stylistBookings(email) {
     _ReadStylists(email);
   }
 
@@ -18,10 +18,14 @@ class stylistBookings extends ChangeNotifier {
     Map<dynamic, dynamic> values =
         event.snapshot.value as Map<dynamic, dynamic>;
     values.forEach((key, values) {
+      print(values);
       _bookings.add(booking(key, values['clientEmail'], values['stylistEmail'],
-          values['type'], DateTime(values['appointmentDate'])));
+          values['type'], DateTime.parse(values['appointmentDate'])));
     });
 
-    notifyListeners();
+    //notifyListeners();
   }
+
+  //create a getter for bookings
+  List<booking> get bookings => _bookings;
 }

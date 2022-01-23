@@ -3,8 +3,9 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:hair/components/StylistListWidget.dart';
 import 'package:provider/provider.dart';
-
 import 'Model/Entity/stylist2.dart';
+import 'Model/Entity/clientBookings.dart';
+import 'Model/Entity/user.dart';
 import 'database_service.dart';
 
 class HomePage extends StatelessWidget {
@@ -79,10 +80,23 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("add booking"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                db.readClientBookings(_email);
+              },
+              child: const Text("Client Bookings"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                db.readStylistBookings('StylistEmail');
+              },
+              child: const Text("Stylist Bookings"),
+            ),
             Text("User functionality"),
             ElevatedButton(
               onPressed: () {
-                db.addUserInfo(_email, 'nick', 'via einstein');
+                //db.addUserInfo(_email, 'nick', 'via einstein');
+                user().addUserInfo(_email, 'nick', 'via einstein');
               },
               child: const Text("add user info"),
             ),

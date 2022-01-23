@@ -6,11 +6,11 @@ class clientBookings extends ChangeNotifier {
   List<booking> _bookings = [];
   final _db = FirebaseDatabase.instance;
 
-  HairStylists(email) {
-    _ReadStylists(email);
+  clientBookings(email) {
+    _ReadBookings(email);
   }
 
-  void _ReadStylists(email) async {
+  void _ReadBookings(email) async {
     var directory = await _db.ref('bookings');
     var event =
         await directory.orderByChild('clientEmail').equalTo(email).once();
@@ -18,10 +18,14 @@ class clientBookings extends ChangeNotifier {
     Map<dynamic, dynamic> values =
         event.snapshot.value as Map<dynamic, dynamic>;
     values.forEach((key, values) {
+      print(values);
       _bookings.add(booking(key, values['clientEmail'], values['stylistEmail'],
-          values['type'], DateTime(values['appointmentDate'])));
+          values['type'], DateTime.parse(values['appointmentDate'])));
     });
 
-    notifyListeners();
+    //notifyListeners();
   }
+
+  //create a getter for bookings
+  List<booking> get bookings => _bookings;
 }
