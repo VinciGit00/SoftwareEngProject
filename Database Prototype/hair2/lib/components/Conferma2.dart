@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'InterfacciaPrincipale.dart';
 
-class temp extends StatefulWidget {
-  temp({Key? key}) : super(key: key);
+class Conferma2 extends StatefulWidget {
+  Conferma2({Key? key}) : super(key: key);
 
   @override
-  _tempState createState() => _tempState();
+  _Conferma2State createState() => _Conferma2State();
 }
 
-class _tempState extends State<temp> {
-  bool state = true;
-
+class _Conferma2State extends State<Conferma2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +25,7 @@ class _tempState extends State<temp> {
             margin: EdgeInsets.only(top: 10),
             alignment: Alignment.center,
             child: Text(
-              "Prenotazione avvenuta con successo!",
+              "Modifiche avvenute con successo!",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 25.0,

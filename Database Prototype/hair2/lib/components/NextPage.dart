@@ -80,7 +80,7 @@ class _nextPageState extends State<nextPage> {
           ],
         ),
         Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(5),
           child: Text(
             choice,
             style: TextStyle(
@@ -114,16 +114,37 @@ class _nextPageState extends State<nextPage> {
       value: item,
       child: Row(
         children: [
-          Icon(item.icon, color: Colors.black, size: 20),
+          Icon(item.icon, color: Colors.black, size: 10),
           Text(item.text)
         ],
       ));
 }
 
 class TipoTaglio {
-  static const List<MenuItem> itemFirst = [semplice, composto];
+  static const List<MenuItem> itemFirst = [a, b, c, d, e];
 
-  static const semplice = MenuItem(text: "Semplice", icon: Icons.share);
+  static const a = MenuItem(
+      text: "Piega",
+      category: "Semplice",
+      icon: IconData(0xf535, fontFamily: 'MaterialIcons'));
 
-  static const composto = MenuItem(text: "Composto", icon: Icons.share);
+  static const b = MenuItem(
+      text: "Shampoo",
+      category: "Semplice",
+      icon: IconData(0xf535, fontFamily: 'MaterialIcons'));
+
+  static const c = MenuItem(
+      text: "Colore",
+      category: "Semplice",
+      icon: IconData(0xee49, fontFamily: 'MaterialIcons'));
+
+  static const d = MenuItem(
+      text: "Permamente",
+      category: "Semplice",
+      icon: IconData(0xee49, fontFamily: 'MaterialIcons'));
+
+  static const e = MenuItem(
+      text: "Shatsuch",
+      category: "Semplice",
+      icon: IconData(0xee49, fontFamily: 'MaterialIcons'));
 }

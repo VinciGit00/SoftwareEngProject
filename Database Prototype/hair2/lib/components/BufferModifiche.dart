@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'Wrong.dart';
-import 'Temp.dart';
+import 'Conferma2.dart';
 
-class Buffer extends StatefulWidget {
-  Buffer({Key? key}) : super(key: key);
+class BufferModifiche extends StatefulWidget {
+  BufferModifiche({Key? key}) : super(key: key);
 
   @override
-  _BufferState createState() => _BufferState();
+  _BufferModificheState createState() => _BufferModificheState();
 }
 
-class _BufferState extends State<Buffer> {
+class _BufferModificheState extends State<BufferModifiche> {
   final Future<String> _calculation = Future<String>.delayed(
     const Duration(seconds: 1),
     () => 'Data Loaded',
@@ -26,7 +26,7 @@ class _BufferState extends State<Buffer> {
               if (snapshot.hasError) {
                 return SomethingWentWrong();
               }
-              return temp();
+              return Conferma2();
             } else {
               return Container(
                   alignment: Alignment.center,

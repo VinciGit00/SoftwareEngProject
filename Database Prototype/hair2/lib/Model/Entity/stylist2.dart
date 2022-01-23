@@ -8,6 +8,7 @@ class HairStylists extends ChangeNotifier {
   final _db = FirebaseDatabase.instance.ref();
   late StreamSubscription<DatabaseEvent> _subscription;
   late DatabaseEvent event;
+  late DatabaseEvent event2;
 
   HairStylists() {
     //_ReadStylists();
@@ -19,10 +20,13 @@ class HairStylists extends ChangeNotifier {
 
     Map<dynamic, dynamic> values =
         event.snapshot.value as Map<dynamic, dynamic>;
-    values.forEach((key, values) {
-      _stylists.add(Stylist(id: key, email: values['email']));
-      //print(key);
-      //print(values['email']);
+    values.forEach((key, values) async {
+      event2 =
+          await _db.orderByChild('clientEmail').equalTo(values['email']).once();
+      Map<dynamic, dynamic> values2 =
+          event2.snapshot.value as Map<dynamic, dynamic>;
+      _stylists.add(Stylist(
+          id: key, email: values['email'], nick: 'name', street: 'name'));
     });
 
     _stylists.forEach((element) {
@@ -38,7 +42,8 @@ class HairStylists extends ChangeNotifier {
           event.snapshot.value as Map<dynamic, dynamic>;
 
       values.forEach((key, values) {
-        stylists.add(Stylist(id: key, email: values['email']));
+        stylists.add(Stylist(
+            id: key, email: values['email'], nick: 'def', street: 'name'));
         print(key);
       });
 
