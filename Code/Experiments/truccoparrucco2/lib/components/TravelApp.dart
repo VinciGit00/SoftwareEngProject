@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
 import 'Settings.dart';
+import 'Gestore.dart';
 
 class TravelApp extends StatefulWidget {
   const TravelApp({Key? key}) : super(key: key);
@@ -75,14 +76,69 @@ class _TravelAppState extends State<TravelApp> {
             SizedBox(
               height: 20.0,
             ),
-            Switch(
-              value: state,
-              onChanged: (bool s) {
-                setState(() {
-                  state = s;
-                });
-              },
+            Row(
+              children: [
+                Text("Cliente"),
+                Switch(
+                  value: state,
+                  onChanged: (bool s) {
+                    setState(() {
+                      state = s;
+                    });
+                  },
+                  /*activeColor: Colors.blue,
+                  activeTrackColor: Colors.blue,*/
+                  inactiveThumbColor: Colors.green,
+                ),
+                Text("Parruchhiere"),
+              ],
             ),
+
+            state == true
+                ? Expanded(
+                    child: ListView(
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        TravelCard(
+                            img: img[0],
+                            HotelName: "Cristina e Thomas parrucchieri",
+                            location: "Bormio",
+                            rating: 5),
+                        TravelCard(
+                            img: img[1],
+                            HotelName: "Total Look N.&N",
+                            location: "Bormio",
+                            rating: 4),
+                        TravelCard(
+                            img: img[2],
+                            HotelName: "Da Vincis",
+                            location: "Bormio",
+                            rating: 4),
+                      ],
+                    ),
+                  )
+                : Flexible(
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        TravelCard(
+                            img: img[0],
+                            HotelName: "Franco e ciccio",
+                            location: "Bormio",
+                            rating: 5),
+                        TravelCard(
+                            img: img[1],
+                            HotelName: "Franco e nando",
+                            location: "Bormio",
+                            rating: 4),
+                        TravelCard(
+                            img: img[2],
+                            HotelName: "Giuseppe e Maria",
+                            location: "Bormio",
+                            rating: 4),
+                      ],
+                    ),
+                  ),
           ],
         ),
       ),
@@ -92,16 +148,23 @@ class _TravelAppState extends State<TravelApp> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Parrucchiere",
+            label: "Home",
           ),
           BottomNavigationBarItem(
             icon: IconButton(
               icon: Icon(Icons.bookmark),
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                        builder: (context) => PrenotazioneCliente()));
+                if (state == true) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => PrenotazioneCliente()));
+                } else {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => PagGestore()));
+                }
               },
             ),
             label: "Prenotazioni",
