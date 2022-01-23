@@ -44,7 +44,7 @@ class _TravelCardState extends State<TravelCard> {
             scale: 2.0,
           )),
           width: 200.0,
-          height: 300,
+          height: 200,
           child: Padding(
             padding: EdgeInsets.all(12.0),
             child: Column(

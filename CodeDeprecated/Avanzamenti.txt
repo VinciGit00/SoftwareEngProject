@@ -22,3 +22,4 @@ Sprint2:
 
 Sprint 3:
 -Aggiunti dei nuovi casi di test al progetto per quanto riguarda i widget test
+-Fatto il refactoring della schermata principale

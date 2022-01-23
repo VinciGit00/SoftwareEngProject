@@ -30,15 +30,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
       appBar: AppBar(
         elevation: 4.0,
         backgroundColor: Color(0xFFF6F7FF),
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.blue,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: Container(),
         actions: <Widget>[
           IconButton(
             icon: Icon(
