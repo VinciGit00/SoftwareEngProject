@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
@@ -20,7 +22,7 @@ class _TravelAppState extends State<TravelApp> {
     //3
     "c.jpeg",
   ];
-  bool state = true;
+  bool state = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,22 +78,42 @@ class _TravelAppState extends State<TravelApp> {
             SizedBox(
               height: 20.0,
             ),
-            Row(
-              children: [
-                Text("Cliente"),
-                Switch(
-                  value: state,
-                  onChanged: (bool s) {
-                    setState(() {
-                      state = s;
-                    });
-                  },
-                  /*activeColor: Colors.blue,
-                  activeTrackColor: Colors.blue,*/
-                  inactiveThumbColor: Colors.green,
-                ),
-                Text("Parruchhiere"),
-              ],
+            Container(
+              padding: EdgeInsets.only(bottom: 12),
+              child: Row(
+                children: [
+                  Text(
+                    "Modalità:",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
+                    child: Text(
+                      "Cliente",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                  Switch(
+                    value: state,
+                    onChanged: (bool s) {
+                      setState(() {
+                        state = s;
+                      });
+                    },
+                    /*activeColor: Colors.blue,
+                    activeTrackColor: Colors.blue,*/
+                    inactiveThumbColor: Colors.green,
+                  ),
+                  Text(
+                    "Parruchhiere",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ),
             ),
 
             state == true
@@ -117,7 +139,7 @@ class _TravelAppState extends State<TravelApp> {
                       ],
                     ),
                   )
-                : Flexible(
+                : Expanded(
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
@@ -158,12 +180,12 @@ class _TravelAppState extends State<TravelApp> {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => PrenotazioneCliente()));
+                          builder: (context) => PagGestore()));
                 } else {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => PagGestore()));
+                          builder: (context) => PrenotazioneCliente()));
                 }
               },
             ),
