@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Chosen.dart';
+import 'InterfacciaPrincipale.dart';
 
 class confermaModifiche extends StatefulWidget {
   confermaModifiche({Key? key}) : super(key: key);
@@ -46,8 +46,10 @@ class _confermaModificheState extends State<confermaModifiche> {
                     borderRadius: BorderRadius.all(Radius.circular(30.0))),
                 elevation: 4.0,
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute<void>(builder: (context) => Chosen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => InterfacciaPrincipale()));
                 }),
           ),
         ],

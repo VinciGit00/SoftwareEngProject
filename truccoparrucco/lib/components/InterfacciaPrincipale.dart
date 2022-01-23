@@ -6,14 +6,14 @@ import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
 
-class TravelApp extends StatefulWidget {
-  const TravelApp({Key? key}) : super(key: key);
+class InterfacciaPrincipale extends StatefulWidget {
+  const InterfacciaPrincipale({Key? key}) : super(key: key);
 
   @override
-  _TravelAppState createState() => _TravelAppState();
+  _InterfacciaPrincipaleState createState() => _InterfacciaPrincipaleState();
 }
 
-class _TravelAppState extends State<TravelApp> {
+class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
   List<String> img = [
     //1
     "a.jpeg",
@@ -67,16 +67,25 @@ class _TravelAppState extends State<TravelApp> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Text(
-              "Scegli il parrucchiere dove tagliare i capelli",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontWeight: FontWeight.w300,
-              ),
-            ),
+            state == false
+                ? Text(
+                    "Scegli il parrucchiere dove tagliare i capelli",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  )
+                : Text(
+                    "Ciao",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
             SizedBox(
-              height: 20.0,
+              height: 6.5,
             ),
             Container(
               padding: EdgeInsets.only(bottom: 12),

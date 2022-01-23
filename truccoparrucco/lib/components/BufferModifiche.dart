@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Wrong.dart';
-import 'Temp.dart';
-import 'ConfermaModifiche.dart';
+import 'Conferma2.dart';
 
 class BufferModifiche extends StatefulWidget {
   BufferModifiche({Key? key}) : super(key: key);
@@ -27,7 +26,7 @@ class _BufferModificheState extends State<BufferModifiche> {
               if (snapshot.hasError) {
                 return SomethingWentWrong();
               }
-              return confermaModifiche();
+              return Conferma2();
             } else {
               return Container(
                   alignment: Alignment.center,

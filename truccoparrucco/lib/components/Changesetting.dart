@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:truccoparrucco/components/Buffer.dart';
 import 'BufferModifiche.dart';
 
 class changeSetting extends StatefulWidget {
@@ -72,8 +71,10 @@ class _changeSettingState extends State<changeSetting> {
                   borderRadius: BorderRadius.all(Radius.circular(30.0))),
               elevation: 4.0,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute<void>(builder: (context) => Buffer()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                        builder: (context) => BufferModifiche()));
               }),
         )
       ]),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'Chosen.dart';
 import 'Wrong.dart';
 import 'Temp.dart';
 
