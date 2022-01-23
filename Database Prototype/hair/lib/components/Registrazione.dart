@@ -138,8 +138,12 @@ class TipoTaglio {
   static const List<MenuItem> itemFirst = [semplice, composto];
 
   static const semplice = MenuItem(
-      text: "Cliente", icon: IconData(0xe61e, fontFamily: 'MaterialIcons'));
+      text: "Cliente",
+      icon: IconData(0xe61e, fontFamily: 'MaterialIcons'),
+      category: '');
 
   static const composto = MenuItem(
-      text: "Gestore", icon: IconData(0xe621, fontFamily: 'MaterialIcons'));
+      text: "Gestore",
+      icon: IconData(0xe621, fontFamily: 'MaterialIcons'),
+      category: '');
 }

@@ -34,7 +34,7 @@ class _PagGestoreState extends State<PagGestore> {
           children: [
             //Let's start by adding the text
             Text(
-              "Prenotazioni effettuate",
+              "Prenotazioni dei clienti",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20.0,
@@ -46,26 +46,6 @@ class _PagGestoreState extends State<PagGestore> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Color(0xFFB7B7B7),
-        selectedItemColor: Colors.blue,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-            label: "Prenotazioni",
-          ),
-          BottomNavigationBarItem(
-            icon: IconButton(
-              icon: Icon(IconData(0xf01f3, fontFamily: 'MaterialIcons')),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute<void>(builder: (context) => Profilo()));
-              },
-            ),
-            label: "Profilo",
-          ),
-        ],
       ),
     );
   }

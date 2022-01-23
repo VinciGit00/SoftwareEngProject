@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 
 import 'Model/Entity/stylist2.dart';
 import 'components/Chosen.dart';
+import 'components/InterfacciaPrincipale.dart';
 import 'components/Login.dart';
 import 'components/TravelApp.dart';
 
@@ -50,8 +51,8 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User?>();
 
     if (firebaseUser != null) {
-      return HomePage();
-      //return Chosen();
+      //return HomePage();
+      return InterfacciaPrincipale();
       //return TravelApp();
     }
     //return SignInPage();

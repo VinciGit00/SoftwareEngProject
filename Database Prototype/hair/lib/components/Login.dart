@@ -1,11 +1,8 @@
 import 'package:flutter_login/flutter_login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hair/components/TravelApp.dart';
-import 'package:hair/components/Chosen.dart';
-import 'package:provider/src/provider.dart';
-
-import '../authentication_service.dart';
+import 'package:hair/components/InterfacciaPrincipale.dart';
+import 'InterfacciaPrincipale.dart';
 
 const users = const {
   'dribbble@gmail.com': '12345',
@@ -16,7 +13,6 @@ const users = const {
 
 class LoginScreen extends StatelessWidget {
   Duration get loginTime => Duration(milliseconds: 1000);
-
   Future<String?> _authUser(LoginData data) {
     debugPrint('Name: ${data.name}, Password: ${data.password}');
     return Future.delayed(loginTime).then((_) {
@@ -53,16 +49,8 @@ class LoginScreen extends StatelessWidget {
     return FlutterLogin(
       //backgroundColor: Color((0xFFF6F7FF);
       title: 'Trucco Parrucco Bormio',
-      //onLogin: _authUser,
-      onLogin: (loginData) => context.read<AuthenticationService>().signIn(
-            email: loginData.name,
-            password: loginData.password,
-          ),
-      //onSignup: _signupUser,
-      onSignup: (signupData) => context.read<AuthenticationService>().signUp(
-            email: signupData.name!, // TODO add null safety
-            password: signupData.password!,
-          ),
+      onLogin: _authUser,
+      onSignup: _signupUser,
       //style: TextStyle(color: Color(0xFFF6F7FF)
 
       loginProviders: <LoginProvider>[
@@ -107,7 +95,7 @@ class LoginScreen extends StatelessWidget {
       ],
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => Chosen(),
+          builder: (context) => InterfacciaPrincipale(),
         ));
       },
       onRecoverPassword: _recoverPassword,
