@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 /*import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/NextPage.dart';
-import 'package:truccoparrucco/components/MenuItem.dart';*/
-//import 'package:truccoparrucco/components/Parrucchiere.dart';
+import 'package:truccoparrucco/components/MenuItem.dart';
+import 'package:truccoparrucco/components/Parrucchiere.dart';*/
+import 'package:truccoparrucco/components/PrenotazioneClienti.dart';
 
 void main() {
   //Unit testing

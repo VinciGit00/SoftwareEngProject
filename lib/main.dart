@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'components/Login.dart';
 import 'components/Gestore.dart';
 import 'components/InterfacciaPrincipale.dart';
-import 'components/PrenotazioniCliente.dart';
+import 'components/TuttePrenotazioniCliente.dart';
 import 'components/Gestore.dart';
 import 'components/NextPage.dart';
 import 'components/Buffer.dart';

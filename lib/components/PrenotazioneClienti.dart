@@ -1,15 +1,79 @@
 import 'package:flutter/material.dart';
 
-class PrenotazioneClienti extends StatefulWidget {
-  PrenotazioneClienti({Key? key}) : super(key: key);
+class PrenotazioneCliente extends StatefulWidget {
+  PrenotazioneCliente(
+      {Key? key, required this.nickname, required this.via, required this.data})
+      : super(key: key);
+  final String nickname;
+  final String via;
+  final DateTime data;
 
   @override
-  State<PrenotazioneClienti> createState() => _PrenotazioneClientiState();
+  State<PrenotazioneCliente> createState() => _PrenotazioneClienteState();
 }
 
-class _PrenotazioneClientiState extends State<PrenotazioneClienti> {
+class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card(
+      margin: EdgeInsets.only(
+        right: 22.0,
+      ),
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+      elevation: 0.0,
+      shadowColor: Colors.black,
+      child: InkWell(
+        onTap: () {},
+        child: Container(
+          width: 200.0,
+          height: 100,
+          child: Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        widget.nickname,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 22.0,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 3.0,
+                      ),
+                      Text(
+                        widget.via,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      /* Text(
+                        DateTime.parse(widget.data),
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),*/
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

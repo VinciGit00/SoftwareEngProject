@@ -5,7 +5,9 @@ import 'package:truccoparrucco/components/Wrong.dart';
 import 'package:truccoparrucco/components/Temp.dart';
 import 'package:truccoparrucco/components/Profilo.dart';
 import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
-import 'package:truccoparrucco/components/Gestore.dart';*/
+import 'package:truccoparrucco/components/Gestore.dart';
+import 'package:truccoparrucco/components/Parrucchiere.dart';*/
+import 'package:truccoparrucco/components/PrenotazioneClienti.dart';
 
 void main() {
   testWidgets('Testo la classe chosen', (WidgetTester tester) async {
@@ -92,6 +94,22 @@ void main() {
 
     //Check outputs
     expect(messageFinder1, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget Parrucchiere funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+        MaterialApp(home: Parrucchiere(nome: "nome", via: "via", rating: 4)));
+
+    final messageFinder1 = find.text("nome");
+    final messageFinder2 = find.text('via');
+
+    //Execute the test
+    await tester.pump();
+
+    //Check outputs
+    expect(messageFinder1, findsOneWidget);
+    expect(messageFinder2, findsOneWidget);
   });
 }
 
@@ -506,6 +524,228 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
           ),
         )
       ]),
+    );
+  }
+}
+
+class Parrucchiere extends StatefulWidget {
+  const Parrucchiere(
+      {Key? key, required this.nome, required this.via, required this.rating})
+      : super(key: key);
+
+  final String nome;
+  final String via;
+  final int rating;
+
+  @override
+  State<Parrucchiere> createState() => _ParrucchiereState();
+}
+
+class _ParrucchiereState extends State<Parrucchiere> {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.only(
+        right: 22.0,
+      ),
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+      elevation: 0.0,
+      shadowColor: Colors.black,
+      child: InkWell(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute<void>(builder: (context) => nextPage()));
+        },
+        child: Container(
+          width: 200.0,
+          height: 100,
+          child: Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    for (var i = 0; i < widget.rating; i++)
+                      Icon(
+                        Icons.star,
+                        color: Colors.blue,
+                      ),
+                  ],
+                ),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        widget.nome,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 22.0,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 3.0,
+                      ),
+                      Text(
+                        widget.via,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class nextPage extends StatefulWidget {
+  const nextPage({Key? key}) : super(key: key);
+
+  @override
+  _nextPageState createState() => _nextPageState();
+
+  String onPressed2() {
+    return "Pressed";
+  }
+}
+
+class _nextPageState extends State<nextPage> {
+  void onPressed() {
+    print("Pressed");
+  }
+
+  late String choice = "";
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.blue,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          "Seleziona la data e il tipo di taglio",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      body: Column(children: [
+        Container(
+          margin: EdgeInsets.all(10),
+          child: Text(
+            "Seleziona il giorno ",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        //prefixIcon: Icon(Icons.calendar_month),
+
+        DatePickerDialog(
+          initialDate: DateTime.now(),
+          firstDate: DateTime.now(),
+          lastDate: DateTime.parse("20250101"),
+        ),
+
+        Text(
+          "Inserisci il tipo di taglio",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20.0,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+
+        Container(
+          margin: EdgeInsets.all(5),
+          child: Text(
+            choice,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+        ),
+        RaisedButton(
+          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: Text(
+            "Esegui richiesta",
+            style: TextStyle(color: Colors.white),
+          ),
+          color: Colors.blue,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30.0))),
+          elevation: 4.0,
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute<void>(builder: (context) => Buffer()));
+          },
+          //child: Icon(Icons.send, color: Colors.white)
+        )
+      ]),
+    );
+  }
+}
+
+class Buffer extends StatefulWidget {
+  Buffer({Key? key}) : super(key: key);
+
+  @override
+  _BufferState createState() => _BufferState();
+}
+
+class _BufferState extends State<Buffer> {
+  final Future<String> _calculation = Future<String>.delayed(
+    const Duration(seconds: 1),
+    () => 'Data Loaded',
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
+      body: FutureBuilder(
+          future: _calculation,
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              if (snapshot.hasError) {
+                return SomethingWentWrong();
+              }
+              return temp();
+            } else {
+              return Container(
+                  alignment: Alignment.center,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 6.0,
+                  ));
+            }
+          }),
     );
   }
 }

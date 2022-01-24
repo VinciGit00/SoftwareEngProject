@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
-import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
+import 'package:truccoparrucco/components/TuttePrenotazioniCliente.dart';
 import 'package:truccoparrucco/components/Parrucchiere.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
