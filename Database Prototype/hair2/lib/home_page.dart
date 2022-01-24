@@ -36,12 +36,6 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Add Stylist"),
             ),
-            /**ElevatedButton(
-              onPressed: () {
-                db.readData();
-              },
-              child: const Text("add stylists to entitites"),
-            ),*/
             ElevatedButton(
               onPressed: () {
                 db.becomeStylist(_email);
@@ -50,7 +44,7 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                db.stopBeingStylist(_email);
+                db.stopBeingStylist();
               },
               child: const Text("stop being stylist"),
             ),
@@ -96,7 +90,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 //db.addUserInfo(_email, 'nick', 'via einstein');
-                user().addUserInfo(_email, 'nick', 'via einstein');
+                user().addUserInfo(_email, 'nicki', 'via einstein');
               },
               child: const Text("add user info"),
             ),

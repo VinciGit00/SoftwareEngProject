@@ -12,19 +12,18 @@ class user extends ChangeNotifier {
   factory user() => _instance;
 
   Future<void> addUserInfo(String email, String nick, String street) async {
-    email = email;
-    nick = nick;
-    street = street;
+    this.email = email;
+    this.nick = nick;
+    this.street = street;
 
-    await database.ref('users').push().set({
+    await database.ref('users/' + nick).update({
       'email': email,
       'nick': nick,
       'street': street,
       'inputDate': DateTime.now().toString(),
     });
-
-    print(email);
-    print(nick);
-    print(street);
   }
+
+  String get nickname => nick;
+  String get streetname => street;
 }
