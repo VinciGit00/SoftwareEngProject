@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
-class PrenotazioneCliente extends StatefulWidget {
-  PrenotazioneCliente(
-      {Key? key, required this.nickname, required this.via, required this.data})
+class PrenotazioneSingolaCliente extends StatefulWidget {
+  const PrenotazioneSingolaCliente(
+      {Key? key, required this.nome, required this.via, required this.data})
       : super(key: key);
-  final String nickname;
+
+  final String nome;
   final String via;
   final DateTime data;
 
   @override
-  State<PrenotazioneCliente> createState() => _PrenotazioneClienteState();
+  State<PrenotazioneSingolaCliente> createState() =>
+      _PrenotazioneSingolaClienteState();
 }
 
-class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
+class _PrenotazioneSingolaClienteState
+    extends State<PrenotazioneSingolaCliente> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -40,7 +43,7 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        widget.nickname,
+                        widget.nome,
                         style: TextStyle(
                           color: Colors.blue,
                           fontSize: 22.0,
@@ -58,14 +61,14 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      /* Text(
-                        DateTime.parse(widget.data),
+                      Text(
+                        widget.data.toString(),
                         style: TextStyle(
                           color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
                         ),
-                      ),*/
+                      ),
                     ],
                   ),
                 ),

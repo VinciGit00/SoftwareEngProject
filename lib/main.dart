@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:truccoparrucco/components/PrenotazioneClienti.dart';
 import 'components/Login.dart';
 import 'components/Gestore.dart';
 import 'components/InterfacciaPrincipale.dart';
@@ -7,16 +8,16 @@ import 'components/Gestore.dart';
 import 'components/NextPage.dart';
 import 'components/Buffer.dart';
 import 'components/Profilo.dart';
-import 'components/travelcard.dart';
 import 'components/Settings.dart';
 import 'components/Changesetting.dart';
 import 'components/Settings.dart';
+import 'components/TuttePrenotazioniCliente.dart';
+import 'components/Parrucchiere.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     //home: LoginScreen(),
-    //home: Chosen(),
     //home: nextPage(),
     //home: PrenotazioneCliente(),
     //home: Registrazione(),
@@ -28,5 +29,8 @@ void main() {
     //home: Settings(),
     //home: changeSetting(),
     //home: Settings(),
+    /*home: PrenotazioneSingolaCliente(
+        nome: "a", via: "b", data: new DateTime(2020 - 2 - 2)),*/
+    /*home: Parrucchiere(nome: "nome", via: "via", rating: 3),*/
   ));
 }

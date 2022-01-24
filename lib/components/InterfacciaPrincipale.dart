@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/TuttePrenotazioniCliente.dart';
 import 'package:truccoparrucco/components/Parrucchiere.dart';
 import 'Settings.dart';
@@ -103,7 +102,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     inactiveThumbColor: Colors.green,
                   ),
                   Text(
-                    "Parruchhiere",
+                    "Parrucchiere",
                     style: TextStyle(fontSize: 20),
                   ),
                 ],

@@ -6,8 +6,8 @@ import 'package:truccoparrucco/components/Temp.dart';
 import 'package:truccoparrucco/components/Profilo.dart';
 import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
 import 'package:truccoparrucco/components/Gestore.dart';
-import 'package:truccoparrucco/components/Parrucchiere.dart';*/
-import 'package:truccoparrucco/components/PrenotazioneClienti.dart';
+import 'package:truccoparrucco/components/Parrucchiere.dart';
+import 'package:truccoparrucco/components/PrenotazioneClienti.dart';*/
 
 void main() {
   testWidgets('Testo la classe chosen', (WidgetTester tester) async {
@@ -111,10 +111,30 @@ void main() {
     expect(messageFinder1, findsOneWidget);
     expect(messageFinder2, findsOneWidget);
   });
+
+  testWidgets("Test per vedere se la widget delle prenotazioni funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(
+        home: PrenotazioneSingolaCliente(
+            nome: "nome", via: "via", data: DateTime(2020 - 1 - 2))));
+
+    final messageFinder1 = find.text("nome");
+    final messageFinder2 = find.text('via');
+
+    //Execute the test
+    await tester.pump();
+
+    //Check outputs
+    expect(messageFinder1, findsOneWidget);
+    expect(messageFinder2, findsOneWidget);
+  });
 }
 
 /**
  * TUTTE LE CLASSI
+ * N.B: è stata fatta questa procedura per renderere
+ * possibile l'utilizzo di Travis CI, altrimenti 
+ * non funzionava l'import di travis CI
  */
 
 class Chosen extends StatefulWidget {
@@ -746,6 +766,87 @@ class _BufferState extends State<Buffer> {
                   ));
             }
           }),
+    );
+  }
+}
+
+class PrenotazioneSingolaCliente extends StatefulWidget {
+  const PrenotazioneSingolaCliente(
+      {Key? key, required this.nome, required this.via, required this.data})
+      : super(key: key);
+
+  final String nome;
+  final String via;
+  final DateTime data;
+
+  @override
+  State<PrenotazioneSingolaCliente> createState() =>
+      _PrenotazioneSingolaClienteState();
+}
+
+class _PrenotazioneSingolaClienteState
+    extends State<PrenotazioneSingolaCliente> {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.only(
+        right: 22.0,
+      ),
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+      elevation: 0.0,
+      shadowColor: Colors.black,
+      child: InkWell(
+        onTap: () {},
+        child: Container(
+          width: 200.0,
+          height: 100,
+          child: Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        widget.nome,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 22.0,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 3.0,
+                      ),
+                      Text(
+                        widget.via,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        widget.data.toString(),
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
