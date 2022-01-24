@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:truccoparrucco/components/travelcard.dart';
 import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
+import 'package:truccoparrucco/components/Parrucchiere.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
 
@@ -14,14 +15,6 @@ class InterfacciaPrincipale extends StatefulWidget {
 }
 
 class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
-  List<String> img = [
-    //1
-    "a.jpeg",
-    //2
-    "b.jpeg",
-    //3
-    "c.jpeg",
-  ];
   bool state = false;
   @override
   Widget build(BuildContext context) {
@@ -120,21 +113,22 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
-                  TravelCard(
-                      img: img[0],
-                      HotelName: "Cristina e Thomas parrucchieri",
-                      location: "Bormio",
-                      rating: 5),
-                  TravelCard(
-                      img: img[1],
-                      HotelName: "Total Look N.&N",
-                      location: "Bormio",
-                      rating: 4),
-                  TravelCard(
-                      img: img[2],
-                      HotelName: "Da Vincis",
-                      location: "Bormio",
-                      rating: 4),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: Parrucchiere(
+                        nome: "img[0]",
+                        via: "Cristina e Thomas parrucchieri",
+                        rating: 5),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: Parrucchiere(
+                        nome: "img[1]", via: "Total Look N.&N", rating: 4),
+                  ),
+                  Container(
+                      padding: EdgeInsets.all(25),
+                      child: Parrucchiere(
+                          nome: "img[2]", via: "Da Vincis", rating: 4)),
                 ],
               ),
             )
