@@ -131,23 +131,23 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   ),
                   Switch(
                     value: state2,
-                   if(state1 == true) {
-                     onChanged: (bool s) {
-                      setState(() {
-                        state2 = s;
-                      });
-                    } else {
-                      final snackBar = SnackBar(
-            content: const Text('Yay! A SnackBar!'),
-            action: SnackBarAction(
-              label: 'Undo',
-              onPressed: () {
-                // Some code to undo the change.
-              },
-            ),
-                    },
-                   }
-                    
+                    onChanged: state1 == false
+                        ? (bool s) {
+                            setState(() {
+                              state2 = s;
+                            });
+                          }
+                        : (bool) {
+                            final snackBar = SnackBar(
+                                content: const Text(
+                                    'Non puoi tagliare prenotazioni se non dai la disponibilità!'),
+                                action: SnackBarAction(
+                                  label: 'Chiudi banner',
+                                  onPressed: () {},
+                                ));
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackBar);
+                          },
                     /*activeColor: Colors.blue,
                     activeTrackColor: Colors.blue,*/
                     inactiveThumbColor: Colors.green,
