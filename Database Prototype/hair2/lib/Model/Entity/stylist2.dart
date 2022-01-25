@@ -8,7 +8,6 @@ class HairStylists extends ChangeNotifier {
   final _db = FirebaseDatabase.instance.ref();
   late StreamSubscription<DatabaseEvent> _subscription;
   late DatabaseEvent event;
-  late DatabaseEvent event2;
 
   HairStylists() {
     //_ReadStylists();
