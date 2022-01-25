@@ -47,7 +47,7 @@ class _nextPageState extends State<nextPage> {
         Container(
           margin: EdgeInsets.all(10),
           child: Text(
-            "Seleziona il giorno ",
+            "Seleziona il giorno",
             style: TextStyle(
               color: Colors.black,
               fontSize: 20.0,

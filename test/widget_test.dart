@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-/*import 'package:hair2/components/Chosen.dart';
-import 'package:hair2/components/Wrong.dart';
+/*import 'package:hair2/components/Wrong.dart';
 import 'package:hair2/components/Temp.dart';
 import 'package:hair2/components/Profilo.dart';
 import 'package:hair2/components/PrenotazioniCliente.dart';
 import 'package:hair2/components/Gestore.dart';
 import 'package:hair2/components/Parrucchiere.dart';
-import 'package:hair2/components/PrenotazioneClienti.dart';*/
+import 'package:hair2/components/PrenotazioneClienti.dart';
+import 'package:hair2/components/Changesetting.dart';
+import 'package:hair2/components/NextPage.dart';
+import 'package:hair2/components/InterfacciaPrincipale.dart';
+import 'package:hair2/components/TuttePrenotazioniCliente.dart';
+import 'package:hair2/components/Conferma2.dart';*/
+import 'package:hair2/components/ConfermaModifiche.dart';
 
 void main() {
   testWidgets('Testo la classe chosen', (WidgetTester tester) async {
@@ -127,6 +132,118 @@ void main() {
     //Check outputs
     expect(messageFinder1, findsOneWidget);
     expect(messageFinder2, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget changeSetting funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: changeSetting()));
+
+    final messageFinder1 = find.text("Cambia le impostazioni");
+    final messageFinder2 = find.text('Inserisci il nuovo nickname');
+    final messageFinder3 = find.text('Cambia la via');
+    final messageFinder4 = find.text('Conferma le modifiche');
+
+    //Execute the test
+    final addButton1 = find.text('Conferma le modifiche');
+    await tester.pump();
+
+    //Check outputs
+    await tester.tap(addButton1);
+    expect(messageFinder1, findsOneWidget);
+    expect(messageFinder2, findsOneWidget);
+    expect(messageFinder3, findsOneWidget);
+    expect(messageFinder4, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget nextpage funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: nextPage()));
+
+    final messageFinder1 = find.text("Seleziona la data e il tipo di taglio");
+    final messageFinder2 = find.text('Inserisci il tipo di taglio');
+    final messageFinder3 = find.text('Esegui richiesta');
+
+    //Execute the test
+    final addButton1 = find.text('Esegui richiesta');
+    await tester.pump();
+
+    //Check outputs
+    await tester.tap(addButton1);
+    expect(messageFinder1, findsOneWidget);
+    expect(messageFinder2, findsOneWidget);
+    expect(messageFinder3, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget InterfacciaPrincipale funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: InterfacciaPrincipale()));
+
+    final messageFinder1 = find.text("Welcome in TruccoParrucco");
+    final messageFinder2 = find.text('Modalità:');
+    final messageFinder3 = find.text('Cliente');
+    final messageFinder4 = find.text('Parrucchiere');
+
+    //Execute the test
+    final addButton1 = find.text('Home');
+    final addButton2 = find.text('Prenotazioni');
+
+    await tester.pump();
+
+    //Check outputs
+    await tester.tap(addButton1);
+    await tester.tap(addButton2);
+
+    expect(messageFinder1, findsOneWidget);
+    expect(messageFinder2, findsOneWidget);
+    expect(messageFinder3, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget TuttePrenotazioniClienti funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: PrenotazioneCliente()));
+
+    final messageFinder1 = find.text("Prenotazioni effettuate");
+
+    //Execute the test
+    await tester.pump();
+
+    //Check outputs
+
+    expect(messageFinder1, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget Conferma2 funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: Conferma2()));
+
+    final messageFinder1 = find.text("Modifiche avvenute con successo!");
+
+    //Execute the test
+    final addButton1 = find.text('Torna alla schermata principale');
+
+    await tester.pump();
+
+    //Check outputs
+    await tester.tap(addButton1);
+
+    expect(messageFinder1, findsOneWidget);
+  });
+
+  testWidgets("Test per vedere se la widget ConfermaModifiche funziona",
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: confermaModifiche()));
+
+    final messageFinder1 = find.text("Prenotazione confermata!");
+
+    //Execute the test
+    final addButton1 = find.text('Torna alla schermata principale');
+
+    await tester.pump();
+
+    //Check outputs
+    await tester.tap(addButton1);
+
+    expect(messageFinder1, findsOneWidget);
   });
 }
 
@@ -846,6 +963,399 @@ class _PrenotazioneSingolaClienteState
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class changeSetting extends StatefulWidget {
+  changeSetting({Key? key}) : super(key: key);
+
+  @override
+  _changeSettingState createState() => _changeSettingState();
+}
+
+class _changeSettingState extends State<changeSetting> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
+      appBar: AppBar(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.blue,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: Column(children: [
+        Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: Text(
+            "Cambia le impostazioni",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 25.0,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          child: TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Inserisci il nuovo nickname',
+            ),
+          ),
+        ),
+        Container(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Cambia la via',
+              ),
+            )),
+        Container(
+          padding: EdgeInsets.all(10),
+          child: RaisedButton(
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+              child: Text(
+                "Conferma le modifiche",
+                style: TextStyle(color: Colors.white),
+              ),
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30.0))),
+              elevation: 4.0,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                        builder: (context) => BufferModifiche()));
+              }),
+        )
+      ]),
+    );
+  }
+}
+
+class BufferModifiche extends StatefulWidget {
+  BufferModifiche({Key? key}) : super(key: key);
+
+  @override
+  _BufferModificheState createState() => _BufferModificheState();
+}
+
+class _BufferModificheState extends State<BufferModifiche> {
+  final Future<String> _calculation = Future<String>.delayed(
+    const Duration(seconds: 1),
+    () => 'Data Loaded',
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
+      body: FutureBuilder(
+          future: _calculation,
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              if (snapshot.hasError) {
+                return SomethingWentWrong();
+              }
+              return Conferma2();
+            } else {
+              return Container(
+                  alignment: Alignment.center,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 6.0,
+                  ));
+            }
+          }),
+    );
+  }
+}
+
+class Conferma2 extends StatefulWidget {
+  Conferma2({Key? key}) : super(key: key);
+
+  @override
+  _Conferma2State createState() => _Conferma2State();
+}
+
+class _Conferma2State extends State<Conferma2> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
+      appBar: AppBar(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
+        leading: Container(),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            alignment: Alignment.center,
+            child: Text(
+              "Modifiche avvenute con successo!",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 25.0,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(15),
+            child: RaisedButton(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                child: Text(
+                  "Torna alla schermata principale",
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30.0))),
+                elevation: 4.0,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => InterfacciaPrincipale()));
+                }),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class InterfacciaPrincipale extends StatefulWidget {
+  const InterfacciaPrincipale({Key? key}) : super(key: key);
+
+  @override
+  _InterfacciaPrincipaleState createState() => _InterfacciaPrincipaleState();
+}
+
+class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
+  bool state = false;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
+      appBar: AppBar(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
+        leading: Container(),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+              color: Colors.blue,
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute<void>(builder: (context) => Settings()));
+            },
+          )
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //Let's start by adding the text
+            Text(
+              "Welcome in TruccoParrucco",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 26.0,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            state == false
+                ? Text(
+                    "Scegli il parrucchiere dove tagliare i capelli",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  )
+                : Text(
+                    "Guarda i clienti che hanno prenotato il taglio di capelli",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+            SizedBox(
+              height: 6.5,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 12),
+              child: Row(
+                children: [
+                  Text(
+                    "Modalità:",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
+                    child: Text(
+                      "Cliente",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                  Switch(
+                    value: state,
+                    onChanged: (bool s) {
+                      setState(() {
+                        state = s;
+                      });
+                    },
+                    /*activeColor: Colors.blue,
+                    activeTrackColor: Colors.blue,*/
+                    inactiveThumbColor: Colors.green,
+                  ),
+                  Text(
+                    "Parrucchiere",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: Parrucchiere(
+                        nome: "img[0]",
+                        via: "Cristina e Thomas parrucchieri",
+                        rating: 5),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: Parrucchiere(
+                        nome: "img[1]", via: "Total Look N.&N", rating: 4),
+                  ),
+                  Container(
+                      padding: EdgeInsets.all(25),
+                      child: Parrucchiere(
+                          nome: "img[2]", via: "Da Vincis", rating: 4)),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        unselectedItemColor: Color(0xFFB7B7B7),
+        selectedItemColor: Colors.blue,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: IconButton(
+              icon: Icon(Icons.bookmark),
+              onPressed: () {
+                if (state == true) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => PagGestore()));
+                } else {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => PrenotazioneCliente()));
+                }
+              },
+            ),
+            label: "Prenotazioni",
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class confermaModifiche extends StatefulWidget {
+  confermaModifiche({Key? key}) : super(key: key);
+
+  @override
+  _confermaModificheState createState() => _confermaModificheState();
+}
+
+class _confermaModificheState extends State<confermaModifiche> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
+      appBar: AppBar(
+        elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
+        leading: Container(),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            alignment: Alignment.center,
+            child: Text(
+              "Prenotazione confermata!",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 25.0,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(15),
+            child: RaisedButton(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                child: Text(
+                  "Torna alla schermata principale",
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30.0))),
+                elevation: 4.0,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => InterfacciaPrincipale()));
+                }),
+          ),
+        ],
       ),
     );
   }

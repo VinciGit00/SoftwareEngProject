@@ -13,6 +13,7 @@ import 'components/Changesetting.dart';
 import 'components/Settings.dart';
 import 'components/TuttePrenotazioniCliente.dart';
 import 'components/Parrucchiere.dart';
+import 'components/StylistListWidget.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -23,7 +24,7 @@ void main() {
     //home: Registrazione(),
     //home: Buffer(),
     //home: PagGestore(),
-    home: InterfacciaPrincipale(),
+    //home: InterfacciaPrincipale(),
     //home: PagGestore(),
     //home: Profilo(),
     //home: Settings(),
@@ -32,5 +33,6 @@ void main() {
     /*home: PrenotazioneSingolaCliente(
         nome: "a", via: "b", data: new DateTime(2020 - 2 - 2)),*/
     /*home: Parrucchiere(nome: "nome", via: "via", rating: 3),*/
+    home: StylistListWidget(),
   ));
 }
