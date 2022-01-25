@@ -7,10 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'Model/Entity/stylist2.dart';
-import 'components/Chosen.dart';
 import 'components/InterfacciaPrincipale.dart';
 import 'components/Login.dart';
-import 'components/TravelApp.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,10 +51,7 @@ class AuthenticationWrapper extends StatelessWidget {
     if (firebaseUser != null) {
       return HomePage();
       //return InterfacciaPrincipale();
-      //return Chosen();
-      //return TravelApp();
     }
-    //return SignInPage();
     return LoginScreen();
   }
 }

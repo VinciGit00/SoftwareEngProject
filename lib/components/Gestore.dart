@@ -1,9 +1,6 @@
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
-import 'package:hair2/Model/Entity/stylist2.dart';
 import 'package:hair2/components/Profilo.dart';
-import 'package:provider/provider.dart';
+import 'package:hair2/components/PrenotazioneClienti.dart';
 
 class PagGestore extends StatefulWidget {
   PagGestore({Key? key}) : super(key: key);
@@ -13,7 +10,6 @@ class PagGestore extends StatefulWidget {
 }
 
 class _PagGestoreState extends State<PagGestore> {
-  final _db = FirebaseDatabase.instance.ref();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,18 +33,56 @@ class _PagGestoreState extends State<PagGestore> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //Let's start by adding the text
             Text(
               "Prenotazioni dei clienti",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 20.0,
+                fontSize: 25.0,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(
-              height: 20.0,
-            ),
+            Expanded(
+              child: ListView(
+                scrollDirection: Axis.vertical,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: PrenotazioneSingolaCliente(
+                        nome: "nome",
+                        via: "via",
+                        data: new DateTime(2020 - 1 - 2)),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: PrenotazioneSingolaCliente(
+                        nome: "AAAAAA",
+                        via: "via",
+                        data: new DateTime(2020 - 1 - 2)),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: PrenotazioneSingolaCliente(
+                        nome: "nome",
+                        via: "via",
+                        data: new DateTime(2020 - 1 - 2)),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: PrenotazioneSingolaCliente(
+                        nome: "nome",
+                        via: "via",
+                        data: new DateTime(2020 - 1 - 2)),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: PrenotazioneSingolaCliente(
+                        nome: "nome",
+                        via: "via",
+                        data: new DateTime(2020 - 1 - 2)),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

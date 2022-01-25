@@ -1,8 +1,7 @@
 import 'package:flutter_login/flutter_login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hair2/components/TravelApp.dart';
-import 'package:hair2/components/Chosen.dart';
+import 'package:hair2/components/InterfacciaPrincipale.dart';
 import 'package:provider/src/provider.dart';
 
 import '../authentication_service.dart';
@@ -107,7 +106,7 @@ class LoginScreen extends StatelessWidget {
       ],
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => Chosen(),
+          builder: (context) => InterfacciaPrincipale(),
         ));
       },
       onRecoverPassword: _recoverPassword,

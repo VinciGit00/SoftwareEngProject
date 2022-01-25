@@ -1,12 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:hair2/Model/Entity/stylist2.dart';
-import 'package:hair2/components/travelcard.dart';
-import 'package:hair2/components/PrenotazioniCliente.dart';
-import 'package:provider/provider.dart';
-import 'package:provider/src/provider.dart';
-import '../authentication_service.dart';
+import 'package:hair2/components/TuttePrenotazioniCliente.dart';
+import 'package:hair2/components/Parrucchiere.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
 
@@ -18,14 +14,6 @@ class InterfacciaPrincipale extends StatefulWidget {
 }
 
 class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
-  List<String> img = [
-    //1
-    "a.jpeg",
-    //2
-    "b.jpeg",
-    //3
-    "c.jpeg",
-  ];
   bool state = false;
   @override
   Widget build(BuildContext context) {
@@ -63,12 +51,6 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                context.read<AuthenticationService>().signOut();
-              },
-              child: const Text("Sign out"),
-            ),
             state == false
                 ? Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
@@ -79,7 +61,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     ),
                   )
                 : Text(
-                    "Ciao",
+                    "Guarda i clienti che hanno prenotato il taglio di capelli",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
@@ -120,73 +102,35 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     inactiveThumbColor: Colors.green,
                   ),
                   Text(
-                    "Parruchhiere",
+                    "Parrucchiere",
                     style: TextStyle(fontSize: 20),
                   ),
                 ],
               ),
             ),
-            Consumer<HairStylists>(builder: (context, stylists, child) {
-              return Expanded(
-                  child: ListView(
+            Expanded(
+              child: ListView(
+                scrollDirection: Axis.vertical,
                 children: [
-                  for (var stylist in stylists.stylists)
-                    ListTile(
-                      title: Text(
-                          stylist.id != null ? stylist.id.toString() : "null"),
-                      subtitle: Text(stylist.email != null
-                          ? stylist.email.toString()
-                          : "null"),
-                    ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: Parrucchiere(
+                        nome: "img[0]",
+                        via: "Cristina e Thomas parrucchieri",
+                        rating: 5),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: Parrucchiere(
+                        nome: "img[1]", via: "Total Look N.&N", rating: 4),
+                  ),
+                  Container(
+                      padding: EdgeInsets.all(25),
+                      child: Parrucchiere(
+                          nome: "img[2]", via: "Da Vincis", rating: 4)),
                 ],
-              ));
-            }),
-/** 
-            state == true
-                ? Expanded(
-                    child: ListView(
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        TravelCard(
-                            img: img[0],
-                            HotelName: "Cristina e Thomas parrucchieri",
-                            location: "Bormio",
-                            rating: 5),
-                        TravelCard(
-                            img: img[1],
-                            HotelName: "Total Look N.&N",
-                            location: "Bormio",
-                            rating: 4),
-                        TravelCard(
-                            img: img[2],
-                            HotelName: "Da Vincis",
-                            location: "Bormio",
-                            rating: 4),
-                      ],
-                    ),
-                  )
-                : Expanded(
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        TravelCard(
-                            img: img[0],
-                            HotelName: "Franco e ciccio",
-                            location: "Bormio",
-                            rating: 5),
-                        TravelCard(
-                            img: img[1],
-                            HotelName: "Franco e nando",
-                            location: "Bormio",
-                            rating: 4),
-                        TravelCard(
-                            img: img[2],
-                            HotelName: "Giuseppe e Maria",
-                            location: "Bormio",
-                            rating: 4),
-                      ],
-                    ),
-                  ),*/
+              ),
+            )
           ],
         ),
       ),
