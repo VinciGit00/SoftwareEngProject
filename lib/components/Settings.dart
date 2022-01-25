@@ -9,7 +9,6 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  bool state = false;
   @override
   Widget build(BuildContext context) {
     String nome = "nickname non ancora inserito";
@@ -48,7 +47,7 @@ class _SettingsState extends State<Settings> {
         ),
         Container(
           padding: EdgeInsets.all(10),
-          child: Text("Via:" + via, style: TextStyle(fontSize: 20)),
+          child: Text("Via:", style: TextStyle(fontSize: 20)),
         ),
         RaisedButton(
             padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
@@ -66,43 +65,6 @@ class _SettingsState extends State<Settings> {
                   MaterialPageRoute<void>(
                       builder: (context) => changeSetting()));
             }),
-        Container(
-          alignment: Alignment.center,
-          child: Row(
-            children: [
-              Text(
-                "Abilita la possibilità di tagliare capelli:",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
-                child: Text(
-                  "Si",
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              Switch(
-                value: state,
-                onChanged: (bool s) {
-                  setState(() {
-                    state = s;
-                  });
-                },
-                /*activeColor: Colors.blue,
-                      activeTrackColor: Colors.blue,*/
-                inactiveThumbColor: Colors.green,
-              ),
-              Text(
-                "No",
-                style: TextStyle(fontSize: 20),
-              ),
-            ],
-          ),
-        ),
       ]),
     );
   }

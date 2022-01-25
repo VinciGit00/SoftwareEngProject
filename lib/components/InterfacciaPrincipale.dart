@@ -1,8 +1,12 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:truccoparrucco/components/travelcard.dart';
-import 'package:truccoparrucco/components/PrenotazioniCliente.dart';
+import 'package:hair2/Model/Entity/stylist2.dart';
+import 'package:hair2/components/travelcard.dart';
+import 'package:hair2/components/PrenotazioniCliente.dart';
+import 'package:provider/provider.dart';
+import 'package:provider/src/provider.dart';
+import '../authentication_service.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
 
@@ -59,6 +63,12 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                context.read<AuthenticationService>().signOut();
+              },
+              child: const Text("Sign out"),
+            ),
             state == false
                 ? Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
@@ -69,7 +79,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     ),
                   )
                 : Text(
-                    "Guarda i clienti che hanno prenotato il taglio di capelli",
+                    "Ciao",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
@@ -116,28 +126,67 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 ],
               ),
             ),
-            Expanded(
-              child: ListView(
-                scrollDirection: Axis.vertical,
+            Consumer<HairStylists>(builder: (context, stylists, child) {
+              return Expanded(
+                  child: ListView(
                 children: [
-                  TravelCard(
-                      img: img[0],
-                      HotelName: "Cristina e Thomas parrucchieri",
-                      location: "Bormio",
-                      rating: 5),
-                  TravelCard(
-                      img: img[1],
-                      HotelName: "Total Look N.&N",
-                      location: "Bormio",
-                      rating: 4),
-                  TravelCard(
-                      img: img[2],
-                      HotelName: "Da Vincis",
-                      location: "Bormio",
-                      rating: 4),
+                  for (var stylist in stylists.stylists)
+                    ListTile(
+                      title: Text(
+                          stylist.id != null ? stylist.id.toString() : "null"),
+                      subtitle: Text(stylist.email != null
+                          ? stylist.email.toString()
+                          : "null"),
+                    ),
                 ],
-              ),
-            )
+              ));
+            }),
+/** 
+            state == true
+                ? Expanded(
+                    child: ListView(
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        TravelCard(
+                            img: img[0],
+                            HotelName: "Cristina e Thomas parrucchieri",
+                            location: "Bormio",
+                            rating: 5),
+                        TravelCard(
+                            img: img[1],
+                            HotelName: "Total Look N.&N",
+                            location: "Bormio",
+                            rating: 4),
+                        TravelCard(
+                            img: img[2],
+                            HotelName: "Da Vincis",
+                            location: "Bormio",
+                            rating: 4),
+                      ],
+                    ),
+                  )
+                : Expanded(
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        TravelCard(
+                            img: img[0],
+                            HotelName: "Franco e ciccio",
+                            location: "Bormio",
+                            rating: 5),
+                        TravelCard(
+                            img: img[1],
+                            HotelName: "Franco e nando",
+                            location: "Bormio",
+                            rating: 4),
+                        TravelCard(
+                            img: img[2],
+                            HotelName: "Giuseppe e Maria",
+                            location: "Bormio",
+                            rating: 4),
+                      ],
+                    ),
+                  ),*/
           ],
         ),
       ),

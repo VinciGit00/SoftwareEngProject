@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Buffer.dart';
-import 'package:truccoparrucco/components/MenuItem.dart';
+import 'package:hair2/components/MenuItem.dart';
 
 class nextPage extends StatefulWidget {
   const nextPage({Key? key}) : super(key: key);

@@ -1,5 +1,9 @@
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
-import 'package:truccoparrucco/components/Profilo.dart';
+import 'package:hair2/Model/Entity/stylist2.dart';
+import 'package:hair2/components/Profilo.dart';
+import 'package:provider/provider.dart';
 
 class PagGestore extends StatefulWidget {
   PagGestore({Key? key}) : super(key: key);
@@ -9,6 +13,7 @@ class PagGestore extends StatefulWidget {
 }
 
 class _PagGestoreState extends State<PagGestore> {
+  final _db = FirebaseDatabase.instance.ref();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
