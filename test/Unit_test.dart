@@ -4,7 +4,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hair2/components/NextPage.dart';
 import 'package:hair2/components/MenuItem.dart';
 import 'package:hair2/components/Parrucchiere.dart';
-import 'package:hair2/components/PrenotazioneClienti.dart';*/
+import 'package:hair2/components/PrenotazioneClienti.dart';
+import 'package:hair2/Model/Entity/booking.dart';*/
 
 void main() {
   //Unit testing
@@ -45,6 +46,16 @@ void main() {
     expect(p.nome, "nome");
     expect(p.via, "via");
     expect(p.data, DateTime(2020 - 1 - 2));
+  });
+
+  test('Unit test sulla creazione della classe Booking', () {
+    final book = booking("a", "b", "c", "d", new DateTime(2020, 2, 2));
+
+    expect(book.key, "a");
+    expect(book.clientEmail, "b");
+    expect(book.stylistEmail, "c");
+    expect(book.type, "d");
+    expect(book.appointmentDate, new DateTime(2020, 2, 2));
   });
 }
 
@@ -1050,5 +1061,25 @@ class _PrenotazioneSingolaClienteState
         ),
       ),
     );
+  }
+}
+
+class booking {
+  String key;
+  String clientEmail;
+  String stylistEmail;
+  String type;
+  DateTime appointmentDate;
+
+  booking(this.key, this.clientEmail, this.stylistEmail, this.type,
+      this.appointmentDate);
+
+  Map<String, dynamic> toMap() {
+    var map = Map<String, dynamic>();
+    map['clientEmail'] = clientEmail;
+    map['stylistEmail'] = stylistEmail;
+    map['type'] = type;
+    map['appointmentDate'] = appointmentDate.toString();
+    return map;
   }
 }
