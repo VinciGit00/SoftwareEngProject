@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage[a4paper,left=18mm,right=18mm,top=20mm,bottom=18mm]{geometry}
+\usepackage[italian]{babel}
+
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+
+\title{Taxonomy of qualities attributes}
+\author{Nicolas Anselmi, David Guzman Piedrahita and Marco Vinciguerra}
+
+\begin{document}
+\maketitle
+\section{Introduzione}
+Questo file si occupa del descrivere i requisiti tassonomici di qualità del progetto.
+\\Per quanto riguarda la definizione di McCall.
+\\In particolare si vuole utiizare i seguenti driver/linee guifa per la produzione, revisione e
+transizione  del codice.
+\section{Product operation}
+\begin{itemize}
+    \item Correctness: se il sistema fa quello richiesto
+    \item Reliability: se il sistema è abbastanza accurato
+    \item Efficiency: se il sistema utilizza l'hardware efficientemente
+    \item Integrity: se il sistema è sicuro
+    \item Usability: se il sistema è utilizzabile
+\end{itemize}
+In particolare ci si sofferma sull'usability, correctness e reliability in quanto il 
+prodotto deve funzionare il meglio possibile.
+
+\section{Product revision}
+\begin{itemize}
+    \item Maintainability: se il sistema in caso di guasto è riparabile
+    \item Testability: se il sistema è testabile 
+    \item Felxibility: se il sistema è facilmente cambiabile
+\end{itemize}
+Il prodotto che si sta costruendo in questo caso tende a essere molto testabile in 
+quanto i test per verificare la correttezza vengono creati ed eseguiti poco dopo la  creazione
+delle classi.
+
+\section{Product transition}
+\begin{itemize}
+    \item Portability: se il software è utilizzabile su altre piattaforme
+    \item Reusability: se il software è riutilizzabile
+    \item Interoperability: se il sistema è interfacciabile con altri sistemi
+\end{itemize}
+Il sistema tenderà a essere molto portabile in quanto è stato fatto co Flutter, il quale
+tende ad essere molto scalabile.
+
+\end{document}
+

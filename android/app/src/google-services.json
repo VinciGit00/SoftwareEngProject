@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "208777354980",
+    "firebase_url": "https://hair2-9d321-default-rtdb.firebaseio.com",
+    "project_id": "hair2-9d321",
+    "storage_bucket": "hair2-9d321.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208777354980:android:7eb6fce518228d0cedd6f1",
+        "android_client_info": {
+          "package_name": "com.truccoparrucco.hair2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208777354980-cg7hk71c997nlm7hebg34e4k8n61mn83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnBm5AD67-cr4dBuo2ogKmiAtLmXW2PLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208777354980-cg7hk71c997nlm7hebg34e4k8n61mn83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
