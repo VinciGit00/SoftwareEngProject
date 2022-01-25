@@ -14,7 +14,9 @@ class InterfacciaPrincipale extends StatefulWidget {
 }
 
 class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
-  bool state = false;
+  bool state1 = false;
+  bool state2 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +53,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            state == false
+            state2 == false
                 ? Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
                     style: TextStyle(
@@ -70,6 +72,43 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   ),
             SizedBox(
               height: 6.5,
+            ),
+            Container(
+              alignment: Alignment.center,
+              child: Row(
+                children: [
+                  Text(
+                    "Abilita la possibilità di tagliare capelli:",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
+                    child: Text(
+                      "Si",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                  Switch(
+                    value: state1,
+                    onChanged: (bool s) {
+                      setState(() {
+                        state1 = s;
+                      });
+                    },
+                    /*activeColor: Colors.blue,
+                      activeTrackColor: Colors.blue,*/
+                    inactiveThumbColor: Colors.green,
+                  ),
+                  Text(
+                    "No",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ),
             ),
             Container(
               padding: EdgeInsets.only(bottom: 12),
@@ -91,12 +130,24 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     ),
                   ),
                   Switch(
-                    value: state,
-                    onChanged: (bool s) {
+                    value: state2,
+                   if(state1 == true) {
+                     onChanged: (bool s) {
                       setState(() {
-                        state = s;
+                        state2 = s;
                       });
+                    } else {
+                      final snackBar = SnackBar(
+            content: const Text('Yay! A SnackBar!'),
+            action: SnackBarAction(
+              label: 'Undo',
+              onPressed: () {
+                // Some code to undo the change.
+              },
+            ),
                     },
+                   }
+                    
                     /*activeColor: Colors.blue,
                     activeTrackColor: Colors.blue,*/
                     inactiveThumbColor: Colors.green,
@@ -112,20 +163,27 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
+                  /*ListView.builder(
+                    itemCount: lista.length  ,
+                    itemBuilder: (context, index)
+                    {
+                      return Parrucchiere(nome: lista., via: lista., rating: lista.)
+                    }
+                    ),*/
                   Container(
-                    padding: EdgeInsets.all(25),
+                    padding: EdgeInsets.all(12.5),
                     child: Parrucchiere(
                         nome: "img[0]",
                         via: "Cristina e Thomas parrucchieri",
                         rating: 5),
                   ),
                   Container(
-                    padding: EdgeInsets.all(25),
+                    padding: EdgeInsets.all(12.5),
                     child: Parrucchiere(
                         nome: "img[1]", via: "Total Look N.&N", rating: 4),
                   ),
                   Container(
-                      padding: EdgeInsets.all(25),
+                      padding: EdgeInsets.all(12.5),
                       child: Parrucchiere(
                           nome: "img[2]", via: "Da Vincis", rating: 4)),
                 ],
@@ -146,7 +204,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
             icon: IconButton(
               icon: Icon(Icons.bookmark),
               onPressed: () {
-                if (state == true) {
+                if (state2 == true) {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(

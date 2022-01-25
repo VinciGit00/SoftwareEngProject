@@ -66,43 +66,6 @@ class _SettingsState extends State<Settings> {
                   MaterialPageRoute<void>(
                       builder: (context) => changeSetting()));
             }),
-        Container(
-          alignment: Alignment.center,
-          child: Row(
-            children: [
-              Text(
-                "Abilita la possibilità di tagliare capelli:",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
-                child: Text(
-                  "Si",
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              Switch(
-                value: state,
-                onChanged: (bool s) {
-                  setState(() {
-                    state = s;
-                  });
-                },
-                /*activeColor: Colors.blue,
-                      activeTrackColor: Colors.blue,*/
-                inactiveThumbColor: Colors.green,
-              ),
-              Text(
-                "No",
-                style: TextStyle(fontSize: 20),
-              ),
-            ],
-          ),
-        ),
       ]),
     );
   }
