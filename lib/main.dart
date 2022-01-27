@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:hair2/Model/Entity/clientBookings.dart';
 import 'package:hair2/authentication_service.dart';
 import 'package:hair2/home_page.dart';
 import 'package:hair2/sign_in_page.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
               context.read<AuthenticationService>().authStateChanges,
           initialData: null,
         ),
-        ChangeNotifierProvider<HairStylists>(create: (_) => HairStylists())
+        ChangeNotifierProvider<HairStylists>(create: (_) => HairStylists()),
+        //ChangeNotifierProvider<clientBookings>(create: (_) => HairStylists()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

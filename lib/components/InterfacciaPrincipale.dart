@@ -170,6 +170,17 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       return Parrucchiere(nome: lista., via: lista., rating: lista.)
                     }
                     ),*/
+                  /*
+                     Consumer<HairStylists>(builder: (context, stylists, child) {
+                return Expanded(
+                    //child: Text('stylists: ${stylists.stylists.length}'),
+                    child: ListView(
+                  children: [
+                    for (var stylist in stylists.stylists)
+                      Parrucchiere(nome: stylist.nick , via: stylist.street, rating: 4)
+                );
+              }),   
+                    */
                   Container(
                     padding: EdgeInsets.all(12.5),
                     child: Parrucchiere(

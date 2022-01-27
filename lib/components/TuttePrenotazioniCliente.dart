@@ -61,6 +61,20 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
                 ],
               ),
             )
+            /*
+                     Consumer<HairStylists>(builder: (context, stylists, child) {
+                return Expanded(
+                    //child: Text('stylists: ${stylists.stylists.length}'),
+                    child: ListView(
+                  children: [
+                    for (var stylist in stylists.stylists)
+                     PrenotazioneSingolaCliente(
+                        nome: "nome",
+                        via: "via",
+                        data: new DateTime(2020 - 1 - 2)),
+                );
+              }),   
+                    */
           ],
         ),
       ),

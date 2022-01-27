@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "/Users/marcovinciguerra/Github/SoftwareEngProject/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/marcovinciguerra/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
