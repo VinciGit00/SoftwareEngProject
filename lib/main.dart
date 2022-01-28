@@ -30,8 +30,9 @@ class MyApp extends StatelessWidget {
               context.read<AuthenticationService>().authStateChanges,
           initialData: null,
         ),
-        ChangeNotifierProvider<HairStylists>(create: (_) => HairStylists()),
-        //ChangeNotifierProvider<clientBookings>(create: (_) => HairStylists()),
+        ChangeNotifierProvider<HairStylists>(
+            create: (_) => HairStylists(), lazy: false),
+        //ChangeNotifierProvider<clientBookings>(create: (_) => clientBookings()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -51,8 +52,14 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User?>();
 
     if (firebaseUser != null) {
-      return HomePage();
-      //return InterfacciaPrincipale();
+      //return HomePage();
+      /**return ChangeNotifierProvider<clientBookings>(
+          create: (_) =>
+              clientBookings(FirebaseAuth.instance.currentUser!.email),
+          child: InterfacciaPrincipale(),
+          lazy: false);
+          */
+      return InterfacciaPrincipale();
     }
     return LoginScreen();
   }

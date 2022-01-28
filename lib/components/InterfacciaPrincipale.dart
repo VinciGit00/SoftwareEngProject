@@ -1,8 +1,13 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:hair2/Model/Entity/clientBookings.dart';
+import 'package:hair2/Model/Entity/stylist2.dart';
 import 'package:hair2/components/TuttePrenotazioniCliente.dart';
 import 'package:hair2/components/Parrucchiere.dart';
+import 'package:provider/provider.dart';
+import '../authentication_service.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
 
@@ -52,6 +57,12 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 fontSize: 26.0,
                 fontWeight: FontWeight.w600,
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                context.read<AuthenticationService>().signOut();
+              },
+              child: const Text("Sign out"),
             ),
             state2 == false
                 ? Text(
@@ -160,46 +171,17 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               ),
             ),
             Expanded(
-              child: ListView(
-                scrollDirection: Axis.vertical,
-                children: [
-                  /*ListView.builder(
-                    itemCount: lista.length  ,
-                    itemBuilder: (context, index)
-                    {
-                      return Parrucchiere(nome: lista., via: lista., rating: lista.)
-                    }
-                    ),*/
-                  /*
-                     Consumer<HairStylists>(builder: (context, stylists, child) {
-                return Expanded(
-                    //child: Text('stylists: ${stylists.stylists.length}'),
-                    child: ListView(
-                  children: [
-                    for (var stylist in stylists.stylists)
-                      Parrucchiere(nome: stylist.nick , via: stylist.street, rating: 4)
-                );
-              }),   
-                    */
-                  Container(
-                    padding: EdgeInsets.all(12.5),
-                    child: Parrucchiere(
-                        nome: "img[0]",
-                        via: "Cristina e Thomas parrucchieri",
-                        rating: 5),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(12.5),
-                    child: Parrucchiere(
-                        nome: "img[1]", via: "Total Look N.&N", rating: 4),
-                  ),
-                  Container(
-                      padding: EdgeInsets.all(12.5),
-                      child: Parrucchiere(
-                          nome: "img[2]", via: "Da Vincis", rating: 4)),
-                ],
-              ),
-            )
+                child: Consumer<HairStylists>(builder: (context, stylists, _) {
+              return ListView.builder(
+                itemCount: stylists.stylists.length,
+                itemBuilder: (context, index) {
+                  return Parrucchiere(
+                      nome: stylists.stylists[index].nick!,
+                      via: stylists.stylists[index].street!,
+                      rating: 5);
+                },
+              );
+            }))
           ],
         ),
       ),
@@ -224,7 +206,33 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => PrenotazioneCliente()));
+                          builder: (context) =>
+                              ChangeNotifierProvider<clientBookings>(
+                                  create: (_) => clientBookings(
+                                      FirebaseAuth.instance.currentUser!.email),
+                                  lazy: false,
+                                  builder: (context, child) {
+                                    return Container(
+                                      child: FutureBuilder(
+                                        builder: (context, asyncsnapshot) {
+                                          if (asyncsnapshot.connectionState ==
+                                              ConnectionState.done) {
+                                            return PrenotazioneCliente();
+                                          } else {
+                                            return Center(
+                                                child:
+                                                    CircularProgressIndicator());
+                                          }
+                                        },
+                                        future:
+                                            Provider.of<clientBookings>(context)
+                                                .ReadBooking(FirebaseAuth
+                                                    .instance
+                                                    .currentUser!
+                                                    .email),
+                                      ),
+                                    );
+                                  })));
                 }
               },
             ),
