@@ -65,63 +65,71 @@ class _nextPageState extends State<nextPage> {
             ),
           ),
         ),
+
         //prefixIcon: Icon(Icons.calendar_month),
-        RaisedButton(
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
-            "Scegli la data",
-            style: TextStyle(color: Colors.white),
-          ),
-          color: Colors.blue,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(30.0))),
-          elevation: 4.0,
-          onPressed: () => pickDate(context),
-          //child: Icon(Icons.send, color: Colors.white)
-        ),
-        Text(
-          "Inserisci il tipo di taglio",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20.0,
-            fontWeight: FontWeight.w400,
+
+        Expanded(
+          flex: 6,
+          child: DatePickerDialog(
+            //controller: ,
+            initialDate: DateTime.now(),
+            firstDate: DateTime.now(),
+            lastDate: DateTime.parse("20250101"),
           ),
         ),
-        PopupMenuButton<MenuItem>(
-          onSelected: (item) => setState(() {
-            choice = item.text;
-          }),
-          itemBuilder: (context) => [
-            ...TipoTaglio.itemFirst.map(buildItem).toList(),
-          ],
-        ),
-        Container(
-          margin: EdgeInsets.all(5),
-          child: Text(
-            choice,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20.0,
-              fontWeight: FontWeight.w300,
-            ),
-          ),
-        ),
-        RaisedButton(
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
-            "Esegui richiesta",
-            style: TextStyle(color: Colors.white),
-          ),
-          color: Colors.blue,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(30.0))),
-          elevation: 4.0,
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute<void>(builder: (context) => Buffer()));
-          },
-          //child: Icon(Icons.send, color: Colors.white)
-        )
+
+        Flexible(
+            flex: 2,
+            child: Column(
+              mainAxisSize: MainAxisSize.min, // To make the card compact
+              children: [
+                Text(
+                  "Inserisci il tipo di taglio",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                PopupMenuButton<MenuItem>(
+                  onSelected: (item) => setState(() {
+                    choice = item.text;
+                  }),
+                  itemBuilder: (context) => [
+                    ...TipoTaglio.itemFirst.map(buildItem).toList(),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.all(5),
+                  child: Text(
+                    choice,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                ),
+                RaisedButton(
+                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                  child: Text(
+                    "Esegui richiesta",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  color: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(30.0))),
+                  elevation: 4.0,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute<void>(
+                            builder: (context) => Buffer()));
+                  },
+                  //child: Icon(Icons.send, color: Colors.white)
+                )
+              ],
+            )),
       ]),
     );
   }

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hair2/Model/Entity/clientBookings.dart';
+import 'package:provider/provider.dart';
+import 'Parrucchiere.dart';
 import 'PrenotazioneClienti.dart';
 
 class PrenotazioneCliente extends StatefulWidget {
@@ -40,7 +43,19 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Expanded(
+            Expanded(child:
+                Consumer<clientBookings>(builder: (context, bookings, _) {
+              return ListView.builder(
+                itemCount: bookings.bookings.length,
+                itemBuilder: (context, index) {
+                  return PrenotazioneSingolaCliente(
+                      nome: bookings.bookings[index].stylistEmail,
+                      via: bookings.bookings[index].type,
+                      data: bookings.bookings[index].appointmentDate);
+                },
+              );
+            })),
+            /**Expanded(
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
@@ -60,21 +75,7 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
                   ),
                 ],
               ),
-            )
-            /*
-                     Consumer<HairStylists>(builder: (context, stylists, child) {
-                return Expanded(
-                    //child: Text('stylists: ${stylists.stylists.length}'),
-                    child: ListView(
-                  children: [
-                    for (var stylist in stylists.stylists)
-                     PrenotazioneSingolaCliente(
-                        nome: "nome",
-                        via: "via",
-                        data: new DateTime(2020 - 1 - 2)),
-                );
-              }),   
-                    */
+            ) */
           ],
         ),
       ),
