@@ -9,6 +9,9 @@ class changeSetting extends StatefulWidget {
 }
 
 class _changeSettingState extends State<changeSetting> {
+  TextEditingController _nicknameTEC = TextEditingController();
+  TextEditingController _streetTEC = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,8 +45,10 @@ class _changeSettingState extends State<changeSetting> {
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           child: TextField(
+            controller: _nicknameTEC,
             obscureText: true,
             decoration: InputDecoration(
+              prefixIcon: Icon(Icons.zoom_out_sharp),
               border: OutlineInputBorder(),
               labelText: 'Inserisci il nuovo nickname',
             ),
@@ -52,8 +57,10 @@ class _changeSettingState extends State<changeSetting> {
         Container(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: TextField(
+              controller: _streetTEC,
               obscureText: true,
               decoration: InputDecoration(
+                prefixIcon: Icon(Icons.zoom_out_sharp),
                 border: OutlineInputBorder(),
                 labelText: 'Cambia la via',
               ),
@@ -71,6 +78,10 @@ class _changeSettingState extends State<changeSetting> {
                   borderRadius: BorderRadius.all(Radius.circular(30.0))),
               elevation: 4.0,
               onPressed: () {
+                var _nickname = _nicknameTEC.text;
+                var _street = _streetTEC.text;
+                print("Nickname: " + _nickname);
+                print("Street: " + _street);
                 Navigator.push(
                     context,
                     MaterialPageRoute<void>(

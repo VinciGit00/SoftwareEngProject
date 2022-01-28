@@ -802,13 +802,6 @@ class _nextPageState extends State<nextPage> {
           ),
         ),
         //prefixIcon: Icon(Icons.calendar_month),
-
-        DatePickerDialog(
-          initialDate: DateTime.now(),
-          firstDate: DateTime.now(),
-          lastDate: DateTime.parse("20250101"),
-        ),
-
         Text(
           "Inserisci il tipo di taglio",
           style: TextStyle(

@@ -14,8 +14,18 @@ class nextPage extends StatefulWidget {
 }
 
 class _nextPageState extends State<nextPage> {
+  late DateTime date;
+
   void onPressed() {
     print("Pressed");
+  }
+
+  String getText() {
+    if (date == null) {
+      return 'Select date';
+    } else {
+      return '${date.month}/${date.day}/${date.year}';
+    }
   }
 
   late String choice = "";
@@ -56,13 +66,19 @@ class _nextPageState extends State<nextPage> {
           ),
         ),
         //prefixIcon: Icon(Icons.calendar_month),
-
-        DatePickerDialog(
-          initialDate: DateTime.now(),
-          firstDate: DateTime.now(),
-          lastDate: DateTime.parse("20250101"),
+        RaisedButton(
+          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: Text(
+            "Scegli la data",
+            style: TextStyle(color: Colors.white),
+          ),
+          color: Colors.blue,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30.0))),
+          elevation: 4.0,
+          onPressed: () => pickDate(context),
+          //child: Icon(Icons.send, color: Colors.white)
         ),
-
         Text(
           "Inserisci il tipo di taglio",
           style: TextStyle(
@@ -118,6 +134,19 @@ class _nextPageState extends State<nextPage> {
           Text(item.text)
         ],
       ));
+
+  Future pickDate(BuildContext context) async {
+    final initialDate = DateTime.now();
+    final newDate = await showDatePicker(
+      context: context,
+      initialDate: initialDate,
+      firstDate: DateTime.now(),
+      lastDate: DateTime.parse("20250101"),
+    );
+    if (newDate == null) return;
+
+    setState(() => date = newDate);
+  }
 }
 
 class TipoTaglio {
