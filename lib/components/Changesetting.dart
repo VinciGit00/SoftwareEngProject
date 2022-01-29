@@ -82,10 +82,20 @@ class _changeSettingState extends State<changeSetting> {
                 var _street = _streetTEC.text;
                 print("Nickname: " + _nickname);
                 print("Street: " + _street);
-                Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                        builder: (context) => BufferModifiche()));
+                if (_nicknameTEC.text != "" && _streetTEC != "") {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => BufferModifiche()));
+                } else {
+                  final snackBar = SnackBar(
+                      content: const Text(
+                          'Compila tutti i campi prima di inviare le modifiche!'),
+                      action: SnackBarAction(
+                        label: 'Chiudi banner',
+                        onPressed: () {},
+                      ));
+                }
               }),
         )
       ]),

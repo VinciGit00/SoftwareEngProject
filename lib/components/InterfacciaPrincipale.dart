@@ -59,12 +59,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                context.read<AuthenticationService>().signOut();
-              },
-              child: const Text("Sign out"),
-            ),
+
             state2 == false
                 ? Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
@@ -182,7 +177,22 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       rating: 5);
                 },
               );
-            }))
+            })),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    padding: EdgeInsets.all(20) //content padding inside button
+
+                    ),
+                onPressed: () {
+                  context.read<AuthenticationService>().signOut();
+                },
+                child: const Text("Sign out"),
+              ),
+            )
           ],
         ),
       ),

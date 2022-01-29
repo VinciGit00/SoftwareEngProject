@@ -6,6 +6,7 @@ import 'package:hair2/sign_in_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'components/theme.dart';
 
 import 'Model/Entity/stylist2.dart';
 import 'components/InterfacciaPrincipale.dart';
@@ -36,10 +37,9 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+        themeMode: ThemeMode.system,
+        theme: white,
+        darkTheme: dark,
         home: AuthenticationWrapper(),
       ),
     );
