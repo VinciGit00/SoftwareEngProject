@@ -26,16 +26,16 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      //backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        //backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.settings,
-              color: Colors.blue,
+              //color: Colors.blue,
             ),
             onPressed: () {
               Navigator.push(context,
@@ -54,7 +54,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
             Text(
               "Welcome in TruccoParrucco",
               style: TextStyle(
-                color: Colors.black,
+                //color: Colors.black,
                 fontSize: 26.0,
                 fontWeight: FontWeight.w600,
               ),
@@ -64,7 +64,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 ? Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
                     style: TextStyle(
-                      color: Colors.black,
+                      //color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.w300,
                     ),
@@ -72,7 +72,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 : Text(
                     "Guarda i clienti che hanno prenotato il taglio di capelli",
                     style: TextStyle(
-                      color: Colors.black,
+                      //color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.w300,
                     ),
@@ -87,7 +87,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   Text(
                     "Abilita la possibilità di tagliare capelli:",
                     style: TextStyle(
-                      color: Colors.black,
+                      //color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -124,7 +124,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   Text(
                     "Modalità:",
                     style: TextStyle(
-                      color: Colors.black,
+                      //color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -197,7 +197,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Color(0xFFB7B7B7),
+        // unselectedItemColor: Color(0xFFB7B7B7),
         selectedItemColor: Colors.blue,
         items: [
           BottomNavigationBarItem(
