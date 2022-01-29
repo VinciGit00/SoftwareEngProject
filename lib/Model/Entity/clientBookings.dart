@@ -32,13 +32,19 @@ class clientBookings extends ChangeNotifier {
     var event =
         await directory.orderByChild('clientEmail').equalTo(email).once();
 
-    Map<dynamic, dynamic> values =
-        event.snapshot.value as Map<dynamic, dynamic>;
-    values.forEach((key, values) {
-      print(values);
-      _bookings.add(booking(key, values['clientEmail'], values['stylistEmail'],
-          values['type'], DateTime.parse(values['appointmentDate'])));
-    });
+    if (event.snapshot.value != null) {
+      Map<dynamic, dynamic> values =
+          event.snapshot.value as Map<dynamic, dynamic>;
+      values.forEach((key, values) {
+        print(values);
+        _bookings.add(booking(
+            key,
+            values['clientEmail'],
+            values['stylistEmail'],
+            values['type'],
+            DateTime.parse(values['appointmentDate'])));
+      });
+    }
 
     //notifyListeners();
   }

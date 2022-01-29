@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hair2/Model/Entity/stylistBookings.dart';
 import 'package:hair2/components/Profilo.dart';
 import 'package:hair2/components/PrenotazioneClienti.dart';
+import 'package:provider/provider.dart';
 
 class PagGestore extends StatefulWidget {
   PagGestore({Key? key}) : super(key: key);
@@ -41,7 +43,19 @@ class _PagGestoreState extends State<PagGestore> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Expanded(
+            Expanded(child:
+                Consumer<stylistBookings>(builder: (context, bookings, _) {
+              return ListView.builder(
+                itemCount: bookings.bookings.length,
+                itemBuilder: (context, index) {
+                  return PrenotazioneSingolaCliente(
+                      nome: bookings.bookings[index].clientEmail,
+                      via: bookings.bookings[index].type,
+                      data: bookings.bookings[index].appointmentDate);
+                },
+              );
+            })),
+            /**Expanded(
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
@@ -59,30 +73,9 @@ class _PagGestoreState extends State<PagGestore> {
                         via: "via",
                         data: new DateTime(2020 - 1 - 2)),
                   ),
-                  Container(
-                    padding: EdgeInsets.all(25),
-                    child: PrenotazioneSingolaCliente(
-                        nome: "nome",
-                        via: "via",
-                        data: new DateTime(2020 - 1 - 2)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(25),
-                    child: PrenotazioneSingolaCliente(
-                        nome: "nome",
-                        via: "via",
-                        data: new DateTime(2020 - 1 - 2)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(25),
-                    child: PrenotazioneSingolaCliente(
-                        nome: "nome",
-                        via: "via",
-                        data: new DateTime(2020 - 1 - 2)),
-                  ),
                 ],
               ),
-            )
+            )*/
           ],
         ),
       ),

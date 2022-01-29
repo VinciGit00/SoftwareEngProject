@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/clientBookings.dart';
 import 'package:hair2/Model/Entity/stylist2.dart';
+import 'package:hair2/Model/Entity/stylistBookings.dart';
 import 'package:hair2/components/TuttePrenotazioniCliente.dart';
 import 'package:hair2/components/Parrucchiere.dart';
 import 'package:provider/provider.dart';
@@ -201,7 +202,30 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => PagGestore()));
+                          builder: (context) => ChangeNotifierProvider<
+                                  stylistBookings>(
+                              create: (_) => stylistBookings(
+                                  FirebaseAuth.instance.currentUser!.email),
+                              lazy: false,
+                              builder: (context, child) {
+                                return Container(
+                                  child: FutureBuilder(
+                                    builder: (context, asyncsnapshot) {
+                                      if (asyncsnapshot.connectionState ==
+                                          ConnectionState.done) {
+                                        return PagGestore();
+                                      } else {
+                                        return Center(
+                                            child: CircularProgressIndicator());
+                                      }
+                                    },
+                                    future:
+                                        Provider.of<stylistBookings>(context)
+                                            .ReadBooking(FirebaseAuth
+                                                .instance.currentUser!.email),
+                                  ),
+                                );
+                              })));
                 } else {
                   Navigator.push(
                       context,

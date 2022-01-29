@@ -52,13 +52,6 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User?>();
 
     if (firebaseUser != null) {
-      //return HomePage();
-      /**return ChangeNotifierProvider<clientBookings>(
-          create: (_) =>
-              clientBookings(FirebaseAuth.instance.currentUser!.email),
-          child: InterfacciaPrincipale(),
-          lazy: false);
-          */
       return InterfacciaPrincipale();
     }
     return LoginScreen();
