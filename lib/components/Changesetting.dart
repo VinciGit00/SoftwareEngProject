@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:hair2/Model/Entity/user.dart';
+import '../database_service.dart';
 import 'BufferModifiche.dart';
 
 class changeSetting extends StatefulWidget {
@@ -11,6 +14,7 @@ class changeSetting extends StatefulWidget {
 class _changeSettingState extends State<changeSetting> {
   TextEditingController _nicknameTEC = TextEditingController();
   TextEditingController _streetTEC = TextEditingController();
+  // var _db =  DatabaseService(); // TODO change the way we access the database class
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +50,7 @@ class _changeSettingState extends State<changeSetting> {
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           child: TextField(
             controller: _nicknameTEC,
-            obscureText: true,
+            obscureText: false,
             decoration: InputDecoration(
               prefixIcon: Icon(Icons.zoom_out_sharp),
               border: OutlineInputBorder(),
@@ -58,7 +62,7 @@ class _changeSettingState extends State<changeSetting> {
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: TextField(
               controller: _streetTEC,
-              obscureText: true,
+              obscureText: false,
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.zoom_out_sharp),
                 border: OutlineInputBorder(),
@@ -80,6 +84,8 @@ class _changeSettingState extends State<changeSetting> {
               onPressed: () {
                 var _nickname = _nicknameTEC.text;
                 var _street = _streetTEC.text;
+                user().addUserInfo(FirebaseAuth.instance.currentUser!.email!,
+                    _nickname, _street);
                 print("Nickname: " + _nickname);
                 print("Street: " + _street);
                 if (_nicknameTEC.text != "" && _streetTEC != "") {

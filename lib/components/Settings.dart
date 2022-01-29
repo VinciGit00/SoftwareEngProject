@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hair2/Model/Entity/user.dart';
 import 'Changesetting.dart';
 
 class Settings extends StatefulWidget {
@@ -12,8 +13,10 @@ class _SettingsState extends State<Settings> {
   bool state = false;
   @override
   Widget build(BuildContext context) {
-    String nome = "nickname non ancora inserito";
-    String via = "via non ancora inserita";
+    //String nome = user().nick;
+    // String via = user().street;
+    String nome = 'def';
+    String via = 'def';
     return Scaffold(
       backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(

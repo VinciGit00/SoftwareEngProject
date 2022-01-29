@@ -77,7 +77,7 @@ class DatabaseService {
 
   //User info
   Future<void> addUserInfo(String email, String nick, String street) async {
-    await database.ref('users/' + email).update({
+    await database.ref('users/' + nick).update({
       'email': email,
       'nick': nick,
       'street': street,
