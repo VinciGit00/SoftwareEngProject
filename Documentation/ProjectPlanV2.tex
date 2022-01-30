@@ -284,7 +284,7 @@ Questo file si occupa del descrivere i requisiti tassonomici di qualità del pro
 \\Per quanto riguarda la definizione di McCall.
 \\In particolare si vuole utiizare i seguenti driver/linee guifa per la produzione, revisione e
 transizione  del codice.
-\section{Product operation}
+\subsection{Product operation}
 \begin{itemize}
     \item Correctness: se il sistema fa quello richiesto
     \item Reliability: se il sistema è abbastanza accurato
@@ -295,7 +295,7 @@ transizione  del codice.
 In particolare ci si sofferma sull'usability, correctness e reliability in quanto il 
 prodotto deve funzionare il meglio possibile.
 
-\section{Product revision}
+\subsection{Product revision}
 \begin{itemize}
     \item Maintainability: se il sistema in caso di guasto è riparabile
     \item Testability: se il sistema è testabile 
@@ -305,7 +305,7 @@ Il prodotto che si sta costruendo in questo caso tende a essere molto testabile 
 quanto i test per verificare la correttezza vengono creati ed eseguiti poco dopo la  creazione
 delle classi.
 
-\section{Product transition}
+\subsection{Product transition}
 \begin{itemize}
     \item Portability: se il software è utilizzabile su altre piattaforme
     \item Reusability: se il software è riutilizzabile
@@ -313,6 +313,24 @@ delle classi.
 \end{itemize}
 Il sistema tenderà a essere molto portabile in quanto è stato fatto con Flutter, il quale
 tende ad essere molto scalabile.
+
+\subsection{Qualità per il codice in Dart}
+Per il codice in Dart è stato implementato il Dart Analyzer, che si ottiene modificando il file
+$analysis_options.yaml$ e tramite il comando da terminale dart analyze si fa un test per 
+vedere se le qualità prese in considerazione sono valide e rispettate.
+\\La documentazione necessaria per informarsi su questo tipo di standard è stata presa
+dal seguente link: \url{https://pub.dev/packages/analyzer}.
+\\Alcuni tra i parametri presi in considerazione per garantire la qualità sono:
+
+\begin{itemize}
+    \item Maximum nesting level
+    \item Ciclomatic complexity
+    \item Number of parameters
+    \item Source lines of code
+\end{itemize}
+
+Ecco un esempio di output di un test fatto con dart analyze:
+\\\includegraphics[scale = 0.5]{"Immagini/Dart_analyze.png"}
 
 \section{Software Architecture}
 \subsection{Architecture design metod }

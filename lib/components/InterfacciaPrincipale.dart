@@ -183,21 +183,25 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
             })),
             Align(
               alignment: Alignment.bottomCenter,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)),
-                    padding: EdgeInsets.all(20) //content padding inside button
+              child: SizedBox(
+                height: 100.0,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      padding:
+                          EdgeInsets.all(20) //content padding inside button
 
-                    ),
-                onPressed: () {
-                  context.read<AuthenticationService>().signOut();
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute<void>(
-                          builder: (context) => AuthenticationWrapper()));
-                },
-                child: const Text("Sign out"),
+                      ),
+                  onPressed: () {
+                    context.read<AuthenticationService>().signOut();
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute<void>(
+                            builder: (context) => AuthenticationWrapper()));
+                  },
+                  child: const Text("Sign out"),
+                ),
               ),
             )
           ],
