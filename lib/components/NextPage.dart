@@ -20,13 +20,7 @@ class _nextPageState extends State<nextPage> {
     print("Pressed");
   }
 
-  String getText() {
-    if (date == null) {
-      return 'Select date';
-    } else {
-      return '${date.month}/${date.day}/${date.year}';
-    }
-  }
+  late DateTime _dateTime;
 
   late String choice = "";
   @override
@@ -69,12 +63,27 @@ class _nextPageState extends State<nextPage> {
         //prefixIcon: Icon(Icons.calendar_month),
 
         Expanded(
-          flex: 6,
-          child: DatePickerDialog(
-            //controller: ,
-            initialDate: DateTime.now(),
-            firstDate: DateTime.now(),
-            lastDate: DateTime.parse("20250101"),
+          child: Column(
+            children: [
+              Text(_dateTime == null
+                  ? 'Nessuna data selezionata'
+                  : _dateTime.toString()),
+              RaisedButton(
+                child: Text("Ciao mondo"),
+                onPressed: () {
+                  showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(2001),
+                          lastDate: DateTime(2025))
+                      .then((date) {
+                    setState(() {
+                      _dateTime = date!;
+                    });
+                  });
+                },
+              )
+            ],
           ),
         ),
 
