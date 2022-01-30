@@ -31,57 +31,67 @@ class _SettingsState extends State<Settings> {
           },
         ),
       ),
-      body: Column(children: [
-        Container(
-          alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
-            "Impostazioni utente",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 25.0,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
-        Text(
-          "Nome: " + nome,
-          style: TextStyle(fontSize: 20),
-        ),
-        Container(
-          padding: EdgeInsets.all(10),
-          child: Text("Via:" + via, style: TextStyle(fontSize: 20)),
-        ),
-        RaisedButton(
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.center,
             padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
             child: Text(
-              "Cambia le impostazioni",
-              style: TextStyle(color: Colors.white),
+              "Impostazioni utente",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 25.0,
+                fontWeight: FontWeight.w600,
+              ),
             ),
-            color: Colors.blue,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(30.0))),
-            elevation: 4.0,
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                      builder: (context) => changeSetting()));
-            }),
-        FutureBuilder(
-          future: user().getUserInfo(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              return Text(
-                "Nome: " + user().nick,
-                style: TextStyle(fontSize: 20),
-              );
-            } else {
-              return Text("loading");
-            }
-          },
-        ),
-      ]),
+          ),
+          FutureBuilder(
+            future: user().getUserInfo(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                return Text(
+                  "Nome: " + user().nick,
+                  style: TextStyle(fontSize: 20),
+                );
+              } else {
+                return Text("loading");
+              }
+            },
+          ),
+          Container(
+            padding: EdgeInsets.all(5.0),
+            child: FutureBuilder(
+              future: user().getUserInfo(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return Text(
+                    "Via: " + user().street,
+                    style: TextStyle(fontSize: 20),
+                  );
+                } else {
+                  return Text("loading");
+                }
+              },
+            ),
+          ),
+          RaisedButton(
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+              child: Text(
+                "Cambia le impostazioni",
+                style: TextStyle(color: Colors.white),
+              ),
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30.0))),
+              elevation: 4.0,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                        builder: (context) => changeSetting()));
+              }),
+        ],
+      ),
     );
   }
 }

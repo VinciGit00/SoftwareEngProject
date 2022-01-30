@@ -184,7 +184,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
             Align(
               alignment: Alignment.bottomCenter,
               child: SizedBox(
-                height: 100.0,
+                width: 150.0,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -210,6 +210,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
       bottomNavigationBar: BottomNavigationBar(
         // unselectedItemColor: Color(0xFFB7B7B7),
         // selectedItemColor: Color(0xFF)Colors.blue,
+        elevation: 10,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

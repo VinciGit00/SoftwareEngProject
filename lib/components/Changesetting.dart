@@ -88,7 +88,7 @@ class _changeSettingState extends State<changeSetting> {
                     _nickname, _street);
                 print("Nickname: " + _nickname);
                 print("Street: " + _street);
-                if (_nicknameTEC.text != "" || _streetTEC != "") {
+                if (_nicknameTEC.text != "" || _streetTEC.text != "") {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
@@ -101,6 +101,7 @@ class _changeSettingState extends State<changeSetting> {
                         label: 'Chiudi banner',
                         onPressed: () {},
                       ));
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
               }),
         )

@@ -28,8 +28,10 @@ class _ParrucchiereState extends State<Parrucchiere> {
       shadowColor: Colors.black,
       child: InkWell(
         onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute<void>(builder: (context) => nextPage()));
+          Navigator.push(
+              context,
+              MaterialPageRoute<void>(
+                  builder: (context) => nextPage(nameStylist: widget.nome)));
         },
         child: Container(
           width: 200.0,
