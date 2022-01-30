@@ -198,7 +198,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         // unselectedItemColor: Color(0xFFB7B7B7),
-        selectedItemColor: Colors.blue,
+        // selectedItemColor: Color(0xFF)Colors.blue,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

@@ -13,10 +13,9 @@ class _SettingsState extends State<Settings> {
   bool state = false;
   @override
   Widget build(BuildContext context) {
-    //String nome = user().nick;
-    // String via = user().street;
-    String nome = 'def';
-    String via = 'def';
+    user().getUserInfo();
+    String nome = user().nick;
+    String via = user().street;
     return Scaffold(
       backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(

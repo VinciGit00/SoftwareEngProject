@@ -8,13 +8,54 @@ class user extends ChangeNotifier {
   late String street;
   final database = FirebaseDatabase.instance;
 
-  //user._privateConstructor(); //pattern to create a singleton
   user._privateConstructor() {
-    // getUserInfo();
-  }
+    this.email = "";
+    this.nick = "";
+    this.street = "";
+    getUserInfo();
+  } //pattern to create a singleton
   static late final user _instance = user._privateConstructor();
-  factory user() =>
-      _instance; //add thingie to get user name from server once instatiatiated
+  factory user() => _instance;
+
+  /*Future<void> addUserInfo(String email, String nick, String street) async {
+    var directory = await database.ref('users');
+    var event = await directory.orderByChild('email').equalTo(email).once();
+    var t = event.snapshot.value as List<dynamic>;
+
+    if (t != null) {
+      var mappy = t[0] as Map<dynamic, dynamic>;
+      await database.ref('users/' + mappy['nick']).remove();
+    }
+
+    this.email = email;
+    this.nick = nick;
+    this.street = street;
+
+    await database.ref('users/' + nick).update({
+      'email': email,
+      'nick': nick,
+      'street': street,
+      'inputDate': DateTime.now().toString(),
+    });
+  }
+
+  Future<void> getUserInfo() async {
+    var directory = await database.ref('users');
+    var event = await directory
+        .orderByChild('email')
+        .equalTo(FirebaseAuth.instance.currentUser!.email!)
+        .once();
+
+    var t = event.snapshot.value as List<dynamic>;
+    var mappy = t[0] as Map<dynamic, dynamic>;
+
+    if (mappy != null) {
+      print(mappy['email']);
+      this.email = mappy['email'];
+      this.nick = mappy['nick'];
+      this.street = mappy['street'];
+    }
+  }*/
 
   Future<void> addUserInfo(String email, String nick, String street) async {
     var directory = await database.ref('users');
