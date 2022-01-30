@@ -9,6 +9,7 @@ import 'package:hair2/components/TuttePrenotazioniCliente.dart';
 import 'package:hair2/components/Parrucchiere.dart';
 import 'package:provider/provider.dart';
 import '../authentication_service.dart';
+import '../main.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
 
@@ -84,12 +85,14 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               alignment: Alignment.center,
               child: Row(
                 children: [
-                  Text(
-                    "Abilita la possibilità di tagliare capelli:",
-                    style: TextStyle(
-                      //color: Colors.black,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Text(
+                      "Abilita la possibilità di tagliare capelli:",
+                      style: TextStyle(
+                        //color: Colors.black,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   Container(
@@ -189,6 +192,10 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     ),
                 onPressed: () {
                   context.read<AuthenticationService>().signOut();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                          builder: (context) => AuthenticationWrapper()));
                 },
                 child: const Text("Sign out"),
               ),

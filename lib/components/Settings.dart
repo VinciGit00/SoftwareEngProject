@@ -68,6 +68,19 @@ class _SettingsState extends State<Settings> {
                   MaterialPageRoute<void>(
                       builder: (context) => changeSetting()));
             }),
+        FutureBuilder(
+          future: user().getUserInfo(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              return Text(
+                "Nome: " + user().nick,
+                style: TextStyle(fontSize: 20),
+              );
+            } else {
+              return Text("loading");
+            }
+          },
+        ),
       ]),
     );
   }
