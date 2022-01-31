@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../database_service.dart';
 import 'Buffer.dart';
 import 'package:hair2/components/MenuItem.dart';
 
@@ -17,6 +19,7 @@ class nextPage extends StatefulWidget {
 
 class _nextPageState extends State<nextPage> {
   late DateTime date;
+  var db = DatabaseService();
 
   void onPressed() {
     print("Pressed");
@@ -131,6 +134,8 @@ class _nextPageState extends State<nextPage> {
                       borderRadius: BorderRadius.all(Radius.circular(30.0))),
                   elevation: 4.0,
                   onPressed: () {
+                    db.addBooking(FirebaseAuth.instance.currentUser!.email!,
+                        widget.nameStylist, choice, _dateTime);
                     Navigator.push(
                         context,
                         MaterialPageRoute<void>(
