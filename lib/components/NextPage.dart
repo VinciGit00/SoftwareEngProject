@@ -3,7 +3,9 @@ import 'Buffer.dart';
 import 'package:hair2/components/MenuItem.dart';
 
 class nextPage extends StatefulWidget {
-  const nextPage({Key? key}) : super(key: key);
+  const nextPage({Key? key, required this.nameStylist}) : super(key: key);
+
+  final String nameStylist;
 
   @override
   _nextPageState createState() => _nextPageState();
@@ -20,7 +22,7 @@ class _nextPageState extends State<nextPage> {
     print("Pressed");
   }
 
-  late DateTime _dateTime;
+  DateTime _dateTime = DateTime.now();
 
   late String choice = "";
   @override
@@ -28,11 +30,9 @@ class _nextPageState extends State<nextPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: Colors.blue,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -41,7 +41,6 @@ class _nextPageState extends State<nextPage> {
         title: Text(
           "Seleziona la data e il tipo di taglio",
           style: TextStyle(
-            color: Colors.black,
             fontSize: 20.0,
             fontWeight: FontWeight.w600,
           ),
@@ -53,7 +52,6 @@ class _nextPageState extends State<nextPage> {
           child: Text(
             "Seleziona il giorno",
             style: TextStyle(
-              color: Colors.black,
               fontSize: 20.0,
               fontWeight: FontWeight.w600,
             ),
@@ -62,14 +60,17 @@ class _nextPageState extends State<nextPage> {
 
         //prefixIcon: Icon(Icons.calendar_month),
 
-        Expanded(
+        Container(
+          alignment: Alignment.center,
           child: Column(
             children: [
               Text(_dateTime == null
                   ? 'Nessuna data selezionata'
-                  : _dateTime.toString()),
+                  : _dateTime.day.toString() +
+                      "/" +
+                      _dateTime.month.toString()),
               RaisedButton(
-                child: Text("Ciao mondo"),
+                child: Text("Cambia data"),
                 onPressed: () {
                   showDatePicker(
                           context: context,

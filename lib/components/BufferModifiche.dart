@@ -3,7 +3,7 @@ import 'Wrong.dart';
 import 'Conferma2.dart';
 
 class BufferModifiche extends StatefulWidget {
-  BufferModifiche({Key? key}) : super(key: key);
+  const BufferModifiche({Key? key}) : super(key: key);
 
   @override
   _BufferModificheState createState() => _BufferModificheState();
@@ -18,7 +18,6 @@ class _BufferModificheState extends State<BufferModifiche> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
       body: FutureBuilder(
           future: _calculation,
           builder: (context, snapshot) {
@@ -30,7 +29,7 @@ class _BufferModificheState extends State<BufferModifiche> {
             } else {
               return Container(
                   alignment: Alignment.center,
-                  child: CircularProgressIndicator(
+                  child: const CircularProgressIndicator(
                     strokeWidth: 6.0,
                   ));
             }

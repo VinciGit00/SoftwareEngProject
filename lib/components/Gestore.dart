@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/stylistBookings.dart';
-import 'package:hair2/components/Profilo.dart';
 import 'package:hair2/components/PrenotazioneClienti.dart';
 import 'package:provider/provider.dart';
 
 class PagGestore extends StatefulWidget {
-  PagGestore({Key? key}) : super(key: key);
+  const PagGestore({Key? key}) : super(key: key);
 
   @override
   _PagGestoreState createState() => _PagGestoreState();
@@ -15,14 +14,11 @@ class _PagGestoreState extends State<PagGestore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
-            color: Colors.blue,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -35,10 +31,9 @@ class _PagGestoreState extends State<PagGestore> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Prenotazioni dei clienti",
               style: TextStyle(
-                color: Colors.black,
                 fontSize: 25.0,
                 fontWeight: FontWeight.w600,
               ),
