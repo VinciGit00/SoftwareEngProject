@@ -6,7 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'Model/Entity/stylist2.dart';
+import 'Model/Entity/Stylist2.dart';
 import 'components/InterfacciaPrincipale.dart';
 import 'components/Login.dart';
 

@@ -12,14 +12,13 @@ class _changeSettingState extends State<changeSetting> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      //backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        // backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
-            color: Colors.blue,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -29,19 +28,18 @@ class _changeSettingState extends State<changeSetting> {
       body: Column(children: [
         Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: const Text(
             "Cambia le impostazioni",
             style: TextStyle(
-              color: Colors.black,
               fontSize: 25.0,
               fontWeight: FontWeight.w600,
             ),
           ),
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-          child: TextField(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          child: const TextField(
             obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
@@ -50,8 +48,8 @@ class _changeSettingState extends State<changeSetting> {
           ),
         ),
         Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            child: TextField(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            child: const TextField(
               obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -59,22 +57,20 @@ class _changeSettingState extends State<changeSetting> {
               ),
             )),
         Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: RaisedButton(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-              child: Text(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+              child: const Text(
                 "Conferma le modifiche",
-                style: TextStyle(color: Colors.white),
               ),
-              color: Colors.blue,
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30.0))),
               elevation: 4.0,
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                        builder: (context) => BufferModifiche()));
+                        builder: (context) => const BufferModifiche()));
               }),
         )
       ]),

@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'Buffer.dart';
 import 'package:hair2/components/MenuItem.dart';
 
-class nextPage extends StatefulWidget {
-  const nextPage({Key? key}) : super(key: key);
+class NextPage extends StatefulWidget {
+  const NextPage({Key? key}) : super(key: key);
 
   @override
-  _nextPageState createState() => _nextPageState();
+  _NextPageState createState() => _NextPageState();
 
   String onPressed2() {
     return "Pressed";
   }
 }
 
-class _nextPageState extends State<nextPage> {
+class _NextPageState extends State<NextPage> {
   void onPressed() {
     print("Pressed");
   }
@@ -24,20 +24,20 @@ class _nextPageState extends State<nextPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        //backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
-            color: Colors.blue,
+            //color: Colors.blue,
           ),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Text(
+        title: const Text(
           "Seleziona la data e il tipo di taglio",
           style: TextStyle(
-            color: Colors.black,
+            //color: Colors.black,
             fontSize: 20.0,
             fontWeight: FontWeight.w600,
           ),
@@ -45,11 +45,11 @@ class _nextPageState extends State<nextPage> {
       ),
       body: Column(children: [
         Container(
-          margin: EdgeInsets.all(10),
-          child: Text(
+          margin: const EdgeInsets.all(10),
+          child: const Text(
             "Seleziona il giorno ",
             style: TextStyle(
-              color: Colors.black,
+              // color: Colors.black,
               fontSize: 20.0,
               fontWeight: FontWeight.w600,
             ),
@@ -63,10 +63,10 @@ class _nextPageState extends State<nextPage> {
           lastDate: DateTime.parse("20250101"),
         ),
 
-        Text(
+        const Text(
           "Inserisci il tipo di taglio",
           style: TextStyle(
-            color: Colors.black,
+            // color: Colors.black,
             fontSize: 20.0,
             fontWeight: FontWeight.w400,
           ),
@@ -80,10 +80,10 @@ class _nextPageState extends State<nextPage> {
           ],
         ),
         Container(
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           child: Text(
             choice,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 20.0,
               fontWeight: FontWeight.w300,
@@ -91,18 +91,18 @@ class _nextPageState extends State<nextPage> {
           ),
         ),
         RaisedButton(
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: const Text(
             "Esegui richiesta",
-            style: TextStyle(color: Colors.white),
+            // style: TextStyle(color: Colors.white),
           ),
-          color: Colors.blue,
-          shape: RoundedRectangleBorder(
+          //color: Colors.blue,
+          shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0))),
           elevation: 4.0,
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute<void>(builder: (context) => Buffer()));
+                MaterialPageRoute<void>(builder: (context) => const Buffer()));
           },
           //child: Icon(Icons.send, color: Colors.white)
         )

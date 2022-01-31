@@ -3,9 +3,9 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:hair2/components/StylistListWidget.dart';
 import 'package:provider/provider.dart';
-import 'Model/Entity/stylist2.dart';
-import 'Model/Entity/clientBookings.dart';
-import 'Model/Entity/user.dart';
+import 'Model/Entity/Stylist2.dart';
+import 'Model/Entity/ClientBookings.dart';
+import 'Model/Entity/User.dart';
 import 'database_service.dart';
 
 class HomePage extends StatelessWidget {

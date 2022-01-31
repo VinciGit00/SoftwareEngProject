@@ -1,11 +1,11 @@
-class booking {
+class Booking {
   String key;
   String clientEmail;
   String stylistEmail;
   String type;
   DateTime appointmentDate;
 
-  booking(this.key, this.clientEmail, this.stylistEmail, this.type,
+  Booking(this.key, this.clientEmail, this.stylistEmail, this.type,
       this.appointmentDate);
 
   Map<String, dynamic> toMap() {

@@ -1,9 +1,8 @@
 import 'package:firebase_database/firebase_database.dart';
-
-import 'Model/Entity/clientBookings.dart';
-import 'Model/Entity/stylist.dart';
-import 'Model/Entity/stylistBookings.dart';
-import 'Model/Entity/user.dart';
+import 'Model/Entity/ClientBookings.dart';
+import 'Model/Entity/Stylist.dart';
+import 'Model/Entity/StylistBookings.dart';
+import 'Model/Entity/User.dart';
 
 class DatabaseService {
   final database = FirebaseDatabase.instance;
@@ -28,7 +27,7 @@ class DatabaseService {
   }
 
   void readStylistBookings(String email) {
-    var bookings = stylistBookings(email).bookings;
+    var bookings = StylistBookings(email).bookings;
     for (var booking in bookings) {
       print(booking.toMap().toString());
     }

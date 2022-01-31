@@ -1,6 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:hair2/Model/Entity/stylist.dart';
+import 'package:hair2/Model/Entity/Stylist.dart';
 import 'dart:async';
 
 class HairStylists extends ChangeNotifier {

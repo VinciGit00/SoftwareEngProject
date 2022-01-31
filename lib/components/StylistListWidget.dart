@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:hair2/Model/Entity/stylist2.dart';
+import 'package:hair2/Model/Entity/Stylist2.dart';
 import 'package:provider/provider.dart';
 
-class StylistListWidget extends StatelessWidget with ChangeNotifier {
+class StylistListWidget extends StatefulWidget {
+  const StylistListWidget({Key? key}) : super(key: key);
+
+  @override
+  State<StylistListWidget> createState() => _StylistListWidgetState();
+}
+
+class _StylistListWidgetState extends State<StylistListWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('example'),
+          title: const Text('example'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),

@@ -1,9 +1,9 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'booking.dart';
+import 'Booking.dart';
 
-class stylistBookings extends ChangeNotifier {
-  List<booking> _bookings = [];
+class StylistBookings extends ChangeNotifier {
+  List<Booking> _bookings = [];
   final _db = FirebaseDatabase.instance;
 
   stylistBookings(email) {
@@ -19,7 +19,7 @@ class stylistBookings extends ChangeNotifier {
         event.snapshot.value as Map<dynamic, dynamic>;
     values.forEach((key, values) {
       print(values);
-      _bookings.add(booking(key, values['clientEmail'], values['stylistEmail'],
+      _bookings.add(Booking(key, values['clientEmail'], values['stylistEmail'],
           values['type'], DateTime.parse(values['appointmentDate'])));
     });
 
@@ -27,5 +27,5 @@ class stylistBookings extends ChangeNotifier {
   }
 
   //create a getter for bookings
-  List<booking> get bookings => _bookings;
+  List<Booking> get bookings => _bookings;
 }

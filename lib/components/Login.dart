@@ -6,7 +6,7 @@ import 'package:provider/src/provider.dart';
 
 import '../authentication_service.dart';
 
-const users = const {
+const users = {
   'dribbble@gmail.com': '12345',
   'hunter@gmail.com': 'hunter',
   'VinciSuperUser@gmail.com': '0000',
@@ -14,7 +14,9 @@ const users = const {
 };
 
 class LoginScreen extends StatelessWidget {
-  Duration get loginTime => Duration(milliseconds: 1000);
+  const LoginScreen({Key? key}) : super(key: key);
+
+  Duration get loginTime => const Duration(milliseconds: 1000);
 
   Future<String?> _authUser(LoginData data) {
     debugPrint('Name: ${data.name}, Password: ${data.password}');
@@ -106,7 +108,7 @@ class LoginScreen extends StatelessWidget {
       ],
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => InterfacciaPrincipale(),
+          builder: (context) => const InterfacciaPrincipale(),
         ));
       },
       onRecoverPassword: _recoverPassword,

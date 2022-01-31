@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:hair2/components/TuttePrenotazioniCliente.dart';
 import 'package:hair2/components/Parrucchiere.dart';
@@ -18,16 +16,16 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      //backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
         backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.settings,
-              color: Colors.blue,
+              //color: Colors.blue,
             ),
             onPressed: () {
               Navigator.push(context,
@@ -43,49 +41,50 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Let's start by adding the text
-            Text(
+            const Text(
               "Welcome in TruccoParrucco",
               style: TextStyle(
-                color: Colors.black,
+                //color: Colors.black,
                 fontSize: 26.0,
                 fontWeight: FontWeight.w600,
               ),
             ),
             state == false
-                ? Text(
+                ? const Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
                     style: TextStyle(
-                      color: Colors.black,
+                      // color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.w300,
                     ),
                   )
-                : Text(
+                : const Text(
                     "Guarda i clienti che hanno prenotato il taglio di capelli",
                     style: TextStyle(
-                      color: Colors.black,
+                      //color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.w300,
                     ),
                   ),
-            SizedBox(
+            const SizedBox(
               height: 6.5,
             ),
             Container(
               padding: EdgeInsets.only(bottom: 12),
               child: Row(
                 children: [
-                  Text(
+                  const Text(
                     "Modalità:",
                     style: TextStyle(
-                      color: Colors.black,
+                      //color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
-                    child: Text(
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 6),
+                    child: const Text(
                       "Cliente",
                       style: TextStyle(fontSize: 20),
                     ),
@@ -101,7 +100,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     activeTrackColor: Colors.blue,*/
                     inactiveThumbColor: Colors.green,
                   ),
-                  Text(
+                  const Text(
                     "Parrucchiere",
                     style: TextStyle(fontSize: 20),
                   ),
@@ -113,20 +112,20 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 scrollDirection: Axis.vertical,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(25),
-                    child: Parrucchiere(
+                    padding: const EdgeInsets.all(25),
+                    child: const Parrucchiere(
                         nome: "img[0]",
                         via: "Cristina e Thomas parrucchieri",
                         rating: 5),
                   ),
                   Container(
-                    padding: EdgeInsets.all(25),
-                    child: Parrucchiere(
+                    padding: const EdgeInsets.all(25),
+                    child: const Parrucchiere(
                         nome: "img[1]", via: "Total Look N.&N", rating: 4),
                   ),
                   Container(
-                      padding: EdgeInsets.all(25),
-                      child: Parrucchiere(
+                      padding: const EdgeInsets.all(25),
+                      child: const Parrucchiere(
                           nome: "img[2]", via: "Da Vincis", rating: 4)),
                 ],
               ),
@@ -135,16 +134,16 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Color(0xFFB7B7B7),
-        selectedItemColor: Colors.blue,
+        // unselectedItemColor: Color(0xFFB7B7B7),
+        //selectedItemColor: Colors.blue,
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-              icon: Icon(Icons.bookmark),
+              icon: const Icon(Icons.bookmark),
               onPressed: () {
                 if (state == true) {
                   Navigator.push(
@@ -155,7 +154,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => PrenotazioneCliente()));
+                          builder: (context) => const PrenotazioneCliente()));
                 }
               },
             ),
