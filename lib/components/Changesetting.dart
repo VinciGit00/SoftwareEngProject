@@ -1,7 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hair2/Model/Entity/user.dart';
-import '../database_service.dart';
 import 'BufferModifiche.dart';
 
 class changeSetting extends StatefulWidget {
@@ -59,7 +57,7 @@ class _changeSettingState extends State<changeSetting> {
             child: TextField(
               controller: _streetTEC,
               obscureText: false,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.zoom_out_sharp),
                 border: OutlineInputBorder(),
                 labelText: 'Cambia la via',
@@ -80,7 +78,7 @@ class _changeSettingState extends State<changeSetting> {
               onPressed: () {
                 var _nickname = _nicknameTEC.text;
                 var _street = _streetTEC.text;
-                user().addUserInfo(FirebaseAuth.instance.currentUser!.email!,
+                User().addUserInfo(FirebaseAuth.instance.currentUser!.email!,
                     _nickname, _street);
                 print("Nickname: " + _nickname);
                 print("Street: " + _street);

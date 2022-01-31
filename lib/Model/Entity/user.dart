@@ -2,20 +2,20 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
-class user extends ChangeNotifier {
+class User extends ChangeNotifier {
   late String email;
   late String nick;
   late String street;
   final database = FirebaseDatabase.instance;
 
-  user._privateConstructor() {
+  User._privateConstructor() {
     this.email = "";
     this.nick = "";
     this.street = "";
     getUserInfo();
   } //pattern to create a singleton
-  static late final user _instance = user._privateConstructor();
-  factory user() => _instance;
+  static late final User _instance = User._privateConstructor();
+  factory User() => _instance;
 
   /*
   Future<void> addUserInfo(String email, String nick, String street) async {
