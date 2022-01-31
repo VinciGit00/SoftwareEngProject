@@ -64,6 +64,8 @@ class DatabaseService {
       'street': street,
       'inputDate': DateTime.now().toString(),
     });
+
+    print('becomeStylist');
   }
 
   Future<void> stopBeingStylist() async {
