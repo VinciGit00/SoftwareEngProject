@@ -3,14 +3,17 @@ import 'package:firebase_database/firebase_database.dart';
 import 'Model/Entity/clientBookings.dart';
 import 'Model/Entity/stylist.dart';
 import 'Model/Entity/stylistBookings.dart';
-import 'Model/Entity/User.dart';
+import 'Model/Entity/user.dart';
 
 class DatabaseService {
   final database = FirebaseDatabase.instance;
   DatabaseService();
 //Bookings
-  Future<void> addBooking(String clientEmail, String stylistEmail, String type,
+  Future<void> addBooking(String clientEmail, String stylistNick, String type,
       DateTime appointmentDate) async {
+    var event = await database.ref('stylists/$stylistNick/email').once();
+    String? stylistEmail = event.snapshot.value as String;
+
     await database.ref('bookings').push().set({
       'clientEmail': clientEmail,
       'stylistEmail': stylistEmail,
@@ -28,7 +31,7 @@ class DatabaseService {
   }
 
   void readStylistBookings(String email) {
-    var bookings = StylistBookings(email).bookings;
+    var bookings = stylistBookings(email).bookings;
     for (var booking in bookings) {
       print(booking.toMap().toString());
     }
@@ -46,14 +49,9 @@ class DatabaseService {
     late String nick;
     late String street;
     try {
-<<<<<<< HEAD
-      await User().getUserInfo();
-      nick = User().nickname;
-      street = User().streetname;
-=======
+      await user().getUserInfo();
       nick = user().nickname;
       street = user().streetname;
->>>>>>> parent of 46ed8e3 (Merge branch 'database-experiments' of https://github.com/VinciGit00/SoftwareEngProject into database-experiments)
     } on Exception catch (e) {
       nick = 'NoNickname';
       street = 'NoStreet';
@@ -64,8 +62,6 @@ class DatabaseService {
       'street': street,
       'inputDate': DateTime.now().toString(),
     });
-
-    print('becomeStylist');
   }
 
   Future<void> stopBeingStylist() async {
@@ -77,8 +73,8 @@ class DatabaseService {
       directory.child(key).remove();
     });
     */
-    print(User().nickname);
-    await database.ref('stylists/' + User().nickname).remove();
+    print(user().nickname);
+    await database.ref('stylists/' + user().nickname).remove();
   }
 
   // Future<void> getStylistBookings(String email) async {}

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "merged": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
         "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/drawable/notification_icon_background.xml"
     },
     {
-        "merged": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "merged": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
         "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/drawable/notification_tile_bg.xml"
     },
     {
-        "merged": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/drawable/notification_bg.xml"
+        "merged": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/drawable/notification_bg_low.xml"
+        "merged": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/drawable/notification_bg.xml"
     }
 ]

@@ -2,11 +2,11 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'booking.dart';
 
-class StylistBookings extends ChangeNotifier {
+class stylistBookings extends ChangeNotifier {
   List<booking> _bookings = [];
   final _db = FirebaseDatabase.instance;
 
-  StylistBookings(email) {
+  stylistBookings(email) {
     // _ReadBookings(email);
   }
 

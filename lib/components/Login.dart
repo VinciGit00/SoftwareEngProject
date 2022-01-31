@@ -59,7 +59,7 @@ class LoginScreen extends StatelessWidget {
           ),
       //onSignup: _signupUser,
       onSignup: (signupData) => context.read<AuthenticationService>().signUp(
-            email: signupData.name!,
+            email: signupData.name!, // TODO add null safety
             password: signupData.password!,
           ),
       //style: TextStyle(color: Color(0xFFF6F7FF)

@@ -18,7 +18,7 @@
 \section{Project Plan}
 \subsection{Introduction}
 Il progetto prevede lo sviluppo di una mobile app per gestire la prenotazione di 
-un negozio di parruccheria. C'è la possibilità di avere due tipi di utente (anche in entrambe le modalità):
+un negozio di parruccheria. C'è la possibilità di avere due tipi di utente (anche in entrambe le mdoalità):
 un cliente e un padrone di negozio. La novità di questo progetto consiste nel fatto che è un tipo di sistema P2P in cui un utente può essere contemporaneamente cliente
 e (se vuole) gestore. Questo modello di business è fatto anche da Uber in cui un autista può essere sia cliente che autista.
 \\Il target della clientela è market driven in quanto il core business dell'azienda si basa su percentuali delle transazioni.
@@ -48,9 +48,9 @@ Il team di sviluppo è composto dai succitati integranti. Per portare a termine 
 l'uso di risorse online: particolarmente nel caso del framework Flutter per il frontend development.
 
 \subsection{Standards, guidelines, procedures}
-Il principale linguaggio di programmazione del progetto sarà dart, quest'ultimo
+I principali linguaggi di programmazione del progetto saranno: python e dart, quest'ultimo
 viene esteso tramite flutter.
-Si usano i coding standards di flutter per garantire la qualità.
+Si usa i coding standards di flutter.
 \\Per gestire l'assegnazione e il corretto sviluppo si usa un template di Notion per gestire i compiti.
 \\Gli IDE che vengono utilizzati sono: VSC e terminale con VIM.
 
@@ -331,10 +331,8 @@ dal seguente link: \url{https://pub.dev/packages/analyzer}.
 
 Ecco un esempio di output di un test fatto con dart analyze:
 \\\includegraphics[scale = 0.5]{"Immagini/Dart_analyze.png"}
-\\Questo era una run che indicava alcuni parametri da modificare per essere conformi ai
-dart standards, in particolare si parla dell'utilizzo della keyword const.
+
 \section{Software Architecture}
-Per quanto riguarda i viewpoint sono stati rappresentati ad esempio due activity diagram per descrivere il progetto tramite due granularità e viewpoint differenti.
 \subsection{Architecture design metod }
 Per derivare una prima architettura funzionante partendo dai requirements specificati nell’apposito documento, si segue il criterio Generalized Model di Hofmeister et al. (2007).
 \\Questo architecture design method è particolarmente utile per il progetto in questione, in quanto è strutturato utilizzando la terminologia e i ragionamenti di SCRUM, che è il life-cycle agile usato per l’applicazione e il suo sviluppo. 
@@ -342,7 +340,7 @@ Per derivare una prima architettura funzionante partendo dai requirements specif
 \\Il backlog ha in input i requirements del progetto, con particolare attenzione ai requisiti di qualità; il contesto, che contiene idee aggiuntive sul come implementare un sistema che soddisfi i requisiti e, infine, i risultati della valutazione dell’architettura dell’iterazione precedente. 
 \\Nel progetto verranno presi in considerazioni questi tre fattori per determinare le scelte di design. 
 \\\includegraphics[scale = 0.75]{"Immagini/GeneralizedModel.png"}
-\subsection{Decisioni di design} 
+\section{Decisioni di design} 
 \subsection{Decision 1}
 \begin{itemize}
 \item Issue 
@@ -375,9 +373,6 @@ Questa categoria di viewpoint descrive la relazione tra il sistema e il mondo ch
 \\I viewpoint di tipo work assignment potrebbero essere utile per rappresentare graficamente la distribuzione del lavoro, ma in questo sprint vengono saltati per brevità. 
 
 \section{Software Design}
-\\I design pattern utilizzati per il progetto sono il factory e di conseguenza il simpleton, la classe user in questo caso occupa il ruolo di factory e si occupa di creare le classi stesse.
-\\La classe User (presente nelle classi e nel diagramma delle classi) usa il design pattern Singleton che, in Dart, usa a sua volta una Factory per costruire l'istanza.
-
 \section{Software Testing}
 \subsubsection{IEEE928}
 Questo tipo di documento si occupa di specificare e documentare come avviene la fase di testing
@@ -425,5 +420,4 @@ Siccome non sapevamo fin da principio come utilizzare Flutter e firebase abbiamo
 engeneering in cui si è sistemata la documentazione in funzione del codice che è stato scritto (redocumentation).
 \\Per quanto riguarda il refactoring sono stati utilizzati i tool che Visual code per eseguire il refactoring (come ad esempio 
 la possibilità di wrappare le widget o cambiare a cascata il nome di una classe).
-\\Una parte di refactoring è stato fatto utilizzando il comando dart analyze per rendersi conformi il più possibile agli standard di flutter 
 \end{document}

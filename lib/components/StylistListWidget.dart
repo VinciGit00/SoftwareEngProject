@@ -7,7 +7,7 @@ class StylistListWidget extends StatelessWidget with ChangeNotifier {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('example'),
+          title: Text('example'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),

@@ -52,12 +52,7 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User?>();
 
     if (firebaseUser != null) {
-<<<<<<< Updated upstream
-      return const InterfacciaPrincipale();
-=======
       return InterfacciaPrincipale();
-      //return HomePage();
->>>>>>> Stashed changes
     }
     return LoginScreen();
   }

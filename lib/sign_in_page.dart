@@ -13,13 +13,13 @@ class SignInPage extends StatelessWidget {
         children: [
           TextField(
             controller: emailController,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: "Email",
             ),
           ),
           TextField(
             controller: passwordController,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: "Password",
             ),
           ),
@@ -30,7 +30,7 @@ class SignInPage extends StatelessWidget {
                     password: passwordController.text.trim(),
                   );
             },
-            child: const Text("Sign in"),
+            child: Text("Sign in"),
           )
         ],
       ),

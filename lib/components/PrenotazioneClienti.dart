@@ -19,7 +19,7 @@ class _PrenotazioneSingolaClienteState
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.only(
+      margin: EdgeInsets.only(
         right: 22.0,
       ),
       clipBehavior: Clip.antiAlias,
@@ -32,7 +32,7 @@ class _PrenotazioneSingolaClienteState
           width: 200.0,
           height: 100,
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: EdgeInsets.all(12.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,27 +44,27 @@ class _PrenotazioneSingolaClienteState
                     children: [
                       Text(
                         widget.nome,
-                        style: const TextStyle(
-                          ///color: Colors.blue,
+                        style: TextStyle(
+                          color: Colors.blue,
                           fontSize: 22.0,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 3.0,
                       ),
                       Text(
                         widget.via,
-                        style: const TextStyle(
-                          //color: Colors.blue,
+                        style: TextStyle(
+                          color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                       Text(
                         widget.data.toString(),
-                        style: const TextStyle(
-                          // color: Colors.blue,
+                        style: TextStyle(
+                          color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
                         ),

@@ -12,8 +12,8 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/davidguzman/Documents/GitHub/SoftwareEngProject/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/Users/davidguzman/Documents/GitHub/SoftwareEngProject/android/app/src/debug/AndroidManifest.xml:6:22-64
+14-->/Users/davidguzman/Desktop/backup/SoftwareEngProject/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/davidguzman/Desktop/backup/SoftwareEngProject/android/app/src/debug/AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 15-->[com.google.firebase:firebase-auth:21.0.1] /Users/davidguzman/.gradle/caches/transforms-2/files-2.1/06e335a88f29e892ea89e02a9cd741a6/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
 15-->[com.google.firebase:firebase-auth:21.0.1] /Users/davidguzman/.gradle/caches/transforms-2/files-2.1/06e335a88f29e892ea89e02a9cd741a6/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:22-76
@@ -68,37 +68,37 @@
 57            android:value="2" />
 58
 59        <service
-59-->[:firebase_auth] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+59-->[:firebase_auth] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 60            android:name="com.google.firebase.components.ComponentDiscoveryService"
-60-->[:firebase_auth] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+60-->[:firebase_auth] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
 61            android:directBootAware="true"
 61-->[com.google.firebase:firebase-common:20.0.0] /Users/davidguzman/.gradle/caches/transforms-2/files-2.1/a43864ea4e098ef6189d5e2b76fd253d/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
 62            android:exported="false" >
 62-->[com.google.firebase:firebase-auth:21.0.1] /Users/davidguzman/.gradle/caches/transforms-2/files-2.1/06e335a88f29e892ea89e02a9cd741a6/jetified-firebase-auth-21.0.1/AndroidManifest.xml:76:13-37
 63            <meta-data
-63-->[:firebase_auth] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+63-->[:firebase_auth] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 64                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-64-->[:firebase_auth] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+64-->[:firebase_auth] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
 65                android:value="com.google.firebase.components.ComponentRegistrar" />
-65-->[:firebase_auth] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+65-->[:firebase_auth] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 66            <meta-data
-66-->[:firebase_database] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+66-->[:firebase_database] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 67                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-67-->[:firebase_database] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
+67-->[:firebase_database] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-127
 68                android:value="com.google.firebase.components.ComponentRegistrar" />
-68-->[:firebase_database] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+68-->[:firebase_database] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 69            <meta-data
-69-->[:firebase_storage] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+69-->[:firebase_storage] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 70                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-70-->[:firebase_storage] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+70-->[:firebase_storage] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
 71                android:value="com.google.firebase.components.ComponentRegistrar" />
-71-->[:firebase_storage] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+71-->[:firebase_storage] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 72            <meta-data
-72-->[:firebase_core] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+72-->[:firebase_core] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 73                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-73-->[:firebase_core] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
+73-->[:firebase_core] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-124
 74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[:firebase_core] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+74-->[:firebase_core] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 75            <meta-data
 75-->[com.google.firebase:firebase-auth:21.0.1] /Users/davidguzman/.gradle/caches/transforms-2/files-2.1/06e335a88f29e892ea89e02a9cd741a6/jetified-firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
 76                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
@@ -132,13 +132,13 @@
 90        </service>
 91
 92        <activity
-92-->[:url_launcher_android] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
+92-->[:url_launcher_android] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
 93            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-93-->[:url_launcher_android] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
+93-->[:url_launcher_android] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
 94            android:exported="false"
-94-->[:url_launcher_android] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
+94-->[:url_launcher_android] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
 95            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-95-->[:url_launcher_android] /Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
+95-->[:url_launcher_android] /Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
 96        <activity
 96-->[com.google.firebase:firebase-auth:21.0.1] /Users/davidguzman/.gradle/caches/transforms-2/files-2.1/06e335a88f29e892ea89e02a9cd741a6/jetified-firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
 97            android:name="com.google.firebase.auth.internal.GenericIdpActivity"

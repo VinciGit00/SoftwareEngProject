@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'InterfacciaPrincipale.dart';
 
-class confermamodifiche extends StatefulWidget {
-  const confermamodifiche({Key? key}) : super(key: key);
+class confermaModifiche extends StatefulWidget {
+  confermaModifiche({Key? key}) : super(key: key);
 
   @override
-  _confermamodificheState createState() => _confermamodificheState();
+  _confermaModificheState createState() => _confermaModificheState();
 }
 
-class _confermamodificheState extends State<confermamodifiche> {
+class _confermaModificheState extends State<confermaModifiche> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
+        backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
       ),
       body: Column(
@@ -22,31 +24,32 @@ class _confermamodificheState extends State<confermamodifiche> {
           Container(
             margin: EdgeInsets.only(top: 10),
             alignment: Alignment.center,
-            child: const Text(
+            child: Text(
               "Prenotazione confermata!",
               style: TextStyle(
+                color: Colors.black,
                 fontSize: 25.0,
                 fontWeight: FontWeight.w300,
               ),
             ),
           ),
           Container(
-            margin: const EdgeInsets.all(15),
+            margin: EdgeInsets.all(15),
             child: RaisedButton(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-                child: const Text(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                child: Text(
                   "Torna alla schermata principale",
-                  //style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white),
                 ),
-                shape: const RoundedRectangleBorder(
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30.0))),
                 elevation: 4.0,
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => const InterfacciaPrincipale()));
+                          builder: (context) => InterfacciaPrincipale()));
                 }),
           ),
         ],
