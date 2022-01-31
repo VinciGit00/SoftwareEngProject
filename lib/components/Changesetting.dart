@@ -5,28 +5,25 @@ import '../database_service.dart';
 import 'BufferModifiche.dart';
 
 class changeSetting extends StatefulWidget {
-  changeSetting({Key? key}) : super(key: key);
+  const changeSetting({Key? key}) : super(key: key);
 
   @override
   _changeSettingState createState() => _changeSettingState();
 }
 
 class _changeSettingState extends State<changeSetting> {
-  TextEditingController _nicknameTEC = TextEditingController();
-  TextEditingController _streetTEC = TextEditingController();
+  final TextEditingController _nicknameTEC = TextEditingController();
+  final TextEditingController _streetTEC = TextEditingController();
   // var _db =  DatabaseService(); // TODO change the way we access the database class
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
-            color: Colors.blue,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -36,22 +33,21 @@ class _changeSettingState extends State<changeSetting> {
       body: Column(children: [
         Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: const Text(
             "Cambia le impostazioni",
             style: TextStyle(
-              color: Colors.black,
               fontSize: 25.0,
               fontWeight: FontWeight.w600,
             ),
           ),
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           child: TextField(
             controller: _nicknameTEC,
             obscureText: false,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               prefixIcon: Icon(Icons.zoom_out_sharp),
               border: OutlineInputBorder(),
               labelText: 'Inserisci il nuovo nickname',
@@ -59,7 +55,7 @@ class _changeSettingState extends State<changeSetting> {
           ),
         ),
         Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: TextField(
               controller: _streetTEC,
               obscureText: false,
@@ -70,15 +66,15 @@ class _changeSettingState extends State<changeSetting> {
               ),
             )),
         Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: RaisedButton(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-              child: Text(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+              child: const Text(
                 "Conferma le modifiche",
                 style: TextStyle(color: Colors.white),
               ),
-              color: Colors.blue,
-              shape: RoundedRectangleBorder(
+              //color: Colors.blue,
+              shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30.0))),
               elevation: 4.0,
               onPressed: () {
@@ -92,7 +88,7 @@ class _changeSettingState extends State<changeSetting> {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => BufferModifiche()));
+                          builder: (context) => const BufferModifiche()));
                 } else {
                   final snackBar = SnackBar(
                       content: const Text(

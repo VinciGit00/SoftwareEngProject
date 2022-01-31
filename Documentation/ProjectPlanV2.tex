@@ -18,7 +18,7 @@
 \section{Project Plan}
 \subsection{Introduction}
 Il progetto prevede lo sviluppo di una mobile app per gestire la prenotazione di 
-un negozio di parruccheria. C'è la possibilità di avere due tipi di utente (anche in entrambe le mdoalità):
+un negozio di parruccheria. C'è la possibilità di avere due tipi di utente (anche in entrambe le modalità):
 un cliente e un padrone di negozio. La novità di questo progetto consiste nel fatto che è un tipo di sistema P2P in cui un utente può essere contemporaneamente cliente
 e (se vuole) gestore. Questo modello di business è fatto anche da Uber in cui un autista può essere sia cliente che autista.
 \\Il target della clientela è market driven in quanto il core business dell'azienda si basa su percentuali delle transazioni.
@@ -48,9 +48,9 @@ Il team di sviluppo è composto dai succitati integranti. Per portare a termine 
 l'uso di risorse online: particolarmente nel caso del framework Flutter per il frontend development.
 
 \subsection{Standards, guidelines, procedures}
-I principali linguaggi di programmazione del progetto saranno: python e dart, quest'ultimo
+Il principale linguaggio di programmazione del progetto sarà dart, quest'ultimo
 viene esteso tramite flutter.
-Si usa i coding standards di flutter.
+Si usano i coding standards di flutter per garantire la qualità.
 \\Per gestire l'assegnazione e il corretto sviluppo si usa un template di Notion per gestire i compiti.
 \\Gli IDE che vengono utilizzati sono: VSC e terminale con VIM.
 
@@ -331,7 +331,8 @@ dal seguente link: \url{https://pub.dev/packages/analyzer}.
 
 Ecco un esempio di output di un test fatto con dart analyze:
 \\\includegraphics[scale = 0.5]{"Immagini/Dart_analyze.png"}
-
+\\Questo era una run che indicava alcuni parametri da modificare per essere conformi ai
+dart standards, in particolare si parla dell'utilizzo della keyword const.
 \section{Software Architecture}
 \subsection{Architecture design metod }
 Per derivare una prima architettura funzionante partendo dai requirements specificati nell’apposito documento, si segue il criterio Generalized Model di Hofmeister et al. (2007).
@@ -420,4 +421,5 @@ Siccome non sapevamo fin da principio come utilizzare Flutter e firebase abbiamo
 engeneering in cui si è sistemata la documentazione in funzione del codice che è stato scritto (redocumentation).
 \\Per quanto riguarda il refactoring sono stati utilizzati i tool che Visual code per eseguire il refactoring (come ad esempio 
 la possibilità di wrappare le widget o cambiare a cascata il nome di una classe).
+\\Una parte di refactoring è stato fatto utilizzando il comando dart analyze per rendersi conformi il più possibile agli standard di flutter 
 \end{document}

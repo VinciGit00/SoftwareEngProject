@@ -2,11 +2,10 @@ import 'package:flutter_login/flutter_login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hair2/components/InterfacciaPrincipale.dart';
-import 'package:provider/src/provider.dart';
 
 import '../authentication_service.dart';
 
-const users = const {
+const users = {
   'dribbble@gmail.com': '12345',
   'hunter@gmail.com': 'hunter',
   'VinciSuperUser@gmail.com': '0000',

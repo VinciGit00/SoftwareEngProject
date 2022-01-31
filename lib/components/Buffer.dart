@@ -3,7 +3,7 @@ import 'Wrong.dart';
 import 'Temp.dart';
 
 class Buffer extends StatefulWidget {
-  Buffer({Key? key}) : super(key: key);
+  const Buffer({Key? key}) : super(key: key);
 
   @override
   _BufferState createState() => _BufferState();
@@ -18,7 +18,6 @@ class _BufferState extends State<Buffer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
       body: FutureBuilder(
           future: _calculation,
           builder: (context, snapshot) {
@@ -30,7 +29,7 @@ class _BufferState extends State<Buffer> {
             } else {
               return Container(
                   alignment: Alignment.center,
-                  child: CircularProgressIndicator(
+                  child: const CircularProgressIndicator(
                     strokeWidth: 6.0,
                   ));
             }

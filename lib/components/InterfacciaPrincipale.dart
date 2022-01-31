@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/clientBookings.dart';
@@ -9,7 +7,6 @@ import 'package:hair2/components/TuttePrenotazioniCliente.dart';
 import 'package:hair2/components/Parrucchiere.dart';
 import 'package:provider/provider.dart';
 import '../authentication_service.dart';
-import '../database_service.dart';
 import '../main.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
@@ -22,7 +19,6 @@ class InterfacciaPrincipale extends StatefulWidget {
 }
 
 class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
-  var db = DatabaseService();
   bool state1 = false;
   bool state2 = false;
 
@@ -36,7 +32,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
         leading: Container(),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.settings,
               //color: Colors.blue,
             ),
@@ -54,7 +50,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Let's start by adding the text
-            Text(
+            const Text(
               "Welcome in TruccoParrucco",
               style: TextStyle(
                 //color: Colors.black,
@@ -62,22 +58,9 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                db.becomeStylist(FirebaseAuth.instance.currentUser!.email!);
-              },
-              child: Text(
-                "BecomeStylist",
-                style: TextStyle(
-                  //color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
 
-            state2 == false //false = client, true = stylist
-                ? Text(
+            state2 == false
+                ? const Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
                     style: TextStyle(
                       //color: Colors.black,
@@ -85,7 +68,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       fontWeight: FontWeight.w300,
                     ),
                   )
-                : Text(
+                : const Text(
                     "Guarda i clienti che hanno prenotato il taglio di capelli",
                     style: TextStyle(
                       //color: Colors.black,
@@ -93,14 +76,14 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       fontWeight: FontWeight.w300,
                     ),
                   ),
-            SizedBox(
+            const SizedBox(
               height: 6.5,
             ),
             Container(
               alignment: Alignment.center,
               child: Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Text(
                       "Abilita la possibilità di tagliare capelli:",
                       style: TextStyle(
@@ -111,8 +94,9 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
-                    child: Text(
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 6),
+                    child: const Text(
                       "Si",
                       style: TextStyle(fontSize: 20),
                     ),
@@ -128,7 +112,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       activeTrackColor: Colors.blue,*/
                     inactiveThumbColor: Colors.green,
                   ),
-                  Text(
+                  const Text(
                     "No",
                     style: TextStyle(fontSize: 20),
                   ),
@@ -136,10 +120,10 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.only(bottom: 12),
               child: Row(
                 children: [
-                  Text(
+                  const Text(
                     "Modalità:",
                     style: TextStyle(
                       //color: Colors.black,
@@ -148,8 +132,9 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
-                    child: Text(
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 6),
+                    child: const Text(
                       "Cliente",
                       style: TextStyle(fontSize: 20),
                     ),
@@ -177,7 +162,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     activeTrackColor: Colors.blue,*/
                     inactiveThumbColor: Colors.green,
                   ),
-                  Text(
+                  const Text(
                     "Parrucchiere",
                     style: TextStyle(fontSize: 20),
                   ),
@@ -204,8 +189,8 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)),
-                      padding:
-                          EdgeInsets.all(20) //content padding inside button
+                      padding: const EdgeInsets.all(
+                          20) //content padding inside button
 
                       ),
                   onPressed: () {
@@ -227,42 +212,43 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
         // selectedItemColor: Color(0xFF)Colors.blue,
         elevation: 10,
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-              icon: Icon(Icons.bookmark),
+              icon: const Icon(Icons.bookmark),
               onPressed: () {
                 if (state2 == true) {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => ChangeNotifierProvider<
-                                  stylistBookings>(
-                              create: (_) => stylistBookings(
-                                  FirebaseAuth.instance.currentUser!.email),
-                              lazy: false,
-                              builder: (context, child) {
-                                return Container(
-                                  child: FutureBuilder(
-                                    builder: (context, asyncsnapshot) {
-                                      if (asyncsnapshot.connectionState ==
-                                          ConnectionState.done) {
-                                        return PagGestore();
-                                      } else {
-                                        return Center(
-                                            child: CircularProgressIndicator());
-                                      }
-                                    },
-                                    future:
-                                        Provider.of<stylistBookings>(context)
+                          builder: (context) =>
+                              ChangeNotifierProvider<stylistBookings>(
+                                  create: (_) => stylistBookings(
+                                      FirebaseAuth.instance.currentUser!.email),
+                                  lazy: false,
+                                  builder: (context, child) {
+                                    return Container(
+                                      child: FutureBuilder(
+                                        builder: (context, asyncsnapshot) {
+                                          if (asyncsnapshot.connectionState ==
+                                              ConnectionState.done) {
+                                            return const PagGestore();
+                                          } else {
+                                            return const Center(
+                                                child:
+                                                    const CircularProgressIndicator());
+                                          }
+                                        },
+                                        future: Provider.of<stylistBookings>(
+                                                context)
                                             .ReadBooking(FirebaseAuth
                                                 .instance.currentUser!.email),
-                                  ),
-                                );
-                              })));
+                                      ),
+                                    );
+                                  })));
                 } else {
                   Navigator.push(
                       context,
@@ -280,9 +266,9 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                                               ConnectionState.done) {
                                             return PrenotazioneCliente();
                                           } else {
-                                            return Center(
+                                            return const Center(
                                                 child:
-                                                    CircularProgressIndicator());
+                                                    const CircularProgressIndicator());
                                           }
                                         },
                                         future:
