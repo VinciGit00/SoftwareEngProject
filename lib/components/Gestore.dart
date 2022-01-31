@@ -39,7 +39,7 @@ class _PagGestoreState extends State<PagGestore> {
               ),
             ),
             Expanded(child:
-                Consumer<stylistBookings>(builder: (context, bookings, _) {
+                Consumer<StylistBookings>(builder: (context, bookings, _) {
               return ListView.builder(
                 itemCount: bookings.bookings.length,
                 itemBuilder: (context, index) {

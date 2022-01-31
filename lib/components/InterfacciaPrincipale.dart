@@ -225,8 +225,8 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       context,
                       MaterialPageRoute<void>(
                           builder: (context) =>
-                              ChangeNotifierProvider<stylistBookings>(
-                                  create: (_) => stylistBookings(
+                              ChangeNotifierProvider<StylistBookings>(
+                                  create: (_) => StylistBookings(
                                       FirebaseAuth.instance.currentUser!.email),
                                   lazy: false,
                                   builder: (context, child) {
@@ -242,7 +242,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                                                     const CircularProgressIndicator());
                                           }
                                         },
-                                        future: Provider.of<stylistBookings>(
+                                        future: Provider.of<StylistBookings>(
                                                 context)
                                             .ReadBooking(FirebaseAuth
                                                 .instance.currentUser!.email),

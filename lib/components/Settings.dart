@@ -13,9 +13,9 @@ class _SettingsState extends State<Settings> {
   bool state = false;
   @override
   Widget build(BuildContext context) {
-    user().getUserInfo();
-    String nome = user().nick;
-    String via = user().street;
+    User().getUserInfo();
+    String nome = User().nick;
+    String via = User().street;
     return Scaffold(
       appBar: AppBar(
         elevation: 4.0,
@@ -64,11 +64,11 @@ class _SettingsState extends State<Settings> {
                       builder: (context) => const changeSetting()));
             }),
         FutureBuilder(
-          future: user().getUserInfo(),
+          future: User().getUserInfo(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               return Text(
-                "Nome: " + user().nick,
+                "Nome: " + User().nick,
                 style: TextStyle(fontSize: 20),
               );
             } else {

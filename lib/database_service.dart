@@ -3,7 +3,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'Model/Entity/clientBookings.dart';
 import 'Model/Entity/stylist.dart';
 import 'Model/Entity/stylistBookings.dart';
-import 'Model/Entity/user.dart';
+import 'Model/Entity/User.dart';
 
 class DatabaseService {
   final database = FirebaseDatabase.instance;
@@ -31,7 +31,7 @@ class DatabaseService {
   }
 
   void readStylistBookings(String email) {
-    var bookings = stylistBookings(email).bookings;
+    var bookings = StylistBookings(email).bookings;
     for (var booking in bookings) {
       print(booking.toMap().toString());
     }
@@ -49,9 +49,9 @@ class DatabaseService {
     late String nick;
     late String street;
     try {
-      await user().getUserInfo();
-      nick = user().nickname;
-      street = user().streetname;
+      await User().getUserInfo();
+      nick = User().nickname;
+      street = User().streetname;
     } on Exception catch (e) {
       nick = 'NoNickname';
       street = 'NoStreet';
@@ -73,8 +73,8 @@ class DatabaseService {
       directory.child(key).remove();
     });
     */
-    print(user().nickname);
-    await database.ref('stylists/' + user().nickname).remove();
+    print(User().nickname);
+    await database.ref('stylists/' + User().nickname).remove();
   }
 
   // Future<void> getStylistBookings(String email) async {}
