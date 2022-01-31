@@ -9,11 +9,8 @@ class DatabaseService {
   final database = FirebaseDatabase.instance;
   DatabaseService();
 //Bookings
-  Future<void> addBooking(String clientEmail, String stylistNick, String type,
+  Future<void> addBooking(String clientEmail, String stylistEmail, String type,
       DateTime appointmentDate) async {
-    var event = await database.ref('stylists/$stylistNick/email').once();
-    String? stylistEmail = event.snapshot.value as String;
-
     await database.ref('bookings').push().set({
       'clientEmail': clientEmail,
       'stylistEmail': stylistEmail,
@@ -49,9 +46,14 @@ class DatabaseService {
     late String nick;
     late String street;
     try {
+<<<<<<< HEAD
       await User().getUserInfo();
       nick = User().nickname;
       street = User().streetname;
+=======
+      nick = user().nickname;
+      street = user().streetname;
+>>>>>>> parent of 46ed8e3 (Merge branch 'database-experiments' of https://github.com/VinciGit00/SoftwareEngProject into database-experiments)
     } on Exception catch (e) {
       nick = 'NoNickname';
       street = 'NoStreet';
