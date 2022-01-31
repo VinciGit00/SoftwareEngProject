@@ -9,6 +9,7 @@ import 'package:hair2/components/TuttePrenotazioniCliente.dart';
 import 'package:hair2/components/Parrucchiere.dart';
 import 'package:provider/provider.dart';
 import '../authentication_service.dart';
+import '../database_service.dart';
 import '../main.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
@@ -21,6 +22,7 @@ class InterfacciaPrincipale extends StatefulWidget {
 }
 
 class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
+  var db = DatabaseService();
   bool state1 = false;
   bool state2 = false;
 
@@ -60,8 +62,21 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                db.becomeStylist(FirebaseAuth.instance.currentUser!.email!);
+              },
+              child: Text(
+                "BecomeStylist",
+                style: TextStyle(
+                  //color: Colors.black,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
 
-            state2 == false
+            state2 == false //false = client, true = stylist
                 ? Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
                     style: TextStyle(

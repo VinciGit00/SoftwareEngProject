@@ -9,8 +9,11 @@ class DatabaseService {
   final database = FirebaseDatabase.instance;
   DatabaseService();
 //Bookings
-  Future<void> addBooking(String clientEmail, String stylistEmail, String type,
+  Future<void> addBooking(String clientEmail, String stylistNick, String type,
       DateTime appointmentDate) async {
+    var event = await database.ref('stylists/$stylistNick/email').once();
+    String? stylistEmail = event.snapshot.value as String;
+
     await database.ref('bookings').push().set({
       'clientEmail': clientEmail,
       'stylistEmail': stylistEmail,
@@ -46,6 +49,7 @@ class DatabaseService {
     late String nick;
     late String street;
     try {
+      await user().getUserInfo();
       nick = user().nickname;
       street = user().streetname;
     } on Exception catch (e) {

@@ -34,6 +34,7 @@ class HairStylists extends ChangeNotifier {
     _subscription = _db.child('stylists').onValue.listen((event) {
       Map<dynamic, dynamic> values =
           event.snapshot.value as Map<dynamic, dynamic>;
+      _stylists.clear();
 
       values.forEach((key, values) {
         stylists.add(Stylist(
