@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/values-fi/values-fi.xml",
+            "outputFile": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/res/merged/debug/values-fi/values-fi.xml",
             "map": [
                 {
                     "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/values-fi/values-fi.xml",
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "outputFile": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/url_launcher_android/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml",
+            "outputFile": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/url_launcher_android/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml",
             "map": [
                 {
                     "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/4501684f105f116204225bd71498665d/core-1.6.0/res/values-fi/values-fi.xml",

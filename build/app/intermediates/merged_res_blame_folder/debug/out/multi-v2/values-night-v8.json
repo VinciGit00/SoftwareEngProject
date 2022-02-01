@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
