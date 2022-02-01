@@ -14,11 +14,12 @@
 \author{Nicolas Anselmi, David Guzman Piedrahita and Marco Vinciguerra}
 
 \begin{document}
-\maketitle
+\maketitle        
 \section{Project Plan}
 \subsection{Introduction}
 Il progetto prevede lo sviluppo di una mobile app per gestire la prenotazione di 
-un negozio di parruccheria. C'è la possibilità di avere due tipi di utente (anche in entrambe le mdoalità):
+un negozio di parruccheria. C'è la possibilità di avere due tipi di utente (anche in entrambe le modalità contemporaneamente):
+
 un cliente e un padrone di negozio. La novità di questo progetto consiste nel fatto che è un tipo di sistema P2P in cui un utente può essere contemporaneamente cliente
 e (se vuole) gestore. Questo modello di business è fatto anche da Uber in cui un autista può essere sia cliente che autista.
 \\Il target della clientela è market driven in quanto il core business dell'azienda si basa su percentuali delle transazioni.
@@ -28,7 +29,7 @@ del negozio ma tramite l'applicazione.Ogni tipologia di taglio selezionabile ha 
 e può consentire un orario customizzabile di prenotazione 
 da parte del cliente. 
 \\I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco Vinciguerra.
-
+   
 \subsection{Process model}
 Il life cycle del progetto è agile, in particolare la tecnica utilizzata è SCRUM con
 sprint di 5 giorni in quanto il tempo necessario per lo sviluppo è breve. Inoltre viene utilizzato un triage per
@@ -116,8 +117,51 @@ Col tempo potrebbero cambiare le richieste da parte del cliente durante la fase 
 \subsection{Delivery}
 Il project plan verrà consegnato entro il 27 dicembre 2021
 \\La consegna verrà fatta 5 giorni prima dell'esame orale di gennaio.
-\subsection{People Management and Team Organization}
-\subsection{Software Quality}
+\newpage
+\section{Scrum life cycle}
+Il life cyle utilizzato è Scrum. Di conseguenza, saranno usate iterazioni con limiti di tempo predefinito, i cosiddetti sprint. La loro composizione e quantità è soggetta a modifiche.
+La durata tradizionale degli sprint e di 2 a 4 settimane, ma in questo caso si utilizzano sprint di durata da 5 a 10 giorni.
+
+\subsubsection{Product owner}
+\subsubsection{Development team}
+\subsubsection{ScrumMaster}
+
+\subsection{}{Sprints} 
+\subsubsection{Sprint 1}
+Il primo sprint comprende la costruzione dei primi requirements e la prima versione dell’architettura e design, insieme a un’implementazione basilare del codice vero e proprio, di conseguenza è prevista una quantità di giorni superiore a quella che si prevede per succesivi sprint. Inoltre, la fase di maintenance ha un ruolo secondario nel primo sprint, e la fase di testing è più interessata a definire come e quando fare testing, e meno alla sua completa messa in pratica: l’approccio di queste ultime due fasi cambierà nei prossimi sprint, i quali partiranno da basi più solide. 
+\subsubsection{State of the backlog}
+il backlog iniziale si basa completamente sui requisiti che sono disponibile nel corrispettivo documento, nella fase di architettura il backlog tiene considerazione dei suddetti requisiti ma anche del contesto architettonico (vedi documento architettura) . 
+\subsubsection{Meetings}
+\begin{itemize}
+\item Sprint planning meeting 
+\\26/12/21 
+\\Sono stati definiti gli obiettivi base del progetto e dello sprint. Dal backlog (e, a sua volta, dai requirements) sono stati scelti i seguenti elementi per lo sprint backlog:
+\\-	Creazione della documentazione dei requirements.
+\\-	Creazione della documentazione di architettura.
+\\-	Proposte iniziali di schemi UML (soggetti a molte modifiche dovuto al seguente punto).
+\\-	Precisazione delle librerie e framework elements da usare per l’implementazione software.
+\\-	Processo cots per la scelta delle suddette librerie e altri elementi di framework.
+
+\item Scrum meetings
+\\28/12/21 
+\\Discussione sui primi schemi UML. Proposte per migliorarli e modificarli.
+\\30/12/21
+\\Discussione su come gestire nel modo più efficiente la costruzione della UI.
+\\2/12/22
+\\Discussione di diversi elementi modulari UI trovati nei giorni precedenti e che erano candidati per uso come UI ufficiale. 
+\\5/12/22
+\\Discussione sul come costruire la home page dell’applicazione.
+\\6/12/22
+Cross-review dei diversi file di documentazione creati (requirements, architecture, testing, ecc) 
+\item Sprint review meeting 
+\item Retrospective meeting notes
+\item Backlog refinement
+\end{itemize}
+\newpage
+\section{People Management and Team Organization}
+
+\newpage
+\section{Software Quality}
 \subsubsection{CMM}
 Per quanto riguarda il CMM (Capaibility Maturity Model) esistono 5 livelli di maturità del software, essi sono:
 \begin{itemize}
@@ -141,7 +185,7 @@ Per quanto riguarda la product conformance si fa riferimento al seguente link: \
 \end{itemize}
 Per chiarire meglio il concetto si fa riferimento al seguente grafico:
 \\\includegraphics[scale = 0.25]{"Immagini/ISO9126.PNG"}
-\section{External and internal quality}
+\subsection{External and internal quality}
 Durante la fase di sviluppo del software il focus principale rimane sempre il mantenimento della qualità.
 Per fare tutto questo bisogna tenere conto delle seguenti 6 caratteristiche.
 \begin{itemize}
@@ -153,30 +197,30 @@ Per fare tutto questo bisogna tenere conto delle seguenti 6 caratteristiche.
     \item \textbf{Portability} 
 \end{itemize}
 
-\subsection{Functionality}
+\subsubsection{Functionality}
 Il codice si occupa di mantenere il giusto grado di sicurezza dei dati e deve essere adeguato e facile
 da utilizzare per gli utenti.
 
-\subsection{Reliability}
+\subsubsection{Reliability}
 Il codice si occupa della gestione dei guasti e punta ad aver il minor numero possibile di errori.
 
-\subsection{Usability}
+\subsubsection{Usability}
 Il prodotto finale non deve essere difficile da utilizzare e la user experience deve essere il più
 semplice possibile per l'utente in quanto non deve essere necessariamente esperto di coding.
 \\Dal punto di vista delle prestazioni deve essere il più reattivo possibile e facile da capire.
 
-\subsection{Efficiency}
+\subsubsection{Efficiency}
 Si vuole creare il programma più efficiente possibile che utilizzi il minimo delle risorse del dispositivo
 da cui si utilizza l'applicazione.
 
-\subsection{Maintanability}
+\subsubsection{Maintanability}
 Il codice deve essere scritto nel modo più conforme alle regole di standard di programmazione per favorire
 la leggibilità e la successiva manutenzione.
 
-\subsection{Portability}
+\subsubsection{Portability}
 Il programma deve funziona su più piattaforme possibilil.
 
-\section{Quality in use Model}
+\subsection{Quality in use Model}
 Si basa sulle seguenti 4 caratteristiche che si vuole soddisfare:
 \begin{itemize}
     \item Effectiveness
@@ -184,106 +228,12 @@ Si basa sulle seguenti 4 caratteristiche che si vuole soddisfare:
     \item Safety
     \item Satisfaction 
 \end{itemize}
-\section{Requirement Engeneering-IEE830}
-\subsection{Purpose} 
-Questo documento segue la struttura proposta dallo standard IEEE 830 per la definizione dei requirements. Questi rappresenta uno dei criteri fondamentali per valutare l’adeguatezza dell’implementazione ottenuta nei diversi sprint e un punto di partenza per le seguenti fasi dello sviluppo dell’applicazione.
-\subsection{Scope}
-L’obiettivo centrale è costruire un’applicazione per la gestione di prenotazioni di tagli in saloni di bellezza, eventualmente estendibile ad altri servizi. 
-\\In grandi linee, l’applicazione dovrebbe consentire di facilitare il processo della creazione di appuntamenti, evitando l’uso di chiamate, sostituendole con procedure online molto più veloci e friction-less. 
-\\L’interfacciamento dell’utente con l’applicazione deve essere tale che, nonostante la più alta complessità inerente a una soluzione model-view-controller rispetto all’uso di semplici chiamate, l’utilizzatore percepisca un netto miglioramento rispetto al solito modo di fare e a prescindere delle loro conoscenze informatiche. 
-\\Di conseguenza, l’applicazione non solo deve offrire la funzionalità centrale delle prenotazioni, ma in più deve farlo in un modo intuitivo. 
 
-\subsection {Definitions, acronyms and abbreviations }
-\subsection {References} 
-\subsection {Overview} 
-Dopo questa introduzione, il documento è composto da due ulteriori fasi: la parte 2, che da una descrizione globale dei requirements, e la parte 3, che elenca e classifica tutti i diversi requirements individuali, usando il modello Kano e Moscow.
-\section {Overall description} 
-\subsection {Product perspective} 
-Non ci sono database o altre strutture informatiche preesistenti, in quanto il pubblico di destinazione è composto proprio da saloni di bellezza che gestiscono le loro prenotazioni in modo informale. La costruzione del software deve dunque partire da zero.
-\\ Per la fase di elicitation sono state usate le strategie di open-ended interview, task analysis derivante anche da esperienze personali e natural language descriptions. 
-\\ Le successive fasi di V and V e di negotiation saranno svolte dopo la generazione di un primo prototipo.
-\subsection {Product functions} 
-A continuazione sono elencati le funzionalità centrali, l’elenco dei requirements a una granularità più precisa sono disponibili nella parte 3.
-\begin{itemize}
-\item Possibilità di prenotare tagli e, eventualmente, altri servizi offerti dai saloni.
-\item Possibilità di visualizzare le prenotazioni future e passate associate al salone in questione.
-\item Possibilità di tener traccia dei clienti con degli appositi profili utente/cliente associati a informazioni rilevanti.
-\item Disponibilità di visualizzare l’andamento dei ricavi risultanti dalle prenotazioni. 
-\end{itemize}
-\subsection {User characteristics} 
-Come detto sopra, il prodotto deve essere costruito per soddisfare le esigenze di un pubblico di destinazione con conoscenze tecniche basilari (uso di smartphone e applicazioni user-friendly). 
-\\L’UI dell’applicazione deve essere facile da usare da utenti ormai familiarizzatisi con altre applicazioni molto popolari (YouTube, Instagram…), di conseguenza il design-language deve essere coerente con quello al quale i potenziali utenti si sono ormai abituati, riducendo, di conseguenza, la learning-curve per usare il software.
-
-\subsection {Constraints} 
-Nella sua versione finale, l’applicazione dovrebbe essere utilizzabile sia da cliente che prenotano che da gestori di saloni di bellezza. 
-\\I clienti dei saloni non devono avere accesso a informazioni del salone, come le prenotazioni di altri utenti, o i ricavi del salone. Dall’altro canto, i gestori non possono modificare certe informazioni dei profili degli utenti, ma possono modificare dati associati alle prenotazioni. 
-\\Per il prototyping iniziale, si deve dare priorità alle funzionalità offerte ai gestori. L’implementazione delle prenotazioni remote fatte direttamente dagli utenti ha una priorità secondaria nelle prime fasi.
-\subsection {Assumptions and dependencies}
-\subsection {Requirements subsets} 
-\section {Specific requirements}
-
-\subsection{Kano model}
-\subsubsection{Attractive:}
-\begin{itemize}
-    \item Possibilità di scegliere i diversi tipi di acconciature e in 
-    base al tipo di acconciatura scegliere la durata della prenotazione 
-\end{itemize}
-\subsubsection{Must-be:}
-\begin{itemize}
-    \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
-    \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
-    variabili per gestire le prenotazioni.
-    \item Creazione di un profilo base utente per le prenotazioni.
-\end{itemize}
-
-\subsubsection{One-Dimensional}
-\begin{itemize}
-    \item Che il sistema dellle prenotazioni non funzioni correttamente 
-    e che si accavallino sulla stessa fascia oraria.
-\end{itemize}
-
-\subsubsection{indifferent:}
-\begin{itemize}
-    \item Troppa personalizzazione dell'utente (immagini + acconciature consigliate).
-\end{itemize}
-\subsubsection{Reverse:}
-
-\subsubsection{Questionable:}
-\begin{itemize}
-    \item Possibilità di mettere recensioni da parte dell'utente.
-\end{itemize}
-
-\subsection{MoSCoW}
-
-\subsection{Must haves}
-\begin{itemize}
-    \item Possibilità di scegliere i diversi tipi di acconciature e in 
-    base al tipo di acconciatura scegliere la durata della prenotazione 
-\end{itemize}
-
-\subsection{Should haves}
-\begin{itemize}
-    \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
-    \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
-    variabili per gestire le prenotazioni.
-    \item Creazione di un profilo base utente per le prenotazioni.
-    \item Che il sistema dellle prenotazioni non funzioni correttamente 
-    e che si accavallino sulla stessa fascia oraria.
-\end{itemize}
-
-\subsection{Could haves}
-\begin{itemize}
-    \item Possibilità di mettere recensioni da parte dell'utente.
-\end{itemize}
-
-\subsection{Won't haves}
-
-\section{Software quality}
 \subsection{Introduzione alla Taxonomy quality}
 Questo file si occupa del descrivere i requisiti tassonomici di qualità del progetto.
 \\Per quanto riguarda la definizione di McCall.
 \\In particolare si vuole utiizare i seguenti driver/linee guifa per la produzione, revisione e
-transizione  del codice.
+transizione  del codice.     
 \subsection{Product operation}
 \begin{itemize}
     \item Correctness: se il sistema fa quello richiesto
@@ -332,6 +282,102 @@ dal seguente link: \url{https://pub.dev/packages/analyzer}.
 Ecco un esempio di output di un test fatto con dart analyze:
 \\\includegraphics[scale = 0.5]{"Immagini/Dart_analyze.png"}
 
+\newpage
+\section{Requirement Engeneering-IEE830}
+\subsection{Purpose} 
+Questo documento segue la struttura proposta dallo standard IEEE 830 per la definizione dei requirements. Questi rappresenta uno dei criteri fondamentali per valutare l’adeguatezza dell’implementazione ottenuta nei diversi sprint e un punto di partenza per le seguenti fasi dello sviluppo dell’applicazione.
+\subsection{Scope}
+L’obiettivo centrale è costruire un’applicazione per la gestione di prenotazioni di tagli in saloni di bellezza, eventualmente estendibile ad altri servizi. 
+\\In grandi linee, l’applicazione dovrebbe consentire di facilitare il processo della creazione di appuntamenti, evitando l’uso di chiamate, sostituendole con procedure online molto più veloci e friction-less. 
+\\L’interfacciamento dell’utente con l’applicazione deve essere tale che, nonostante la più alta complessità inerente a una soluzione model-view-controller rispetto all’uso di semplici chiamate, l’utilizzatore percepisca un netto miglioramento rispetto al solito modo di fare e a prescindere delle loro conoscenze informatiche. 
+\\Di conseguenza, l’applicazione non solo deve offrire la funzionalità centrale delle prenotazioni, ma in più deve farlo in un modo intuitivo. 
+
+\subsection {Definitions, acronyms and abbreviations }
+\subsection {References} 
+\subsection {Overview} 
+Dopo questa introduzione, il documento è composto da due ulteriori fasi: la parte 2, che da una descrizione globale dei requirements, e la parte 3, che elenca e classifica tutti i diversi requirements individuali, usando il modello Kano e Moscow.
+\subsection {Overall description} 
+\subsection {Product perspective} 
+Non ci sono database o altre strutture informatiche preesistenti, in quanto il pubblico di destinazione è composto proprio da saloni di bellezza che gestiscono le loro prenotazioni in modo informale. La costruzione del software deve dunque partire da zero.
+\\ Per la fase di elicitation sono state usate le strategie di open-ended interview, task analysis derivante anche da esperienze personali e natural language descriptions. 
+\\ Le successive fasi di V and V e di negotiation saranno svolte dopo la generazione di un primo prototipo.
+\subsection {Product functions} 
+A continuazione sono elencati le funzionalità centrali, l’elenco dei requirements a una granularità più precisa sono disponibili nella parte 3.
+\begin{itemize}
+\item Possibilità di prenotare tagli e, eventualmente, altri servizi offerti dai saloni.
+\item Possibilità di visualizzare le prenotazioni future e passate associate al salone in questione.
+\item Possibilità di tener traccia dei clienti con degli appositi profili utente/cliente associati a informazioni rilevanti.
+\item Disponibilità di visualizzare l’andamento dei ricavi risultanti dalle prenotazioni. 
+\end{itemize}
+\subsection {User characteristics} 
+Come detto sopra, il prodotto deve essere costruito per soddisfare le esigenze di un pubblico di destinazione con conoscenze tecniche basilari (uso di smartphone e applicazioni user-friendly). 
+\\L’UI dell’applicazione deve essere facile da usare da utenti ormai familiarizzatisi con altre applicazioni molto popolari (YouTube, Instagram…), di conseguenza il design-language deve essere coerente con quello al quale i potenziali utenti si sono ormai abituati, riducendo, di conseguenza, la learning-curve per usare il software.
+
+\subsection {Constraints} 
+Nella sua versione finale, l’applicazione dovrebbe essere utilizzabile sia da cliente che prenotano che da gestori di saloni di bellezza. 
+\\I clienti dei saloni non devono avere accesso a informazioni del salone, come le prenotazioni di altri utenti, o i ricavi del salone. Dall’altro canto, i gestori non possono modificare certe informazioni dei profili degli utenti, ma possono modificare dati associati alle prenotazioni. 
+\\Per il prototyping iniziale, si deve dare priorità alle funzionalità offerte ai gestori. L’implementazione delle prenotazioni remote fatte direttamente dagli utenti ha una priorità secondaria nelle prime fasi.
+\subsection {Assumptions and dependencies}
+\subsection {Requirements subsets} 
+\subsection {Specific requirements}
+
+\subsubsection{Kano model}
+\subsubsubsection{Attractive:}
+\begin{itemize}
+    \item Possibilità di scegliere i diversi tipi di acconciature e in 
+    base al tipo di acconciatura scegliere la durata della prenotazione 
+\end{itemize}
+\subsubsubsection{Must-be:}
+\begin{itemize}
+    \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
+    \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
+    variabili per gestire le prenotazioni.
+    \item Creazione di un profilo base utente per le prenotazioni.
+\end{itemize}
+
+\subsubsubsection{One-Dimensional}
+\begin{itemize}
+    \item Che il sistema dellle prenotazioni non funzioni correttamente 
+    e che si accavallino sulla stessa fascia oraria.
+\end{itemize}
+
+\subsubsubsection{indifferent:}
+\begin{itemize}
+    \item Troppa personalizzazione dell'utente (immagini + acconciature consigliate).
+\end{itemize}
+\subsubsubsection{Reverse:}
+
+\subsubsubsection{Questionable:}
+\begin{itemize}
+    \item Possibilità di mettere recensioni da parte dell'utente.
+\end{itemize}
+
+\subsubsection{MoSCoW}
+
+\subsubsubsection{Must haves}
+\begin{itemize}
+    \item Possibilità di scegliere i diversi tipi di acconciature e in 
+    base al tipo di acconciatura scegliere la durata della prenotazione 
+\end{itemize}
+
+\subsubsubsubsection{Should haves}
+\begin{itemize}
+    \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
+    \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
+    variabili per gestire le prenotazioni.
+    \item Creazione di un profilo base utente per le prenotazioni.
+    \item Che il sistema dellle prenotazioni non funzioni correttamente 
+    e che si accavallino sulla stessa fascia oraria.
+\end{itemize}
+
+\subsubsubsection{Could haves}
+\begin{itemize}
+    \item Possibilità di mettere recensioni da parte dell'utente.
+\end{itemize}
+
+\subsubsubsection{Won't haves}
+   
+\newpage 
 \section{Software Architecture}
 \subsection{Architecture design metod }
 Per derivare una prima architettura funzionante partendo dai requirements specificati nell’apposito documento, si segue il criterio Generalized Model di Hofmeister et al. (2007).
@@ -340,8 +386,8 @@ Per derivare una prima architettura funzionante partendo dai requirements specif
 \\Il backlog ha in input i requirements del progetto, con particolare attenzione ai requisiti di qualità; il contesto, che contiene idee aggiuntive sul come implementare un sistema che soddisfi i requisiti e, infine, i risultati della valutazione dell’architettura dell’iterazione precedente. 
 \\Nel progetto verranno presi in considerazioni questi tre fattori per determinare le scelte di design. 
 \\\includegraphics[scale = 0.75]{"Immagini/GeneralizedModel.png"}
-\section{Decisioni di design} 
-\subsection{Decision 1}
+\subsection{Decisioni di design} 
+\subsubsection{Decision 1}
 \begin{itemize}
 \item Issue 
 \item Decision
@@ -372,7 +418,10 @@ Questa categoria di viewpoint descrive la relazione tra il sistema e il mondo ch
 \\Per il progetto in questione, questo tipo di problematiche vengono gestite automaticamente dai framework utilizzati e quindi non sono competenza degli stakeholder che altrimenti ne farebbe uso, come i programmatori e i maintaner.
 \\I viewpoint di tipo work assignment potrebbero essere utile per rappresentare graficamente la distribuzione del lavoro, ma in questo sprint vengono saltati per brevità. 
 
+\newpage
 \section{Software Design}
+
+\newpage
 \section{Software Testing}
 \subsubsection{IEEE928}
 Questo tipo di documento si occupa di specificare e documentare come avviene la fase di testing
@@ -386,7 +435,7 @@ seguenti:
     \item Preparation of tests 
     \item Running the  tests
     \item Completion of testing
-\end{itemize}
+\end{itemize} 
 
 \subsubsection{Preparation of tests}
 I test vengono fatti in contemporanea allo sviluppo delle classi, talvolta per alcune classi
@@ -415,7 +464,10 @@ finchè i test non danno tutti risultati positivi
 \subsubsection{Completion of testing}
 I dati expected sono inventati e ad ogni iterazione si commentano i risultati per capire 
 se va tutto bene e se c'è qualcosa che non quadra.
-\subsection{Software Maintenance}
+
+\newpage
+\section{Software Maintenance}
+
 Siccome non sapevamo fin da principio come utilizzare Flutter e firebase abbiamo alternato momenti di forwading engeneering con momenti di reverese
 engeneering in cui si è sistemata la documentazione in funzione del codice che è stato scritto (redocumentation).
 \\Per quanto riguarda il refactoring sono stati utilizzati i tool che Visual code per eseguire il refactoring (come ad esempio 
