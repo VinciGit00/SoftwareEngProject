@@ -120,13 +120,14 @@ Il project plan verrà consegnato entro il 27 dicembre 2021
 \newpage
 \section{Scrum life cycle}
 Il life cyle utilizzato è Scrum. Di conseguenza, saranno usate iterazioni con limiti di tempo predefinito, i cosiddetti sprint. La loro composizione e quantità è soggetta a modifiche.
-La durata tradizionale degli sprint e di 2 a 4 settimane, ma in questo caso si utilizzano sprint di durata da 5 a 10 giorni.
+La durata tradizionale degli sprint e di 2 a 4 settimane, ma in questo caso si utilizzano sprint di durata da 5 a 10 giorni per velocizzare il processo.
+\\Pre cercare di capire come funzionano i ruoli all'interno di Scrum, essi vengono cambiati a rotazione settimanale.
 
-\subsubsection{Product owner}
-\subsubsection{Development team}
-\subsubsection{ScrumMaster}
+\subsubsection{Product owner}: è l'intermediario tra cliente e dipendenti e solitamente si occupa lui di gestire il backlog.
+\subsubsection{Development team}: è il team che si occuoa di sviluppare il progetto 
+\subsubsection{ScrumMaster}: si occupa di aiutare a risolvere i problemi del development team tramite coonsigli
 
-\subsection{}{Sprints} 
+\subsection{Sprints} 
 \subsubsection{Sprint 1}
 Il primo sprint comprende la costruzione dei primi requirements e la prima versione dell’architettura e design, insieme a un’implementazione basilare del codice vero e proprio, di conseguenza è prevista una quantità di giorni superiore a quella che si prevede per succesivi sprint. Inoltre, la fase di maintenance ha un ruolo secondario nel primo sprint, e la fase di testing è più interessata a definire come e quando fare testing, e meno alla sua completa messa in pratica: l’approccio di queste ultime due fasi cambierà nei prossimi sprint, i quali partiranno da basi più solide. 
 \subsubsection{State of the backlog}
@@ -142,23 +143,37 @@ il backlog iniziale si basa completamente sui requisiti che sono disponibile nel
 \\-	Precisazione delle librerie e framework elements da usare per l’implementazione software.
 \\-	Processo cots per la scelta delle suddette librerie e altri elementi di framework.
 
-\item Scrum meetings
+\item Report degli Scrum meeting più significativi
 \\28/12/21 
 \\Discussione sui primi schemi UML. Proposte per migliorarli e modificarli.
 \\30/12/21
 \\Discussione su come gestire nel modo più efficiente la costruzione della UI.
-\\2/12/22
+\\2/1/22
 \\Discussione di diversi elementi modulari UI trovati nei giorni precedenti e che erano candidati per uso come UI ufficiale. 
-\\5/12/22
+\\5/1/22
 \\Discussione sul come costruire la home page dell’applicazione.
-\\6/12/22
-Cross-review dei diversi file di documentazione creati (requirements, architecture, testing, ecc) 
+\\6/1/22
+\\Cross-review dei diversi file di documentazione creati (requirements, architecture, testing, ecc) 
+\\12/1/22
+\\Scrum per gestire la UI
+\\15/1/22
+\\Scrum per discutere lato backend e Firebase, abbandonata l'idea di usare un database relazionale classico
+\\18/1/22
+\\Discussione su come utilizzare Firebase
+\\21/1/22
+\\Implementazione di Firebase 
+\\24/1/22
+\\Prova generale dell'applicazione
+\\27/1//22
+\\Discussione e revisione della documentazione
 \item Sprint review meeting 
 \item Retrospective meeting notes
 \item Backlog refinement
 \end{itemize}
 \newpage
 \section{People Management and Team Organization}
+La suddivisione e il funzionamento dello Scrum team è citato al paragrafo precedente. 
+\\Il team è formato da 3 persone e la comunicazione avviene tramite chiamate telefoniche.
 
 \newpage
 \section{Software Quality}
@@ -249,7 +264,7 @@ prodotto deve funzionare il meglio possibile.
 \begin{itemize}
     \item Maintainability: se il sistema in caso di guasto è riparabile
     \item Testability: se il sistema è testabile 
-    \item Felxibility: se il sistema è facilmente cambiabile
+    \item Flexibility: se il sistema è facilmente cambiabile
 \end{itemize}
 Il prodotto che si sta costruendo in questo caso tende a essere molto testabile in 
 quanto i test per verificare la correttezza vengono creati ed eseguiti poco dopo la  creazione
@@ -281,7 +296,8 @@ dal seguente link: \url{https://pub.dev/packages/analyzer}.
 
 Ecco un esempio di output di un test fatto con dart analyze:
 \\\includegraphics[scale = 0.5]{"Immagini/Dart_analyze.png"}
-
+\\I parametri presi in considerazione per le dart quality metrics sono i seguenti:
+\\\includegraphics[scale = 0.5]{"Immagini/ParametriQuality.png"}
 \newpage
 \section{Requirement Engeneering-IEE830}
 \subsection{Purpose} 
@@ -311,8 +327,7 @@ A continuazione sono elencati le funzionalità centrali, l’elenco dei requirem
 \end{itemize}
 \subsection {User characteristics} 
 Come detto sopra, il prodotto deve essere costruito per soddisfare le esigenze di un pubblico di destinazione con conoscenze tecniche basilari (uso di smartphone e applicazioni user-friendly). 
-\\L’UI dell’applicazione deve essere facile da usare da utenti ormai familiarizzatisi con altre applicazioni molto popolari (YouTube, Instagram…), di conseguenza il design-language deve essere coerente con quello al quale i potenziali utenti si sono ormai abituati, riducendo, di conseguenza, la learning-curve per usare il software.
-
+\\L’UI dell’applicazione deve essere facile da usare da utenti ormai familiarizzatisi con altre applicazioni molto popolari (YouTube, Instagram…), di conseguenza il design-language deve essere coerente con quello al quale i potenziali utenti si sono ormai abituati, riducendo, di conseguenza, la learning-curve per usare il softwarele
 \subsection {Constraints} 
 Nella sua versione finale, l’applicazione dovrebbe essere utilizzabile sia da cliente che prenotano che da gestori di saloni di bellezza. 
 \\I clienti dei saloni non devono avere accesso a informazioni del salone, come le prenotazioni di altri utenti, o i ricavi del salone. Dall’altro canto, i gestori non possono modificare certe informazioni dei profili degli utenti, ma possono modificare dati associati alle prenotazioni. 
@@ -322,61 +337,48 @@ Nella sua versione finale, l’applicazione dovrebbe essere utilizzabile sia da 
 \subsection {Specific requirements}
 
 \subsubsection{Kano model}
-\subsubsubsection{Attractive:}
+
 \begin{itemize}
+
+\item[$\blacksquare$] Attractive:} 
     \item Possibilità di scegliere i diversi tipi di acconciature e in 
     base al tipo di acconciatura scegliere la durata della prenotazione 
-\end{itemize}
-\subsubsubsection{Must-be:}
-\begin{itemize}
+\item[$\blacksquare$] {Must-be:}
     \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
     \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
     variabili per gestire le prenotazioni.
     \item Creazione di un profilo base utente per le prenotazioni.
-\end{itemize}
 
-\subsubsubsection{One-Dimensional}
-\begin{itemize}
+\item[$\blacksquare$] {One-Dimensional}
     \item Che il sistema dellle prenotazioni non funzioni correttamente 
     e che si accavallino sulla stessa fascia oraria.
-\end{itemize}
 
-\subsubsubsection{indifferent:}
-\begin{itemize}
+\item[$\blacksquare$] {indifferent:}
     \item Troppa personalizzazione dell'utente (immagini + acconciature consigliate).
-\end{itemize}
 \subsubsubsection{Reverse:}
 
-\subsubsubsection{Questionable:}
-\begin{itemize}
+\item[$\blacksquare$] {Questionable:}
     \item Possibilità di mettere recensioni da parte dell'utente.
-\end{itemize}
 
 \subsubsection{MoSCoW}
 
-\subsubsubsection{Must haves}
-\begin{itemize}
+\item[$\blacksquare$] {Must haves}
     \item Possibilità di scegliere i diversi tipi di acconciature e in 
     base al tipo di acconciatura scegliere la durata della prenotazione 
-\end{itemize}
 
-\subsubsubsubsection{Should haves}
-\begin{itemize}
+\item[$\blacksquare$] {Should haves}
     \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
     \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
     variabili per gestire le prenotazioni.
     \item Creazione di un profilo base utente per le prenotazioni.
     \item Che il sistema dellle prenotazioni non funzioni correttamente 
     e che si accavallino sulla stessa fascia oraria.
-\end{itemize}
 
-\subsubsubsection{Could haves}
-\begin{itemize}
+\item[$\blacksquare$] {Could haves}
     \item Possibilità di mettere recensioni da parte dell'utente.
-\end{itemize}
 
-\subsubsubsection{Won't haves}
-   
+\item[$\blacksquare$] {Won't haves}
+\end{itemize}
 \newpage 
 \section{Software Architecture}
 \subsection{Architecture design metod }
@@ -395,12 +397,13 @@ Per derivare una prima architettura funzionante partendo dai requirements specif
 \item Assumptions
 \item Alternatives
 \item Rationale
-\item Implications
+\item Implications    
 \item Notes
 \end{itemize}
 E' stato creato nei diagrammi UML diverse versioni dello stesso tipo di diagramma a seconda dello stakeholder
-con cui ci si sta confrontando
-TODO: AGGIUNGERE MODELLO CON COMPONENTI E CONNETTORI!!!
+con cui ci si sta confrontando.
+\\Il diagramma dei componenti e dei connettori risulta il seguente:
+\\\includegraphics[scale = 0.45]{"Immagini/SoftArch.png"}
 
 \subsection{Rappresentazione architettura con IEEE 1471} 
 Le rappresentazioni più concrete dell'architettura dell'applicativo vengono descritte attraverso degli schemi UML. Questi possono essere categorizzati come delle View indirizzate a diversi Stakeholder e definite tramite diversi Viewpoint, come formalizzato dallo standard IEEE 1471.
@@ -420,6 +423,11 @@ Questa categoria di viewpoint descrive la relazione tra il sistema e il mondo ch
 
 \newpage
 \section{Software Design}
+Per i parametri di qualità di design si utilizzano le seguenti metriche:
+\\\includegraphics[scale = 0.75]{"Immagini/ParametriQuality.png"}
+\\Invece per quanto riguarda i design pattern si utilizzano il Singleton, la Factory e il provider .
+
+DAVDID SCRIVI QUIIIIIIIIIIIIIII
 
 \newpage
 \section{Software Testing}

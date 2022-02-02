@@ -450,7 +450,7 @@ class _tempState extends State<temp> {
 }
 
 class PagGestore extends StatefulWidget {
-  PagGestore({Key? key}) : super(key: key);
+  const PagGestore({Key? key}) : super(key: key);
 
   @override
   _PagGestoreState createState() => _PagGestoreState();
@@ -460,12 +460,12 @@ class _PagGestoreState extends State<PagGestore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      backgroundColor: const Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        backgroundColor: const Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -481,7 +481,7 @@ class _PagGestoreState extends State<PagGestore> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Let's start by adding the text
-            Text(
+            const Text(
               "Prenotazioni effettuate",
               style: TextStyle(
                 color: Colors.black,
@@ -489,23 +489,23 @@ class _PagGestoreState extends State<PagGestore> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Color(0xFFB7B7B7),
+        unselectedItemColor: const Color(0xFFB7B7B7),
         selectedItemColor: Colors.blue,
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
             label: "Prenotazioni",
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-              icon: Icon(IconData(0xf01f3, fontFamily: 'MaterialIcons')),
+              icon: const Icon(IconData(0xf01f3, fontFamily: 'MaterialIcons')),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute<void>(builder: (context) => Profilo()));
@@ -520,7 +520,7 @@ class _PagGestoreState extends State<PagGestore> {
 }
 
 class Profilo extends StatefulWidget {
-  Profilo({Key? key}) : super(key: key);
+  const Profilo({Key? key}) : super(key: key);
 
   @override
   _ProfiloState createState() => _ProfiloState();
@@ -530,12 +530,12 @@ class _ProfiloState extends State<Profilo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      backgroundColor: const Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        backgroundColor: const Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -547,8 +547,8 @@ class _ProfiloState extends State<Profilo> {
       body: Column(children: [
         Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: const Text(
             "Profilo parrucchiere",
             style: TextStyle(
               color: Colors.black,
@@ -559,8 +559,8 @@ class _ProfiloState extends State<Profilo> {
         ),
         Container(
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.all(12),
-          child: Text("Nome:",
+          padding: const EdgeInsets.all(12),
+          child: const Text("Nome:",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
@@ -568,8 +568,8 @@ class _ProfiloState extends State<Profilo> {
         ),
         Container(
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.all(12),
-          child: Text("Indirizzo:",
+          padding: const EdgeInsets.all(12),
+          child: const Text("Indirizzo:",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
@@ -581,7 +581,7 @@ class _ProfiloState extends State<Profilo> {
 }
 
 class Settings extends StatefulWidget {
-  Settings({Key? key}) : super(key: key);
+  const Settings({Key? key}) : super(key: key);
 
   @override
   _SettingsState createState() => _SettingsState();
@@ -591,12 +591,12 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      backgroundColor: const Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        backgroundColor: const Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -608,8 +608,8 @@ class _SettingsState extends State<Settings> {
       body: Column(children: [
         Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: const Text(
             "Impostazioni utente",
             style: TextStyle(
               color: Colors.black,
@@ -624,7 +624,7 @@ class _SettingsState extends State<Settings> {
 }
 
 class PrenotazioneCliente extends StatefulWidget {
-  PrenotazioneCliente({Key? key}) : super(key: key);
+  const PrenotazioneCliente({Key? key}) : super(key: key);
 
   @override
   _PrenotazioneClienteState createState() => _PrenotazioneClienteState();
@@ -634,12 +634,12 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      backgroundColor: const Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        backgroundColor: const Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -651,7 +651,7 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
       body: Column(children: [
         Container(
           alignment: Alignment.center,
-          child: Text(
+          child: const Text(
             "Prenotazioni effettuate",
             style: TextStyle(
               color: Colors.black,
@@ -682,7 +682,7 @@ class _ParrucchiereState extends State<Parrucchiere> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         right: 22.0,
       ),
       clipBehavior: Clip.antiAlias,
@@ -692,13 +692,13 @@ class _ParrucchiereState extends State<Parrucchiere> {
       child: InkWell(
         onTap: () {
           Navigator.push(context,
-              MaterialPageRoute<void>(builder: (context) => nextPage()));
+              MaterialPageRoute<void>(builder: (context) => const nextPage()));
         },
         child: Container(
           width: 200.0,
           height: 100,
           child: Padding(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -706,7 +706,7 @@ class _ParrucchiereState extends State<Parrucchiere> {
                 Row(
                   children: [
                     for (var i = 0; i < widget.rating; i++)
-                      Icon(
+                      const Icon(
                         Icons.star,
                         color: Colors.blue,
                       ),
@@ -719,18 +719,18 @@ class _ParrucchiereState extends State<Parrucchiere> {
                     children: [
                       Text(
                         widget.nome,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 22.0,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 3.0,
                       ),
                       Text(
                         widget.via,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
@@ -770,9 +770,9 @@ class _nextPageState extends State<nextPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        backgroundColor: const Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -780,7 +780,7 @@ class _nextPageState extends State<nextPage> {
             Navigator.pop(context);
           },
         ),
-        title: Text(
+        title: const Text(
           "Seleziona la data e il tipo di taglio",
           style: TextStyle(
             color: Colors.black,
@@ -791,8 +791,8 @@ class _nextPageState extends State<nextPage> {
       ),
       body: Column(children: [
         Container(
-          margin: EdgeInsets.all(10),
-          child: Text(
+          margin: const EdgeInsets.all(10),
+          child: const Text(
             "Seleziona il giorno ",
             style: TextStyle(
               color: Colors.black,
@@ -802,7 +802,7 @@ class _nextPageState extends State<nextPage> {
           ),
         ),
         //prefixIcon: Icon(Icons.calendar_month),
-        Text(
+        const Text(
           "Inserisci il tipo di taglio",
           style: TextStyle(
             color: Colors.black,
@@ -812,10 +812,10 @@ class _nextPageState extends State<nextPage> {
         ),
 
         Container(
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           child: Text(
             choice,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 20.0,
               fontWeight: FontWeight.w300,
@@ -823,13 +823,13 @@ class _nextPageState extends State<nextPage> {
           ),
         ),
         RaisedButton(
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: const Text(
             "Esegui richiesta",
             style: TextStyle(color: Colors.white),
           ),
           color: Colors.blue,
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(30.0))),
           elevation: 4.0,
           onPressed: () {
@@ -844,7 +844,7 @@ class _nextPageState extends State<nextPage> {
 }
 
 class Buffer extends StatefulWidget {
-  Buffer({Key? key}) : super(key: key);
+  const Buffer({Key? key}) : super(key: key);
 
   @override
   _BufferState createState() => _BufferState();
@@ -871,7 +871,7 @@ class _BufferState extends State<Buffer> {
             } else {
               return Container(
                   alignment: Alignment.center,
-                  child: CircularProgressIndicator(
+                  child: const CircularProgressIndicator(
                     strokeWidth: 6.0,
                   ));
             }
@@ -899,7 +899,7 @@ class _PrenotazioneSingolaClienteState
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         right: 22.0,
       ),
       clipBehavior: Clip.antiAlias,
@@ -912,7 +912,7 @@ class _PrenotazioneSingolaClienteState
           width: 200.0,
           height: 100,
           child: Padding(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -924,18 +924,18 @@ class _PrenotazioneSingolaClienteState
                     children: [
                       Text(
                         widget.nome,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 22.0,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 3.0,
                       ),
                       Text(
                         widget.via,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
@@ -943,7 +943,7 @@ class _PrenotazioneSingolaClienteState
                       ),
                       Text(
                         widget.data.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
@@ -962,7 +962,7 @@ class _PrenotazioneSingolaClienteState
 }
 
 class changeSetting extends StatefulWidget {
-  changeSetting({Key? key}) : super(key: key);
+  const changeSetting({Key? key}) : super(key: key);
 
   @override
   _changeSettingState createState() => _changeSettingState();
@@ -972,12 +972,12 @@ class _changeSettingState extends State<changeSetting> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      backgroundColor: const Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        backgroundColor: const Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -989,8 +989,8 @@ class _changeSettingState extends State<changeSetting> {
       body: Column(children: [
         Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+          child: const Text(
             "Cambia le impostazioni",
             style: TextStyle(
               color: Colors.black,
@@ -1000,8 +1000,8 @@ class _changeSettingState extends State<changeSetting> {
           ),
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-          child: TextField(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          child: const TextField(
             obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
@@ -1010,8 +1010,8 @@ class _changeSettingState extends State<changeSetting> {
           ),
         ),
         Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            child: TextField(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            child: const TextField(
               obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -1019,15 +1019,15 @@ class _changeSettingState extends State<changeSetting> {
               ),
             )),
         Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: RaisedButton(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-              child: Text(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+              child: const Text(
                 "Conferma le modifiche",
                 style: TextStyle(color: Colors.white),
               ),
               color: Colors.blue,
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30.0))),
               elevation: 4.0,
               onPressed: () {
@@ -1070,7 +1070,7 @@ class _BufferModificheState extends State<BufferModifiche> {
             } else {
               return Container(
                   alignment: Alignment.center,
-                  child: CircularProgressIndicator(
+                  child: const CircularProgressIndicator(
                     strokeWidth: 6.0,
                   ));
             }
@@ -1080,7 +1080,7 @@ class _BufferModificheState extends State<BufferModifiche> {
 }
 
 class Conferma2 extends StatefulWidget {
-  Conferma2({Key? key}) : super(key: key);
+  const Conferma2({Key? key}) : super(key: key);
 
   @override
   _Conferma2State createState() => _Conferma2State();
@@ -1090,19 +1090,19 @@ class _Conferma2State extends State<Conferma2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      backgroundColor: const Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        backgroundColor: const Color(0xFFF6F7FF),
         leading: Container(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.only(top: 10),
+            margin: const EdgeInsets.only(top: 10),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               "Modifiche avvenute con successo!",
               style: TextStyle(
                 color: Colors.black,
@@ -1112,22 +1112,23 @@ class _Conferma2State extends State<Conferma2> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: RaisedButton(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-                child: Text(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                child: const Text(
                   "Torna alla schermata principale",
                   style: TextStyle(color: Colors.white),
                 ),
                 color: Colors.blue,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30.0))),
                 elevation: 4.0,
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => InterfacciaPrincipale()));
+                          builder: (context) => const InterfacciaPrincipale()));
                 }),
           ),
         ],
@@ -1148,20 +1149,20 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.settings,
               color: Colors.blue,
             ),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute<void>(builder: (context) => Settings()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                      builder: (context) => const Settings()));
             },
           )
         ],
@@ -1173,7 +1174,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Let's start by adding the text
-            Text(
+            const Text(
               "Welcome in TruccoParrucco",
               style: TextStyle(
                 color: Colors.black,
@@ -1182,7 +1183,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               ),
             ),
             state == false
-                ? Text(
+                ? const Text(
                     "Scegli il parrucchiere dove tagliare i capelli",
                     style: TextStyle(
                       color: Colors.black,
@@ -1190,7 +1191,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       fontWeight: FontWeight.w300,
                     ),
                   )
-                : Text(
+                : const Text(
                     "Guarda i clienti che hanno prenotato il taglio di capelli",
                     style: TextStyle(
                       color: Colors.black,
@@ -1198,14 +1199,14 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                       fontWeight: FontWeight.w300,
                     ),
                   ),
-            SizedBox(
+            const SizedBox(
               height: 6.5,
             ),
             Container(
-              padding: EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.only(bottom: 12),
               child: Row(
                 children: [
-                  Text(
+                  const Text(
                     "Modalità:",
                     style: TextStyle(
                       color: Colors.black,
@@ -1214,8 +1215,9 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
-                    child: Text(
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 6),
+                    child: const Text(
                       "Cliente",
                       style: TextStyle(fontSize: 20),
                     ),
@@ -1231,7 +1233,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                     activeTrackColor: Colors.blue,*/
                     inactiveThumbColor: Colors.green,
                   ),
-                  Text(
+                  const Text(
                     "Parrucchiere",
                     style: TextStyle(fontSize: 20),
                   ),
@@ -1243,20 +1245,20 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 scrollDirection: Axis.vertical,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(25),
-                    child: Parrucchiere(
+                    padding: const EdgeInsets.all(25),
+                    child: const Parrucchiere(
                         nome: "img[0]",
                         via: "Cristina e Thomas parrucchieri",
                         rating: 5),
                   ),
                   Container(
-                    padding: EdgeInsets.all(25),
-                    child: Parrucchiere(
+                    padding: const EdgeInsets.all(25),
+                    child: const Parrucchiere(
                         nome: "img[1]", via: "Total Look N.&N", rating: 4),
                   ),
                   Container(
-                      padding: EdgeInsets.all(25),
-                      child: Parrucchiere(
+                      padding: const EdgeInsets.all(25),
+                      child: const Parrucchiere(
                           nome: "img[2]", via: "Da Vincis", rating: 4)),
                 ],
               ),
@@ -1265,27 +1267,26 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Color(0xFFB7B7B7),
         selectedItemColor: Colors.blue,
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
           ),
           BottomNavigationBarItem(
             icon: IconButton(
-              icon: Icon(Icons.bookmark),
+              icon: const Icon(Icons.bookmark),
               onPressed: () {
                 if (state == true) {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => PagGestore()));
+                          builder: (context) => const PagGestore()));
                 } else {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => PrenotazioneCliente()));
+                          builder: (context) => const PrenotazioneCliente()));
                 }
               },
             ),
@@ -1308,19 +1309,17 @@ class _confermaModificheState extends State<confermaModifiche> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.only(top: 10),
+            margin: const EdgeInsets.only(top: 10),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               "Prenotazione confermata!",
               style: TextStyle(
                 color: Colors.black,
@@ -1330,15 +1329,16 @@ class _confermaModificheState extends State<confermaModifiche> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: RaisedButton(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-                child: Text(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                child: const Text(
                   "Torna alla schermata principale",
                   style: TextStyle(color: Colors.white),
                 ),
                 color: Colors.blue,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30.0))),
                 elevation: 4.0,
                 onPressed: () {

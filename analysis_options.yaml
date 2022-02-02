@@ -42,6 +42,8 @@ dart_code_metrics:
     source-lines-of-code: 50
   metrics-exclude:
     - test/**
+    - Unit_test.dart
+    - widget_test.dart
   rules:
     - newline-before-return
     - no-boolean-literal-compare
