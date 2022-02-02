@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/c09f27b7cc276eaefd82ccc59b92604b/coordinatorlayout-1.0.0/res/values/values.xml",
@@ -40,25 +40,6 @@
                     }
                 },
                 {
-                    "source": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,807",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "465,971"
-                    },
-                    "to": {
-                        "startLines": "126,131",
-                        "startColumns": "4,4",
-                        "startOffsets": "9486,9783",
-                        "endLines": "130,133",
-                        "endColumns": "12,12",
-                        "endOffsets": "9778,9947"
-                    }
-                },
-                {
                     "source": "/Users/davidguzman/.gradle/caches/transforms-2/files-2.1/cafdb1caa8d034100062b68de8ac45d1/browser-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
@@ -73,23 +54,6 @@
                         "startOffsets": "386,444,510,573,1438,1509",
                         "endColumns": "57,65,62,61,70,71",
                         "endOffsets": "439,505,568,630,1504,1576"
-                    }
-                },
-                {
-                    "source": "/Users/davidguzman/Desktop/backup/SoftwareEngProject/build/app/generated/res/google-services/debug/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,318,400,504,613,733,828",
-                        "endColumns": "143,118,81,103,108,119,94,71",
-                        "endOffsets": "194,313,395,499,608,728,823,895"
-                    },
-                    "to": {
-                        "startLines": "117,118,119,120,121,122,123,124",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "8570,8714,8833,8915,9019,9128,9248,9343",
-                        "endColumns": "143,118,81,103,108,119,94,71",
-                        "endOffsets": "8709,8828,8910,9014,9123,9243,9338,9410"
                     }
                 },
                 {
@@ -128,6 +92,42 @@
                         "endLines": "10,11,12,13,14,15,16,17,99,100,101,102,103,104,105,106,108,109,110,111,112,113,114,115,116,399,418",
                         "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
                         "endOffsets": "720,800,890,980,1060,1141,1221,1301,6337,6518,6643,6750,6930,7053,7169,7272,7627,7732,7913,8038,8213,8361,8424,8486,8565,25360,25777"
+                    }
+                },
+                {
+                    "source": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/build/app/generated/res/google-services/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,318,400,504,613,733,828",
+                        "endColumns": "143,118,81,103,108,119,94,71",
+                        "endOffsets": "194,313,395,499,608,728,823,895"
+                    },
+                    "to": {
+                        "startLines": "117,118,119,120,121,122,123,124",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "8570,8714,8833,8915,9019,9128,9248,9343",
+                        "endColumns": "143,118,81,103,108,119,94,71",
+                        "endOffsets": "8709,8828,8910,9014,9123,9243,9338,9410"
+                    }
+                },
+                {
+                    "source": "/Users/davidguzman/Documents/GitHub/SoftwareEngProject/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,807",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "465,971"
+                    },
+                    "to": {
+                        "startLines": "126,131",
+                        "startColumns": "4,4",
+                        "startOffsets": "9486,9783",
+                        "endLines": "130,133",
+                        "endColumns": "12,12",
+                        "endOffsets": "9778,9947"
                     }
                 }
             ]

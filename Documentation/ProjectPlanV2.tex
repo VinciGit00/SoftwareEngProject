@@ -18,27 +18,26 @@
 \section{Project Plan}
 \subsection{Introduction}
 Il progetto prevede lo sviluppo di una mobile app per gestire la prenotazione di 
-un negozio di parruccheria. C'è la possibilità di avere due tipi di utente (anche in entrambe le modalità contemporaneamente):
+un negozio di parruccheria. C'è la possibilità di avere due tipi di utente:
 
-un cliente e un padrone di negozio. La novità di questo progetto consiste nel fatto che è un tipo di sistema P2P in cui un utente può essere contemporaneamente cliente
+ La novità di questo progetto consiste nel fatto che è un tipo di sistema P2P in cui un utente può essere contemporaneamente cliente
 e (se vuole) gestore. Questo modello di business è fatto anche da Uber in cui un autista può essere sia cliente che autista.
 \\Il target della clientela è market driven in quanto il core business dell'azienda si basa su percentuali delle transazioni.
 Il cliente ha la possibilità di prenotare diversi 
 tipi di acconciatura direttamente senza interfacciarsi /chiamare direttamente il proprietario
-del negozio ma tramite l'applicazione.Ogni tipologia di taglio selezionabile ha una durata e in base al tipo dei macchinari e delle risorse che devono essere utilizzate 
-e può consentire un orario customizzabile di prenotazione 
+del negozio, usando invece tramite l'applicazione.Ogni tipologia di taglio selezionabile e può consentire una data customizzabile di prenotazione 
 da parte del cliente. 
 \\I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco Vinciguerra.
    
 \subsection{Process model}
 Il life cycle del progetto è agile, in particolare la tecnica utilizzata è SCRUM con
-sprint di 5 giorni in quanto il tempo necessario per lo sviluppo è breve. Inoltre viene utilizzato un triage per
+sprint di circa 5 giorni. Inoltre viene utilizzato un triage per
 gestire i compiti (MoSCoW).
-\\Inoltre viene applicato un modello di prototipazione incrementale in cui ad ogni git viene aggiunto una funzionalità al sito e deve essere sempre disponibile
+\\Inoltre viene applicato un modello di prototipazione incrementale in cui ad ogni git viene aggiunto una funzionalità al sito e in più deve essere sempre disponibile
 su Github una versione funzionante del progetto.
 \\Per accelerare il processo di apprendimento viene applicato anche il processo di pair programming, 
 pratica molto utilizzata nei metodi AGILE.
-\\Per quanto riguarda i requirements si utilizza il Kano Model.
+\\Per quanto riguarda i requirements si utilizza il Kano Model el il MoSCoW model.
 Il periodo di sviluppo parte poco prima di Natale. Ogni giorno verso le 9 30 del mattino 
 c'è un daily scrum tenuto dallo scrum master in cui si discutono le problematiche riscontrate durante 
 il giorno precedente e le possibili soluzioni a queste.
@@ -49,15 +48,15 @@ Il team di sviluppo è composto dai succitati integranti. Per portare a termine 
 l'uso di risorse online: particolarmente nel caso del framework Flutter per il frontend development.
 
 \subsection{Standards, guidelines, procedures}
-I principali linguaggi di programmazione del progetto saranno: python e dart, quest'ultimo
+I principali linguaggi di programmazione del progetto sarà dart, quest'ultimo
 viene esteso tramite flutter.
-Si usa i coding standards di flutter.
+Si usano i coding standards di flutter.
 \\Per gestire l'assegnazione e il corretto sviluppo si usa un template di Notion per gestire i compiti.
 \\Gli IDE che vengono utilizzati sono: VSC e terminale con VIM.
 
 \subsection{Management activities}
-Ogni settimana viene fatto un report sui progressi in corso fatti dal team di sviluppo per avere un'idea sull'avanzamento del progetto.
-\\Le modifiche critiche del progetto devono essere accettate dal padrone della cartella (Marco Vinciguerra), le altre possono essere fatte 
+Ogni settimana viene fatto un report informale sui progressi in corso fatti dal team di sviluppo per avere un'idea sull'avanzamento del progetto.
+\\Le modifiche critiche del progetto devono essere accettate dal CCB (a sua volta composto dall'intero team di sviluppo), le altre possono essere fatte 
 liberamente.
 \\Questi report, insieme alle decisioni definite negli scrum meeting, rappresentano la principale strategia per valutare velocemente lo status del progetto, e, 
 di conseguenza, sono utili a fare course-correction.
@@ -68,20 +67,17 @@ Il rischio principale è di non consegnare in tempo il progetto o di non consegn
 I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco.
 \\Per provare a vedere come funziona il mestiere il ruolo dello SCRUM master cambia a rotazione e si parte dalla settimana 
 che inizia col 13 dicembre. Il primo SCRUM master sarà David, la settimana dopo Nicolas e quella dopo Marco Vinciguerra e così via...
-\\Sono 3 studenti di ingegneria del terzo anno.
 
 \subsection{Methods and techiniques}
 Per gestire gli sprint è stato utilizzato un template di Notion in quanto ha la possibilità di schedulare i task in base alla scadenza e in base ad un ordine gerarchico.
 \\Per gestire la fase di testing si usa il tool better flutter tests che fa lui il testing sul framework Flutter. Il test viene scritto automaticamente dal tool e quindi 
 non si applica fin da principio.
 \\Per quanto riguarda la specifica dei requisiti si utilizza lo standard IEEE 830.
-\\Il design pattern utilizzato è il delegation pattern.
-\\Si utilizza Flutlab.io per convertire il modello fatto con Figma in codice sorgente Flutter, questa è una strategia model driven.
 \\Si prevede l'uso di una strategia COTS per la scelta di diversi moduli o, più precisamente, widget di Flutter, che consentono di implementare velocemente
 elementi UI classici, senza scrivergli da zero.
 \\Per quanto riguarda i test di Dart si utilizza Dart unit testing e si utilizza il TDD e per garantire la continuos integration si usa Travis CI che partirà ad ogni 
 Git e ogni 24 ore.
-\\Per i database non si fa nessun tipo di testing e si utilizza Firebase  per creare e gestire il database delle prenotazioni.
+\\Per i database si utilizza Firebase  per creare e gestire il database delle prenotazioni.
 \\La gestione delle modifiche viene svolta tenendo in conto le considerazione del punto 5 e, soprattutto, il punto 13.
 \subsection{Quality assurance}
 Per garantire la qualità del prodotto viene utilizzato lo standard ISO 9001.
@@ -104,9 +100,8 @@ Gli obiettivi di prototipazione proposti dal progetto in questione richiedono so
 Dopo diverse iterazioni di prototipazione è prevista la possibilità di usare dei cloud-server che ricevano e gestiscano le richieste degli utenti tramite i loro client/app. 
 
 \subsection{Budget and schedule}
-Il tempo preventivato per il progetto è di circa 55 ore a testa, quindi in totale saranno richieste 150 ore.
-\\In particolare si prevede che saranno richieste 30 ore per fare la documentazione, 10 ore per imparare Flutter e dart, 10 ore per implementarla
-e le restanti ore i database e il testing.
+Il tempo preventivato per il progetto è di circa 70 ore a testa, quindi in totale saranno richieste 210 ore.
+\\La documentazione ha la priorità più alta, ma la necessità di imparare a utilizzare Flutter, di imparare a gestire UI per la prima volta, rappresentarà comunque un alto costo in termini di tempo.
 \subsection{Changes}
 Col tempo potrebbero cambiare le richieste da parte del cliente durante la fase di validazione di ogni processo.
 \\Al supporto delle attività di change management vengono utilizzati i due tool usati anche per altri aspetti del progetto, ovvero: 
@@ -116,7 +111,7 @@ Col tempo potrebbero cambiare le richieste da parte del cliente durante la fase 
 
 \subsection{Delivery}
 Il project plan verrà consegnato entro il 27 dicembre 2021
-\\La consegna verrà fatta 5 giorni prima dell'esame orale di gennaio.
+\\La consegna verrà fatta 5 giorni prima dell'esame orale.
 \newpage
 \section{Scrum life cycle}
 Il life cyle utilizzato è Scrum. Di conseguenza, saranno usate iterazioni con limiti di tempo predefinito, i cosiddetti sprint. La loro composizione e quantità è soggetta a modifiche.
@@ -181,13 +176,13 @@ La suddivisione e il funzionamento dello Scrum team è citato al paragrafo prece
 Per quanto riguarda il CMM (Capaibility Maturity Model) esistono 5 livelli di maturità del software, essi sono:
 \begin{itemize}
     \item Initial 
-    \item Managed
+    \item Repeatable
     \item Defined
-    \item Measurable
-    \item Optimization
+    \item Quantitatively managed
+    \item Optimizing
 \end{itemize}
 In questo progetto si punta ad utilizzare il terzo livello 3 (Defined) in cui ogni attività viene documentata
-e standardadizzata per l'intera organizzazione del processo per il design, development e testing.
+e standardadizzata per l'intera organizzazione per quanto riguarda il  processo per il design, development, testing e via dicendo.
 
 \subsubsection{ISO 9216}
 Per quanto riguarda la product conformance si fa riferimento al seguente link: \url{https://www.geeksforgeeks.org/iso-iec-9126-in-software-engineering/}
@@ -434,7 +429,7 @@ DAVDID SCRIVI QUIIIIIIIIIIIIIII
 \subsubsection{IEEE928}
 Questo tipo di documento si occupa di specificare e documentare come avviene la fase di testing
 del progetto. Questo documento rappresenta anche il test plan. Siccome stiamo facendo un tipo di
-sviluppo di software AGILE i test non vengono fatti alla fine ma vengono svolti in contemporanea allo
+sviluppo di software AGILE i test non vengono fatti alla fine ma vengono svolti assieme allo
 sviluppo delle classi.
 \\Viene svolto un tipo di sviluppo di tipo TDD in cui si scrivono le classi dei test in 
 contemporanea (se non prima) delle classi che servono per il sito. Le fasi del testing sono le 
