@@ -440,8 +440,10 @@ class _ChosenState extends State<Chosen> {
               color: Colors.blue,
             ),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute<void>(builder: (context) => Settings()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                      builder: (context) => const Settings()));
             },
           )
         ],
@@ -496,7 +498,7 @@ class _ChosenState extends State<Chosen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                        builder: (context) => PagGestore()));
+                        builder: (context) => const PagGestore()));
               } else {
                 final snackBar = SnackBar(
                   content: const Text(
@@ -610,9 +612,9 @@ class _PagGestoreState extends State<PagGestore> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Prenotazioni effettuate",
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 20.0,
                 fontWeight: FontWeight.w600,
@@ -636,8 +638,10 @@ class _PagGestoreState extends State<PagGestore> {
             icon: IconButton(
               icon: const Icon(IconData(0xf01f3, fontFamily: 'MaterialIcons')),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute<void>(builder: (context) => Profilo()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                        builder: (context) => const Profilo()));
               },
             ),
             label: "Profilo",
