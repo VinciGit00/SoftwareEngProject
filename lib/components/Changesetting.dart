@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/user.dart';
-import '../database_service.dart';
 import 'BufferModifiche.dart';
 
 class changeSetting extends StatefulWidget {
@@ -14,7 +13,7 @@ class changeSetting extends StatefulWidget {
 class _changeSettingState extends State<changeSetting> {
   final TextEditingController _nicknameTEC = TextEditingController();
   final TextEditingController _streetTEC = TextEditingController();
-  // var _db =  DatabaseService(); // TODO change the way we access the database class
+  // var _db =  DatabaseService();
 
   @override
   Widget build(BuildContext context) {
