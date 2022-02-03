@@ -14,7 +14,7 @@ const users = const {
 };
 
 class LoginScreen extends StatelessWidget {
-  Duration get loginTime => Duration(milliseconds: 1000);
+  Duration get loginTime => const Duration(milliseconds: 1000);
 
   Future<String?> _authUser(LoginData data) {
     debugPrint('Name: ${data.name}, Password: ${data.password}');
@@ -106,7 +106,7 @@ class LoginScreen extends StatelessWidget {
       ],
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => InterfacciaPrincipale(),
+          builder: (context) => const InterfacciaPrincipale(),
         ));
       },
       onRecoverPassword: _recoverPassword,

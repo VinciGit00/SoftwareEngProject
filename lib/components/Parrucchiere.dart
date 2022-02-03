@@ -19,7 +19,7 @@ class _ParrucchiereState extends State<Parrucchiere> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         right: 22.0,
       ),
       clipBehavior: Clip.antiAlias,
@@ -37,7 +37,7 @@ class _ParrucchiereState extends State<Parrucchiere> {
           width: 200.0,
           height: 100,
           child: Padding(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +45,7 @@ class _ParrucchiereState extends State<Parrucchiere> {
                 Row(
                   children: [
                     for (var i = 0; i < widget.rating; i++)
-                      Icon(
+                      const Icon(
                         Icons.star,
                         color: Colors.blue,
                       ),
@@ -58,19 +58,19 @@ class _ParrucchiereState extends State<Parrucchiere> {
                     children: [
                       Text(
                         widget.nome,
-                        style: TextStyle(
-                          color: Colors.blue,
+                        style: const TextStyle(
+                          //color: Colors.blue,
                           fontSize: 22.0,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 3.0,
                       ),
                       Text(
                         widget.via,
-                        style: TextStyle(
-                          color: Colors.blue,
+                        style: const TextStyle(
+                          //color: Colors.blue,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600,
                         ),

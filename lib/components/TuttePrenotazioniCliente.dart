@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/clientBookings.dart';
 import 'package:provider/provider.dart';
-import 'Parrucchiere.dart';
 import 'PrenotazioneClienti.dart';
 
 class PrenotazioneCliente extends StatefulWidget {
@@ -15,10 +14,10 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      //backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        // backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
@@ -35,7 +34,7 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Prenotazioni effettuate",
               style: TextStyle(
                 color: Colors.black,

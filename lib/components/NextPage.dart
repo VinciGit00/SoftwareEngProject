@@ -33,9 +33,9 @@ class _nextPageState extends State<nextPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        //backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -43,7 +43,7 @@ class _nextPageState extends State<nextPage> {
             Navigator.pop(context);
           },
         ),
-        title: Text(
+        title: const Text(
           "Seleziona la data e il tipo di taglio",
           style: TextStyle(
             color: Colors.black,
@@ -54,8 +54,8 @@ class _nextPageState extends State<nextPage> {
       ),
       body: Column(children: [
         Container(
-          margin: EdgeInsets.all(10),
-          child: Text(
+          margin: const EdgeInsets.all(10),
+          child: const Text(
             "Seleziona il giorno",
             style: TextStyle(
               color: Colors.black,
@@ -77,7 +77,7 @@ class _nextPageState extends State<nextPage> {
                       "/" +
                       _dateTime.month.toString()),
               RaisedButton(
-                child: Text("Cambia data"),
+                child: const Text("Cambia data"),
                 onPressed: () {
                   showDatePicker(
                           context: context,
@@ -100,7 +100,7 @@ class _nextPageState extends State<nextPage> {
             child: Column(
               mainAxisSize: MainAxisSize.min, // To make the card compact
               children: [
-                Text(
+                const Text(
                   "Inserisci il tipo di taglio",
                   style: TextStyle(
                     color: Colors.black,
@@ -117,24 +117,25 @@ class _nextPageState extends State<nextPage> {
                   ],
                 ),
                 Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Text(
                     choice,
-                    style: TextStyle(
-                      color: Colors.black,
+                    style: const TextStyle(
+                      //  color: Colors.black,
                       fontSize: 20.0,
                       fontWeight: FontWeight.w300,
                     ),
                   ),
                 ),
                 RaisedButton(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-                  child: Text(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                  child: const Text(
                     "Esegui richiesta",
-                    style: TextStyle(color: Colors.white),
+                    //style: TextStyle(color: Colors.white),
                   ),
-                  color: Colors.blue,
-                  shape: RoundedRectangleBorder(
+                  // color: Colors.blue,
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30.0))),
                   elevation: 4.0,
                   onPressed: () {

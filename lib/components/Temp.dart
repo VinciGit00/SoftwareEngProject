@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'InterfacciaPrincipale.dart';
 
 class temp extends StatefulWidget {
-  temp({Key? key}) : super(key: key);
+  const temp({Key? key}) : super(key: key);
 
   @override
   _tempState createState() => _tempState();
@@ -14,19 +14,19 @@ class _tempState extends State<temp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF6F7FF),
+      //  backgroundColor: Color(0xFFF6F7FF),
       appBar: AppBar(
         elevation: 4.0,
-        backgroundColor: Color(0xFFF6F7FF),
+        // backgroundColor: Color(0xFFF6F7FF),
         leading: Container(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.only(top: 10),
+            margin: const EdgeInsets.only(top: 10),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               "Prenotazione avvenuta con successo!",
               style: TextStyle(
                 color: Colors.black,
@@ -36,22 +36,23 @@ class _tempState extends State<temp> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: RaisedButton(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 25),
-                child: Text(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
+                child: const Text(
                   "Torna alla schermata principale",
-                  style: TextStyle(color: Colors.white),
+                  //  style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.blue,
-                shape: RoundedRectangleBorder(
+                //  color: Colors.blue,
+                shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30.0))),
                 elevation: 4.0,
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                          builder: (context) => InterfacciaPrincipale()));
+                          builder: (context) => const InterfacciaPrincipale()));
                 }),
           ),
         ],

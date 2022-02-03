@@ -20,14 +20,14 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome: " + _email!), // TODO turn into null safe version!
+            Text("Welcome: " + _email!),
             ElevatedButton(
               onPressed: () {
                 context.read<AuthenticationService>().signOut();
               },
               child: const Text("Sign out"),
             ),
-            Text("Stylists functionality"),
+            const Text("Stylists functionality"),
             ElevatedButton(
               onPressed: () {
                 print('start');
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("stylist list"),
             ),
-            Text("Booking functionality"),
+            const Text("Booking functionality"),
             ElevatedButton(
               onPressed: () {
                 db.addBooking(
@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Stylist Bookings"),
             ),
-            Text("User functionality"),
+            const Text("User functionality"),
             ElevatedButton(
               onPressed: () {
                 //db.addUserInfo(_email, 'nick', 'via einstein');
