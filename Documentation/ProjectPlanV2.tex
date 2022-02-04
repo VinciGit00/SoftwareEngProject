@@ -64,7 +64,7 @@ di conseguenza, sono utili a fare course-correction.
 \subsection{Risks}
 Il rischio principale è di non consegnare in tempo il progetto o di non consegnare un progetto perfettamente funzionante.
 \subsection{Staffing}
-I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco.
+I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco Vinciguerra.
 \\Per provare a vedere come funziona il mestiere il ruolo dello SCRUM master cambia a rotazione e si parte dalla settimana 
 che inizia col 13 dicembre. Il primo SCRUM master sarà David, la settimana dopo Nicolas e quella dopo Marco Vinciguerra e così via...
 
@@ -118,9 +118,13 @@ Il life cyle utilizzato è Scrum. Di conseguenza, saranno usate iterazioni con l
 La durata tradizionale degli sprint e di 2 a 4 settimane, ma in questo caso si utilizzano sprint di durata da 5 a 10 giorni per velocizzare il processo.
 \\Pre cercare di capire come funzionano i ruoli all'interno di Scrum, essi vengono cambiati a rotazione settimanale.
 
-\subsubsection{Product owner} è l'intermediario tra cliente e dipendenti e solitamente si occupa lui di gestire il backlog.
-\subsubsection{Development team} è il team che si occuoa di sviluppare il progetto 
-\subsubsection{ScrumMaster} si occupa di aiutare a risolvere i problemi del development team tramite coonsigli
+\subsubsection{Product owner} è l'intermediario tra cliente e dipendenti e solitamente si occupa lui di gestire il backlog. In questo 
+caso non c'è nessuno che si occupa di gestire l'interazione col cliente.
+\subsubsection{Development team} è il team che si occuopa di sviluppare il progetto. Quando si fa questo ruolo
+ci si occupa di svolgere i ruoli che sono inseriti nel backlog.
+\subsubsection{ScrumMaster} Quando uno degli elementi del gruppo diventa ScrumMaster
+si occupa di aiutare a risolvere i problemi del development team tramite consigli.
+
 
 \subsection{Sprints} 
 \subsubsection{Sprint 1}
@@ -140,13 +144,13 @@ il backlog iniziale si basa completamente sui requisiti che sono disponibile nel
 
 \item Report degli Scrum meeting più significativi
 \\28/12/21 
-\\Discussione sui primi schemi UML. Proposte per migliorarli e modificarli.
+\\Discussione sui primi schemi UML. Proposte per migliorarli e modificarli + Backlog refinement
 \\30/12/21
-\\Discussione su come gestire nel modo più efficiente la costruzione della UI.
+\\Discussione su come gestire nel modo più efficiente la costruzione della UI + Backlog refinement
 \\2/1/22
 \\Discussione di diversi elementi modulari UI trovati nei giorni precedenti e che erano candidati per uso come UI ufficiale. 
 \\5/1/22
-\\Discussione sul come costruire la home page dell’applicazione.
+\\Discussione sul come costruire la home page dell’applicazione + Retrospective meeting notes
 \\6/1/22
 \\Cross-review dei diversi file di documentazione creati (requirements, architecture, testing, ecc) 
 \\12/1/22
@@ -156,14 +160,12 @@ il backlog iniziale si basa completamente sui requisiti che sono disponibile nel
 \\18/1/22
 \\Discussione su come utilizzare Firebase
 \\21/1/22
-\\Implementazione di Firebase 
+\\Implementazione di Firebase + Sprint review meeting 
 \\24/1/22
 \\Prova generale dell'applicazione
 \\27/1//22
-\\Discussione e revisione della documentazione
-\item Sprint review meeting 
-\item Retrospective meeting notes
-\item Backlog refinement
+\\Discussione e revisione della documentazione + Retrospective meeting notes
+
 \end{itemize}
 \newpage
 \section{People Management and Team Organization}
@@ -229,11 +231,13 @@ Il codice si occupa della gestione dei guasti e punta ad aver il minor numero po
 \subsubsection{Usability}
 Il prodotto finale non deve essere difficile da utilizzare e la user experience deve essere il più
 semplice possibile per l'utente in quanto non deve essere necessariamente esperto di coding.
+Ad esempio i bottoni sono studiati per essere il più semplici e intuitivi possibile.
 \\Dal punto di vista delle prestazioni deve essere il più reattivo possibile e facile da capire.
 
 \subsubsection{Efficiency}
 Si vuole creare il programma più efficiente possibile che utilizzi il minimo delle risorse del dispositivo
-da cui si utilizza l'applicazione.
+da cui si utilizza l'applicazione. 
+\\Per migliorare l'efficienza si è usato per esempio la variabile const nella UI.
 
 \subsubsection{Maintanability}
 Il codice deve essere scritto nel modo più conforme alle regole di standard di programmazione per favorire
@@ -301,11 +305,15 @@ dal seguente link: \url{https://pub.dev/packages/analyzer}.
     \item Number of parameters
     \item Source lines of code
 \end{itemize}
+La configurazione è presente nel file analysis\_options.yaml.
+\\\includegraphics[scale = 0.5]{"Immagini/ParametriQuality.png"}
 
 Ecco un esempio di output di un test fatto con dart analyze:
 \\\includegraphics[scale = 0.5]{"Immagini/Dart_analyze.png"}
-\\I parametri presi in considerazione per le dart quality metrics sono i seguenti:
-\\\includegraphics[scale = 0.5]{"Immagini/ParametriQuality.png"}
+\\Col tempo questi consigli sono diminuiti di circa l'80 \% e il 20\% riguarda istruzioni
+che sono deprecated ma che sono necessarie per il progetto.
+\\Per migliorare l'efficienza si è usato per esempio la variabile const nella UI che toglie un errore in dart\_analyze.
+
 \newpage
 \section{Requirement Engeneering-IEE830}
 \subsection{Purpose} 
@@ -364,54 +372,8 @@ variabili per gestire le prenotazioni. (Must-be, should have)
 \item Creazione di un profilo base utente per le prenotazioni. (Must-be, should have)
 \item Che il sistema dellle prenotazioni non funzioni correttamente 
 e che si accavallino sulla stessa fascia oraria. (One-Dimensional, should have)
-\item Possibilità di mettere recensioni da parte dell'utente. (Questionable, could have)
-\begin{itemize}
-\subsubsection{Kano model}
+\item Possibilità di mettere recensioni da parte dell'utente. (Questionable, could have).
 
-\item Prestazioni
-\item Sicurezza
-\item Manutenibilità
-\item Usabilità
-\item Affidabilità
-\item Disponibilità
-\item[$\blacksquare$] Attractive:} 
-    \item Possibilità di scegliere i diversi tipi di acconciature e in 
-    base al tipo di acconciatura scegliere la durata della prenotazione 
-\item[$\blacksquare$] {Must-be:}
-    \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
-    \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
-    variabili per gestire le prenotazioni.
-    \item Creazione di un profilo base utente per le prenotazioni.
-
-\item[$\blacksquare$] {One-Dimensional}
-    \item Che il sistema dellle prenotazioni non funzioni correttamente 
-    e che si accavallino sulla stessa fascia oraria.
-
-\item[$\blacksquare$] {indifferent:}
-    \item Troppa personalizzazione dell'utente (immagini + acconciature consigliate).
-\subsubsubsection{Reverse:}
-
-\item[$\blacksquare$] {Questionable:}
-    \item Possibilità di mettere recensioni da parte dell'utente.
-
-\subsubsection{MoSCoW}
-
-\item[$\blacksquare$] {Must haves}
-    \item Possibilità di scegliere i diversi tipi di acconciature e in 
-    base al tipo di acconciatura scegliere la durata della prenotazione 
-
-\item[$\blacksquare$] {Should haves}
-    \item Possibilità di registrarsi per la prima volta al sito da parte di un cliente.
-    \item Utilizzo di un database per la gestione dei clienti. In alternativa si potrebbero utilizzare 
-    variabili per gestire le prenotazioni.
-    \item Creazione di un profilo base utente per le prenotazioni.
-    \item Che il sistema dellle prenotazioni non funzioni correttamente 
-    e che si accavallino sulla stessa fascia oraria.
-
-\item[$\blacksquare$] {Could haves}
-    \item Possibilità di mettere recensioni da parte dell'utente.
-
-\item[$\blacksquare$] {Won't haves}
 \end{itemize}
 \newpage 
 \section{Software Architecture}
@@ -494,7 +456,10 @@ del test in background su Travis. Ad ogni test viene fatta in automatico anche u
 di vedere se ci sono eventuali errori diortografia all'interno del codice.
 \\L'unico problema di Travis CI è che flutter non è supportato e non gestisce gli import correttamente e quindi è stato necessario importare (copiando) le classi che 
 servivano per il testing.
-\\All'interno del progetto flutter vengono utilizzate 3 classi differenti che si occupano dello 
+\\L'interfaccia di Travis è la seguente:
+\\\includegraphics[scale = 0.25]{"Immagini/Travis.PNG"}
+
+All'interno del progetto flutter vengono utilizzate 2 classi differenti che si occupano dello 
 sviluppo del testing, essi sono:
 \begin{itemize}
     \item $UnitTest.dart$: per fare unit testing
@@ -503,7 +468,7 @@ sviluppo del testing, essi sono:
 
 \subsubsection{Running the tests}
 Una volta fatte le classi ed eseguiti i test si procede in modo iterativo a modificare il codice
-finchè i test non danno tutti risultati positivi
+finchè i test non danno tutti risultati positivi. 
 
 \subsubsection{Completion of testing}
 I dati expected sono inventati e ad ogni iterazione si commentano i risultati per capire 

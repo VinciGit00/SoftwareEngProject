@@ -52,9 +52,9 @@
 														"$ref": "AAAAAAF+TxRKy8ZW94Y="
 													},
 													"font": "Arial;13;0",
-													"left": 32.72998046875,
+													"left": 30.55908203125,
 													"top": 13,
-													"width": 133.25341796875,
+													"width": 121.57373046875,
 													"height": 13,
 													"text": "SequenceDigramLogin"
 												},
@@ -67,7 +67,7 @@
 													"font": "Arial;13;1",
 													"left": 13,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -899,9 +899,9 @@
 														"$ref": "AAAAAAF+TxRKy8aCfN4="
 													},
 													"font": "Arial;13;0",
-													"left": 79.9599609375,
+													"left": 76.3291015625,
 													"top": 149,
-													"width": 81.208984375,
+													"width": 75.724609375,
 													"height": 13,
 													"text": "Analizza posti"
 												},
@@ -914,7 +914,7 @@
 													"font": "Arial;13;1",
 													"left": 53,
 													"top": 149,
-													"width": 21.9599609375,
+													"width": 18.3291015625,
 													"height": 13,
 													"text": "seq"
 												},
@@ -947,7 +947,7 @@
 																	"font": "Arial;13;0",
 																	"left": 68,
 																	"top": 182,
-																	"width": 108.75439453125,
+																	"width": 106.27880859375,
 																	"height": 13,
 																	"text": "[postiDisponibili>0]"
 																}
@@ -980,7 +980,7 @@
 																	"font": "Arial;13;0",
 																	"left": 68,
 																	"top": 264,
-																	"width": 116.34619140625,
+																	"width": 113.6103515625,
 																	"height": 13,
 																	"text": "[postiDisponibili==0]"
 																}
@@ -1013,7 +1013,7 @@
 																	"font": "Arial;13;0",
 																	"left": 68,
 																	"top": 344,
-																	"width": 105.47265625,
+																	"width": 97.4619140625,
 																	"height": 13,
 																	"text": "[Errore di sistema]"
 																}
@@ -2400,7 +2400,7 @@
 											"font": "Arial;13;0",
 											"left": 395.5,
 											"top": 52.5,
-											"width": 92.36083984375,
+											"width": 91,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vp5ZOPE1Fgg="
@@ -3000,7 +3000,7 @@
 											"font": "Arial;13;0",
 											"left": 425.5,
 											"top": 212.5,
-											"width": 123.41357421875,
+											"width": 123,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vp/pifHEXBs="
@@ -3200,7 +3200,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 276.5,
-											"width": 139.33349609375,
+											"width": 139,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqAUaPHyFnI="
@@ -3600,7 +3600,7 @@
 											"font": "Arial;13;0",
 											"left": 413,
 											"top": 396.5,
-											"width": 101.75537109375,
+											"width": 101,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqD0R/OycAk="
@@ -5430,7 +5430,7 @@
 											"font": "Arial;13;0",
 											"left": 959,
 											"top": 207,
-											"width": 147.94091796875,
+											"width": 147,
 											"height": 38,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqQeF/9/pN8="
@@ -5620,7 +5620,7 @@
 											"font": "Arial;13;0",
 											"left": 885,
 											"top": 372.5,
-											"width": 254.16259765625,
+											"width": 253,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqywFQHgmw0="
@@ -6210,7 +6210,7 @@
 											"font": "Arial;13;0",
 											"left": 787,
 											"top": 132.5,
-											"width": 167.50439453125,
+											"width": 166,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vq4ShAof0dI="
@@ -32856,6 +32856,19 @@
 									"propertyLabel": {
 										"$ref": "AAAAAAF+w+slO4bF3f8="
 									}
+								},
+								{
+									"_type": "UMLTextView",
+									"_id": "AAAAAAF+xZBRAYreUGc=",
+									"_parent": {
+										"$ref": "AAAAAAF+w9nRjYJ42JU="
+									},
+									"font": "Arial;13;0",
+									"left": 72,
+									"top": 88,
+									"width": 425,
+									"height": 53,
+									"text": "Activity diagram del funzionamento della UI"
 								}
 							]
 						}
