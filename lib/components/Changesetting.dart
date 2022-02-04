@@ -25,7 +25,7 @@ class _changeSettingState extends State<changeSetting> {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios,
-            color: Colors.blue,
+            //color: Colors.blue,
           ),
           onPressed: () {
             Navigator.pop(context);

@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterLogin(
       //backgroundColor: Color((0xFFF6F7FF);
-      title: 'Trucco Parrucco Bormio',
+      title: 'Trucco Parrucco',
       //onLogin: _authUser,
       onLogin: (loginData) => context.read<AuthenticationService>().signIn(
             email: loginData.name,

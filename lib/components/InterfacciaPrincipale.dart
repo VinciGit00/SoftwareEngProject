@@ -41,8 +41,10 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               //color: Colors.blue,
             ),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute<void>(builder: (context) => Settings()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                      builder: (context) => const Settings()));
             },
           )
         ],
@@ -137,7 +139,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.only(bottom: 12),
               child: Row(
                 children: [
                   const Text(
@@ -206,8 +208,8 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)),
-                      padding:
-                          EdgeInsets.all(20) //content padding inside button
+                      padding: const EdgeInsets.all(
+                          20) //content padding inside button
 
                       ),
                   onPressed: () {

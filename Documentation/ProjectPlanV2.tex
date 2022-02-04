@@ -328,10 +328,10 @@ Non ci sono database o altre strutture informatiche preesistenti, in quanto il p
 \subsection {Product functions} 
 A continuazione sono elencati le funzionalità centrali, l’elenco dei requirements a una granularità più precisa sono disponibili nella parte 3.
 \begin{itemize}
-\item Possibilità di prenotare tagli e, eventualmente, altri servizi offerti dai saloni.
-\item Possibilità di visualizzare le prenotazioni future e passate associate al salone in questione.
-\item Possibilità di tener traccia dei clienti con degli appositi profili utente/cliente associati a informazioni rilevanti.
-\item Disponibilità di visualizzare l’andamento dei ricavi risultanti dalle prenotazioni. 
+    \item Possibilità di prenotare tagli e, eventualmente, altri servizi offerti dai saloni.
+    \item Possibilità di visualizzare le prenotazioni future e passate associate al salone in questione.
+    \item Possibilità di tener traccia dei clienti con degli appositi profili utente/cliente associati a informazioni rilevanti.
+    \item Disponibilità di visualizzare l’andamento dei ricavi risultanti dalle prenotazioni. 
 \end{itemize}
 \subsection {User characteristics} 
 Come detto sopra, il prodotto deve essere costruito per soddisfare le esigenze di un pubblico di destinazione con conoscenze tecniche basilari (uso di smartphone e applicazioni user-friendly). 
@@ -341,7 +341,18 @@ Nella sua versione finale, l’applicazione dovrebbe essere utilizzabile sia da 
 \\I clienti dei saloni non devono avere accesso a informazioni del salone, come le prenotazioni di altri utenti, o i ricavi del salone. Dall’altro canto, i gestori non possono modificare certe informazioni dei profili degli utenti, ma possono modificare dati associati alle prenotazioni. 
 \\Per il prototyping iniziale, si deve dare priorità alle funzionalità offerte ai gestori. L’implementazione delle prenotazioni remote fatte direttamente dagli utenti ha una priorità secondaria nelle prime fasi.
 \subsection {Assumptions and dependencies} I sistemi usati sono: Firebase + Flutter login.
-\subsection {Requirements subsets} 
+\subsection {Requisiti non funzionali} 
+Il sistema deve avere un tempo di risposta minimo, velocità di utilizzo, dati accessibili solo
+agli utenti specifici e quindi i seguenti requisiti non funzionali:
+\begin{itemize}
+    \item Prestazioni
+    \item Sicurezza
+    \item Manutenibilità
+    \item Usabilità
+    \item Affidabilità
+    \item Disponibilità
+\end{itemize}
+
 \subsection {Specific requirements}
 tra parentesi va scritta la priorità nel seguente modo: (Kano, Moscow)
 \begin{itemize}
@@ -357,6 +368,12 @@ e che si accavallino sulla stessa fascia oraria. (One-Dimensional, should have)
 \begin{itemize}
 \subsubsection{Kano model}
 
+\item Prestazioni
+\item Sicurezza
+\item Manutenibilità
+\item Usabilità
+\item Affidabilità
+\item Disponibilità
 \item[$\blacksquare$] Attractive:} 
     \item Possibilità di scegliere i diversi tipi di acconciature e in 
     base al tipo di acconciatura scegliere la durata della prenotazione 
@@ -474,7 +491,9 @@ ogni git e ogni 24 ore.
 il più possibile i casi di test.
 \\I test di Travis partono ogni 24 h sul main e ogni git su un branch specifico porta all'esecuzione 
 del test in background su Travis. Ad ogni test viene fatta in automatico anche una build che permette
-di vedere se ci sono eventuali errori di calligrafia all'interno del codice.
+di vedere se ci sono eventuali errori diortografia all'interno del codice.
+\\L'unico problema di Travis CI è che flutter non è supportato e non gestisce gli import correttamente e quindi è stato necessario importare (copiando) le classi che 
+servivano per il testing.
 \\All'interno del progetto flutter vengono utilizzate 3 classi differenti che si occupano dello 
 sviluppo del testing, essi sono:
 \begin{itemize}
