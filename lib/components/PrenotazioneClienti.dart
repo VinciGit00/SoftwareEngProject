@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hair2/metodi.dart';
 
 class PrenotazioneSingolaCliente extends StatefulWidget {
   const PrenotazioneSingolaCliente(

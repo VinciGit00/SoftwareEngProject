@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../database_service.dart';
 import 'Buffer.dart';
 import 'package:hair2/components/MenuItem.dart';
+import 'package:hair2/metodi.dart';
 
 class nextPage extends StatefulWidget {
   const nextPage({Key? key, required this.nameStylist}) : super(key: key);

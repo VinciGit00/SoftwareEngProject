@@ -44,6 +44,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "asn1lib",
+      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/asn1lib-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2",
       "packageUri": "lib/",
@@ -118,6 +124,12 @@
     {
       "name": "dart_style",
       "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/dart_style-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "encrypt",
+      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/encrypt-5.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -297,7 +309,7 @@
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/material_color_utilities-0.1.3",
+      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/material_color_utilities-0.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.13"
     },
@@ -332,6 +344,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/pointycastle-3.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "provider",
       "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/provider-6.0.2",
       "packageUri": "lib/",
@@ -357,9 +375,9 @@
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1",
+      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "stack_trace",
@@ -447,7 +465,7 @@
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1",
+      "rootUri": "file:///Users/marcovinciguerra/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -470,7 +488,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-02-04T08:29:57.744895Z",
+  "generated": "2022-02-06T17:22:53.824872Z",
   "generator": "pub",
-  "generatorVersion": "2.17.0-10.0.dev"
+  "generatorVersion": "2.17.0-79.0.dev"
 }

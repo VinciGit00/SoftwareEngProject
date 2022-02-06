@@ -8,6 +8,7 @@ import 'package:hair2/Model/Entity/stylistBookings.dart';
 import 'package:hair2/components/TuttePrenotazioniCliente.dart';
 import 'package:hair2/components/Parrucchiere.dart';
 import 'package:provider/provider.dart';
+import 'package:hair2/metodi.dart';
 import '../authentication_service.dart';
 import '../database_service.dart';
 import '../main.dart';

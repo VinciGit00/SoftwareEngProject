@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/user.dart';
 import 'BufferModifiche.dart';
+import 'package:hair2/metodi.dart';
 
 class changeSetting extends StatefulWidget {
   const changeSetting({Key? key}) : super(key: key);
