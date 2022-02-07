@@ -84,6 +84,8 @@ class _changeSettingState extends State<changeSetting> {
               onPressed: () {
                 var _nickname = _nicknameTEC.text;
                 var _street = _streetTEC.text;
+
+                //AGGIUNGERE QUI IL FILE DI CRIPTAZIONE
                 user().addUserInfo(FirebaseAuth.instance.currentUser!.email!,
                     _nickname, _street);
                 print("Nickname: " + _nickname);

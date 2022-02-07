@@ -48,6 +48,7 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
                 itemCount: bookings.bookings.length,
                 itemBuilder: (context, index) {
                   return PrenotazioneSingolaCliente(
+                      //SISTEMARE QUAAAA
                       nome: bookings.bookings[index].stylistEmail,
                       via: bookings.bookings[index].type,
                       data: bookings.bookings[index].appointmentDate);

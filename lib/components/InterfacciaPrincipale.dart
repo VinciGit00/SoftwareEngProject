@@ -194,6 +194,7 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
               return ListView.builder(
                 itemCount: stylists.stylists.length,
                 itemBuilder: (context, index) {
+                  //SISTEMARE QUAAAA
                   return Parrucchiere(
                       nome: stylists.stylists[index].nick!,
                       via: stylists.stylists[index].street!,

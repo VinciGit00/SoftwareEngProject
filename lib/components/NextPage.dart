@@ -140,6 +140,7 @@ class _nextPageState extends State<nextPage> {
                       borderRadius: BorderRadius.all(Radius.circular(30.0))),
                   elevation: 4.0,
                   onPressed: () {
+                    //Agggiungere file criptazione
                     db.addBooking(FirebaseAuth.instance.currentUser!.email!,
                         widget.nameStylist, choice, _dateTime);
                     Navigator.push(

@@ -48,6 +48,7 @@ class _PagGestoreState extends State<PagGestore> {
                 itemCount: bookings.bookings.length,
                 itemBuilder: (context, index) {
                   return PrenotazioneSingolaCliente(
+                      //SISTEMARE QUAAA
                       nome: bookings.bookings[index].clientEmail,
                       via: bookings.bookings[index].type,
                       data: bookings.bookings[index].appointmentDate);
