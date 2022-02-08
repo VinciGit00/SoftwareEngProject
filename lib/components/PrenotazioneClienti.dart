@@ -44,7 +44,7 @@ class _PrenotazioneSingolaClienteState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        widget.nome,
+                        Metodi().decriptaParola(widget.nome),
                         style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 22.0,
@@ -55,7 +55,7 @@ class _PrenotazioneSingolaClienteState
                         height: 3.0,
                       ),
                       Text(
-                        widget.via,
+                        Metodi().decriptaParola(widget.via),
                         style: const TextStyle(
                           // color: Colors.blue,
                           fontSize: 20.0,
@@ -63,7 +63,7 @@ class _PrenotazioneSingolaClienteState
                         ),
                       ),
                       Text(
-                        widget.data.toString(),
+                        Metodi().decriptaParola(widget.data.toString()),
                         style: const TextStyle(
                           //color: Colors.blue,
                           fontSize: 20.0,

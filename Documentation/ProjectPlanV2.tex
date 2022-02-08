@@ -12,7 +12,7 @@
 
 \title{Documentation for Software engineering project}
 \author{Nicolas Anselmi, David Guzman Piedrahita and Marco Vinciguerra}
-
+ 
 \begin{document}
 \maketitle        
 \section{Project Plan}
@@ -25,8 +25,11 @@ e (se vuole) gestore. Questo modello di business è fatto anche da Uber in cui u
 \\Il target della clientela è market driven in quanto il core business dell'azienda si basa su percentuali delle transazioni.
 Il cliente ha la possibilità di prenotare diversi 
 tipi di acconciatura direttamente senza interfacciarsi /chiamare direttamente il proprietario
-del negozio, usando invece tramite l'applicazione.Ogni tipologia di taglio selezionabile e può consentire una data customizzabile di prenotazione 
+del negozio, usando invece tramite l'applicazione. Ogni tipologia di taglio selezionabile e può consentire una data customizzabile di prenotazione 
 da parte del cliente. 
+\\La caratteristica principale del progetto è che i dati sono criptati secondo 
+la codifica AES e lato database non sono direttamente visibile per garantire la sicurezza
+e la riservatezza.
 \\I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco Vinciguerra.
    
 \subsection{Process model}
@@ -247,6 +250,8 @@ la leggibilità e la successiva manutenzione.
 Il programma deve funziona su più piattaforme possibilili, Flutter permette con un solo codice 
 sorgente di scrivere programmi per più piattaforme.
 
+\subsubsection{Security}
+I dati vengono criptati tramite la piattaforma encrypt.
 \subsection{Quality in use Model}
 Si basa sulle seguenti 4 caratteristiche che si vuole soddisfare:
 \begin{itemize}
@@ -412,6 +417,7 @@ I Viewpoint nella categoria module costituiscono una rappresentazione statica de
 Il tipo di viewpoint scelto in questa categoria è il process viewpoint. Questo definisce il sistema in termini di comunicazione e sincronizzazione di processi. 
 \\Come tutti gli altri viewpoint in questa categoria, offre una descrizione dinamica del software e, nel caso particolare del process viewpoint, è particolarmente utile per valutare performance e availability del sistema. 
 \\In termini di UML, questa informazione è disponibile principalmente tramite il Sequence diagram. Questo schema spiega come i diversi elementi (classi) del sistema comunicano tra di loro attraverso procedure calls \textbf{(di tipo sincrono e asincrono)}.
+\\Il component è la memory, il connector è la memory (database).
 \subsubsection{Allocation View}
 Questa categoria di viewpoint descrive la relazione tra il sistema e il mondo che lo circonda. Di conseguenza, può essere utilizzato per definire come viene assegnato hardware al software o come quest’ultimo viene mappato al file system. 
 \\Per il progetto in questione, questo tipo di problematiche vengono gestite automaticamente dai framework utilizzati e quindi non sono competenza degli stakeholder che altrimenti ne farebbe uso, come i programmatori e i maintaner.
@@ -484,9 +490,10 @@ engeneering in cui si è sistemata la documentazione in funzione del codice che 
 di round trip engineering.
 \\Per quanto riguarda il refactoring sono stati utilizzati i tool che Visual code per eseguire il refactoring (come ad esempio 
 la possibilità di wrappare le widget o cambiare a cascata il nome di una classe).
+\\Alla fine del progetto sono state rimosse anche le classi e i metodi non utilizzati (dead code).
 \\Ad esempio è stato utilizzato il wrapp per creare il container di un widget in dart nel seguente modo:
 
-\\\includegraphics[scale = 0.25]{"Immagini/ref1.PNG"}
+\includegraphics[scale = 0.25]{"Immagini/ref1.PNG"}
 \\\includegraphics[scale = 0.25]{"Immagini/ref2.PNG"}
 
 Un esempio di refactoring che è stato fatto è quello di aggiungere la parola const davanti agli elementi dei widget per aumentare le prestazioni

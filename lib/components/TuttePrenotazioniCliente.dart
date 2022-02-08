@@ -19,7 +19,7 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
         elevation: 4.0,
         // backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -48,8 +48,7 @@ class _PrenotazioneClienteState extends State<PrenotazioneCliente> {
                 itemCount: bookings.bookings.length,
                 itemBuilder: (context, index) {
                   return PrenotazioneSingolaCliente(
-                      //SISTEMARE QUAAAA
-                      nome: bookings.bookings[index].stylistEmail,
+                      nome: (bookings.bookings[index].stylistEmail),
                       via: bookings.bookings[index].type,
                       data: bookings.bookings[index].appointmentDate);
                 },
