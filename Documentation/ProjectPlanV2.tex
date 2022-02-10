@@ -310,6 +310,13 @@ dal seguente link: \url{https://pub.dev/packages/analyzer}.
     \item Number of parameters
     \item Source lines of code
 \end{itemize}
+Per usare i quality metrics si usano i segueti comandi digitati da terminale:
+\begin{itemize}
+    \item Miglioramento delle performance del codice: dart$\_$analyze
+    \item Calcolo complessità: flutter pub run dart$\_$code$\_$metrics:metrics analyze lib
+    \item File non utilizzati: flutter pub run dart$\_$code$\_$metrics:metrics check-unused-files lib
+\end{itemize}
+
 La configurazione è presente nel file analysis\_options.yaml.
 \\\includegraphics[scale = 0.5]{"Immagini/ParametriQuality.png"}
 
@@ -467,6 +474,11 @@ di vedere se ci sono eventuali errori diortografia all'interno del codice.
 servivano per il testing.
 \\L'interfaccia di Travis è la seguente:
 \\\includegraphics[scale = 0.25]{"Immagini/Travis.PNG"}
+\\E' stato fatto anche il firrebase testing per vedere se l'applicazione funziona correttamente
+sui dispositivi mobile.
+\\In questo tipo di test sono stati presi diversi tipi di cellulari e installato in modo automatico 
+l'apk e l'applicazione è stata testata per vedere se girasse in modo corretto.
+\\\includegraphics[scale = 0.45]{"Immagini/Firebase_testing.PNG"}
 
 All'interno del progetto flutter vengono utilizzate 2 classi differenti che si occupano dello 
 sviluppo del testing, essi sono:

@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import 'package:hair2/metodi.dart';
 import '../authentication_service.dart';
 import '../database_service.dart';
-import '../MainAndroid.dart';
+import '../main.dart';
 import 'Settings.dart';
 import 'Gestore.dart';
 
