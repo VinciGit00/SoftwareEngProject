@@ -412,7 +412,22 @@ E' stato creato nei diagrammi UML diverse versioni dello stesso tipo di diagramm
 con cui ci si sta confrontando.
 \\Il diagramma dei componenti e dei connettori risulta il seguente:
 \\\includegraphics[scale = 0.45]{"Immagini/SoftArch.png"}
-
+\subsection{Stile di architettura}
+Lo stile architetturale dell’applicazione può essere assimilabile al repository style, in quanto ci sono due blocchi fondamentali: i client, composti del codice Dart/Flutter e disponibile come applicativo mobile, e il database, implementato usando i servizi non relazionali di Firebase Realtime Database offerti da Google. 
+\\\includegraphics[scale = 0.45]{"Immagini/Blackboard.PNG"} 
+\\Distinguiamo quindi come:
+\begin{itemize}
+\item System model: un sistema centralizzato di informazione strutturata che deve essere disponibile in scrittura e lettura per i diversi client, che sono invece gli elementi computazionali che sono indipendenti da esso.  
+\item Components: si tratta di un unico componente memory (il database) e una quantità indefinita di client (a seconda del quantitativo di utenti) che sono invece dei component di tipo manager, in quanto mantengo, per un certo periodo di tempo, informazioni di stato e offrono diverse operation o funzionalità.
+\item Connectors: chiamate sincrone e asincrone http tramite il web per contattare Firebase, comunicando tramite file json.  
+\end{itemize}
+Se, in più, teniamo in considerazione il ruolo centrale dei servizi offerti da Firebase, i quali non si limitano soltanto al database ma anche alle funzionalità di login e authentication gestite separatamente, possiamo definire l’architettura dell’app come una a servizi.
+\\\includegraphics[scale = 0.45]{"Immagini/controllerViewArch.png"}
+\\Dove si segue un modello basato sul classico model-view-controller, ma dove il model del client, al posto di essere implementato e gestito in locale, si appoggia a servizi esterni e standardizzati. 
+\begin{itemize}
+    \item Controller: il controller, a differenza del model, è implementato come parte del client vero e proprio, ed è stato costruito riflettendo, per quanto possibile, le diverse entità del mondo reale che interagiscono con l’applicazione o che rappresentano tipologie di dati pertinenti. La sua composizione e descritta per esteso nel class diagram.
+    \item View: interamente costruita utilizzando i servizi offerti dal framework flutter, dove tutti i diversi tasti e pagine sono rappresentate da cosiddetti widget, che a usa volta sono delle classi dart. Dovuto all’elevato numero di classi che ne risulta e considerando che sono perlopiù assenti di metodi e campi nel senso tradizionale, non sono stati rappresentati nel class diagram. 
+    \end{itemize}
 \subsection{Rappresentazione architettura con IEEE 1471} 
 Le rappresentazioni più concrete dell'architettura dell'applicativo vengono descritte attraverso degli schemi UML. Questi possono essere categorizzati come delle View indirizzate a diversi Stakeholder e definite tramite diversi Viewpoint, come formalizzato dallo standard IEEE 1471.
 \\In particolare, i Viewpoint utilizzati per definire le View sono stati scelti tra quelli proposti da Bass et al. (2003).
@@ -429,10 +444,6 @@ Il tipo di viewpoint scelto in questa categoria è il process viewpoint. Questo 
 Questa categoria di viewpoint descrive la relazione tra il sistema e il mondo che lo circonda. Di conseguenza, può essere utilizzato per definire come viene assegnato hardware al software o come quest’ultimo viene mappato al file system. 
 \\Per il progetto in questione, questo tipo di problematiche vengono gestite automaticamente dai framework utilizzati e quindi non sono competenza degli stakeholder che altrimenti ne farebbe uso, come i programmatori e i maintaner.
 \\I viewpoint di tipo work assignment potrebbero essere utile per rappresentare graficamente la distribuzione del lavoro, ma in questo sprint vengono saltati per brevità. 
-\subsubsection{Shared Blackboard}
-Un modello architetturale che si è utilizzat è quello della shared blackboard in cui c'è uno spazio condiviso i dati rappresentato 
-dal server di firebase.
-\\\includegraphics[scale = 0.45]{"Immagini/Blackboard.PNG"}
 \newpage
 \section{Software Design}
 Per i parametri di qualità di design si utilizzano le seguenti metriche:

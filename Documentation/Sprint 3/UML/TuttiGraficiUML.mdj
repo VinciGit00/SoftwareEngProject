@@ -23026,19 +23026,6 @@
 									"points": "1084:857;1078:879"
 								},
 								{
-									"_type": "UMLTextView",
-									"_id": "AAAAAAF+w8oRrM9xBIU=",
-									"_parent": {
-										"$ref": "AAAAAAF+w8oRq87eDp4="
-									},
-									"font": "Arial;13;0",
-									"left": 1248,
-									"top": 936,
-									"width": 313,
-									"height": 233,
-									"text": "La classe User usa il design pattern Singleton che, in Dart, usa a sua volta una Factory per costruire l'istanza. "
-								},
-								{
 									"_type": "UMLClassView",
 									"_id": "AAAAAAF+w8oRrM9y+UM=",
 									"_parent": {
@@ -23547,6 +23534,19 @@
 									"width": 233,
 									"height": 41,
 									"text": "Il metodo e ripetuto nelle sottoclassi in quanto si fa un override."
+								},
+								{
+									"_type": "UMLTextBoxView",
+									"_id": "AAAAAAF+8AVm+brZWmI=",
+									"_parent": {
+										"$ref": "AAAAAAF+w8oRq87eDp4="
+									},
+									"font": "Arial;13;0",
+									"left": 1224,
+									"top": 968,
+									"width": 201,
+									"height": 65,
+									"text": "La classe User usa il design pattern Singleton che, in Dart, usa a sua volta una Factory per costruire l'istanza. "
 								}
 							]
 						},
