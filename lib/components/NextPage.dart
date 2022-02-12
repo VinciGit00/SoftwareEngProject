@@ -142,8 +142,7 @@ class _nextPageState extends State<nextPage> {
                   onPressed: () {
                     //Agggiungere file criptazione
                     db.addBooking(
-                        Metodi().encryptParola(
-                            FirebaseAuth.instance.currentUser!.email!),
+                        FirebaseAuth.instance.currentUser!.email!,
                         Metodi().encryptParola(widget.nameStylist),
                         Metodi().encryptParola(choice),
                         _dateTime);
