@@ -9123,9 +9123,9 @@
 												"$ref": "AAAAAAF+wgKnWMIJf7A="
 											},
 											"font": "Arial;13;0",
-											"left": 30.55908203125,
+											"left": 32.72998046875,
 											"top": 13,
-											"width": 180.4228515625,
+											"width": 198.27880859375,
 											"height": 13,
 											"text": "Make Booking Sequence Diagram"
 										},
@@ -9138,7 +9138,7 @@
 											"font": "Arial;13;1",
 											"left": 13,
 											"top": 13,
-											"width": 12.55908203125,
+											"width": 14.72998046875,
 											"height": 13,
 											"text": "sd"
 										}
@@ -11018,9 +11018,9 @@
 												"$ref": "AAAAAAF+wiA2HcQ7jCI="
 											},
 											"font": "Arial;13;0",
-											"left": 30.55908203125,
+											"left": 32.72998046875,
 											"top": 13,
-											"width": 219.080078125,
+											"width": 242.3505859375,
 											"height": 13,
 											"text": "Read Stylist Bookings Sequence Diagram"
 										},
@@ -11033,7 +11033,7 @@
 											"font": "Arial;13;1",
 											"left": 13,
 											"top": 13,
-											"width": 12.55908203125,
+											"width": 14.72998046875,
 											"height": 13,
 											"text": "sd"
 										}
@@ -12192,9 +12192,9 @@
 												"$ref": "AAAAAAF+wioBkMWT+lE="
 											},
 											"font": "Arial;13;0",
-											"left": 1266.11181640625,
+											"left": 1267.578125,
 											"top": 341,
-											"width": 251.52294921875,
+											"width": 277.7578125,
 											"height": 13,
 											"text": "(number of bookings received from the databse)"
 										},
@@ -12207,7 +12207,7 @@
 											"font": "Arial;13;1",
 											"left": 1237,
 											"top": 341,
-											"width": 24.11181640625,
+											"width": 25.578125,
 											"height": 13,
 											"text": "loop"
 										},
@@ -12474,7 +12474,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1524,
+											"left": 1547,
 											"top": 304,
 											"width": 14,
 											"height": 25
@@ -12541,9 +12541,9 @@
 													"font": "Arial;13;1",
 													"left": 1493,
 													"top": 291,
-													"width": 62.736328125,
+													"width": 108.236328125,
 													"height": 13,
-													"text": "Lifeline1"
+													"text": "StylistBookings"
 												},
 												{
 													"_type": "LabelView",
@@ -12574,7 +12574,7 @@
 											"font": "Arial;13;0",
 											"left": 1488,
 											"top": 284,
-											"width": 72.736328125,
+											"width": 118.236328125,
 											"height": 40,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+wjGhOMZM5rM="
@@ -12599,7 +12599,7 @@
 												"$ref": "AAAAAAF+wjGhN8ZJS4Y="
 											},
 											"font": "Arial;13;0",
-											"left": 1524,
+											"left": 1547,
 											"top": 324,
 											"width": 1,
 											"height": 240
@@ -12608,7 +12608,7 @@
 									"font": "Arial;13;0",
 									"left": 1488,
 									"top": 284,
-									"width": 72.736328125,
+									"width": 118.236328125,
 									"height": 280,
 									"nameCompartment": {
 										"$ref": "AAAAAAF+wjGhN8ZLedQ="
@@ -12637,7 +12637,7 @@
 												"$ref": "AAAAAAF+wjJYgcaC5HA="
 											},
 											"font": "Arial;13;0",
-											"left": 1279,
+											"left": 1302,
 											"top": 383,
 											"width": 211.49755859375,
 											"height": 13,
@@ -12660,7 +12660,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1578,
+											"left": 1601,
 											"top": 379,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -12681,7 +12681,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1544,
+											"left": 1567,
 											"top": 380,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -12701,7 +12701,7 @@
 												"$ref": "AAAAAAF+wjJYgcaC5HA="
 											},
 											"font": "Arial;13;0",
-											"left": 1517,
+											"left": 1540,
 											"top": 396,
 											"width": 14,
 											"height": 29
@@ -12714,7 +12714,7 @@
 									"tail": {
 										"$ref": "AAAAAAF+wjGhOMZQhlQ="
 									},
-									"points": "1524:376;1554:376;1554:396;1530:396",
+									"points": "1547:376;1577:376;1577:396;1553:396",
 									"nameLabel": {
 										"$ref": "AAAAAAF+wjJYgsaECQc="
 									},
@@ -13175,7 +13175,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF+wiA2HcQ5XFg="
 							},
-							"name": "Lifeline1",
+							"name": "StylistBookings",
 							"represent": {
 								"$ref": "AAAAAAF+wjGhN8ZIPvI="
 							},
@@ -13248,8 +13248,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF+wiA2HMQ4J0c="
 					},
-					"name": "Role5",
-					"type": ""
+					"name": "Role5"
 				}
 			]
 		}
