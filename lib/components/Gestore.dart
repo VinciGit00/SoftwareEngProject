@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/stylistBookings.dart';
 import 'package:hair2/components/PrenotazioneClienti.dart';
 import 'package:provider/provider.dart';
-import 'package:hair2/metodi.dart';
 
 class PagGestore extends StatefulWidget {
   PagGestore({Key? key}) : super(key: key);
@@ -20,7 +19,7 @@ class _PagGestoreState extends State<PagGestore> {
         elevation: 4.0,
         //backgroundColor: Color(0xFFF6F7FF),
         leading: IconButton(
-          icon: const Icon(
+          icon: Icon(
             Icons.arrow_back_ios,
             color: Colors.blue,
           ),
@@ -49,10 +48,9 @@ class _PagGestoreState extends State<PagGestore> {
                 itemCount: bookings.bookings.length,
                 itemBuilder: (context, index) {
                   return PrenotazioneSingolaCliente(
-                      nome: Metodi()
-                          .decriptaParola(bookings.bookings[index].clientEmail),
-                      via: Metodi()
-                          .decriptaParola(bookings.bookings[index].type),
+                      //SISTEMARE QUAAA
+                      nome: bookings.bookings[index].clientEmail,
+                      via: bookings.bookings[index].type,
                       data: bookings.bookings[index].appointmentDate);
                 },
               );

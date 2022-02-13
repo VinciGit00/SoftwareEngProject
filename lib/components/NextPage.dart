@@ -141,15 +141,12 @@ class _nextPageState extends State<nextPage> {
                   elevation: 4.0,
                   onPressed: () {
                     //Agggiungere file criptazione
-                    db.addBooking(
-                        FirebaseAuth.instance.currentUser!.email!,
-                        Metodi().encryptParola(widget.nameStylist),
-                        Metodi().encryptParola(choice),
-                        _dateTime);
+                    db.addBooking(FirebaseAuth.instance.currentUser!.email!,
+                        widget.nameStylist, choice, _dateTime);
                     Navigator.push(
                         context,
                         MaterialPageRoute<void>(
-                            builder: (context) => const Buffer()));
+                            builder: (context) => Buffer()));
                   },
                   //child: Icon(Icons.send, color: Colors.white)
                 )

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:hair2/Model/Entity/user.dart';
 import 'BufferModifiche.dart';
 import 'package:hair2/metodi.dart';
-import 'package:hair2/metodi.dart';
 
 class changeSetting extends StatefulWidget {
   const changeSetting({Key? key}) : super(key: key);
@@ -87,11 +86,8 @@ class _changeSettingState extends State<changeSetting> {
                 var _street = _streetTEC.text;
 
                 //AGGIUNGERE QUI IL FILE DI CRIPTAZIONE
-                user().addUserInfo(
-                    Metodi().encryptParola(
-                        FirebaseAuth.instance.currentUser!.email!),
-                    Metodi().encryptParola(_nickname),
-                    Metodi().encryptParola(_street));
+                user().addUserInfo(FirebaseAuth.instance.currentUser!.email!,
+                    _nickname, _street);
                 print("Nickname: " + _nickname);
                 print("Street: " + _street);
                 if (_nicknameTEC.text != "" && _streetTEC.text != "") {

@@ -1,19 +1,19 @@
 import 'package:encrypt/encrypt.dart' as encrypt;
 
 class Metodi {
-  late final _chiave, _iv;
-  late final _encrypter;
+  late final chiave, iv;
+  late final encrypter;
 
   Metodi() {
-    _chiave = encrypt.Key.fromLength(32);
-    _iv = encrypt.IV.fromLength(8);
-    _encrypter = encrypt.Encrypter(encrypt.AES(_chiave));
+    chiave = encrypt.Key.fromLength(32);
+    iv = encrypt.IV.fromLength(8);
+    encrypter = encrypt.Encrypter(encrypt.AES(chiave));
   }
 
   late final _encrypted, decrypted;
 
   String encryptParola(String parametro) {
-    var titoloEncrypted = _encrypter.encrypt(parametro, iv: _iv);
+    var titoloEncrypted = encrypter.encrypt(parametro, iv: iv);
     print(
         "-----------------------------------------------------------------------");
     print("titoloCriptato criptata: " + titoloEncrypted.base64);
@@ -22,9 +22,9 @@ class Metodi {
     return titoloEncrypted.base64;
   }
 
-  String decriptaParola(String parametro) {
+  String DecriptaParola(String parametro) {
     var C = encrypt.Encrypted.fromBase64(parametro);
-    decrypted = _encrypter.decrypt(C, iv: _iv);
+    decrypted = encrypter.decrypt(C, iv: iv);
     return decrypted;
   }
 }
