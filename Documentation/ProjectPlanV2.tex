@@ -414,6 +414,19 @@ e che si accavallino sulla stessa fascia oraria. (One-Dimensional, should have)
 \item Possibilità di mettere recensioni da parte dell'utente. (Questionable, could have).
 
 \end{itemize}
+
+\subsection {COTS: scelte di framework e tecnologie esterne}
+
+Per soddisfare i requirements funzionali (e non) proposti nel rispettivo documento sono state adottate una serie di strategie standard. 
+\\In particolare, è necessario creare delle strutture dati per offrire la funzionalità di effettuare e visualizzare prenotazioni, sia dal punto di vista dal cliente che dal parrucchiere. In più, visto che tutti gli utenti possono essere sia parrucchieri che clienti, entrambe funzionalità devono essere disponibili per tutti gli utenti con un basso overhead di transizione da una modalità all’altra. 
+\\Di conseguenza, la scelta delle tecnologie utilizzate deve essere guidata da questi criteri di qualità:
+
+\begin{itemize}
+    \item Flutter: Viene usato il framework Flutter di app-development proposto da Google. Rispetto ad altre alternative come React o Swift, si adatta meglio al nostro requirement di portability, in quanto serve un unico code-base per generare l’applicazione per più piattaforme.  
+    \item Firebase Realtime Database: L’uso di un database online è fondamentale per il funzionamento di base. Sono state valutate alternative SQL che si adeguavano meglio al skillset preesistente del team, ma servizi noSQL come firebase offrono database gratuiti e molto veloci, rispettano i requirement non funzionale della responsiveness dell’app. In più, l’integrazione con Flutter è facilitata dal fatto che sono entrambi servizi offerti da Google.
+    \item Firebase Authetication: per i servizi di creazioni di account e log in, Firebase continua a essere la scelta migliore per i motivi citati sopra. 
+    \end{itemize}
+
 \newpage 
 \section{Software Architecture}
 \subsection{Architecture design metod }
@@ -473,9 +486,7 @@ Questa categoria di viewpoint descrive la relazione tra il sistema e il mondo ch
 \\I viewpoint di tipo work assignment potrebbero essere utile per rappresentare graficamente la distribuzione del lavoro, ma in questo sprint vengono saltati per brevità. 
 \newpage
 \section{Software Design}
-Per i parametri di qualità di design si utilizzano le seguenti metriche:
-\\\includegraphics[scale = 0.75]{"Immagini/ParametriQuality.png"}
-\\Invece per quanto riguarda i design pattern si utilizzano il Singleton, la Factory e il provider .
+Per informazione sulla complessità e altri criteri di qualità, fare riferimento al documento della qualità.
 \subsection{Funzionamento delle classi Dart, in conformità con i requisiti funzionali e non:}
 Come evidenziato dall’UML Class Diagram, le classi che si interfacciano con i servizi di Firebase sono state modellate partendo da entità del mondo reale, rappresentando quindi diversi ruoli e azioni previste nell’utilizzo dell’app. 
 \\In particolare, un fattore che ha guidato il loro design è stata la necessità di gestire dati che non sono disponibili in locale con altri che invece lo sono. Tutto questo deve essere invisibile dal punto di vista dell’utente, usando delle loading screen nel caso peggiore. 
