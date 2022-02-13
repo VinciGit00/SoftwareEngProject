@@ -6,7 +6,7 @@
 \usepackage{titling}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{float}
+\usepackage{float} 
 \usepackage{hyperref}
 
 
@@ -27,9 +27,6 @@ Il cliente ha la possibilità di prenotare diversi
 tipi di acconciatura direttamente senza interfacciarsi /chiamare direttamente il proprietario
 del negozio, usando invece tramite l'applicazione. Ogni tipologia di taglio selezionabile e può consentire una data customizzabile di prenotazione 
 da parte del cliente. 
-\\La caratteristica principale del progetto è che i dati sono criptati secondo 
-la codifica AES e lato database non sono direttamente visibile per garantire la sicurezza
-e la riservatezza.
 \\I membri del team sono: Nicolas Anselmi, David Guzman Piedrahita e Marco Vinciguerra.
    
 \subsection{Process model}
@@ -130,11 +127,40 @@ si occupa di aiutare a risolvere i problemi del development team tramite consigl
 
 
 \subsection{Sprints} 
-\subsubsection{Sprint 1}
-Il primo sprint comprende la costruzione dei primi requirements e la prima versione dell’architettura e design, insieme a un’implementazione basilare del codice vero e proprio, di conseguenza è prevista una quantità di giorni superiore a quella che si prevede per succesivi sprint. Inoltre, la fase di maintenance ha un ruolo secondario nel primo sprint, e la fase di testing è più interessata a definire come e quando fare testing, e meno alla sua completa messa in pratica: l’approccio di queste ultime due fasi cambierà nei prossimi sprint, i quali partiranno da basi più solide. 
 \subsubsection{State of the backlog}
 il backlog iniziale si basa completamente sui requisiti che sono disponibile nel corrispettivo documento, nella fase di architettura il backlog tiene considerazione dei suddetti requisiti ma anche del contesto architettonico (vedi documento architettura) . 
-\subsubsection{Meetings}
+\subsection{Sprint 1}
+\begin{itemize}
+    \item Creazione della prima parte della UI
+    \item Informarsi sul funzionamento dei database in flutter
+    \item Proseguire con la documentazione
+    \item Informarsi sul testing
+    \item Unit testing
+\end{itemize}
+\subsection{Sprint 2}
+\begin{itemize}
+    \item Avanzamento della UI
+    \item Implementazione dell'interfaccia di Login
+    \item Iniziare il testing
+    \item Implementazione di un database relazionale
+    \item Proseguire con la documentazione
+    \item Widget testing
+\end{itemize}
+\subsection{Sprint 3}
+\begin{itemize}
+    \item Perfionamento della UI
+    \item Implementazione di un real time database
+    \item Mappare l'interfaccia di Login col database
+    \item Proseguire con la documentazione 
+    \item Continuos integration con Travis per il testinf
+\end{itemize}
+\subsection{Sprint 4: database - experiments}
+\begin{itemize}
+    \item Perfezionamento del tema e delle migliore tecniche
+    \item Build per l'interfaccia web
+    \item Fine della documetnazione
+   
+\end{itemize}
 \begin{itemize}
 \item Sprint planning meeting 
 \\26/12/21 
@@ -177,14 +203,15 @@ La suddivisione e il funzionamento dello Scrum team è citato al paragrafo prece
 \\Come approccio di organizzazione si usa l'approccio di Mintzberg, i punti principali sono:
 NON SO COSA SCRIVERE
 \begin{itemize}
-     \item \textbf{simple structure}: Non c'è una persona del gruppo che comanda ma c'è solo supervisione
-        dirett
-    \item \textbf{Machine bureaucracy}:
-    \item \textbf{Divisionalized form}:
-    \item \textbf{Professional bureaucracy}: 
+     \item \textbf{simple structure}: Non c'è una persona del gruppo che comanda ma c'è un livello paritetico
+        e la comunicazione è veloce e diretta
+    \item \textbf{Machine bureaucracy}: Una volta stabiliti gli output non si interviene sull'andamento dei membri
+    del team ma l'importante è raggiungere gli obiettivi
+    \item \textbf{Divisionalized form}: La standardizzazione del processo produttivo la si ha
+    gli standard di qualità del codice di flutter
+    \item \textbf{Professional bureaucracy}: Non c'è formalità e nessun tipo di gerarchia
     \item \textbf{Adhocracy}: Tutti i componenti si occupano di fare un po' tutti i ruoli per 
-        quanto riguarda lo svilupi ruoli per 
-        quanto riguarda lo sviluppoo
+        quanto riguarda lo sviluppo del software, la gestione del database e dei casi di test
     
 \end{itemize}
    \newpage
@@ -455,7 +482,7 @@ Come evidenziato dall’UML Class Diagram, le classi che si interfacciano con i 
 \\Di conseguenza, le classi che raggruppano informazioni disponibili nel database sono tutte munite da un collegamento diretto a esso tramite un attributo che è un oggetto speciale offerto dalle librerie di Firebase.
 \\Ad esempio, la classe HairStylists, che ha il compito di essere un registro di tutti i parrucchieri che offrono i loro servizi ad ogni singolo istante, ha il campo privato db di tipo FirebaseDatabase, che di default viene inizializzato con l’oggetto che consente alla classe di comunicare con il database a un alto livello di astrazione. In più questa classe ha una particolarità: per consentire di avere un elenco di parrucchieri dinamico, e che quindi si tiene costantemente aggiornato rispetto al database, la classe conta con un metodo StreamChanges, eseguito nel costruttore, che crea una Subscription al database, dove la classe diventa un listener di tutte le modifiche del sotto-albero del json che contiene l’informazione pertinente.
 \\In alternativa, è stato i implemento il metodo ReadStylists, che legge il contenuto del database un’unica volta, e quindi senza creare una Subscription; non è in uso nell’implementazione più recente, ma resta disponibile qualora ci fossero problematiche nel funzionamento di StreamChanges. 
-\\ \textbf{add CalsseHairStylists.png} 
+\\ \includegraphics{Immagini/CalsseHairStylists.png} 
 \subsection{Uso di strategie standard del linguaggio Dart e il Framework Flutter:}
 \begin{itemize}
     \item -	Provider: usare flutter implica che l’interfaccia grafica è strutturata come un albero di ‘widget’, ovvero tasti e altri elementi interattivi. Spesso è necessario propagare informazione che è stata ottenuta in un punto dell’albero ad altri punti dell’albero (e.g quando si passa da una schermata alla prossima), pertanto esistono diverse strategie soddisfare questa necessità. 
@@ -468,7 +495,7 @@ Come evidenziato dall’UML Class Diagram, le classi che si interfacciano con i 
 \begin{itemize}
     \item -	Singleton e factory: per gestire le informazioni dell’utente che, come nel caso di altre informazioni, può essere disponibile sia in locale che nei server, si usa una classe singleton di nome User che pertanto può essere istanziata una sola volta. Questo vincolo è abbastanza naturale per questo tipo di informazione, dato che il suo contenuto si limita a una sola occorrenza per ogni singolo client. 
 \\Inoltre, per quanto riguarda Dart, è common practice usare delle Factory per la gestione dei singleton. La creazione delle Factory è semplificata in quanto basta aggiungere al costruttore la parola chiave Factory. 
-\\ \textbf{add userClass.png} 
+\\ \includegraphics{Immagini/userClass.png} 
 
     \item -	Abstraction occurrence: questo design pattern è utilizzato nel caso dei singoli parrucchieri che vengono raggruppati nella classe HairStylists o nel caso delle prenotazioni e le classi per raggruppare le prenotazioni (StylistsBookings e ClientBookings), dove la relazione è composta da una classe che funge da Registro di tutte le occorrenze vere e proprie di una entità del mondo reale, che è rappresentata dalla seconda classe nella relazione.
     \item -	Façade: La classe AuthenticationService e la classe DatabaseService sono delle façade in quanto hanno il compito di offrire tutta una serie funzionalità (per il login e per gestione del database rispettivamente) usando i metodi di un'unica classe. I metodi offerti da queste classi si interfacciano direttamente con i servizi offerti di firebase, per i quali non sono noti i class diagram, di conseguenza queste associazioni non vengono descritte esplicitamente nel class diagram.
@@ -518,6 +545,7 @@ sui dispositivi mobile.
 \\In questo tipo di test sono stati presi diversi tipi di cellulari e installato in modo automatico 
 l'apk e l'applicazione è stata testata per vedere se girasse in modo corretto.
 \\\includegraphics[scale = 0.45]{"Immagini/Firebase_testing.PNG"}
+\\\includegraphics[scale = 0.50]{Immagini/firebaseTesting.jpg}
 
 All'interno del progetto flutter vengono utilizzate 2 classi differenti che si occupano dello 
 sviluppo del testing, essi sono:
@@ -539,6 +567,7 @@ se va tutto bene e se c'è qualcosa che non quadra.
 Siccome non sapevamo fin da principio come utilizzare Flutter e firebase abbiamo alternato momenti di forwading engeneering con momenti di reverese
 engeneering in cui si è sistemata la documentazione in funzione del codice che è stato scritto (redocumentation) facendo così un processo
 di round trip engineering.
+\\Il refactoring è stato fatto alla fine per separare le classi di dart per la view e per il model in delle cartelle apposite.
 \\Per quanto riguarda il refactoring sono stati utilizzati i tool che Visual code per eseguire il refactoring (come ad esempio 
 la possibilità di wrappare le widget o cambiare a cascata il nome di una classe).
 \\Alla fine del progetto sono state rimosse anche le classi e i metodi non utilizzati (dead code).
