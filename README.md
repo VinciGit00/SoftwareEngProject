@@ -23,5 +23,6 @@ Per guardare tutti i diagrammi UML:
 //Documentation/TuttiGrafici.pdf
 
 # Come far partire il programma 
-
-
+Mettere il path del terminale e scrivere
+flutter run 
+da terminale
