@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-/*import 'package:hair2/components/travelcard.dart';
-import 'package:hair2/components/NextPage.dart';
-import 'package:hair2/components/MenuItem.dart';
-import 'package:hair2/components/Parrucchiere.dart';
-import 'package:hair2/components/PrenotazioneClienti.dart';
-import 'package:hair2/Model/Entity/booking.dart';*/
+/*import 'package:hair2/view/travelcard.dart';
+import 'package:hair2/view/NextPage.dart';
+import 'package:hair2/view/MenuItem.dart';
+import 'package:hair2/view/Parrucchiere.dart';
+import 'package:hair2/view/PrenotazioneClienti.dart';
+import 'package:hair2/controller/booking.dart';*/
 
 void main() {
   //Unit testing

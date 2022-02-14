@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-/*import 'package:hair2/components/Wrong.dart';
-import 'package:hair2/components/Temp.dart';
-import 'package:hair2/components/Profilo.dart';
-import 'package:hair2/components/PrenotazioniCliente.dart';
-import 'package:hair2/components/Gestore.dart';
-import 'package:hair2/components/Parrucchiere.dart';
-import 'package:hair2/components/PrenotazioneClienti.dart';
-import 'package:hair2/components/Changesetting.dart';
-import 'package:hair2/components/NextPage.dart';
-import 'package:hair2/components/InterfacciaPrincipale.dart';
-import 'package:hair2/components/TuttePrenotazioniCliente.dart';
-import 'package:hair2/components/Conferma2.dart';*/
-import 'package:hair2/components/ConfermaModifiche.dart';
+/*import 'package:hair2/view/Wrong.dart';
+import 'package:hair2/view/Temp.dart';
+import 'package:hair2/view/Profilo.dart';
+import 'package:hair2/view/PrenotazioniCliente.dart';
+import 'package:hair2/view/Gestore.dart';
+import 'package:hair2/view/Parrucchiere.dart';
+import 'package:hair2/view/PrenotazioneClienti.dart';
+import 'package:hair2/view/Changesetting.dart';
+import 'package:hair2/view/NextPage.dart';
+import 'package:hair2/view/InterfacciaPrincipale.dart';
+import 'package:hair2/view/TuttePrenotazioniCliente.dart';
+import 'package:hair2/view/Conferma2.dart';*/
+import 'package:hair2/view/ConfermaModifiche.dart';
 
 void main() {
   testWidgets('Testo la classe chosen', (WidgetTester tester) async {

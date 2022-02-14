@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:hair2/components/PrenotazioneClienti.dart';
-import 'components/Login.dart';
-import 'components/Gestore.dart';
-import 'components/InterfacciaPrincipale.dart';
-import 'components/TuttePrenotazioniCliente.dart';
-import 'components/Gestore.dart';
-import 'components/NextPage.dart';
-import 'components/Buffer.dart';
-import 'components/Profilo.dart';
-import 'components/Settings.dart';
-import 'components/Changesetting.dart';
-import 'components/Settings.dart';
-import 'components/TuttePrenotazioniCliente.dart';
-import 'components/Parrucchiere.dart';
-import 'components/StylistListWidget.dart';
+import 'package:hair2/view/PrenotazioneClienti.dart';
+import 'view/Login.dart';
+import 'view/Gestore.dart';
+import 'view/InterfacciaPrincipale.dart';
+import 'view/TuttePrenotazioniCliente.dart';
+import 'view/Gestore.dart';
+import 'view/NextPage.dart';
+import 'view/Buffer.dart';
+import 'view/Profilo.dart';
+import 'view/Settings.dart';
+import 'view/Changesetting.dart';
+import 'view/Settings.dart';
+import 'view/TuttePrenotazioniCliente.dart';
+import 'view/Parrucchiere.dart';
+import 'view/StylistListWidget.dart';
 
 void main() {
   runApp(MaterialApp(
