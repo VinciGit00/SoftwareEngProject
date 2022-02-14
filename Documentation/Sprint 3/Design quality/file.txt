@@ -1,2 +1,0 @@
-Per garantire la qualità si utilizzano i dart code metrics
- 
