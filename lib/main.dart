@@ -1,14 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:hair2/authentication_service.dart';
-import 'package:hair2/home_page.dart';
-import 'package:hair2/sign_in_page.dart';
+import 'package:hair2/controller/clientBookings.dart';
+import 'package:hair2/controller/authentication_service.dart';
+import 'package:hair2/view/home_page.dart';
+import 'package:hair2/view/sign_in_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'view/theme.dart';
 
-import 'Model/Entity/Stylist2.dart';
-import 'components/InterfacciaPrincipale.dart';
-import 'components/Login.dart';
+import 'controller/stylist2.dart';
+import 'view/InterfacciaPrincipale.dart';
+import 'view/Login.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,14 +31,15 @@ class MyApp extends StatelessWidget {
               context.read<AuthenticationService>().authStateChanges,
           initialData: null,
         ),
-        ChangeNotifierProvider<HairStylists>(create: (_) => HairStylists())
+        ChangeNotifierProvider<HairStylists>(
+            create: (_) => HairStylists(), lazy: false),
+        //ChangeNotifierProvider<clientBookings>(create: (_) => clientBookings()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+        themeMode: ThemeMode.system,
+        theme: white,
+        darkTheme: dark,
         home: AuthenticationWrapper(),
       ),
     );
@@ -49,8 +52,7 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User?>();
 
     if (firebaseUser != null) {
-      return HomePage();
-      //return InterfacciaPrincipale();
+      return InterfacciaPrincipale();
     }
     return LoginScreen();
   }

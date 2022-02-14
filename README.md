@@ -1,16 +1,18 @@
-# hair2
+# Trucco parrucco
 
-A new Flutter project.
+# Dove si trova la documentazione 
+Per guardare il pdf con il project plan e tutti gli altri documenti guardare il file che si trova al seguente path:
+//Documentation/ProjectPlanV2.pdf
 
-## Getting Started
+Per guardare tutti i diagrammi UML:
+//Documentation/TuttiGrafici.pdf
+oppure
+//Documentation/TuttiGraficiUML.mdj
 
-This project is a starting point for a Flutter application.
+# Come far partire il programma 
+Installare flutter (la guida per l'installazione si trova al
+seguente link: https://docs.flutter.dev/get-started/install)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Mettere il path del terminale e scrivere
+flutter run 
+da terminale
