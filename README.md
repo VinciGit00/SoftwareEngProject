@@ -1,11 +1,13 @@
 # Trucco parrucco
 
 # Dove si trova la documentazione 
-Per guardare il project plan guardare il file che si trova al seguente path:
+Per guardare il pdf con il project plan e tutti gli altri documenti guardare il file che si trova al seguente path:
 //Documentation/ProjectPlanV2.pdf
 
 Per guardare tutti i diagrammi UML:
 //Documentation/TuttiGrafici.pdf
+oppure
+//Documentation/TuttiGraficiUML.mdj
 
 # Come far partire il programma 
 Installare flutter (la guida per l'installazione si trova al
