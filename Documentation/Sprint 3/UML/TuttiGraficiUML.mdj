@@ -939,7 +939,7 @@
 											"font": "Arial;13;0",
 											"left": 395.5,
 											"top": 52.5,
-											"width": 92.36083984375,
+											"width": 91,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vp5ZOPE1Fgg="
@@ -1539,7 +1539,7 @@
 											"font": "Arial;13;0",
 											"left": 425.5,
 											"top": 212.5,
-											"width": 123.41357421875,
+											"width": 123,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vp/pifHEXBs="
@@ -1739,7 +1739,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 276.5,
-											"width": 139.33349609375,
+											"width": 139,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqAUaPHyFnI="
@@ -2139,7 +2139,7 @@
 											"font": "Arial;13;0",
 											"left": 413,
 											"top": 396.5,
-											"width": 101.75537109375,
+											"width": 101,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqD0R/OycAk="
@@ -3969,7 +3969,7 @@
 											"font": "Arial;13;0",
 											"left": 959,
 											"top": 207,
-											"width": 147.94091796875,
+											"width": 147,
 											"height": 38,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqQeF/9/pN8="
@@ -4159,7 +4159,7 @@
 											"font": "Arial;13;0",
 											"left": 885,
 											"top": 372.5,
-											"width": 254.16259765625,
+											"width": 253,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vqywFQHgmw0="
@@ -4749,7 +4749,7 @@
 											"font": "Arial;13;0",
 											"left": 787,
 											"top": 132.5,
-											"width": 167.50439453125,
+											"width": 166,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF+vq4ShAof0dI="
@@ -32499,9 +32499,9 @@
 														"$ref": "AAAAAAF+9WnmPdDCSq4="
 													},
 													"font": "Arial;13;0",
-													"left": 32.72998046875,
+													"left": 30.55908203125,
 													"top": 13,
-													"width": 198.27880859375,
+													"width": 180.4228515625,
 													"height": 13,
 													"text": "Make Booking Sequence Diagram"
 												},
@@ -32514,7 +32514,7 @@
 													"font": "Arial;13;1",
 													"left": 13,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -34237,7 +34237,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 739.51904296875,
+													"left": 735.869140625,
 													"top": 325,
 													"width": 1,
 													"height": 13
@@ -34251,7 +34251,7 @@
 													"font": "Arial;13;1",
 													"left": 701,
 													"top": 325,
-													"width": 33.51904296875,
+													"width": 29.869140625,
 													"height": 13,
 													"text": "break"
 												},
@@ -34478,7 +34478,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 191.9599609375,
+													"left": 188.3291015625,
 													"top": 93,
 													"width": 1,
 													"height": 13
@@ -34492,7 +34492,7 @@
 													"font": "Arial;13;1",
 													"left": 165,
 													"top": 93,
-													"width": 21.9599609375,
+													"width": 18.3291015625,
 													"height": 13,
 													"text": "seq"
 												},
