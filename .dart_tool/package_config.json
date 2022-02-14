@@ -2,6 +2,24 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_fe_analyzer_shared",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-34.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "analyzer",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-3.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "analyzer_plugin",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer_plugin-0.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "another_flushbar",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/another_flushbar-1.10.28",
       "packageUri": "lib/",
@@ -10,6 +28,12 @@
     {
       "name": "another_transformer_page_view",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/another_transformer_page_view-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "ansicolor",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/ansicolor-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -56,6 +80,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cli_util",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/cli_util-0.3.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0",
       "packageUri": "lib/",
@@ -80,8 +110,26 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.17.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "dart_code_metrics",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/dart_code_metrics-4.10.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "dart_style",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/dart_style-2.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -94,6 +142,12 @@
     {
       "name": "fake_async",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -212,6 +266,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "glob",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/glob-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.15.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4",
       "packageUri": "lib/",
@@ -260,6 +326,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "package_config",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/package_config-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0",
       "packageUri": "lib/",
@@ -286,6 +358,12 @@
     {
       "name": "provider",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/provider-6.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pub_semver",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/pub_semver-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -398,6 +476,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "watcher",
+      "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/watcher-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///Users/davidguzman/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/xml-5.3.1",
       "packageUri": "lib/",
@@ -416,7 +500,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-02-13T20:03:17.431070Z",
+  "generated": "2022-02-14T14:53:14.993482Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }
