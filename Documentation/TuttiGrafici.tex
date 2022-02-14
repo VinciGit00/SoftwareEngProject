@@ -21,11 +21,16 @@ meglio il funzionamento ai diversi tipi di stakexholder.
  
 \section{Use case diagram}
 \includegraphics[scale = 0.45]{ImmaginiUML/UseCase.png}
-\section{Class diagram}
-In questo le immagini a sinistra e a destra rappresentano flutter (interfaccia grafica) 
-e firebase (database)
-\\\includegraphics[scale = 0.4]{ImmaginiUML/ClassDiagram.jpg}
 \newpage
+\section{Class diagram}
+In questo le immagini a sinistra e a destra rappresentano rispettivamente l'interfaccia 
+grafica fatta con Flutter e il database real time Firebase. La logica del database
+non è rappresentabile con delle classi nel class diagram perchè si accede 
+al servizio tramite delle API e il funzionamento non è noto.
+L'interfaccia grafica invece è rappresentabile solo tramite un widget tree 
+e non tramite un diagramma delle classi.
+\\\includegraphics[scale = 0.4]{ImmaginiUML/ClassDiagram.jpg}
+\newpage 
 \section{State machine diagram}
 \includegraphics[scale = 0.5]{ImmaginiUML/StateMachineDiagram.png}
 \newpage
