@@ -37,7 +37,7 @@ class clientBookings extends ChangeNotifier {
           event.snapshot.value as Map<dynamic, dynamic>;
       values.forEach((key, values) {
         print(values);
-        _bookings.add(booking(
+        _bookings.add(Booking(
             key,
             values['clientEmail'],
             values['stylistEmail'],

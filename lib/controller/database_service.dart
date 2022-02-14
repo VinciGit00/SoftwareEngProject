@@ -67,7 +67,6 @@ class DatabaseService {
   Future<void> stopBeingStylist() async {
     /**var directory = await database.ref('stylists');
     var val = await directory.orderByChild('email').equalTo(email).once();
-
     Map<dynamic, dynamic> values = val.snapshot.value as Map<dynamic, dynamic>;
     values.forEach((key, values) {
       directory.child(key).remove();

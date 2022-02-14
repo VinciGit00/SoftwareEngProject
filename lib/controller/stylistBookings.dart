@@ -2,7 +2,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'Booking.dart';
 
-class StylistBookings extends ChangeNotifier {
+class stylistBookings extends ChangeNotifier {
   List<Booking> _bookings = [];
   final _db = FirebaseDatabase.instance;
 
@@ -37,7 +37,7 @@ class StylistBookings extends ChangeNotifier {
           event.snapshot.value as Map<dynamic, dynamic>;
       values.forEach((key, values) {
         print(values);
-        _bookings.add(booking(
+        _bookings.add(Booking(
             key,
             values['clientEmail'],
             values['stylistEmail'],
