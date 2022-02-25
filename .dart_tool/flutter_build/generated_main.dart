@@ -5,10 +5,10 @@
 
 // @dart = 2.15
 
-// When `file:///var/folders/m5/1xdj8pfj2cs3wjpc41g9qkj80000gn/T/flutter_tools.4gMawh/flutter_test_listener.m5ra9n/listener.dart` defines `main`, that definition is shadowed by the definition below.
-export 'file:///var/folders/m5/1xdj8pfj2cs3wjpc41g9qkj80000gn/T/flutter_tools.4gMawh/flutter_test_listener.m5ra9n/listener.dart';
+// When `package:hair2/main.dart` defines `main`, that definition is shadowed by the definition below.
+export 'package:hair2/main.dart';
 
-import 'file:///var/folders/m5/1xdj8pfj2cs3wjpc41g9qkj80000gn/T/flutter_tools.4gMawh/flutter_test_listener.m5ra9n/listener.dart' as entrypoint;
+import 'package:hair2/main.dart' as entrypoint;
 import 'dart:io'; // flutter_ignore: dart_io_import.
 import 'package:url_launcher_android/url_launcher_android.dart';
 import 'package:url_launcher_ios/url_launcher_ios.dart';

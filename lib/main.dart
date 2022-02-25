@@ -7,7 +7,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'view/theme.dart';
-
 import 'controller/stylist2.dart';
 import 'view/InterfacciaPrincipale.dart';
 import 'view/Login.dart';

@@ -69,7 +69,20 @@ class _InterfacciaPrincipaleState extends State<InterfacciaPrincipale> {
                 db.becomeStylist(FirebaseAuth.instance.currentUser!.email!);
               },
               child: const Text(
-                "BecomeStylist",
+                "Become a Stylist",
+                style: TextStyle(
+                  //color: Colors.black,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                db.stopBeingStylist();
+              },
+              child: const Text(
+                "Become a Client",
                 style: TextStyle(
                   //color: Colors.black,
                   fontSize: 20.0,
